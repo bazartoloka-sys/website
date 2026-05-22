@@ -3,295 +3,356 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>БАЗАР ТОЛОКА — Скоро відкриваємось</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>БАЗАР — Автентичні українські продукти</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;overflow:hidden}
-body{
-  background:#0D0C08;
-  font-family:'Montserrat',sans-serif;
-  color:#F9F5EC;
-  display:flex;align-items:center;justify-content:center;
-  min-height:100vh;position:relative;
-}
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --dark: #0A0A0A;
+    --dark-2: #111111;
+    --dark-3: #1A1A1A;
+    --text: #F5F0E8;
+    --text-muted: #8A8070;
+  }
 
-/* Зернистий шар */
-body::before{
-  content:'';position:fixed;inset:0;z-index:10;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  opacity:.7;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* Золоте сяйво */
-.glow{
-  position:fixed;top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  width:900px;height:900px;
-  background:radial-gradient(ellipse,rgba(201,168,76,.11) 0%,rgba(201,168,76,.03) 50%,transparent 70%);
-  pointer-events:none;z-index:0;
-  animation:breathe 5s ease-in-out infinite;
-}
-@keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.8}50%{transform:translate(-50%,-50%) scale(1.1);opacity:1}}
+  body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-/* Декоративні кутки SVG */
-.corner{position:fixed;width:70px;height:70px;pointer-events:none;z-index:5;}
-.c-tl{top:20px;left:20px}
-.c-tr{top:20px;right:20px;transform:scaleX(-1)}
-.c-bl{bottom:20px;left:20px;transform:scaleY(-1)}
-.c-br{bottom:20px;right:20px;transform:scale(-1,-1)}
+  /* Grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.4;
+  }
 
-/* Центральний блок */
-.wrap{
-  position:relative;z-index:2;
-  text-align:center;
-  padding:32px 24px;
-  max-width:660px;width:100%;
-  animation:fadeUp .8s cubic-bezier(.22,1,.36,1) both;
-}
-@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px 20px;
+  }
 
-/* Верхня лінія */
-.top-rule{
-  display:flex;align-items:center;justify-content:center;gap:14px;
-  margin-bottom:20px;
-}
-.rule-line{width:60px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.6),transparent)}
-.rule-ornament{color:#C9A84C;font-size:16px;letter-spacing:2px}
+  /* Radial glow */
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
 
-/* Назва */
-.brand{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(48px,9vw,88px);
-  font-weight:900;
-  letter-spacing:.06em;
-  line-height:1;
-  margin-bottom:2px;
-  background:linear-gradient(135deg,#F0D878 0%,#C9A84C 35%,#F5E6C8 65%,#B8922A 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.brand-sub{
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-size:clamp(14px,2.5vw,20px);
-  color:rgba(201,168,76,.7);
-  letter-spacing:.2em;
-  margin-bottom:28px;
-}
+  .logo-wrap {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeUp 1.2s ease both;
+  }
 
-/* Розділювач */
-.divider{
-  display:flex;align-items:center;gap:12px;
-  justify-content:center;margin:0 auto 28px;width:280px;
-}
-.div-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.4),transparent)}
-.div-gem{
-  width:8px;height:8px;
-  background:#C9A84C;
-  transform:rotate(45deg);
-  flex-shrink:0;
-}
+  .logo-line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 24px;
+  }
 
-/* Заголовок */
-.headline{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(18px,3.5vw,28px);
-  font-weight:700;
-  line-height:1.4;
-  margin-bottom:14px;
-}
-.headline em{
-  font-style:italic;
-  background:linear-gradient(90deg,#E8C96A,#C9A84C);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(72px, 15vw, 140px);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: transparent;
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #8B6914 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 0.9;
+  }
 
-.tagline{
-  font-size:clamp(12px,1.8vw,15px);
-  font-weight:300;
-  line-height:1.9;
-  color:rgba(249,245,236,.5);
-  max-width:440px;margin:0 auto 32px;
-}
+  .logo-sub {
+    font-size: clamp(10px, 2vw, 13px);
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 16px;
+    font-weight: 300;
+  }
 
-/* Бейдж */
-.badge{
-  display:inline-flex;align-items:center;gap:10px;
-  border:1px solid rgba(201,168,76,.3);
-  padding:9px 26px;border-radius:40px;
-  background:rgba(201,168,76,.05);
-  backdrop-filter:blur(8px);
-  margin-bottom:32px;
-}
-.badge-dot{
-  width:7px;height:7px;border-radius:50%;
-  background:#C9A84C;
-  box-shadow:0 0 10px #C9A84C;
-  animation:blink 1.8s ease-in-out infinite;
-}
-@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 10px #C9A84C}50%{opacity:.2;box-shadow:none}}
-.badge-text{font-size:11px;font-weight:600;letter-spacing:.25em;color:#C9A84C;text-transform:uppercase}
+  .logo-line-bottom {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 24px auto 0;
+  }
 
-/* Контакти */
-.contacts{
-  display:flex;flex-wrap:wrap;gap:12px;
-  justify-content:center;margin-bottom:32px;
-}
-.c-btn{
-  display:flex;align-items:center;gap:10px;
-  padding:11px 22px;
-  border:1px solid rgba(201,168,76,.22);
-  border-radius:8px;
-  background:rgba(255,255,255,.02);
-  text-decoration:none;color:#F9F5EC;
-  font-size:13px;font-weight:400;
-  transition:all .25s ease;
-  letter-spacing:.02em;
-}
-.c-btn:hover{
-  border-color:rgba(201,168,76,.55);
-  background:rgba(201,168,76,.08);
-  color:#F0D878;
-  transform:translateY(-2px);
-  box-shadow:0 4px 20px rgba(201,168,76,.12);
-}
-.c-icon{
-  width:16px;height:16px;flex-shrink:0;
-  fill:none;stroke:#C9A84C;stroke-width:1.8;
-  stroke-linecap:round;stroke-linejoin:round;
-}
+  .tagline {
+    text-align: center;
+    max-width: 560px;
+    animation: fadeUp 1.2s ease 0.3s both;
+    margin-bottom: 64px;
+  }
 
-/* Три стовпчики */
-.pillars{
-  display:flex;gap:1px;
-  border:1px solid rgba(201,168,76,.12);
-  border-radius:10px;overflow:hidden;
-}
-.pillar{
-  flex:1;padding:14px 10px;
-  background:rgba(255,255,255,.018);
-  border-right:1px solid rgba(201,168,76,.09);
-  transition:background .2s;
-}
-.pillar:last-child{border-right:none}
-.pillar:hover{background:rgba(201,168,76,.04)}
-.p-icon{font-size:18px;display:block;margin-bottom:5px}
-.p-title{font-weight:600;color:#C9A84C;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px}
-.p-desc{color:rgba(249,245,236,.4);font-size:10px;line-height:1.5}
+  .tagline h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 5vw, 42px);
+    font-weight: 300;
+    line-height: 1.3;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
 
-/* Футер */
-.foot{
-  position:fixed;bottom:16px;left:0;right:0;
-  text-align:center;z-index:5;
-  font-size:10px;letter-spacing:.18em;
-  color:rgba(249,245,236,.18);text-transform:uppercase;
-}
+  .tagline h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
 
-@media(max-width:500px){
-  .pillars{flex-direction:column}
-  .pillar{border-right:none;border-bottom:1px solid rgba(201,168,76,.09)}
-  .pillar:last-child{border-bottom:none}
-  .corner{width:44px;height:44px}
-  .c-tl{top:12px;left:12px}.c-tr{top:12px;right:12px}
-  .c-bl{bottom:28px;left:12px}.c-br{bottom:28px;right:12px}
-}
+  .tagline p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    font-weight: 300;
+  }
+
+  .features {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 64px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeUp 1.2s ease 0.5s both;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .feature-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .feature span {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .coming-soon {
+    text-align: center;
+    animation: fadeUp 1.2s ease 0.7s both;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 14px 32px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .badge::before, .badge::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--gold);
+  }
+  .badge::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .badge::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .badge span {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .contact-item:hover { opacity: 0.7; }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(201,168,76,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 14px;
+  }
+
+  .contact-text {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    background: linear-gradient(to top, rgba(10,10,10,0.9), transparent);
+    animation: fadeUp 1.2s ease 1s both;
+  }
+
+  .bottom-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .bottom-domain {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .app-links {
+    display: flex;
+    gap: 12px;
+  }
+
+  .app-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 6px 14px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+
+  .app-badge:hover {
+    border-color: rgba(201,168,76,0.5);
+    color: var(--gold);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    .features { gap: 16px; }
+    .bottom { flex-direction: column; gap: 12px; text-align: center; }
+    .app-links { display: none; }
+  }
 </style>
 </head>
 <body>
 
-<div class="glow"></div>
-
-<!-- Кутки -->
-<svg class="corner c-tl" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M4 38 L4 4 L38 4" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity=".55"/>
-  <path d="M4 18 L4 4 L18 4" stroke="#C9A84C" stroke-width=".8" stroke-linecap="round" opacity=".3"/>
-  <circle cx="4" cy="4" r="2.5" fill="#C9A84C" opacity=".7"/>
-</svg>
-<svg class="corner c-tr" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M4 38 L4 4 L38 4" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity=".55"/>
-  <path d="M4 18 L4 4 L18 4" stroke="#C9A84C" stroke-width=".8" stroke-linecap="round" opacity=".3"/>
-  <circle cx="4" cy="4" r="2.5" fill="#C9A84C" opacity=".7"/>
-</svg>
-<svg class="corner c-bl" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M4 38 L4 4 L38 4" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity=".55"/>
-  <path d="M4 18 L4 4 L18 4" stroke="#C9A84C" stroke-width=".8" stroke-linecap="round" opacity=".3"/>
-  <circle cx="4" cy="4" r="2.5" fill="#C9A84C" opacity=".7"/>
-</svg>
-<svg class="corner c-br" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M4 38 L4 4 L38 4" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity=".55"/>
-  <path d="M4 18 L4 4 L18 4" stroke="#C9A84C" stroke-width=".8" stroke-linecap="round" opacity=".3"/>
-  <circle cx="4" cy="4" r="2.5" fill="#C9A84C" opacity=".7"/>
-</svg>
-
-<div class="wrap">
-
-  <div class="top-rule">
-    <div class="rule-line"></div>
-    <div class="rule-ornament">✦ ✦ ✦</div>
-    <div class="rule-line"></div>
+<section class="hero">
+  <div class="logo-wrap">
+    <div class="logo-line"></div>
+    <div class="logo">БАЗАР</div>
+    <div class="logo-sub">Маркетплейс автентичних продуктів</div>
+    <div class="logo-line-bottom"></div>
   </div>
 
-  <div class="brand">БАЗАР</div>
-  <div class="brand-sub">Толока · Торгуй по-людськи</div>
-
-  <div class="divider">
-    <div class="div-line"></div>
-    <div class="div-gem"></div>
-    <div class="div-line"></div>
+  <div class="tagline">
+    <h1>Де справжнє українське<br><em>зустрічає свого покупця</em></h1>
+    <p>Фермерські продукти, хендмейд та унікальні вироби<br>від перевірених українських майстрів і господарів</p>
   </div>
 
-  <div class="headline">
-    Перший українській маркетплейс<br>
-    <em>автентичних продуктів</em>
+  <div class="features">
+    <div class="feature"><div class="feature-dot"></div><span>Безпечна угода</span></div>
+    <div class="feature"><div class="feature-dot"></div><span>Доставка НП</span></div>
+    <div class="feature"><div class="feature-dot"></div><span>Офіційні чеки</span></div>
+    <div class="feature"><div class="feature-dot"></div><span>Лише оригінальне</span></div>
   </div>
 
-  <p class="tagline">
-    Господарі, майстри, крамарі — ті хто виробляє<br>
-    руками і серцем. Покупці, які знають кому платять.
-  </p>
-
-  <div class="badge">
-    <div class="badge-dot"></div>
-    <div class="badge-text">Скоро відкриваємось</div>
-  </div>
-
-  <div class="contacts">
-    <a href="tel:+380950901252" class="c-btn">
-      <svg class="c-icon" viewBox="0 0 24 24">
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.83 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012.74 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-      </svg>
-      +38 095 090 12 52
-    </a>
-    <a href="mailto:bazartoloka@gmail.com" class="c-btn">
-      <svg class="c-icon" viewBox="0 0 24 24">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-        <polyline points="22,6 12,13 2,6"/>
-      </svg>
-      bazartoloka@gmail.com
-    </a>
-  </div>
-
-  <div class="pillars">
-    <div class="pillar">
-      <span class="p-icon">🌻</span>
-      <div class="p-title">Автентичність</div>
-      <div class="p-desc">Кожен товар верифікований. Тільки справжнє.</div>
+  <div class="coming-soon">
+    <div class="badge">
+      <div class="badge-dot"></div>
+      <span>Незабаром відкриття</span>
     </div>
-    <div class="pillar">
-      <span class="p-icon">🤝</span>
-      <div class="p-title">Довіра</div>
-      <div class="p-desc">Ескроу та рейтинг. Захищені обидва.</div>
-    </div>
-    <div class="pillar">
-      <span class="p-icon">🇺🇦</span>
-      <div class="p-title">Українськість</div>
-      <div class="p-desc">100% вітчизняні виробники та продукти.</div>
+
+    <div class="contact-block">
+      <a href="mailto:bazartoloka@gmail.com" class="contact-item">
+        <div class="contact-icon">✉</div>
+        <span class="contact-text">bazartoloka@gmail.com</span>
+      </a>
     </div>
   </div>
+</section>
 
+<div class="bottom">
+  <div class="bottom-brand">БАЗАР</div>
+  <div class="bottom-domain">bazar.in.ua</div>
+  <div class="app-links">
+    <a href="#" class="app-badge">▶ App Store</a>
+    <a href="#" class="app-badge">▶ Google Play</a>
+  </div>
 </div>
-
-<div class="foot">bazar.ua &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; Всі права захищені</div>
 
 </body>
 </html>
