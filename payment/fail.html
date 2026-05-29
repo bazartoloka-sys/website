@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Помилка оплати — Базар Толока</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--clay:#1A0F08;--clay2:#261508;--green:#2ECC8E;--amber:#E8A030;--red:#E24B4A;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--border:rgba(245,230,200,.07)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+.card{background:var(--clay2);border:1px solid rgba(226,75,74,.3);border-radius:28px;padding:48px 36px;max-width:440px;width:100%}
+.icon{font-size:72px;margin-bottom:24px;display:block}
+h1{font-family:'Unbounded',sans-serif;font-size:24px;font-weight:900;margin-bottom:12px;color:var(--red)}
+p{font-size:14px;color:var(--cream2);line-height:1.65;margin-bottom:8px}
+.reasons{background:rgba(226,75,74,.06);border:1px solid rgba(226,75,74,.15);border-radius:14px;padding:16px 18px;margin:20px 0;text-align:left}
+.reasons p{font-size:13px;font-weight:700;color:var(--cream);margin-bottom:8px}
+.reasons ul{list-style:none}
+.reasons li{font-size:12px;color:var(--cream3);padding:3px 0 3px 14px;position:relative}
+.reasons li::before{content:'·';position:absolute;left:0;color:var(--red)}
+.divider{height:1px;background:var(--border);margin:20px 0}
+.btn{display:block;background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;padding:14px 32px;border-radius:100px;text-decoration:none;margin-bottom:12px}
+.btn-sec{display:block;font-size:13px;color:var(--cream2);text-decoration:none;margin-bottom:8px}
+.support{font-size:12px;color:var(--cream3);margin-top:16px}
+.support a{color:var(--cream2)}
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="icon">❌</span>
+  <h1>Оплату не завершено</h1>
+  <p>Щось пішло не так. Кошти з вашого рахунку не списані.</p>
+  <div class="reasons">
+    <p>Можливі причини:</p>
+    <ul>
+      <li>Недостатньо коштів на картці</li>
+      <li>Картка заблокована або прострочена</li>
+      <li>Банк відхилив транзакцію (3D Secure)</li>
+      <li>Технічна помилка платіжної системи</li>
+    </ul>
+  </div>
+  <div class="divider"></div>
+  <a href="/upgrade" class="btn" id="retryBtn">СПРОБУВАТИ ЗНОВУ →</a>
+  <a href="/" class="btn-sec">← Головна</a>
+  <div class="support">Потрібна допомога? <a href="/support">Написати в підтримку</a></div>
+</div>
+<script>
+const p = new URLSearchParams(window.location.search);
+const plan = p.get('plan');
+const uid = p.get('uid');
+if (plan || uid) {
+  const url = '/upgrade' + '?' + (uid?'uid='+uid:'') + (uid&&plan?'&':'') + (plan?'plan='+plan:'');
+  document.getElementById('retryBtn').href = url;
+}
+setTimeout(() => { window.location.href = 'bazartoloka://payment/fail'; }, 1500);
+</script>
+</body></html>
