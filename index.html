@@ -2,357 +2,397 @@
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>БАЗАР — Автентичні українські продукти</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Базар Толока — Маркетплейс автентичних товарів України</title>
+<meta name="description" content="Відео-маркетплейс автентичних українських товарів. ШІ-верифікація, Escrow-захист, 4 способи оплати. Завантажити для Android.">
+<meta property="og:title" content="Базар Толока">
+<meta property="og:description" content="Купуй у справжніх господарів. Продавай — і тебе знайдуть.">
+<meta property="og:url" content="https://bazar.in.ua">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --gold: #C9A84C;
-    --gold-light: #E8C97A;
-    --dark: #0A0A0A;
-    --dark-2: #111111;
-    --dark-3: #1A1A1A;
-    --text: #F5F0E8;
-    --text-muted: #8A8070;
-  }
+:root{--clay:#1A0F08;--clay2:#261508;--clay3:#321C0A;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.22);--aborder:rgba(232,160,48,.22)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.nlogo b{color:var(--amber)}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover{color:var(--green)}
+.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
 
-  body {
-    background: var(--dark);
-    color: var(--text);
-    font-family: 'Montserrat', sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+/* HERO */
+.hero{padding:48px 5% 52px;text-align:center;position:relative;overflow:hidden}
+.hglow{position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 30%,rgba(46,204,142,.07) 0%,transparent 70%);pointer-events:none}
+.panas{position:relative;width:260px;height:260px;margin:0 auto 28px}
+.panas-c{width:260px;height:260px;border-radius:54% 46% 52% 48%/46% 54% 48% 52%;background:var(--clay2);border:2px solid var(--aborder);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.panas-img{width:100%;height:100%;object-fit:cover}
+.panas-emoji{font-size:110px;line-height:1;margin-top:16px}
+.bd{position:absolute;border-radius:50%}
+.bd1{width:16px;height:16px;background:var(--green);top:20px;left:24px;opacity:.8;animation:bob 3s ease-in-out infinite}
+.bd2{width:12px;height:12px;background:var(--amber);top:36px;right:20px;opacity:.9;animation:bob 3.5s ease-in-out infinite .5s}
+.bd3{width:9px;height:9px;background:#E24B4A;bottom:32px;left:20px;opacity:.7;animation:bob 2.8s ease-in-out infinite 1s}
+.bd4{width:20px;height:20px;background:var(--amber);bottom:18px;right:16px;opacity:.5;animation:bob 4s ease-in-out infinite .3s}
+.bd5{width:7px;height:7px;background:var(--green);bottom:56px;right:10px;opacity:.6;animation:bob 3.2s ease-in-out infinite .8s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 
-  /* Grain overlay */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 100;
-    opacity: 0.4;
-  }
+.sbadge{display:inline-flex;align-items:center;gap:7px;background:rgba(46,204,142,.1);border:1px solid var(--gborder);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--green);margin-bottom:20px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.7)}}
+h1{font-family:'Unbounded',sans-serif;font-size:clamp(38px,8vw,80px);font-weight:900;line-height:.92;letter-spacing:-2px;margin-bottom:8px}
+h1 b{color:var(--amber);display:block}
+.hsub{font-size:clamp(15px,2.5vw,18px);color:var(--cream2);line-height:1.55;margin-bottom:36px;font-style:italic;max-width:480px;margin-left:auto;margin-right:auto}
+.hero-btns{display:flex;flex-direction:column;align-items:center;gap:12px}
+.btn-play{display:flex;align-items:center;gap:12px;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;padding:15px 32px;border-radius:100px;width:280px;justify-content:center;transition:transform .15s,box-shadow .15s}
+.btn-play:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(46,204,142,.25)}
+.hlegal{font-size:11px;color:var(--cream4)}
+.hlegal a{color:var(--cream2)}
 
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 40px 20px;
-  }
+/* PILLS */
+.pills{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;padding:8px 5% 48px}
+.pill{display:flex;align-items:center;gap:5px;background:var(--clay2);border:1px solid var(--border);border-radius:100px;padding:6px 14px;font-size:12px;color:var(--cream2);font-weight:700}
 
-  /* Radial glow */
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
+.div{height:1px;background:var(--border);margin:0 5% 48px}
 
-  .logo-wrap {
-    text-align: center;
-    margin-bottom: 60px;
-    animation: fadeUp 1.2s ease both;
-  }
+/* SECTION HEADER */
+.sh{text-align:center;margin-bottom:32px}
+.sl{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--amber);text-transform:uppercase;margin-bottom:10px}
+.st{font-family:'Unbounded',sans-serif;font-size:clamp(20px,3.5vw,30px);font-weight:900;line-height:1.15;margin-bottom:8px}
+.ss{font-size:14px;color:var(--cream2);line-height:1.6;max-width:520px;margin:0 auto}
 
-  .logo-line {
-    width: 80px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    margin: 0 auto 24px;
-  }
+/* VIDEO BLOCK */
+.video-block{margin:0 5% 48px;background:var(--clay2);border-radius:24px;border:1px solid var(--gborder);overflow:hidden}
+.vb-top{padding:24px 24px 18px;border-bottom:1px solid rgba(46,204,142,.1)}
+.vb-chip{display:inline-flex;align-items:center;gap:7px;background:var(--green);color:#05200F;font-size:10px;font-weight:700;letter-spacing:1px;padding:5px 14px;border-radius:100px;margin-bottom:12px}
+.vb-title{font-family:'Unbounded',sans-serif;font-size:clamp(18px,3vw,24px);font-weight:900;line-height:1.2;margin-bottom:8px}
+.vb-title em{color:var(--green);font-style:normal}
+.vb-desc{font-size:13px;color:var(--cream2);line-height:1.65;max-width:520px}
+.vb-phones{display:flex;gap:10px;padding:18px 20px;overflow-x:auto;scrollbar-width:none}
+.vb-phones::-webkit-scrollbar{display:none}
+.vphone{flex-shrink:0;width:130px;background:var(--clay);border-radius:18px;border:1px solid var(--aborder);overflow:hidden;transition:border-color .2s}
+.vphone:hover{border-color:var(--amber)}
+.vp-screen{aspect-ratio:9/18;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;position:relative}
+.vp-play{width:38px;height:38px;background:rgba(46,204,142,.15);border:1.5px solid rgba(46,204,142,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--green)}
+.vp-tag{font-size:8px;font-weight:700;color:var(--cream3);letter-spacing:.5px;text-align:center;padding:0 8px;text-transform:uppercase}
+.vp-bar{background:var(--clay2);padding:7px 9px;display:flex;align-items:center}
+.vp-bar span{font-size:9px;color:var(--cream2);font-weight:700}
+.vp-price{font-size:10px;color:var(--green);font-weight:900;margin-left:auto}
 
-  .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(72px, 15vw, 140px);
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    color: transparent;
-    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #8B6914 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    line-height: 0.9;
-  }
+/* PAYMENTS */
+.pay-sec{padding:0 5% 48px}
+.pay-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.pc{background:var(--clay2);border:1px solid var(--border);border-radius:16px;padding:18px 16px;transition:border-color .2s}
+.pc:hover{border-color:var(--amber)}
+.pc.hl{border-color:rgba(46,204,142,.18)}
+.pc-icon{font-size:28px;margin-bottom:10px;display:block}
+.pc-name{font-size:14px;font-weight:700;color:var(--cream);margin-bottom:4px}
+.pc-tag{display:inline-block;font-size:10px;font-weight:700;padding:3px 9px;border-radius:100px;margin-bottom:8px}
+.tg{background:rgba(46,204,142,.15);color:var(--green)}
+.ta{background:rgba(232,160,48,.15);color:var(--amber)}
+.tb{background:rgba(74,158,232,.15);color:#4A9EE8}
+.tgr{background:rgba(245,230,200,.08);color:var(--cream2)}
+.pc-desc{font-size:12px;color:var(--cream3);line-height:1.6}
 
-  .logo-sub {
-    font-size: clamp(10px, 2vw, 13px);
-    letter-spacing: 0.5em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-top: 16px;
-    font-weight: 300;
-  }
+/* AI */
+.ai-sec{margin:0 5% 48px;background:var(--clay2);border-radius:20px;border:1px solid var(--aborder);padding:28px 24px}
+.ai-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.ai-ico{width:48px;height:48px;border-radius:14px;background:rgba(232,160,48,.1);border:1px solid var(--aborder);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.ai-ttl{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;line-height:1.2}
+.ai-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.ai-b{display:flex;align-items:center;gap:8px;background:var(--clay);border:1px solid var(--aborder);border-radius:12px;padding:12px 14px;flex:1;min-width:150px}
+.ai-b-ico{font-size:22px}
+.ai-b-t1{font-size:13px;font-weight:700;color:var(--amber)}
+.ai-b-t2{font-size:11px;color:var(--cream3);margin-top:2px}
+.ai-note{font-size:12px;color:var(--cream3);line-height:1.7;font-style:italic;border-top:1px solid var(--border);padding-top:14px}
 
-  .logo-line-bottom {
-    width: 80px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    margin: 24px auto 0;
-  }
+/* TRUST */
+.trust-sec{padding:0 5% 48px}
+.tg-wrap{display:flex;flex-direction:column;gap:10px}
+.trow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tcard{background:var(--clay2);border-radius:16px;border:1px solid var(--border);padding:18px 16px}
+.tcard.wide{grid-column:1/-1}
+.tcard.green{border-color:rgba(46,204,142,.18)}
+.tcard.amber{border-color:rgba(232,160,48,.15)}
+.tcard-ico{font-size:28px;margin-bottom:8px;display:block}
+.tcard-name{font-size:13px;font-weight:700;color:var(--cream);margin-bottom:4px;line-height:1.3}
+.tcard-desc{font-size:12px;color:var(--cream3);line-height:1.55}
+.tlist{list-style:none;margin-top:8px}
+.tlist li{font-size:12px;color:var(--cream3);line-height:1.7;padding-left:14px;position:relative}
+.tlist li::before{content:'·';position:absolute;left:0;color:var(--green);font-size:16px;line-height:1.4}
 
-  .tagline {
-    text-align: center;
-    max-width: 560px;
-    animation: fadeUp 1.2s ease 0.3s both;
-    margin-bottom: 64px;
-  }
+/* ROLES */
+.roles-sec{padding:0 5% 48px}
+.roles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.rcard{background:var(--clay2);border:1px solid var(--border);border-radius:16px;padding:18px 14px;text-align:center;transition:border-color .25s,transform .2s}
+.rcard:hover{border-color:var(--amber);transform:translateY(-3px)}
+.rcard-ico{font-size:32px;margin-bottom:10px;display:block}
+.rcard-name{font-size:13px;font-weight:700;color:var(--amber);margin-bottom:5px}
+.rcard-desc{font-size:12px;color:var(--cream3);line-height:1.5}
 
-  .tagline h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(24px, 5vw, 42px);
-    font-weight: 300;
-    line-height: 1.3;
-    color: var(--text);
-    margin-bottom: 20px;
-  }
+/* INVEST */
+.invest-sec{margin:0 5% 48px;border-radius:24px;border:1px solid var(--aborder);background:var(--clay2);overflow:hidden}
+.invest-glow{height:4px;background:linear-gradient(90deg,var(--amber),rgba(232,160,48,.2),var(--amber))}
+.invest-inner{padding:32px 24px}
+.invest-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(232,160,48,.12);border:1px solid var(--aborder);border-radius:100px;padding:5px 16px;font-size:10px;font-weight:700;color:var(--amber);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+.invest-title{font-family:'Unbounded',sans-serif;font-size:clamp(22px,4vw,32px);font-weight:900;line-height:1.1;margin-bottom:12px}
+.invest-title em{color:var(--amber);font-style:normal}
+.invest-desc{font-size:14px;color:var(--cream2);line-height:1.7;margin-bottom:24px;max-width:560px}
+.istats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:28px}
+.istat{background:var(--clay);border:1px solid var(--aborder);border-radius:14px;padding:16px;text-align:center}
+.istat-n{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;color:var(--amber);display:block;line-height:1}
+.istat-l{font-size:10px;color:var(--cream3);margin-top:5px;letter-spacing:.5px;text-transform:uppercase}
 
-  .tagline h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
+.invest-form{background:var(--clay);border:1px solid var(--aborder);border-radius:16px;padding:20px}
+.iform-title{font-size:14px;font-weight:700;color:var(--cream);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.field{margin-bottom:12px}
+.field label{font-size:10px;color:var(--cream3);font-weight:700;letter-spacing:.5px;text-transform:uppercase;display:block;margin-bottom:5px}
+.field input,.field textarea,.field select{width:100%;background:var(--clay2);border:1px solid rgba(245,230,200,.12);border-radius:10px;padding:10px 14px;font-size:14px;color:var(--cream);font-family:'Nunito',sans-serif;outline:none;transition:border-color .2s}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--amber)}
+.field input::placeholder,.field textarea::placeholder{color:var(--cream4)}
+.field textarea{resize:vertical;min-height:80px;line-height:1.55}
+.field select{color:var(--cream2);cursor:pointer}
+.field select option{background:var(--clay2)}
+.btn-invest{width:100%;background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;padding:14px;border-radius:100px;border:none;cursor:pointer;margin-top:4px;transition:opacity .2s}
+.btn-invest:hover{opacity:.88}
+.iform-note{font-size:11px;color:var(--cream4);text-align:center;margin-top:10px}
 
-  .tagline p {
-    font-size: 13px;
-    line-height: 1.8;
-    color: var(--text-muted);
-    letter-spacing: 0.02em;
-    font-weight: 300;
-  }
+/* SELLER CTA */
+.seller-sec{margin:0 5% 48px;background:var(--clay2);border:1px solid var(--gborder);border-radius:20px;padding:28px 24px;text-align:center}
+.seller-sec h2{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;margin-bottom:8px}
+.seller-sec p{font-size:14px;color:var(--cream2);margin-bottom:20px;line-height:1.65}
+.btn-seller{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--gborder);color:var(--green);font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;padding:12px 26px;border-radius:100px;transition:background .2s}
+.btn-seller:hover{background:rgba(46,204,142,.08)}
 
-  .features {
-    display: flex;
-    gap: 32px;
-    margin-bottom: 64px;
-    flex-wrap: wrap;
-    justify-content: center;
-    animation: fadeUp 1.2s ease 0.5s both;
-  }
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:40px 5%}
+.foot-inner{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:16px;font-weight:900;letter-spacing:3px}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.flinks a{font-size:12px;color:var(--cream3);transition:color .2s}
+.flinks a:hover{color:var(--green)}
+.fcontact{font-size:12px;color:var(--cream3)}
+.fcontact a{color:var(--cream2)}
+.fcopy{font-size:11px;color:var(--cream4)}
 
-  .feature {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .feature-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-    flex-shrink: 0;
-  }
-
-  .feature span {
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    font-weight: 500;
-  }
-
-  .coming-soon {
-    text-align: center;
-    animation: fadeUp 1.2s ease 0.7s both;
-  }
-
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid rgba(201,168,76,0.3);
-    padding: 14px 32px;
-    margin-bottom: 40px;
-    position: relative;
-  }
-
-  .badge::before, .badge::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border: 1px solid var(--gold);
-  }
-  .badge::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
-  .badge::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
-
-  .badge-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--gold);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.8); }
-  }
-
-  .badge span {
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 500;
-  }
-
-  .contact-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    transition: opacity 0.2s;
-  }
-
-  .contact-item:hover { opacity: 0.7; }
-
-  .contact-icon {
-    width: 36px;
-    height: 36px;
-    border: 1px solid rgba(201,168,76,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gold);
-    font-size: 14px;
-  }
-
-  .contact-text {
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    font-weight: 400;
-  }
-
-  .bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(255,255,255,0.04);
-    background: linear-gradient(to top, rgba(10,10,10,0.9), transparent);
-    animation: fadeUp 1.2s ease 1s both;
-  }
-
-  .bottom-brand {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    font-weight: 600;
-  }
-
-  .bottom-domain {
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--text-muted);
-    text-transform: uppercase;
-  }
-
-  .app-links {
-    display: flex;
-    gap: 12px;
-  }
-
-  .app-badge {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    border: 1px solid rgba(201,168,76,0.2);
-    padding: 6px 14px;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: all 0.2s;
-    text-transform: uppercase;
-  }
-
-  .app-badge:hover {
-    border-color: rgba(201,168,76,0.5);
-    color: var(--gold);
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @media (max-width: 600px) {
-    .features { gap: 16px; }
-    .bottom { flex-direction: column; gap: 12px; text-align: center; }
-    .app-links { display: none; }
-  }
+@media(max-width:600px){
+  .nlinks{display:none}
+  .trow{grid-template-columns:1fr}
+  .tcard.wide{grid-column:auto}
+  .istats{grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <div class="logo-wrap">
-    <div class="logo-line"></div>
-    <div class="logo">БАЗАР</div>
-    <div class="logo-sub">Маркетплейс автентичних продуктів</div>
-    <div class="logo-line-bottom"></div>
+<nav class="nav">
+  <div class="nlogo">БАЗАР<b>.</b></div>
+  <div class="nlinks">
+    <a href="#video">Відео</a>
+    <a href="#invest">Інвесторам</a>
+    <a href="/support">Підтримка</a>
   </div>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
+</nav>
 
-  <div class="tagline">
-    <h1>Де справжнє українське<br><em>зустрічає свого покупця</em></h1>
-    <p>Фермерські продукти, хендмейд та унікальні вироби<br>від перевірених українських майстрів і господарів</p>
-  </div>
-
-  <div class="features">
-    <div class="feature"><div class="feature-dot"></div><span>Безпечна угода</span></div>
-    <div class="feature"><div class="feature-dot"></div><span>Доставка НП</span></div>
-    <div class="feature"><div class="feature-dot"></div><span>Офіційні чеки</span></div>
-    <div class="feature"><div class="feature-dot"></div><span>Лише оригінальне</span></div>
-  </div>
-
-  <div class="coming-soon">
-    <div class="badge">
-      <div class="badge-dot"></div>
-      <span>Незабаром відкриття</span>
+<section class="hero" id="top">
+  <div class="hglow"></div>
+  <div class="panas">
+    <div class="panas-c">
+      <span class="panas-emoji">🧑‍🌾</span>
     </div>
-
-    <div class="contact-block">
-      <a href="mailto:bazartoloka@gmail.com" class="contact-item">
-        <div class="contact-icon">✉</div>
-        <span class="contact-text">bazartoloka@gmail.com</span>
-      </a>
-    </div>
+    <div class="bd bd1"></div><div class="bd bd2"></div>
+    <div class="bd bd3"></div><div class="bd bd4"></div><div class="bd bd5"></div>
+  </div>
+  <div class="sbadge"><div class="dot"></div>Вже в Google Play</div>
+  <h1>БАЗАР<b>ТОЛОКА</b></h1>
+  <p class="hsub">Де справжнє українське зустрічає свого покупця</p>
+  <div class="hero-btns">
+    <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="btn-play">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 24C2.3 24 1.7 23.74 1.25 23.26.8 22.79.55 22.18.55 21.44V2.56C.55 1.82.8 1.21 1.25.73 1.7.25 2.3 0 3 0L13.3 12 3 24Z" fill="#04342C"/><path d="M17.3 15.87 13.9 12.36 17.3 8.15 20.4 9.97C21.4 10.55 21.8 11.27 21.8 11.97 21.8 12.68 21.4 13.41 20.4 13.98Z" fill="#412402"/><path d="M3 24 13.3 12l3.9 3.87C17 16.13 8.4 21.05 8.4 21.05 6.1 22.36 4.4 23.69 3 24Z" fill="#173404"/><path d="M3 0C4.4.31 8.4 2.95 8.4 2.95 14.3 6.34 17 7.87 17.3 8.13L13.3 12Z" fill="#042C53"/></svg>
+      Завантажити в Google Play
+    </a>
+    <p class="hlegal">Погоджуєтесь з <a href="/terms">Угодою</a> та <a href="/privacy">Конфіденційністю</a></p>
   </div>
 </section>
 
-<div class="bottom">
-  <div class="bottom-brand">БАЗАР</div>
-  <div class="bottom-domain">bazar.in.ua</div>
-  <div class="app-links">
-    <a href="#" class="app-badge">▶ App Store</a>
-    <a href="#" class="app-badge">▶ Google Play</a>
+<div class="pills">
+  <div class="pill">🎬 Відео-оголошення</div>
+  <div class="pill">🤖 ШІ-верифікація</div>
+  <div class="pill">🛡️ Escrow-захист</div>
+  <div class="pill">🕵️ Анонімність</div>
+  <div class="pill">🔒 Антифрод</div>
+  <div class="pill">4 способи оплати</div>
+</div>
+
+<div class="div"></div>
+
+<!-- ВІДЕО -->
+<div class="video-block" id="video">
+  <div class="vb-top">
+    <div class="vb-chip">🎬 ГОЛОВНА ФІЧА</div>
+    <h2 class="vb-title">Відео-оголошення<br><em>як у TikTok</em></h2>
+    <p class="vb-desc">Вертикальне відео 9:16, автоплей, свайп між товарами. Покупець бачить товар живим — не фото на білому фоні.</p>
+  </div>
+  <div class="vb-phones">
+    <div class="vphone"><div class="vp-screen" style="background:#0A1A0A"><div class="vp-play">▶</div><div class="vp-tag">МЕД ПАНАСА</div></div><div class="vp-bar"><span>🍯 Мед</span><span class="vp-price">280₴</span></div></div>
+    <div class="vphone"><div class="vp-screen" style="background:#0A0A1A"><div class="vp-play">▶</div><div class="vp-tag">ВИШИВАНКА</div></div><div class="vp-bar"><span>🧵 Вишивка</span><span class="vp-price">1200₴</span></div></div>
+    <div class="vphone"><div class="vp-screen" style="background:#1A0A00"><div class="vp-play">▶</div><div class="vp-tag">КЕРАМІКА</div></div><div class="vp-bar"><span>🏺 Кераміка</span><span class="vp-price">650₴</span></div></div>
+    <div class="vphone"><div class="vp-screen" style="background:#001A0A"><div class="vp-play">▶</div><div class="vp-tag">САЛО 😄</div></div><div class="vp-bar"><span>🥩 Сало</span><span class="vp-price">180₴</span></div></div>
+    <div class="vphone"><div class="vp-screen" style="background:#100A1A"><div class="vp-play">▶</div><div class="vp-tag">ХЕНДМЕЙД</div></div><div class="vp-bar"><span>🎨 Картина</span><span class="vp-price">890₴</span></div></div>
   </div>
 </div>
 
+<!-- ПЛАТЕЖІ -->
+<div class="pay-sec" id="pay">
+  <div class="sh">
+    <div class="sl">Свобода вибору</div>
+    <h2 class="st">4 способи отримати оплату</h2>
+    <p class="ss">Продавець сам обирає — ніяких нав'язаних схем і прихованих комісій.</p>
+  </div>
+  <div class="pay-grid">
+    <div class="pc hl"><span class="pc-icon">📦</span><div class="pc-name">NovaPay</div><span class="pc-tag ta">Готівка НП</span><p class="pc-desc">Покупець платить на відділенні. Гроші на картку за 1–3 дні.</p></div>
+    <div class="pc hl"><span class="pc-icon">💳</span><div class="pc-name">WayForPay</div><span class="pc-tag tg">Escrow-захист</span><p class="pc-desc">Карткою онлайн. Гроші заморожені до підтвердження доставки НП.</p></div>
+    <div class="pc"><span class="pc-icon">🏦</span><div class="pc-name">Monobank / IBAN</div><span class="pc-tag tb">B2B безнал</span><p class="pc-desc">Передплата на рахунок. З податковою накладною для юросіб.</p></div>
+    <div class="pc"><span class="pc-icon">🤝</span><div class="pc-name">Готівка при зустрічі</div><span class="pc-tag tgr">Локально</span><p class="pc-desc">Домовились — зустрілись. Без комісій для місцевих угод.</p></div>
+  </div>
+</div>
+
+<div class="div"></div>
+
+<!-- ШІ -->
+<div class="ai-sec">
+  <div class="ai-head">
+    <div class="ai-ico">🤖</div>
+    <div class="ai-ttl">ШІ-перевірка кожного оголошення</div>
+  </div>
+  <div class="ai-badges">
+    <div class="ai-b"><div class="ai-b-ico">✅</div><div><div class="ai-b-t1">СПРАВЖНЄ</div><div class="ai-b-t2">Фото і відео пройшли перевірку оригінальності</div></div></div>
+    <div class="ai-b"><div class="ai-b-ico">💎</div><div><div class="ai-b-t1">УНІКАЛЬНЕ</div><div class="ai-b-t2">Такого товару більше немає на платформі</div></div></div>
+  </div>
+  <p class="ai-note">Claude AI аналізує медіа при кожному завантаженні. Дублікати і підозрілий контент позначаються автоматично — покупець завжди бачить реальний товар.</p>
+</div>
+
+<!-- БЕЗПЕКА -->
+<div class="trust-sec">
+  <div class="sh">
+    <div class="sl">Довіра і захист</div>
+    <h2 class="st">Безпека без компромісів</h2>
+    <p class="ss">Три рівні захисту — для покупця, продавця і всієї платформи.</p>
+  </div>
+  <div class="tg-wrap">
+    <div class="trow">
+      <div class="tcard green"><span class="tcard-ico">🕵️</span><div class="tcard-name">Анонімність</div><div class="tcard-desc">Номер телефону прихований. Покупець і продавець бачать тільки Bazar-ID.</div></div>
+      <div class="tcard green"><span class="tcard-ico">🔐</span><div class="tcard-name">Фото-верифікація</div><div class="tcard-desc">Будь-яка зміна реквізитів — підтвердження через 6 живих фото.</div></div>
+    </div>
+    <div class="tcard wide amber"><span class="tcard-ico">🛡️</span><div class="tcard-name">Антифрод — захист покупця</div>
+      <ul class="tlist">
+        <li>Escrow утримує гроші до підтвердження отримання посилки НП</li>
+        <li>ШІ виявляє підозрілі оголошення і дублікати в реальному часі</li>
+        <li>Двостороння система рейтингів — репутація видна всім</li>
+        <li>Заява на повернення і арбітраж протягом 14 днів</li>
+      </ul>
+    </div>
+    <div class="trow">
+      <div class="tcard"><span class="tcard-ico">🌾</span><div class="tcard-name">Свобода продавця</div><div class="tcard-desc">Сам обирає спосіб оплати, ціну, умови доставки і повернення.</div></div>
+      <div class="tcard"><span class="tcard-ico">🧾</span><div class="tcard-name">Офіційні чеки</div><div class="tcard-desc">ПРРО Вчасно.Каса — фіскальні чеки автоматично для ФОП.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="div"></div>
+
+<!-- РОЛІ -->
+<div class="roles-sec">
+  <div class="sh">
+    <div class="sl">Для продавців</div>
+    <h2 class="st">Хто торгує на Базарі</h2>
+    <p class="ss">Від домашнього господаря до великого магазину — кожен знайде свій рівень.</p>
+  </div>
+  <div class="roles-grid">
+    <div class="rcard"><span class="rcard-ico">🌾</span><div class="rcard-name">Господар</div><div class="rcard-desc">Власна с/г продукція. До 10 оголошень. Верифікація за телефоном.</div></div>
+    <div class="rcard"><span class="rcard-ico">🎨</span><div class="rcard-name">Майстер</div><div class="rcard-desc">Хендмейд та авторські вироби. Розширені ліміти.</div></div>
+    <div class="rcard"><span class="rcard-ico">🏪</span><div class="rcard-name">Крамар</div><div class="rcard-desc">ФОП, малий бізнес. Верифікація через Дія. Фіскальні чеки ПРРО.</div></div>
+    <div class="rcard"><span class="rcard-ico">🏢</span><div class="rcard-name">Купець</div><div class="rcard-desc">Великий бізнес. API інтеграція. ШІ-продавець. Повний доступ.</div></div>
+  </div>
+</div>
+
+<div class="div"></div>
+
+<!-- ІНВЕСТИЦІЇ -->
+<div class="invest-sec" id="invest">
+  <div class="invest-glow"></div>
+  <div class="invest-inner">
+    <div class="invest-chip">💰 Інвесторам та партнерам</div>
+    <h2 class="invest-title">Увійди в проект<br><em>поки ринок вільний</em></h2>
+    <p class="invest-desc">Базар Толока — перший маркетплейс автентичних українських товарів з відео-форматом, ШІ-верифікацією та вбудованою мультиплатіжною системою. Ми будуємо інфраструктуру довіри для мільйонів угод між українцями.</p>
+    <div class="istats">
+      <div class="istat"><span class="istat-n">🇺🇦</span><div class="istat-l">Ukraine-first</div></div>
+      <div class="istat"><span class="istat-n">4</span><div class="istat-l">Платіжних системи</div></div>
+      <div class="istat"><span class="istat-n">🤖</span><div class="istat-l">ШІ-модерація</div></div>
+      <div class="istat"><span class="istat-n">0₴</span><div class="istat-l">Вхід для продавця</div></div>
+    </div>
+    <div class="invest-form">
+      <div class="iform-title">📩 Залишити заявку</div>
+      <div class="field"><label>Ваше ім'я</label><input type="text" placeholder="Іван Петренко"></div>
+      <div class="field"><label>Email</label><input type="email" placeholder="ivan@example.com"></div>
+      <div class="field"><label>Я цікавлюсь як</label>
+        <select>
+          <option>Інвестор — хочу вкласти кошти</option>
+          <option>Партнер — хочу співпрацювати</option>
+          <option>Медіа — хочу написати про проект</option>
+          <option>Інше</option>
+        </select>
+      </div>
+      <div class="field"><label>Коротко про себе</label><textarea placeholder="Розкажіть хто ви і чим можете бути корисні проекту..."></textarea></div>
+      <button class="btn-invest" onclick="handleInvestForm(event)">НАДІСЛАТИ ЗАЯВКУ →</button>
+      <p class="iform-note">Відповідаємо протягом 24 годин · <a href="mailto:bazartoloka@gmail.com" style="color:var(--cream2)">bazartoloka@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ПРОДАВЦЯМ CTA -->
+<div class="seller-sec">
+  <h2>🌾 Ти продаєш?</h2>
+  <p>Перше оголошення — безкоштовно.<br>Реєстрація за 30 секунд через номер телефону.</p>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="btn-seller">ЗАВАНТАЖИТИ І ПОЧАТИ →</a>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови використання</a>
+      <a href="/offer">Публічна оферта</a>
+      <a href="/upgrade">Тарифи</a>
+      <a href="/support">Підтримка</a>
+    </div>
+    <div class="fcontact"><a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
+</footer>
+
+<script>
+function handleInvestForm(e) {
+  e.preventDefault();
+  const btn = e.target;
+  const name = btn.closest('.invest-form').querySelector('input[type=text]').value;
+  const email = btn.closest('.invest-form').querySelector('input[type=email]').value;
+  if (!name || !email) { btn.textContent = '⚠️ Заповніть ім\'я та email'; setTimeout(()=>btn.textContent='НАДІСЛАТИ ЗАЯВКУ →',2000); return; }
+  btn.textContent = '✅ Заявку надіслано!';
+  btn.style.background = 'var(--green)';
+  btn.style.color = '#05200F';
+  // TODO: replace with actual form submission to backend
+  window.location.href = 'mailto:bazartoloka@gmail.com?subject=Заявка від ' + encodeURIComponent(name) + '&body=Email: ' + encodeURIComponent(email);
+}
+</script>
 </body>
 </html>
