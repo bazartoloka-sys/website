@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Оплата успішна — Базар Толока</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--clay:#1A0F08;--clay2:#261508;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.25)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;-webkit-font-smoothing:antialiased}
+.card{background:var(--clay2);border:1px solid var(--gborder);border-radius:28px;padding:48px 36px;max-width:440px;width:100%}
+.icon{font-size:72px;margin-bottom:24px;display:block;animation:pop .5s ease-out}
+@keyframes pop{0%{transform:scale(.5);opacity:0}80%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+h1{font-family:'Unbounded',sans-serif;font-size:26px;font-weight:900;margin-bottom:12px;color:var(--green)}
+p{font-size:15px;color:var(--cream2);line-height:1.65;margin-bottom:8px}
+.plan-badge{display:inline-block;background:rgba(46,204,142,.15);border:1px solid var(--gborder);border-radius:100px;padding:6px 18px;font-size:13px;font-weight:700;color:var(--green);margin:16px 0 28px}
+.btn{display:block;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;padding:14px 32px;border-radius:100px;text-decoration:none;margin-bottom:12px;transition:opacity .2s}
+.btn:hover{opacity:.88}
+.btn-sec{display:block;font-size:13px;color:var(--cream2);text-decoration:none;transition:color .2s}
+.btn-sec:hover{color:var(--green)}
+.divider{height:1px;background:var(--border);margin:24px 0}
+.receipt{font-size:12px;color:var(--cream3);line-height:1.8}
+.receipt b{color:var(--cream2)}
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="icon">✅</span>
+  <h1>Оплату здійснено!</h1>
+  <p>Дякуємо, Ваш пакет активовано.</p>
+  <div class="plan-badge" id="planBadge">Пакет активовано</div>
+  <div class="receipt" id="receiptInfo"></div>
+  <div class="divider"></div>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="btn">ВІДКРИТИ ДОДАТОК →</a>
+  <a href="/" class="btn-sec">← Повернутись на сайт</a>
+</div>
+<script>
+const p = new URLSearchParams(window.location.search);
+const plan = p.get('plan');
+const planNames = {hospodar:'Господар 🌾',majster:'Майстер 🎨',kramar:'Крамар 🏪',kupets:'Купець 🏢'};
+if (plan && planNames[plan]) {
+  document.getElementById('planBadge').textContent = planNames[plan] + ' — активовано';
+}
+const orderId = p.get('orderId');
+if (orderId) {
+  document.getElementById('receiptInfo').innerHTML = '<b>Номер замовлення:</b> ' + orderId + '<br>Квитанцію надіслано на вашу електронну пошту.';
+}
+// Try to open app via deep link
+setTimeout(() => {
+  window.location.href = 'bazartoloka://payment/success';
+}, 1500);
+</script>
+</body></html>
