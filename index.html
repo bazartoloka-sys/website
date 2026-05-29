@@ -206,7 +206,7 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
   <div class="hglow"></div>
   <div class="panas">
     <div class="panas-c">
-      <span class="panas-emoji">🧑‍🌾</span>
+      <img id="panasImg" src="splash_spring.png" alt="Панас" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">
     </div>
     <div class="bd bd1"></div><div class="bd bd2"></div>
     <div class="bd bd3"></div><div class="bd bd4"></div><div class="bd bd5"></div>
@@ -394,5 +394,39 @@ function handleInvestForm(e) {
   window.location.href = 'mailto:bazartoloka@gmail.com?subject=Заявка від ' + encodeURIComponent(name) + '&body=Email: ' + encodeURIComponent(email);
 }
 </script>
+
+<script>
+// Seasonal Panas
+(function() {
+  const m = new Date().getMonth();
+  const seasons = {
+    spring: [2,3,4],
+    summer: [5,6,7],
+    autumn: [8,9,10],
+    winter: [11,0,1]
+  };
+  const files = {
+    spring: 'splash_spring.png',
+    summer: 'summer.png',
+    autumn: 'splash_autumn.png',
+    winter: 'splash_winter.png'
+  };
+  const labels = {
+    spring: 'Весна на базарі! 🌸',
+    summer: 'Літо на базарі! ☀️',
+    autumn: 'Осінь на базарі! 🍂',
+    winter: 'Зима на базарі! ❄️'
+  };
+  let season = 'summer';
+  for (const [s, months] of Object.entries(seasons)) {
+    if (months.includes(m)) { season = s; break; }
+  }
+  const img = document.getElementById('panasImg');
+  if (img) img.src = files[season];
+  const badge = document.querySelector('.sbadge');
+  if (badge) badge.innerHTML = '<div class="dot"></div>' + labels[season];
+})();
+</script>
+
 </body>
 </html>
