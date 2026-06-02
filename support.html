@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8"><link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Підтримка — Базар Толока</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -30,15 +28,16 @@ h1{font-family:'Unbounded',sans-serif;font-size:clamp(24px,4vw,36px);font-weight
 .cc-val{font-size:13px;color:var(--green)}
 .cc-note{font-size:11px;color:var(--cream3);margin-top:4px}
 .div{height:1px;background:var(--border);margin:36px 0}
-h2{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;margin-bottom:20px}
-.faq{display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
+.sec-title{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;margin-bottom:20px}
+.sec-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--amber);text-transform:uppercase;margin:32px 0 14px}
+.faq{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
 .faq-item{background:var(--clay2);border:1px solid var(--border);border-radius:14px;overflow:hidden}
 .faq-q{padding:16px 18px;font-size:14px;font-weight:700;color:var(--cream);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none}
 .faq-q:hover{color:var(--green)}
-.faq-a{padding:0 18px 14px;font-size:13px;color:var(--cream2);line-height:1.7;display:none}
 .faq-item.open .faq-a{display:block}
 .faq-item.open .faq-q{color:var(--amber)}
-.form-wrap{background:var(--clay2);border:1px solid var(--gborder);border-radius:20px;padding:28px 24px}
+.faq-a{padding:0 18px 14px;font-size:13px;color:var(--cream2);line-height:1.7;display:none}
+.form-wrap{background:var(--clay2);border:1px solid var(--gborder);border-radius:20px;padding:28px 24px;margin-top:32px}
 .form-title{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;margin-bottom:6px}
 .form-sub{font-size:13px;color:var(--cream2);margin-bottom:24px}
 .field{margin-bottom:14px}
@@ -57,6 +56,7 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
 .fl a{font-size:12px;color:var(--cream3)}
 .fl a:hover{color:var(--green)}
 .fc{font-size:11px;color:var(--cream4)}
+@media(max-width:500px){.contacts{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -99,30 +99,95 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
 
   <div class="div"></div>
 
-  <h2>Часті питання</h2>
+  <div class="sec-title">Часті питання</div>
+
+  <!-- ПОКУПЦЯМ -->
+  <div class="sec-label">🛍️ Покупцям</div>
   <div class="faq">
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Як розмістити перше оголошення? <span>+</span></div>
-      <div class="faq-a">Завантажте додаток, зареєструйтесь за номером телефону. Перше оголошення абсолютно безкоштовне — натисніть «+» на головному екрані і слідуйте інструкціям.</div>
+      <div class="faq-q" onclick="toggleFaq(this)">Базар пропонує додати карту. Чи це безпечно? Гроші не вкрадуть? <span>+</span></div>
+      <div class="faq-a">Ні, ваша картка в безпеці! Ми не зберігаємо номер картки на наших серверах — платіж обробляє WayForPay, це ліцензований платіжний сервіс (як Privat24 або monobank). Ваші дані захищені шифруванням банківського рівня. Базар бачить лише факт оплати — і більше нічого.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Як працює Безпечна угода? <span>+</span></div>
-      <div class="faq-a">При оплаті карткою через WayForPay гроші «заморожуються» і не надходять продавцю до моменту, поки ви не підтвердите отримання посилки. Якщо товар не відповідає опису — подайте заявку на повернення.</div>
+      <div class="faq-q" onclick="toggleFaq(this)">Я заплатила, а мені надішлють цеглину замість телефону. Гроші точно повернуться? <span>+</span></div>
+      <div class="faq-a">Так, повернуться! Ось як це працює: ви платите карткою — гроші заморожуються і НЕ надходять продавцю. Отримали посилку — перевірили товар — тільки тоді підтвердили. Якщо прийшло не те — натискаєте «Спір» і гроші повертаються вам. Продавець отримує оплату тільки коли ви задоволені.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Мій товар позначили «Дублікат» — що робити? <span>+</span></div>
-      <div class="faq-a">ШІ-перевірка автоматична і іноді помиляється. Зверніться до підтримки через форму нижче — ми розглянемо апеляцію протягом 48 годин.</div>
+      <div class="faq-q" onclick="toggleFaq(this)">У вас є «Спори»? Як це працює? Мені залишиться зіпсований товар і гроші повернуться? <span>+</span></div>
+      <div class="faq-a">Так, є система Спорів! Якщо товар не відповідає опису — відкриваєте Спір протягом 14 днів. Ми розглядаємо ситуацію: якщо продавець винен — гроші повертаються вам, а товар відправляєте назад за рахунок продавця. Зіпсований товар вам не залишиться — це було б несправедливо 😊</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Коли прийдуть гроші після продажу? <span>+</span></div>
-      <div class="faq-a">Після підтвердження отримання посилки покупцем: NovaPay — 1-3 робочих дні, WayForPay — 1-2 робочих дні.</div>
+      <div class="faq-q" onclick="toggleFaq(this)">Навіщо вносити картку — я сама продавцю скину! <span>+</span></div>
+      <div class="faq-a">Можна і так! Якщо продавець підключив оплату «готівкою при зустрічі» або «переказом на картку» — ви домовляєтесь напряму і платите як зручно. Картку в додаток вносити не обов'язково. Але якщо платите через WayForPay — тоді так, бо саме ця система захищає ваші гроші до отримання товару.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Як скасувати підписку? <span>+</span></div>
-      <div class="faq-a">Тарифні пакети не поновлюються автоматично — ви купуєте на 30 днів і вирішуєте самостійно продовжувати чи ні. Відповідно скасовувати нічого не потрібно.</div>
+      <div class="faq-q" onclick="toggleFaq(this)">Що за рейтинг — мені воно не потрібно, я можу не відповідати? <span>+</span></div>
+      <div class="faq-a">Можете не відповідати — це необов'язково. Але рейтинг покупця захищає і вас теж: продавці бачать що ви надійна людина і охочіше продають вам першими, тримають товар, погоджуються на зручні умови. Без рейтингу деякі продавці можуть відмовити незнайомому покупцю. 1-2 хвилини на відгук — і вас поважатимуть як клієнта 😊</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Як рейтинг мені допоможе якщо я тільки купую? <span>+</span></div>
+      <div class="faq-a">Рейтинг покупця — це ваша репутація на ринку. Продавці бачать з ким мають справу: чи підтверджуєте отримання вчасно, чи не відкриваєте спори без причини. Висока оцінка = кращий сервіс, пріоритет при обмеженій кількості товару, деякі продавці роблять знижки постійним покупцям з гарним рейтингом.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Накладеним платежем можна платити? <span>+</span></div>
+      <div class="faq-a">Так! Якщо продавець підключив NovaPay — ви платите готівкою прямо на відділенні Нової Пошти при отриманні посилки. Нічого не треба вносити заздалегідь. Просто отримали — перевірили — заплатили касиру. Зручно і звично 👍</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Хочу доставку Укрпоштою! Можна додати? <span>+</span></div>
+      <div class="faq-a">Чуємо вас! Зараз Базар працює з Новою Поштою — там є трекінг, автоматичне відстеження і інтеграція з платіжною системою. Укрпошта поки що в планах. Але якщо ви і продавець домовились — нічого не заважає продавцю відправити Укрпоштою і просто написати номер ТТН в чаті.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Хочу сам домовитись з продавцем як платити і доставляти! Чому немає такого? <span>+</span></div>
+      <div class="faq-a">Є! Базар не нав'язує жодну схему. Якщо продавець підключив «готівку при зустрічі» — зустрічаєтесь і домовляєтесь самі. Є вбудований чат — пишіть продавцю прямо в додатку, обговорюйте все що потрібно. Ми лише надаємо інструменти захисту — але ніхто не змушує ними користуватись якщо обидві сторони довіряють одне одному.</div>
     </div>
   </div>
 
+  <!-- ПРОДАВЦЯМ -->
+  <div class="sec-label">🏪 Продавцям</div>
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Я зареєструвався але де моє оголошення? Чому його не видно? <span>+</span></div>
+      <div class="faq-a">Нове оголошення проходить швидку перевірку — зазвичай до 30 хвилин. ШІ перевіряє фото і текст на оригінальність. Якщо через годину оголошення досі не з'явилось — напишіть нам через форму нижче, розберемось одразу.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Мені кажуть що фото не оригінальне — та це моя власна картопля з городу! <span>+</span></div>
+      <div class="faq-a">Розуміємо ваше обурення! ШІ іноді помиляється — особливо з популярними товарами як овочі, фрукти, мед. Натисніть «Оскаржити» поруч з оголошенням або напишіть нам. Ми перевіримо вручну і знімемо позначку протягом 48 годин. Ваша картопля — ваша! 😊</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Покупець отримав товар вже 3 дні тому а гроші досі не прийшли. Куди поділись? <span>+</span></div>
+      <div class="faq-a">Гроші нікуди не поділись — вони чекають підтвердження від покупця. Якщо він не підтвердив — нагадайте йому в чаті. Якщо покупець мовчить більше 14 днів після доставки — гроші надходять вам автоматично. NovaPay — 1-3 дні, WayForPay — 1-2 дні після підтвердження.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Покупець відкрив спір і каже що товар не той. Та він бреше! Що мені робити? <span>+</span></div>
+      <div class="faq-a">Спокійно! У вас є право на захист. Відкрийте Спір зі своєї сторони і надайте докази — фото упаковки перед відправкою, скріншоти переписки, відео як пакували. Саме тому радимо завжди знімати відео при пакуванні. Ми розглянемо обидві сторони чесно — і якщо покупець бреше, гроші залишаться у вас.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Як підключити NovaPay? Зареєструвався там але в додатку не розумію де налаштувати <span>+</span></div>
+      <div class="faq-a">Легко! Кабінет продавця → «Рахунки» → картка NovaPay → введіть номер картки на яку НП переказуватиме гроші. Це та картка яку ви прив'язали в застосунку NovaPay. Після збереження покупці одразу бачать накладений платіж як варіант оплати у ваших оголошеннях.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Покупець не забрав посилку вже тиждень. Гроші за доставку назад мені хто поверне? <span>+</span></div>
+      <div class="faq-a">Це неприємна ситуація і ми це розуміємо. Спочатку нагадайте покупцю в чаті — іноді люди просто забувають. Якщо посилка повернулась — відкрийте Спір, вкажіть що покупець не забрав товар. Вартість доставки назад стягується з покупця — це прописано в умовах угоди яку він прийняв при реєстрації.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Хочу змінити ціну — знайшов як редагувати але боюсь що рейтинг впаде <span>+</span></div>
+      <div class="faq-a">Не бійтесь! Зміна ціни ніяк не впливає на рейтинг. Рейтинг залежить від відгуків покупців, швидкості відповіді і виконання угод. Редагуйте ціну скільки завгодно — хоч щодня. Єдине — якщо товар вже в чиємусь замовленні, ціна для цього покупця не зміниться.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">У мене 10 оголошень і каже ліміт. Але я хочу ще! Що робити? <span>+</span></div>
+      <div class="faq-a">Час рости! 😊 Ліміт — це базовий пакет Господар. Перейдіть на Майстер або Крамар — і ліміт збільшиться. Кабінет продавця → кнопка «Upgrade» → оберіть пакет. Оплата через браузер, займе 2 хвилини.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Хочу продавати оптом — є така можливість? <span>+</span></div>
+      <div class="faq-a">Так! В оголошенні можна вказати мінімальну кількість для замовлення і оптову ціну. Для серйозного оптового бізнесу рекомендуємо пакет Крамар або Купець — там є безнал з податковою накладною для B2B покупців.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Сусід бачить мій товар а я в іншому місті не бачу. Чому так? <span>+</span></div>
+      <div class="faq-a">Все правильно працює! Базар показує товари з урахуванням геолокації — спочатку те що поруч. Ваш сусід бачить вас бо ви поруч. З іншого міста ваш товар теж видно — але трохи нижче в стрічці. Щоб вас бачили по всій Україні — підключіть GEO-пакет в рекламних налаштуваннях.</div>
+    </div>
+  </div>
+
+  <!-- ФОРМА -->
   <div class="form-wrap">
     <div class="form-title">Напиши нам</div>
     <div class="form-sub">Не знайшли відповідь? Опишіть проблему і ми допоможемо.</div>
@@ -134,6 +199,7 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
         <option>Питання щодо оплати</option>
         <option>Проблема з доставкою</option>
         <option>Скарга на продавця або покупця</option>
+        <option>Спір — потрібна допомога</option>
         <option>Технічна проблема з додатком</option>
         <option>Запит на видалення акаунту</option>
         <option>Інше</option>
