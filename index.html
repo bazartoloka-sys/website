@@ -209,6 +209,80 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
   .tcard.wide{grid-column:auto}
   .istats{grid-template-columns:1fr 1fr}
 }
+
+/* ── PHONE MOCKUP ── */
+.phone-section{padding:60px 5% 0;text-align:center}
+.phone-wrap{margin:0 auto;position:relative;width:260px}
+.phone{width:260px;height:520px;background:linear-gradient(160deg,#1A1200,#0D0B07);border-radius:40px;border:2px solid rgba(245,200,66,.25);position:relative;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.7),0 0 60px rgba(245,200,66,.08),inset 0 1px 0 rgba(255,255,255,.05);margin:0 auto}
+.phone::before{content:'';position:absolute;top:12px;left:50%;transform:translateX(-50%);width:80px;height:6px;background:rgba(245,200,66,.3);border-radius:10px;z-index:10}
+.phone-screen{padding:32px 14px 14px;height:100%;display:flex;flex-direction:column;gap:8px}
+.screen-header{display:flex;align-items:center;justify-content:space-between;padding:0 4px}
+.screen-logo{font-family:'Unbounded',sans-serif;font-size:16px;font-weight:900;color:var(--amber);letter-spacing:-.5px}
+.screen-icons{display:flex;gap:6px}
+.sdot{width:8px;height:8px;border-radius:50%;background:var(--amber);opacity:.6}
+.ai-search{background:rgba(46,204,142,.08);border:1px solid rgba(46,204,142,.2);border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:8px}
+.ai-icon{color:var(--green);font-size:14px}
+.ai-text{font-size:10px;color:var(--cream2);flex:1}
+.ai-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 1.5s infinite}
+.video-card{background:linear-gradient(135deg,#1A2A1A,#0A1A0A);border-radius:16px;height:200px;position:relative;overflow:hidden;border:1px solid rgba(46,204,142,.2);flex-shrink:0}
+.video-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.8))}
+.video-bg{position:absolute;inset:0;background:radial-gradient(circle at 30% 40%,rgba(46,204,142,.15) 0%,transparent 50%),radial-gradient(circle at 70% 60%,rgba(232,160,48,.1) 0%,transparent 50%)}
+.play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:44px;height:44px;background:rgba(232,160,48,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;animation:playPulse 2s infinite}
+@keyframes playPulse{0%,100%{box-shadow:0 0 0 0 rgba(232,160,48,.4)}50%{box-shadow:0 0 0 12px rgba(232,160,48,0)}}
+.video-labels{position:absolute;right:8px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;align-items:center}
+.video-action{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:9px;color:var(--cream)}
+.video-action-icon{width:28px;height:28px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
+.video-info{position:absolute;bottom:8px;left:8px;right:48px}
+.video-title{font-size:11px;font-weight:700;color:#fff;line-height:1.3}
+.video-price{font-family:'Unbounded',sans-serif;font-size:13px;color:var(--amber);font-weight:700;margin-top:2px}
+.tiktok-badge{position:absolute;top:8px;left:8px;background:var(--amber);color:#000;font-size:8px;font-weight:800;padding:3px 8px;border-radius:6px;letter-spacing:.5px}
+.rating-card{background:rgba(245,230,200,.04);border:1px solid rgba(245,230,200,.08);border-radius:12px;padding:8px 10px;display:flex;align-items:center;gap:8px}
+.avatar{font-size:24px;flex-shrink:0}
+.rating-info{flex:1}
+.rating-name{font-size:10px;font-weight:700;color:var(--cream)}
+.stars{font-size:10px;color:var(--amber)}
+.rating-badge{background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:900;padding:4px 8px;border-radius:8px}
+.shield-row{display:flex;gap:6px}
+.shield-chip{background:rgba(46,204,142,.08);border:1px solid rgba(46,204,142,.15);border-radius:8px;padding:5px 8px;font-size:9px;color:var(--green);font-weight:700;display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
+.float-chip{position:absolute;background:rgba(26,15,8,.95);border:1px solid rgba(245,230,200,.12);border-radius:100px;padding:5px 12px;font-size:10px;font-weight:700;color:var(--cream2);white-space:nowrap;z-index:10}
+.float-chip.left{left:-110px}
+.float-chip.right{right:-110px}
+
+/* ── 10 FEATURES ── */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:32px}
+.feat-card{background:var(--clay2);border:1px solid var(--border);border-radius:20px;padding:24px 20px;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+.feat-card:hover{transform:translateY(-3px)}
+.feat-card.green{border-color:rgba(46,204,142,.2)}
+.feat-card.red{border-color:rgba(226,75,74,.2)}
+.feat-card.blue{border-color:rgba(52,152,219,.2)}
+.feat-card.large{grid-column:1/-1}
+.feat-glow{position:absolute;width:120px;height:120px;border-radius:50%;filter:blur(40px);opacity:.15;top:-30px;right:-30px;background:var(--amber);pointer-events:none}
+.feat-card.green .feat-glow{background:var(--green)}
+.feat-card.red .feat-glow{background:#E74C3C}
+.feat-card.blue .feat-glow{background:#3498DB}
+.feat-number{font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--cream3);letter-spacing:2px;margin-bottom:10px}
+.feat-icon{font-size:32px;display:block;margin-bottom:10px}
+.feat-title{font-family:'Unbounded',sans-serif;font-size:15px;font-weight:700;color:var(--cream);margin-bottom:8px;line-height:1.3}
+.feat-desc{font-size:13px;color:var(--cream2);line-height:1.65}
+.feat-tag{display:inline-block;margin-top:12px;background:rgba(245,230,200,.06);border:1px solid rgba(245,230,200,.1);border-radius:100px;padding:3px 12px;font-size:10px;font-weight:700;color:var(--cream3);letter-spacing:.5px}
+.feat-card.green .feat-tag{background:rgba(46,204,142,.08);border-color:rgba(46,204,142,.2);color:var(--green)}
+.feat-card.red .feat-tag{background:rgba(226,75,74,.08);border-color:rgba(226,75,74,.2);color:#E74C3C}
+.feat-card.blue .feat-tag{background:rgba(52,152,219,.08);border-color:rgba(52,152,219,.2);color:#3498DB}
+.ai-lines{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.ai-line{height:4px;background:linear-gradient(90deg,rgba(0,212,255,.3),transparent);border-radius:4px;animation:aiScan 2s infinite}
+.ai-line:nth-child(2){animation-delay:.3s;width:80%}
+.ai-line:nth-child(3){animation-delay:.6s;width:60%}
+.ai-line:nth-child(4){animation-delay:.9s;width:40%}
+@keyframes aiScan{0%{opacity:.3}50%{opacity:1}100%{opacity:.3}}
+.feat-visual{float:right;margin-left:16px}
+
+/* ── STATS ROW ── */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:32px}
+.stat-box{background:var(--clay2);border:1px solid var(--border);border-radius:16px;padding:20px 14px;text-align:center}
+.stat-num{font-family:'Unbounded',sans-serif;font-size:28px;font-weight:900;color:var(--amber)}
+.stat-label{font-size:11px;color:var(--cream3);margin-top:6px;letter-spacing:.3px}
+@media(max-width:600px){.float-chip{display:none}.stats-row{grid-template-columns:1fr 1fr}.feat-card.large{grid-column:auto}}
+
 </style>
 </head>
 <body>
@@ -265,55 +339,136 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
   <div class="pill">4 способи оплати</div>
 </div>
 
-<div class="div"></div>
 
-<!-- ВІДЕО -->
-<div class="video-block" id="video">
-  <div class="vb-top">
-    <div class="vb-chip">🎬 ГОЛОВНА ФІЧА</div>
-    <h2 class="vb-title">Відео-оголошення<br><em>як у TikTok</em></h2>
-    <p class="vb-desc">Вертикальне відео 9:16, автоплей, свайп між товарами. Покупець бачить товар живим — не фото на білому фоні.</p>
-  </div>
-  <div class="vb-phones">
-    <div class="vphone"><div class="vp-screen" style="padding:0"><img src="screen_splash.png" alt="Вхід" style="width:100%;height:100%;object-fit:cover;border-radius:14px 14px 0 0"></div><div class="vp-bar"><span>🌸 Вхід</span></div></div>
-    <div class="vphone"><div class="vp-screen" style="padding:0"><img src="screen_feed.png" alt="Товар" style="width:100%;height:100%;object-fit:cover;border-radius:14px 14px 0 0"></div><div class="vp-bar"><span>🐐 Товар</span><span class="vp-price">300₴</span></div></div>
-    <div class="vphone"><div class="vp-screen" style="padding:0"><img src="screen_cabinet.png" alt="Кабінет" style="width:100%;height:100%;object-fit:cover;border-radius:14px 14px 0 0"></div><div class="vp-bar"><span>🏪 Кабінет</span></div></div>
-    <div class="vphone"><div class="vp-screen" style="padding:0"><img src="buy.png" alt="Покупець" style="width:100%;height:100%;object-fit:cover;border-radius:14px 14px 0 0"></div><div class="vp-bar"><span>🛍️ Покупець</span></div></div>
-    <div class="vphone"><div class="vp-screen" style="padding:0"><img src="screen_payment.png" alt="Оплата" style="width:100%;height:100%;object-fit:cover;border-radius:14px 14px 0 0"></div><div class="vp-bar"><span>💳 Оплата</span></div></div>
-  </div>
-</div>
-
-<!-- ПЛАТЕЖІ -->
-<div class="pay-sec" id="pay">
+<!-- PHONE MOCKUP -->
+<div class="phone-section">
   <div class="sh">
-    <div class="sl">Свобода вибору</div>
-    <h2 class="st">4 способи отримати оплату</h2>
-    <p class="ss">Продавець сам обирає — ніяких нав'язаних схем і прихованих комісій.</p>
+    <div class="sl">Як це виглядає</div>
+    <h2 class="st">Живий додаток</h2>
+    <p class="ss">TikTok-стрічка товарів, ШІ-пошук і захист — все в одному екрані</p>
   </div>
-  <div class="pay-grid">
-    <div class="pc hl"><span class="pc-icon">📦</span><div class="pc-name">NovaPay</div><span class="pc-tag ta">Готівка НП</span><p class="pc-desc">Покупець платить на відділенні. Гроші на картку за 1–3 дні.</p></div>
-    <div class="pc hl"><span class="pc-icon">💳</span><div class="pc-name">WayForPay</div><span class="pc-tag tg">Escrow-захист</span><p class="pc-desc">Карткою онлайн. Гроші заморожені до підтвердження доставки НП.</p></div>
-    <div class="pc"><span class="pc-icon">🏦</span><div class="pc-name">Monobank / IBAN</div><span class="pc-tag tb">B2B безнал</span><p class="pc-desc">Передплата на рахунок. З податковою накладною для юросіб.</p></div>
-    <div class="pc"><span class="pc-icon">🤝</span><div class="pc-name">Готівка при зустрічі</div><span class="pc-tag tgr">Локально</span><p class="pc-desc">Домовились — зустрілись. Без комісій для місцевих угод.</p></div>
+  <div class="phone-wrap">
+    <div class="float-chip left" style="top:60px">🛡 Захист 360°</div>
+    <div class="float-chip left" style="top:160px">⭐ Рейтинг ×2</div>
+    <div class="float-chip left" style="top:260px">🤖 ШІ Пошук</div>
+    <div class="float-chip right" style="top:60px">🎬 TikTok формат</div>
+    <div class="float-chip right" style="top:160px">🎓 Навчання</div>
+    <div class="float-chip right" style="top:260px">📢 Авто-реклама</div>
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="screen-header">
+          <div class="screen-logo">БАЗАР.</div>
+          <div class="screen-icons">
+            <div class="sdot"></div>
+            <div class="sdot" style="opacity:.4"></div>
+            <div class="sdot" style="opacity:.2"></div>
+          </div>
+        </div>
+        <div class="ai-search">
+          <div class="ai-icon">✦</div>
+          <div class="ai-text">ШІ пошук — просто напишіть...</div>
+          <div class="ai-dot"></div>
+        </div>
+        <div class="video-card">
+          <div class="video-bg"></div>
+          <div class="tiktok-badge">▶ ВІДЕО</div>
+          <div class="play-btn">▶</div>
+          <div class="video-labels">
+            <div class="video-action"><div class="video-action-icon">❤</div><span>2.4к</span></div>
+            <div class="video-action"><div class="video-action-icon">💬</div><span>89</span></div>
+            <div class="video-action"><div class="video-action-icon">↗</div><span>Share</span></div>
+          </div>
+          <div class="video-info">
+            <div class="video-title">Свіжі овочі з поля 🌿<br>Без хімії. Вінниця</div>
+            <div class="video-price">180 грн/кг</div>
+          </div>
+        </div>
+        <div class="rating-card">
+          <div class="avatar">👨‍🌾</div>
+          <div class="rating-info">
+            <div class="rating-name">Петро Коваленко</div>
+            <div class="stars">★★★★★ <span style="color:var(--cream3);font-size:9px">Продавець</span></div>
+          </div>
+          <div class="rating-badge">4.9</div>
+        </div>
+        <div class="shield-row">
+          <div class="shield-chip"><span>🛡</span>Захист</div>
+          <div class="shield-chip"><span>🔒</span>Дані схов.</div>
+          <div class="shield-chip"><span>✅</span>Верифік.</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="div"></div>
-
-<!-- ШІ -->
-<div class="ai-sec">
-  <div class="ai-head">
-    <div class="ai-ico">🤖</div>
-    <div class="ai-ttl">ШІ-перевірка кожного оголошення</div>
+<!-- СКРІНШОТИ -->
+<div style="padding:40px 5% 0;max-width:900px;margin:0 auto">
+  <div class="sh" style="text-align:center;margin-bottom:24px">
+    <div class="sl">Реальний додаток</div>
+    <h2 class="st">Скріншоти</h2>
   </div>
-  <div class="ai-badges">
-    <div class="ai-b"><div class="ai-b-ico">✅</div><div><div class="ai-b-t1">СПРАВЖНЄ</div><div class="ai-b-t2">Фото і відео пройшли перевірку оригінальності</div></div></div>
-    <div class="ai-b"><div class="ai-b-ico">💎</div><div><div class="ai-b-t1">УНІКАЛЬНЕ</div><div class="ai-b-t2">Такого товару більше немає на платформі</div></div></div>
+  <div style="display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:8px">
+    <div style="flex-shrink:0;width:160px;background:var(--clay2);border-radius:20px;border:1px solid rgba(232,160,48,.15);overflow:hidden">
+      <img src="screen_splash.png" alt="Вхід" style="width:100%;display:block">
+      <div style="padding:6px 10px;font-size:10px;color:var(--cream2);font-weight:700">🌸 Вхід</div>
+    </div>
+    <div style="flex-shrink:0;width:160px;background:var(--clay2);border-radius:20px;border:1px solid rgba(232,160,48,.15);overflow:hidden">
+      <img src="screen_cabinet.png" alt="Кабінет" style="width:100%;display:block">
+      <div style="padding:6px 10px;font-size:10px;color:var(--cream2);font-weight:700">🏪 Кабінет продавця</div>
+    </div>
+    <div style="flex-shrink:0;width:160px;background:var(--clay2);border-radius:20px;border:1px solid rgba(232,160,48,.15);overflow:hidden">
+      <img src="screen_feed.png" alt="Товар" style="width:100%;display:block">
+      <div style="padding:6px 10px;font-size:10px;color:var(--cream2);font-weight:700">🐐 Екран товару</div>
+    </div>
+    <div style="flex-shrink:0;width:160px;background:var(--clay2);border-radius:20px;border:1px solid rgba(232,160,48,.15);overflow:hidden">
+      <img src="buy.png" alt="Покупець" style="width:100%;display:block">
+      <div style="padding:6px 10px;font-size:10px;color:var(--cream2);font-weight:700">🛍️ Кабінет покупця</div>
+    </div>
+    <div style="flex-shrink:0;width:160px;background:var(--clay2);border-radius:20px;border:1px solid rgba(232,160,48,.15);overflow:hidden">
+      <img src="screen_payment.png" alt="Оплата" style="width:100%;display:block">
+      <div style="padding:6px 10px;font-size:10px;color:var(--cream2);font-weight:700">💳 Способи оплати</div>
+    </div>
+    <div style="flex-shrink:0;width:160px;background:var(--clay2);border-radius:20px;border:1px solid rgba(232,160,48,.15);overflow:hidden">
+      <img src="accounts.png" alt="Рахунки" style="width:100%;display:block">
+      <div style="padding:6px 10px;font-size:10px;color:var(--cream2);font-weight:700">🏦 Рахунки виплат</div>
+    </div>
   </div>
-  <p class="ai-note">Claude AI аналізує медіа при кожному завантаженні. Дублікати і підозрілий контент позначаються автоматично — покупець завжди бачить реальний товар.</p>
 </div>
 
-<!-- БЕЗПЕКА -->
+<div class="div" style="margin-top:60px"></div>
+
+<!-- 10 ФІШОК -->
+<div class="features" id="video" style="padding:60px 5% 0">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="sh" style="text-align:center;margin-bottom:32px">
+      <div class="sl">Наші фішки</div>
+      <h2 class="st">10 причин обрати<br>Базар Толока</h2>
+      <p class="ss" style="margin:0 auto">Ми побудували маркетплейс де кожна деталь працює на довіру між людьми</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card"><div class="feat-glow"></div><div class="feat-number">01</div><span class="feat-icon">⭐</span><div class="feat-title">Двосторонній рейтинг</div><div class="feat-desc">Оцінюють обидва — і покупець продавця, і продавець покупця. Чесна репутація кожного учасника.</div><span class="feat-tag">Довіра</span></div>
+      <div class="feat-card"><div class="feat-glow"></div><div class="feat-number">02</div><span class="feat-icon">🎬</span><div class="feat-title">Відео-оголошення</div><div class="feat-desc">Знімай товар на відео прямо в застосунку. Реальний продукт — жива увага. Ніяких постановочних фото.</div><span class="feat-tag">Контент</span></div>
+      <div class="feat-card green"><div class="feat-glow"></div><div class="feat-number">03</div><span class="feat-icon">📲</span><div class="feat-title">Формат TikTok</div><div class="feat-desc">Вертикальна стрічка відео-оголошень. Гортай — купуй. Алгоритм підбирає саме те що тебе цікавить.</div><span class="feat-tag">Вірусність</span></div>
+      <div class="feat-card red"><div class="feat-glow"></div><div class="feat-number">04</div><span class="feat-icon">🚫</span><div class="feat-title">Захист від шахрайства</div><div class="feat-desc">ШІ аналізує поведінку, виявляє підозрілі схеми. Верифікація через Google. Ескроу-платежі. Боти заблоковані.</div><span class="feat-tag">Безпека</span></div>
+      <div class="feat-card blue"><div class="feat-glow"></div><div class="feat-number">05</div><span class="feat-icon">🔒</span><div class="feat-title">Приватність даних</div><div class="feat-desc">Продавці не бачать адресу, телефон чи особисті дані покупців. Анонімний контакт через захищений чат.</div><span class="feat-tag">Конфіденційно</span></div>
+      <div class="feat-card"><div class="feat-glow"></div><div class="feat-number">06</div><span class="feat-icon">📦</span><div class="feat-title">Розумна картка товару</div><div class="feat-desc">Відео, рейтинг продавця, захист угоди, схожі пропозиції від ШІ, аналіз ціни по ринку — все на одному екрані.</div><span class="feat-tag">UX</span></div>
+      <div class="feat-card green"><div class="feat-glow"></div><div class="feat-number">07</div><span class="feat-icon">🎓</span><div class="feat-title">Сторінка навчання</div><div class="feat-desc">Курси для продавців: як робити відео, як встановлювати ціни, як отримувати 5 зірок. Прямо в застосунку.</div><span class="feat-tag">Зростання</span></div>
+      <div class="feat-card"><div class="feat-glow"></div><div class="feat-number">08</div><span class="feat-icon">🤝</span><div class="feat-title">Захист всіх сторін</div><div class="feat-desc">Ескроу-рахунок тримає гроші до підтвердження. Покупець отримав — продавець отримав оплату.</div><span class="feat-tag">Гарантія</span></div>
+      <div class="feat-card blue"><div class="feat-glow"></div><div class="feat-number">09</div><span class="feat-icon">📢</span><div class="feat-title">Просте керування рекламою</div><div class="feat-desc">3 кнопки — і твоє оголошення в топі. Авто-бюджет, авто-аудиторія, авто-час показу. ШІ оптимізує сам.</div><span class="feat-tag">Маркетинг</span></div>
+      <div class="feat-card green"><div class="feat-glow"></div><div class="feat-number">10</div><span class="feat-icon">📱</span><div class="feat-title">Дані на вашому пристрої</div><div class="feat-desc">Особисті дані, чати та кеш зберігаються локально на телефоні. Ніякого злиття в хмару без вашого відома.</div><span class="feat-tag">Приватність</span></div>
+      <div class="feat-card blue large"><div class="feat-glow" style="background:#00D4FF;width:200px;height:200px;top:-60px;right:-60px"></div><div class="feat-visual"><div style="font-size:24px;margin-bottom:6px">✦</div><div class="ai-lines"><div class="ai-line"></div><div class="ai-line"></div><div class="ai-line"></div><div class="ai-line"></div></div></div><div><div class="feat-number">11</div><div class="feat-title" style="font-size:18px">Ультра-сучасний ШІ пошук</div><div class="feat-desc">Семантичний пошук розуміє природну мову. "Хочу солодкі яблука з Карпат" — і ось вони. ШІ аналізує попит і підбирає рекламу автоматично.</div><span class="feat-tag" style="margin-top:16px">ШІ Клауд</span></div></div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-num">11</div><div class="stat-label">Унікальних фішок</div></div>
+      <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Посередників</div></div>
+      <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Українські дані</div></div>
+      <div class="stat-box"><div class="stat-num">∞</div><div class="stat-label">Довіра громади</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="div" style="margin-top:60px"></div>
+
 <div class="trust-sec">
   <div class="sh">
     <div class="sl">Довіра і захист</div>
