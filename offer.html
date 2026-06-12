@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8"><link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Публічна оферта — Базар Толока</title>
+<meta name="description" content="Публічна оферта Базар Толока. Версія 2.0, 12 червня 2026. Умови надання послуг маркетплейсу для ФОП та юридичних осіб.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F5X711EZGE');
+</script>
 <style>
 :root{--clay:#1A0F08;--clay2:#261508;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--aborder:rgba(232,160,48,.22)}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -16,28 +26,38 @@ a{color:var(--green)}
 .nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
 .nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream);text-decoration:none}
 .nlogo b{color:var(--amber)}
-.nav-back{font-size:13px;color:var(--cream2);text-decoration:none}
+.nav-back{font-size:13px;color:var(--cream2);text-decoration:none;transition:color .2s}
 .nav-back:hover{color:var(--green)}
 .doc{max-width:780px;margin:0 auto;padding:56px 5% 80px}
 .doc-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:10px}
 h1{font-family:'Unbounded',sans-serif;font-size:clamp(22px,4vw,34px);font-weight:900;margin-bottom:8px;line-height:1.15}
+.doc-meta{font-size:12px;color:var(--cream3);margin-bottom:8px}
 .doc-date{font-size:12px;color:var(--cream3);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--border)}
 .sec{margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--border)}
 .sec:last-child{border-bottom:none}
-h2{font-family:'Unbounded',sans-serif;font-size:16px;font-weight:700;color:var(--amber);margin-bottom:12px}
-p{font-size:14px;color:var(--cream2);margin-bottom:10px;line-height:1.7}
-ul{margin:8px 0 12px 20px}
-li{font-size:14px;color:var(--cream2);margin-bottom:5px;line-height:1.65}
+h2{font-family:'Unbounded',sans-serif;font-size:15px;font-weight:700;color:var(--amber);margin-bottom:14px}
+p{font-size:14px;color:var(--cream2);margin-bottom:10px;line-height:1.75}
+p strong{color:var(--cream)}
+ul,ol{margin:8px 0 12px 20px}
+li{font-size:14px;color:var(--cream2);margin-bottom:6px;line-height:1.65}
+li strong{color:var(--cream)}
 .hl{background:rgba(232,160,48,.08);border-left:3px solid var(--amber);border-radius:0 8px 8px 0;padding:14px 18px;margin:14px 0}
 .hl p{margin:0;font-size:13px;color:var(--amber)}
+.hl.green{background:rgba(46,204,142,.08);border-left-color:var(--green)}
+.hl.green p{color:var(--green)}
 .tariffs{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
-.tariffs th{background:var(--clay2);color:var(--amber);font-weight:700;padding:10px 12px;text-align:left;border-bottom:1px solid var(--aborder)}
-.tariffs td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--cream2)}
+.tariffs th{background:var(--clay2);color:var(--amber);font-weight:700;padding:10px 12px;text-align:left;border-bottom:1px solid var(--aborder);font-family:'Unbounded',sans-serif;font-size:11px}
+.tariffs td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--cream2);vertical-align:top;line-height:1.6}
 .tariffs tr:last-child td{border-bottom:none}
 .tariffs td:first-child{color:var(--cream);font-weight:700}
+.tariffs td small{display:block;font-size:11px;color:var(--cream3);margin-top:3px}
+.sign-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
+.sign-table td{padding:12px;border-bottom:1px solid var(--border);color:var(--cream2);vertical-align:top}
+.sign-table td:first-child{color:var(--cream);font-weight:700;width:40%}
+.sign-table tr:last-child td{border-bottom:none}
 footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
 .fl{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
-.fl a{font-size:12px;color:var(--cream3);text-decoration:none}
+.fl a{font-size:12px;color:var(--cream3);text-decoration:none;transition:color .2s}
 .fl a:hover{color:var(--green)}
 .fc{font-size:11px;color:var(--cream4)}
 </style>
@@ -47,67 +67,245 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
   <a href="/" class="nlogo">БАЗАР<b>.</b></a>
   <a href="/" class="nav-back">← Головна</a>
 </nav>
+
 <div class="doc">
   <div class="doc-label">Юридичний документ</div>
   <h1>Публічна оферта</h1>
-  <p class="doc-date">Набирає чинності: 1 червня 2026 · Версія 1.0</p>
-  <div class="hl"><p>Цей документ є публічною офертою згідно ст. 633 Цивільного кодексу України. Оплата тарифного пакету означає повне і беззастережне прийняття умов оферти.</p></div>
+  <div class="doc-meta">Версія 2.0 · B2B-маркетплейс</div>
+  <p class="doc-date">Набирає чинності: 12 червня 2026 · Замінює версію 1.0 від 1 червня 2026</p>
 
-  <div class="sec"><h2>1. Сторони договору</h2>
-    <p><strong>Виконавець:</strong> ФОП <strong>ФОП Торкотюк Оксана Петрівна</strong>, РНОКПП: <strong>2915615688</strong>, адреса: <strong>м. Київ, 02088</strong>, email: <a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></p>
-    <p><strong>Замовник:</strong> фізична або юридична особа, що здійснила акцепт оферти шляхом оплати послуги.</p>
+  <div class="hl"><p>Цей документ є публічною офертою згідно ст. 633 Цивільного кодексу України. Оплата тарифного пакету або реєстрація як продавця означає повне і беззастережне прийняття умов оферти.</p></div>
+
+  <!-- 1 -->
+  <div class="sec">
+    <h2>1. Сторони договору</h2>
+    <p><strong>Виконавець:</strong> ФОП Торкотюк Оксана Петрівна, РНОКПП: 2915615688, адреса: м. Київ, 02088, email: <a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></p>
+    <p><strong>Замовник:</strong> Фізична особа-підприємець (ФОП) або юридична особа, зареєстрована в Україні, що пройшла верифікацію через державний реєстр та здійснила акцепт оферти.</p>
+    <div class="hl">
+      <p>⚖️ Платформа працює виключно з суб'єктами господарювання відповідно до закону № 15111-д. Реєстрація фізичних осіб без статусу ФОП як продавців не передбачена.</p>
+    </div>
   </div>
 
-  <div class="sec"><h2>2. Предмет договору</h2>
-    <p>Виконавець надає Замовнику доступ до платних функцій маркетплейсу «Базар Толока» — розміщення оголошень понад безкоштовний ліміт, розширені функції профілю, пріоритетне розміщення (далі — «Послуги»).</p>
+  <!-- 2 -->
+  <div class="sec">
+    <h2>2. Предмет договору</h2>
+    <p>Виконавець надає Замовнику доступ до платних функцій маркетплейсу «Базар Толока» — розміщення оголошень відповідно до обраного тарифного пакету, розширені функції профілю продавця, пріоритетне розміщення (далі — «Послуги»).</p>
+    <p>Платформа є B2B-маркетплейсом для верифікованих виробників, ФОП та юридичних осіб. Комісія з угод між продавцями і покупцями — <strong>0% назавжди</strong>, закріплено цим договором.</p>
   </div>
 
-  <div class="sec"><h2>3. Тарифи та вартість</h2>
+  <!-- 3 -->
+  <div class="sec">
+    <h2>3. Верифікація продавця</h2>
+    <p>Для отримання статусу продавця Замовник зобов'язаний пройти верифікацію:</p>
+    <ul>
+      <li>Ввести код ЄДРПОУ (юрособа, 8 цифр) або ІПН ФОП (10 цифр)</li>
+      <li>Підтвердити відповідність даних державному реєстру (opendatabot / data.gov.ua)</li>
+      <li>Вказати IBAN бізнес-рахунку для виплат</li>
+      <li>Ознайомитись і прийняти умови цієї оферти (електронна згода)</li>
+    </ul>
+    <p>Верифікація здійснюється автоматично через державні реєстри. Платформа залишає за собою право відмовити у реєстрації у разі невідповідності статусу (припинена діяльність, банкрутство тощо).</p>
+    <div class="hl green">
+      <p>✅ Бейдж «Перевірений ФОП / ЮО, ЄДРПОУ XXXXXXXX» відображається у профілі кожного продавця — це підвищує довіру покупців.</p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="sec">
+    <h2>4. Тарифні пакети</h2>
     <table class="tariffs">
-      <thead><tr><th>Пакет</th><th>Ліміт оголошень</th><th>Вартість</th><th>Термін</th></tr></thead>
+      <thead>
+        <tr>
+          <th>Пакет</th>
+          <th>Оголошень</th>
+          <th>Користувачів</th>
+          <th>Вартість</th>
+          <th>Термін</th>
+        </tr>
+      </thead>
       <tbody>
-        <tr><td>Господар</td><td>10 оголошень</td><td>Безкоштовно</td><td>Безстроково</td></tr>
-        <tr><td>Майстер</td><td>30 оголошень</td><td><strong>[ЦІНА]</strong> грн</td><td>30 днів</td></tr>
-        <tr><td>Крамар</td><td>100 оголошень</td><td><strong>[ЦІНА]</strong> грн</td><td>30 днів</td></tr>
-        <tr><td>Купець</td><td>Необмежено</td><td><strong>[ЦІНА]</strong> грн</td><td>30 днів</td></tr>
+        <tr>
+          <td>🌾 Господар<small>Сільгосп продукція</small></td>
+          <td>10</td>
+          <td>1</td>
+          <td>0 ₴ → 150 ₴/міс<small>1 міс безкоштовно</small></td>
+          <td>Щомісяця</td>
+        </tr>
+        <tr>
+          <td>🎨 Майстер<small>Хендмейд, ремесло</small></td>
+          <td>100</td>
+          <td>1</td>
+          <td>249 ₴/міс</td>
+          <td>30 днів</td>
+        </tr>
+        <tr>
+          <td>🏪 Крамар<small>ФОП, малий бізнес</small></td>
+          <td>1 000</td>
+          <td>1</td>
+          <td>299 ₴/міс</td>
+          <td>30 днів</td>
+        </tr>
+        <tr>
+          <td>🏢 Купець<small>ТОВ, середній і великий бізнес</small></td>
+          <td>10 000</td>
+          <td>до 10</td>
+          <td>від 2 000 ₴/міс<small>+1 000 ₴ за кожне дод. місце</small></td>
+          <td>30 днів</td>
+        </tr>
       </tbody>
     </table>
-    <p>Актуальні ціни завжди відображаються на сторінці <a href="/upgrade">bazar.in.ua/upgrade</a> та в додатку.</p>
+    <p>Актуальні ціни завжди відображаються на сторінці <a href="/upgrade">bazar.in.ua/upgrade</a> та в додатку. Комісія з продажів — <strong>0% для всіх тарифів назавжди</strong>.</p>
+
+    <h2 style="margin-top:24px">4.1. Тариф «Купець» — додаткові місця</h2>
+    <p>Базовий акаунт власника — <strong>2 000 ₴/міс</strong>. Кожне додаткове робоче місце — <strong>+1 000 ₴/міс</strong>. Робоче місце прив'язується до офіційно працевлаштованого співробітника (ІПН + трудовий договір).</p>
+    <ul>
+      <li>Команда 3 особи — 4 000 ₴/міс</li>
+      <li>Команда 5 осіб — 6 000 ₴/міс</li>
+      <li>Команда 10 осіб — 11 000 ₴/міс (максимум)</li>
+    </ul>
+
+    <h2 style="margin-top:24px">4.2. Акція «Ранній доступ»</h2>
+    <p>Діє для перших 2 000 продавців:</p>
+    <ul>
+      <li><strong>Хвиля 1 (перші 1 000):</strong> оплата до 1 серпня 2026 — 3 місяці у подарунок + кожні 6 оплачених місяців 1 місяць безкоштовно</li>
+      <li><strong>Хвиля 2 (наступні 1 000):</strong> оплата до 1 вересня 2026 — 1 місяць у подарунок + кожні 6 оплачених місяців 1 місяць безкоштовно</li>
+    </ul>
+    <p>Акція поширюється на всі тарифні пакети. Бонусні місяці нараховуються автоматично.</p>
   </div>
 
-  <div class="sec"><h2>4. Порядок оплати</h2>
-    <ul><li>Оплата здійснюється через платіжні системи Monobank Acquiring або WayForPay</li><li>Оплата вважається здійсненою з моменту отримання підтвердження від платіжної системи</li><li>Після оплати доступ до пакету надається автоматично протягом 5 хвилин</li><li>Підтвердження оплати надсилається на email або push-сповіщенням</li></ul>
+  <!-- 5 -->
+  <div class="sec">
+    <h2>5. Заборонені категорії товарів</h2>
+    <p>Відповідно до законодавства України (закон № 15111-д) на платформі забороняється розміщення оголошень про продаж:</p>
+    <ul>
+      <li>Алкогольних напоїв усіх категорій</li>
+      <li>Тютюнових виробів, електронних сигарет та рідин для них</li>
+      <li>Пального та нафтопродуктів</li>
+      <li>Товарів, обіг яких обмежений або заборонений законодавством України</li>
+    </ul>
+    <p>При спробі розмістити оголошення в забороненій категорії система автоматично блокує публікацію з поясненням причини.</p>
   </div>
 
-  <div class="sec"><h2>5. Права та обов'язки сторін</h2>
+  <!-- 6 -->
+  <div class="sec">
+    <h2>6. Порядок оплати</h2>
+    <ul>
+      <li>Оплата здійснюється через платіжні системи Monobank Acquiring або WayForPay</li>
+      <li>Оплата здійснюється через захищений сайт bazar.in.ua — без Google Play</li>
+      <li>Оплата вважається здійсненою з моменту отримання підтвердження від платіжної системи</li>
+      <li>Після оплати доступ до пакету надається автоматично протягом 5 хвилин</li>
+      <li>Підтвердження надсилається на email або push-сповіщенням у додатку</li>
+      <li>Відео-оголошення включені у всі тарифи без додаткової плати</li>
+      <li>Перше оголошення — безкоштовне для кожного нового продавця</li>
+    </ul>
+  </div>
+
+  <!-- 7 -->
+  <div class="sec">
+    <h2>7. Права та обов'язки сторін</h2>
     <p><strong>Виконавець зобов'язується:</strong></p>
-    <ul><li>Надати доступ до оплаченого пакету протягом 5 хвилин після підтвердження оплати</li><li>Забезпечити доступність сервісу не менше 95% часу на місяць</li><li>Повідомляти про планові технічні роботи за 24 години</li></ul>
+    <ul>
+      <li>Надати доступ до оплаченого пакету протягом 5 хвилин після підтвердження оплати</li>
+      <li>Забезпечити доступність сервісу не менше 95% часу на місяць</li>
+      <li>Повідомляти про планові технічні роботи за 24 години</li>
+      <li>Зберігати комісію 0% з угод для всіх діючих Замовників назавжди</li>
+      <li>Зберігати конфіденційність даних Замовника відповідно до Політики конфіденційності</li>
+    </ul>
     <p><strong>Замовник зобов'язується:</strong></p>
-    <ul><li>Дотримуватись Умов використання сервісу</li><li>Розміщувати лише правомірний контент</li><li>Не передавати доступ до акаунту третім особам</li></ul>
+    <ul>
+      <li>Підтримувати актуальний статус ФОП або юрособи протягом усього терміну співпраці</li>
+      <li>Негайно повідомляти платформу про зміну або припинення підприємницького статусу</li>
+      <li>Дотримуватись Умов використання сервісу та законодавства України</li>
+      <li>Розміщувати лише правомірний контент і достовірну інформацію про товари</li>
+      <li>Не передавати доступ до акаунту третім особам (для Купця — у межах ліміту робочих місць з підтвердженим ІПН)</li>
+    </ul>
   </div>
 
-  <div class="sec"><h2>6. Повернення коштів</h2>
-    <ul><li>Повернення за невикористаний залишок тарифу не здійснюється</li><li>У разі технічної неможливості надання послуги з вини Виконавця — повне повернення</li><li>Запит на повернення надсилати на <a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a> протягом 14 днів з дати оплати</li></ul>
+  <!-- 8 -->
+  <div class="sec">
+    <h2>8. Призупинення та блокування акаунту</h2>
+    <p>Платформа має право призупинити або заблокувати акаунт продавця у разі:</p>
+    <ul>
+      <li>Втрати статусу ФОП або юрособи (припинення, банкрутство)</li>
+      <li>Розміщення заборонених категорій товарів</li>
+      <li>Порушення Умов використання сервісу</li>
+      <li>Надання недостовірних даних при верифікації</li>
+      <li>Систематичних скарг покупців, підтверджених платформою</li>
+    </ul>
+    <p>При автоматичному виявленні втрати статусу ФОП через державний реєстр — всі активні оголошення продавця знімаються з публікації до відновлення статусу або надання пояснень.</p>
   </div>
 
-  <div class="sec"><h2>7. Форс-мажор</h2>
-    <p>Сторони звільняються від відповідальності за невиконання зобов'язань внаслідок обставин непереборної сили (воєнний стан, стихійні лиха, рішення державних органів тощо).</p>
+  <!-- 9 -->
+  <div class="sec">
+    <h2>9. Повернення коштів</h2>
+    <ul>
+      <li>Скасування підписки — будь-якої миті без штрафів через кабінет продавця</li>
+      <li>Повернення за невикористаний залишок тарифу після скасування — не здійснюється</li>
+      <li>У разі технічної неможливості надання послуги з вини Виконавця — повне повернення протягом 5 робочих днів</li>
+      <li>Запит на повернення надсилати на <a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a> протягом 14 днів з дати оплати</li>
+    </ul>
   </div>
 
-  <div class="sec"><h2>8. Реквізити Виконавця</h2>
-    <p>ФОП <strong>ФОП Торкотюк Оксана Петрівна</strong><br>
-    РНОКПП: <strong>2915615688</strong><br>
-    Адреса: <strong>м. Київ, 02088</strong><br>
-    IBAN: <strong>UA23 3220 0100 0002 6004 3800 0848 8</strong><br>
-    Банк: <strong>Універсал Банк (Monobank)</strong><br>
-    МФО: <strong>322001</strong><br>
-    ЄДРПОУ Банку: <strong>21133352</strong><br>
-    Email: <a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></p>
+  <!-- 10 -->
+  <div class="sec">
+    <h2>10. Форс-мажор</h2>
+    <p>Сторони звільняються від відповідальності за невиконання зобов'язань внаслідок обставин непереборної сили: воєнний стан, стихійні лиха, рішення державних органів, збої платіжних систем та інші обставини поза контролем сторін. Про настання форс-мажору Виконавець повідомляє Замовника протягом 3 робочих днів.</p>
   </div>
+
+  <!-- 11 -->
+  <div class="sec">
+    <h2>11. Відповідність законодавству</h2>
+    <p>Платформа зареєстрована як <strong>звільнений оператор</strong> цифрової платформи відповідно до закону України № 15111-д (набирає чинності 01.01.2027). Базар Толока працює виключно з виключеними продавцями (ФОП та юрособи), що звільняє платформу від функцій податкового агента щодо фізичних осіб.</p>
+    <p>Всі продавці є самостійними платниками податків і несуть повну відповідальність за декларування власних доходів.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="sec">
+    <h2>12. Реквізити Виконавця</h2>
+    <p>
+      ФОП <strong>Торкотюк Оксана Петрівна</strong><br>
+      РНОКПП: <strong>2915615688</strong><br>
+      Адреса: <strong>м. Київ, 02088</strong><br>
+      IBAN: <strong>UA23 3220 0100 0002 6004 3800 0848 8</strong><br>
+      Банк: <strong>Універсал Банк (Monobank)</strong><br>
+      МФО: <strong>322001</strong><br>
+      ЄДРПОУ Банку: <strong>21133352</strong><br>
+      Email: <a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a>
+    </p>
+  </div>
+
+  <!-- ПІДПИСИ -->
+  <div class="sec">
+    <h2>Підписи сторін</h2>
+    <table class="sign-table">
+      <tr>
+        <td>Засновник · ФОП Торкотюк Оксана Петрівна</td>
+        <td>________________________________ · ___.___. 2026</td>
+      </tr>
+      <tr>
+        <td>Co-засновник · Влад</td>
+        <td>________________________________ · ___.___. 2026</td>
+      </tr>
+      <tr>
+        <td>Юридичний консультант (TBD)</td>
+        <td>________________________________ · ___.___. 2026</td>
+      </tr>
+    </table>
+    <p style="margin-top:16px;font-size:12px;color:var(--cream3)">bazar.in.ua · Версія 2.0 · 12 червня 2026 · Конфіденційно до публічного релізу</p>
+  </div>
+
 </div>
 
 <footer>
-  <div class="fl"><a href="/">Головна</a><a href="/privacy">Конфіденційність</a><a href="/terms">Умови</a><a href="/offer">Оферта</a><a href="/support">Підтримка</a></div>
+  <div class="fl">
+    <a href="/">Головна</a>
+    <a href="/blog">Блог</a>
+    <a href="/upgrade">Тарифи</a>
+    <a href="/privacy">Конфіденційність</a>
+    <a href="/terms">Умови</a>
+    <a href="/offer">Оферта</a>
+    <a href="/support">Підтримка</a>
+  </div>
   <div class="fc">© 2026 Базар Толока 🇺🇦</div>
 </footer>
-</body></html>
+</body>
+</html>

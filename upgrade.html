@@ -1,205 +1,454 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8"><link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Тарифи — Базар Толока</title>
+<meta name="description" content="Тарифні плани Базар Толока. Комісія 0% назавжди. Господар, Майстер, Крамар, Купець — обери свій рівень.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F5X711EZGE');
+</script>
 <style>
-:root{--clay:#1A0F08;--clay2:#261508;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--aborder:rgba(232,160,48,.22);--gborder:rgba(46,204,142,.22)}
+:root{--clay:#1A0F08;--clay2:#261508;--clay3:#321C0A;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.22);--aborder:rgba(232,160,48,.22)}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
-a{color:var(--green);text-decoration:none}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none}
+
+/* NAV */
 .nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
 .nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
 .nlogo b{color:var(--amber)}
-.nav-back{font-size:13px;color:var(--cream2);transition:color .2s}
-.nav-back:hover{color:var(--green)}
-.wrap{max-width:900px;margin:0 auto;padding:56px 5% 80px}
-.page-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--amber);text-transform:uppercase;text-align:center;margin-bottom:12px}
-h1{font-family:'Unbounded',sans-serif;font-size:clamp(24px,4vw,38px);font-weight:900;text-align:center;margin-bottom:10px;line-height:1.1}
-.sub{font-size:15px;color:var(--cream2);text-align:center;margin-bottom:48px;line-height:1.6}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover{color:var(--green)}
+.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
 
-/* USER CONTEXT BANNER */
-.user-banner{background:var(--clay2);border:1px solid var(--gborder);border-radius:14px;padding:16px 20px;margin-bottom:36px;display:flex;align-items:center;gap:12px}
+/* HERO */
+.hero{padding:52px 5% 0;text-align:center}
+.hero-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(232,160,48,.1);border:1px solid var(--aborder);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--amber);margin-bottom:18px;letter-spacing:.5px}
+.hero h1{font-family:'Unbounded',sans-serif;font-size:clamp(28px,5vw,48px);font-weight:900;line-height:1.05;letter-spacing:-1px;margin-bottom:12px}
+.hero h1 span{color:var(--green)}
+.hero-sub{font-size:15px;color:var(--cream2);max-width:520px;margin:0 auto 40px;line-height:1.7}
+
+/* PROMO BANNER */
+.promo-banner{max-width:960px;margin:0 auto 48px;padding:0 5%}
+.promo-inner{background:linear-gradient(135deg,rgba(46,204,142,.08) 0%,rgba(232,160,48,.06) 100%);border:1px solid var(--gborder);border-radius:24px;padding:28px 32px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.promo-fire{font-size:48px;flex-shrink:0}
+.promo-text{flex:1;min-width:200px}
+.promo-text h2{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;color:var(--cream);margin-bottom:6px}
+.promo-text h2 span{color:var(--green)}
+.promo-waves{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.promo-wave{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.wave-badge{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;padding:4px 12px;border-radius:100px;white-space:nowrap}
+.wave-badge.amber{background:var(--amber)}
+.wave-text{font-size:13px;color:var(--cream2);line-height:1.5}
+.wave-text strong{color:var(--cream)}
+.promo-deadline{text-align:right;flex-shrink:0}
+.deadline-label{font-size:11px;color:var(--cream3);margin-bottom:4px}
+.deadline-date{font-family:'Unbounded',sans-serif;font-size:16px;font-weight:900;color:var(--amber)}
+.deadline-sub{font-size:11px;color:var(--cream3);margin-top:2px}
+
+/* USER BANNER */
+.user-banner{max-width:960px;margin:0 auto 24px;padding:0 5%}
+.ub-inner{background:var(--clay2);border:1px solid var(--gborder);border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:12px}
 .ub-icon{font-size:28px}
-.ub-text{flex:1}
 .ub-name{font-size:15px;font-weight:700;color:var(--cream)}
 .ub-plan{font-size:12px;color:var(--cream3);margin-top:2px}
 
-/* PLANS */
-.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:40px}
-.plan{background:var(--clay2);border:1px solid var(--border);border-radius:20px;padding:24px 18px;position:relative;transition:border-color .2s,transform .2s}
-.plan:hover{transform:translateY(-3px)}
+/* PLANS GRID */
+.plans-wrap{max-width:960px;margin:0 auto;padding:0 5% 16px}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+
+/* PLAN CARD */
+.plan{background:var(--clay2);border:1.5px solid var(--border);border-radius:24px;padding:28px 20px 22px;position:relative;transition:border-color .2s,transform .2s;display:flex;flex-direction:column}
+.plan:hover{transform:translateY(-4px);border-color:var(--aborder)}
 .plan.popular{border-color:var(--green);border-width:2px}
-.plan.current-plan{border-color:var(--amber)}
-.plan-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--green);color:#05200F;font-size:10px;font-weight:700;letter-spacing:1px;padding:4px 14px;border-radius:100px;white-space:nowrap}
-.plan-badge.curr{background:var(--amber);color:#1A0800}
-.plan-icon{font-size:36px;margin-bottom:12px;display:block;text-align:center}
-.plan-name{font-family:'Unbounded',sans-serif;font-size:16px;font-weight:900;color:var(--cream);text-align:center;margin-bottom:4px}
-.plan-price{font-family:'Unbounded',sans-serif;font-size:28px;font-weight:900;color:var(--amber);text-align:center;margin:12px 0 4px}
-.plan-price span{font-size:13px;font-weight:400;color:var(--cream3)}
-.plan-period{font-size:11px;color:var(--cream3);text-align:center;margin-bottom:16px}
-.plan-features{list-style:none;margin-bottom:20px}
-.plan-features li{font-size:12px;color:var(--cream2);padding:4px 0;padding-left:18px;position:relative;line-height:1.5}
+.plan.featured{border-color:var(--amber);border-width:2px}
+.plan-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-family:'Unbounded',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px;padding:4px 14px;border-radius:100px;white-space:nowrap}
+.plan-badge.green{background:var(--green);color:#05200F}
+.plan-badge.amber{background:var(--amber);color:#1A0800}
+.plan-icon{font-size:40px;text-align:center;display:block;margin-bottom:10px}
+.plan-name{font-family:'Unbounded',sans-serif;font-size:17px;font-weight:900;text-align:center;margin-bottom:4px}
+.plan-niche{font-size:11px;color:var(--cream3);text-align:center;margin-bottom:14px;line-height:1.5;font-style:italic}
+.plan-price-wrap{text-align:center;margin-bottom:6px}
+.plan-price{font-family:'Unbounded',sans-serif;font-size:32px;font-weight:900;color:var(--amber)}
+.plan-price sup{font-size:16px;vertical-align:super}
+.plan-price-note{font-size:11px;color:var(--cream3);text-align:center;margin-bottom:6px}
+.plan-trial{font-size:11px;color:var(--green);font-weight:700;text-align:center;margin-bottom:16px}
+.plan-features{list-style:none;flex:1;margin-bottom:20px;display:flex;flex-direction:column;gap:6px}
+.plan-features li{font-size:12px;color:var(--cream2);padding-left:18px;position:relative;line-height:1.5}
 .plan-features li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
-.btn-upgrade{display:block;width:100%;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;letter-spacing:.5px;padding:12px;border-radius:100px;border:none;cursor:pointer;text-align:center;transition:opacity .2s}
-.btn-upgrade:hover{opacity:.88}
-.btn-upgrade.disabled{background:var(--clay);color:var(--cream3);border:1px solid var(--border);cursor:default}
-.btn-upgrade.disabled:hover{opacity:1}
+.plan-features li.dim{color:var(--cream4)}
+.plan-features li.dim::before{content:'—';color:var(--cream4)}
+.plan-commission{font-family:'Unbounded',sans-serif;font-size:11px;color:var(--green);text-align:center;margin-bottom:16px;letter-spacing:.5px}
+.btn-plan{display:block;width:100%;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:.5px;padding:12px;border-radius:100px;border:none;cursor:pointer;text-align:center;transition:opacity .2s,transform .15s}
+.btn-plan.green{background:var(--green);color:#05200F}
+.btn-plan.green:hover{opacity:.88}
+.btn-plan.amber{background:var(--amber);color:#1A0800}
+.btn-plan.amber:hover{opacity:.88}
+.btn-plan.outline{background:transparent;color:var(--cream2);border:1px solid var(--border)}
+.btn-plan.outline:hover{border-color:var(--aborder);color:var(--cream)}
+.btn-plan.disabled{background:var(--clay);color:var(--cream4);border:1px solid var(--border);cursor:default}
 
-.note{font-size:12px;color:var(--cream3);text-align:center;margin-bottom:40px;line-height:1.7}
-.note a{color:var(--cream2)}
+/* KUPETS EXTRA */
+.kupets-extra{max-width:960px;margin:16px auto 0;padding:0 5%}
+.kupets-box{background:var(--clay2);border:1px solid var(--aborder);border-radius:20px;padding:24px 28px}
+.kupets-box h3{font-family:'Unbounded',sans-serif;font-size:15px;font-weight:700;color:var(--amber);margin-bottom:16px}
+.kupets-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.kupets-tier{background:var(--clay3);border:1px solid var(--border);border-radius:14px;padding:16px;text-align:center}
+.kt-size{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--cream);margin-bottom:6px}
+.kt-price{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;color:var(--amber);margin-bottom:4px}
+.kt-note{font-size:11px;color:var(--cream3);line-height:1.5}
+.kupets-note{font-size:12px;color:var(--cream3);margin-top:14px;line-height:1.6}
+.kupets-note strong{color:var(--cream2)}
 
-/* FEATURES TABLE */
-.feat-table{width:100%;border-collapse:collapse;margin-bottom:40px;font-size:13px}
-.feat-table th{padding:10px 12px;text-align:center;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;border-bottom:2px solid var(--aborder)}
-.feat-table th:first-child{text-align:left;color:var(--cream2)}
-.feat-table td{padding:10px 12px;text-align:center;border-bottom:1px solid var(--border);color:var(--cream2)}
-.feat-table td:first-child{text-align:left}
-.feat-table tr:last-child td{border-bottom:none}
-.check{color:var(--green);font-weight:700;font-size:16px}
-.cross{color:var(--cream4)}
+/* IRON RULES */
+.rules{max-width:960px;margin:40px auto 0;padding:0 5%}
+.rules-inner{background:var(--clay2);border:1px solid var(--border);border-radius:24px;padding:28px 32px}
+.rules-title{font-family:'Unbounded',sans-serif;font-size:14px;font-weight:700;color:var(--cream3);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;text-align:center}
+.rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.rule-item{display:flex;gap:12px;align-items:flex-start}
+.rule-icon{font-size:22px;flex-shrink:0}
+.rule-text strong{display:block;font-size:13px;color:var(--cream);margin-bottom:3px}
+.rule-text span{font-size:12px;color:var(--cream3);line-height:1.5}
 
-footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
-.fl{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
-.fl a{font-size:12px;color:var(--cream3)}
-.fl a:hover{color:var(--green)}
-.fc{font-size:11px;color:var(--cream4)}
+/* COMPARE LINK */
+.compare-cta{max-width:960px;margin:32px auto 0;padding:0 5%;text-align:center}
+.compare-cta a{display:inline-flex;align-items:center;gap:8px;background:var(--clay2);border:1px solid var(--border);border-radius:100px;padding:11px 24px;font-size:13px;font-weight:700;color:var(--cream2);transition:all .2s}
+.compare-cta a:hover{border-color:var(--aborder);color:var(--amber)}
 
-@media(max-width:600px){.plans{grid-template-columns:1fr 1fr}}
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:32px 5%;margin-top:60px}
+.foot-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;letter-spacing:3px}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.flinks a{font-size:12px;color:var(--cream3);transition:color .2s}
+.flinks a:hover{color:var(--cream)}
+.fcontact a{font-size:13px;color:var(--cream2)}
+.fcopy{font-size:11px;color:var(--cream4)}
+
+@media(max-width:760px){
+  .nlinks{display:none}
+  .plans{grid-template-columns:1fr 1fr}
+  .promo-inner{flex-direction:column}
+  .promo-deadline{text-align:left}
+  .kupets-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .plans{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
+
 <nav class="nav">
-  <div class="nlogo">БАЗАР<b>.</b></div>
-  <a href="/" class="nav-back">← Головна</a>
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nlinks">
+    <a href="/">Головна</a>
+    <a href="/blog">Блог</a>
+    <a href="/jobs">Вакансії</a>
+    <a href="/support">Підтримка</a>
+  </div>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
 </nav>
 
-<div class="wrap">
-  <div class="page-label">Тарифи та пакети</div>
-  <h1>Обери свій рівень</h1>
-  <p class="sub">1 фото + 1 відео на місяць — безкоштовно.<br>Розвивай магазин разом із Базаром.</p>
+<div class="hero">
+  <div class="hero-chip">💰 Комісія 0% назавжди</div>
+  <h1>Обери свій<br><span>рівень</span></h1>
+  <p class="hero-sub">Базар дає те саме що OLX, Prom і Розетка разом — але без відсотку з продажів і без прихованих платежів.</p>
+</div>
 
-  <!-- Банер користувача (заповнюється з URL параметрів) -->
-  <div class="user-banner" id="userBanner" style="display:none">
-    <div class="ub-icon">👤</div>
-    <div class="ub-text">
-      <div class="ub-name" id="ubName">Завантаження...</div>
-      <div class="ub-plan" id="ubPlan">Поточний пакет</div>
+<!-- АКЦІЯ РАННІЙ ДОСТУП -->
+<div class="promo-banner">
+  <div class="promo-inner">
+    <div class="promo-fire">🔥</div>
+    <div class="promo-text">
+      <h2>Акція <span>«Ранній доступ»</span></h2>
+      <div class="promo-waves">
+        <div class="promo-wave">
+          <span class="wave-badge green">Хвиля 1 · перші 1 000</span>
+          <span class="wave-text">Оплата до <strong>1 серпня 2026</strong> — <strong>3 місяці у подарунок</strong> + кожні 6 місяців 1 місяць безкоштовно</span>
+        </div>
+        <div class="promo-wave">
+          <span class="wave-badge amber">Хвиля 2 · наступні 1 000</span>
+          <span class="wave-text">Оплата до <strong>1 вересня 2026</strong> — <strong>1 місяць у подарунок</strong> + кожні 6 місяців 1 місяць безкоштовно</span>
+        </div>
+      </div>
+    </div>
+    <div class="promo-deadline">
+      <div class="deadline-label">Хвиля 1 діє до</div>
+      <div class="deadline-date">01.08.2026</div>
+      <div class="deadline-sub">Місць залишилось обмаль</div>
     </div>
   </div>
+</div>
 
+<!-- USER BANNER (з додатку) -->
+<div class="user-banner" id="userBanner" style="display:none">
+  <div class="ub-inner">
+    <div class="ub-icon">👤</div>
+    <div>
+      <div class="ub-name" id="ubName">Завантаження...</div>
+      <div class="ub-plan" id="ubPlan">Оберіть пакет для підключення</div>
+    </div>
+  </div>
+</div>
+
+<!-- ТАРИФИ -->
+<div class="plans-wrap">
   <div class="plans">
+
+    <!-- ГОСПОДАР -->
     <div class="plan" id="plan-hospodar">
       <span class="plan-icon">🌾</span>
       <div class="plan-name">Господар</div>
-      <div class="plan-price">0<span> грн</span></div>
-      <div class="plan-period">Безкоштовно щомісяця</div>
+      <div class="plan-niche">Сільськогосподарська продукція</div>
+      <div class="plan-price-wrap">
+        <div class="plan-price">0<sup>₴</sup></div>
+      </div>
+      <div class="plan-price-note">1 місяць безкоштовно, далі 150 ₴/міс</div>
+      <div class="plan-trial">🎁 Перший місяць — безкоштовно</div>
       <ul class="plan-features">
-        <li>1 фото оголошення на місяць</li>
-        <li>1 відео оголошення на місяць</li>
-        <li>Базовий профіль</li>
-        <li>Верифікація через Google</li>
+        <li>10 оголошень</li>
+        <li>Фото та відео</li>
+        <li>Оплата NovaPay</li>
+        <li>Трекінг Нова Пошта</li>
+        <li class="dim">Пріоритет у пошуку</li>
+        <li class="dim">ШІ-чернетка</li>
       </ul>
-      <div class="btn-upgrade disabled">Базовий пакет</div>
+      <div class="plan-commission">КОМІСІЯ 0%</div>
+      <div class="btn-plan disabled">ПОТОЧНИЙ ПЛАН</div>
     </div>
 
+    <!-- МАЙСТЕР -->
     <div class="plan popular" id="plan-majster">
-      <div class="plan-badge">ПОПУЛЯРНИЙ</div>
+      <div class="plan-badge green">ПОПУЛЯРНИЙ</div>
       <span class="plan-icon">🎨</span>
       <div class="plan-name">Майстер</div>
-      <div class="plan-price"><span id="price-majster">[ЦІНА]</span><span> грн</span></div>
-      <div class="plan-period">на 30 днів</div>
+      <div class="plan-niche">Хендмейд, майстерня, ремесло</div>
+      <div class="plan-price-wrap">
+        <div class="plan-price">249<sup>₴</sup></div>
+      </div>
+      <div class="plan-price-note">на місяць</div>
+      <div class="plan-trial" id="promo-majster">🔥 +3 міс у подарунок до 01.08</div>
       <ul class="plan-features">
-        <li>До 30 оголошень</li>
+        <li>100 оголошень</li>
+        <li>Фото та відео</li>
         <li>Пріоритет у пошуку</li>
-        <li>Розширений профіль</li>
-        <li>Всі способи оплати</li>
         <li>Статистика продажів</li>
+        <li>ШІ-чернетка оголошення</li>
+        <li class="dim">Власний магазин</li>
       </ul>
-      <button class="btn-upgrade" onclick="startPayment('majster')">ОБРАТИ МАЙСТРА →</button>
+      <div class="plan-commission">КОМІСІЯ 0%</div>
+      <button class="btn-plan green" onclick="startPayment('majster')">ОБРАТИ МАЙСТРА →</button>
     </div>
 
-    <div class="plan" id="plan-kramar">
+    <!-- КРАМАР -->
+    <div class="plan featured" id="plan-kramar">
+      <div class="plan-badge amber">НАЙКРАЩА ЦІНА</div>
       <span class="plan-icon">🏪</span>
       <div class="plan-name">Крамар</div>
-      <div class="plan-price"><span id="price-kramar">[ЦІНА]</span><span> грн</span></div>
-      <div class="plan-period">на 30 днів</div>
+      <div class="plan-niche">ФОП, малий бізнес</div>
+      <div class="plan-price-wrap">
+        <div class="plan-price">299<sup>₴</sup></div>
+      </div>
+      <div class="plan-price-note">на місяць · 3 588 ₴/рік</div>
+      <div class="plan-trial" id="promo-kramar">🔥 +3 міс у подарунок до 01.08</div>
       <ul class="plan-features">
-        <li>До 100 оголошень</li>
+        <li>1 000 оголошень</li>
+        <li>Власний магазин</li>
         <li>ФОП верифікація</li>
-        <li>Фіскальні чеки ПРРО</li>
         <li>Пріоритет у пошуку ×2</li>
-        <li>🌐 Власний магазин у браузері</li>
-        <li>Панель керування магазином</li>
-        <li>API доступ</li>
-        <li>Аналітика</li>
+        <li>Веб-кабінет</li>
+        <li>ШІ-чернетка оголошення</li>
       </ul>
-      <button class="btn-upgrade" onclick="startPayment('kramar')">ОБРАТИ КРАМАРА →</button>
+      <div class="plan-commission">КОМІСІЯ 0%</div>
+      <button class="btn-plan amber" onclick="startPayment('kramar')">ОБРАТИ КРАМАРА →</button>
     </div>
 
+    <!-- КУПЕЦЬ -->
     <div class="plan" id="plan-kupets">
       <span class="plan-icon">🏢</span>
       <div class="plan-name">Купець</div>
-      <div class="plan-price"><span id="price-kupets">[ЦІНА]</span><span> грн</span></div>
-      <div class="plan-period">на 30 днів</div>
+      <div class="plan-niche">ТОВ, середній та великий бізнес</div>
+      <div class="plan-price-wrap">
+        <div class="plan-price">від 2000<sup>₴</sup></div>
+      </div>
+      <div class="plan-price-note">на місяць · базовий акаунт</div>
+      <div class="plan-trial" id="promo-kupets">🔥 +3 міс у подарунок до 01.08</div>
       <ul class="plan-features">
-        <li>Необмежено оголошень</li>
-        <li>ШІ-продавець</li>
-        <li>🌐 Власний магазин у браузері</li>
-        <li>Панель керування (до 10 користувачів)</li>
+        <li>10 000 оголошень</li>
         <li>Брендований магазин</li>
-        <li>Масове завантаження</li>
-        <li>Пріоритет ×5</li>
-        <li>Особистий менеджер</li>
+        <li>ШІ-продавець 24/7</li>
+        <li>Пріоритет у пошуку ×5</li>
+        <li>API доступ</li>
+        <li>До 10 робочих місць</li>
       </ul>
-      <button class="btn-upgrade" onclick="startPayment('kupets')">ОБРАТИ КУПЦЯ →</button>
+      <div class="plan-commission">КОМІСІЯ 0%</div>
+      <button class="btn-plan outline" onclick="document.getElementById('kupets-calc').scrollIntoView({behavior:'smooth'})">РОЗРАХУВАТИ →</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- КУПЕЦЬ КАЛЬКУЛЯТОР -->
+<div class="kupets-extra" id="kupets-calc">
+  <div class="kupets-box">
+    <h3>🏢 Купець — вартість за розміром команди</h3>
+    <div class="kupets-grid">
+      <div class="kupets-tier">
+        <div class="kt-size">Власник</div>
+        <div class="kt-price">2 000 ₴</div>
+        <div class="kt-note">1 акаунт<br>базовий пакет</div>
+      </div>
+      <div class="kupets-tier">
+        <div class="kt-size">Команда 3</div>
+        <div class="kt-price">4 000 ₴</div>
+        <div class="kt-note">власник + 2 місця<br>+1 000 ₴ за місце</div>
+      </div>
+      <div class="kupets-tier">
+        <div class="kt-size">Команда 5</div>
+        <div class="kt-price">6 000 ₴</div>
+        <div class="kt-note">власник + 4 місця<br>+1 000 ₴ за місце</div>
+      </div>
+      <div class="kupets-tier">
+        <div class="kt-size">Команда 10</div>
+        <div class="kt-price">11 000 ₴</div>
+        <div class="kt-note">власник + 9 місць<br>максимум</div>
+      </div>
+    </div>
+    <p class="kupets-note">
+      <strong>Кожне додаткове робоче місце — +1 000 ₴/місяць.</strong><br>
+      Робоче місце прив'язується до офіційно працевлаштованого співробітника (ІПН + трудовий договір).<br>
+      Підходить для: ювелірних магазинів, бутиків білизни, парфумерії, будівельних матеріалів та інших категорій з великим асортиментом.
+    </p>
+    <button class="btn-plan amber" style="margin-top:16px;max-width:280px" onclick="startPayment('kupets')">ПІДКЛЮЧИТИ КУПЦЯ →</button>
+  </div>
+</div>
+
+<!-- ЗАЛІЗНІ ПРАВИЛА -->
+<div class="rules">
+  <div class="rules-inner">
+    <div class="rules-title">⛓ Залізні правила всіх тарифів</div>
+    <div class="rules-grid">
+      <div class="rule-item">
+        <div class="rule-icon">🔒</div>
+        <div class="rule-text">
+          <strong>Комісія 0% назавжди</strong>
+          <span>Закріплено договором. Ніколи не зміниться для діючих клієнтів.</span>
+        </div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-icon">🛡️</div>
+        <div class="rule-text">
+          <strong>Безпечна оплата</strong>
+          <span>Через захищений сайт. Без Google Play. Monobank або WayForPay.</span>
+        </div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-icon">🎥</div>
+        <div class="rule-text">
+          <strong>Відео-оголошення</strong>
+          <span>Включені у всі тарифи. Показуй товар живцем.</span>
+        </div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-icon">⚡</div>
+        <div class="rule-text">
+          <strong>Скасування будь-коли</strong>
+          <span>Без штрафів і дзвінків. Одна кнопка в кабінеті.</span>
+        </div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-icon">🎁</div>
+        <div class="rule-text">
+          <strong>Перше оголошення</strong>
+          <span>Безкоштовне для кожного нового продавця.</span>
+        </div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-icon">⚖️</div>
+        <div class="rule-text">
+          <strong>Тільки ФОП і ЮО</strong>
+          <span>Всі продавці верифіковані. Комісія з продажів — 0%.</span>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 
-  <p class="note">
-    Оплата через Monobank / WayForPay · Безпечне з'єднання HTTPS<br>
-    Оплачуючи, ви погоджуєтесь з <a href="/offer">Публічною офертою</a>
-  </p>
+<!-- ПОРІВНЯННЯ -->
+<div class="compare-cta">
+  <a href="/compare">📊 Порівняти з OLX, Prom та TikTok →</a>
 </div>
 
 <footer>
-  <div class="fl"><a href="/">Головна</a>
-    <a href="/blog">Блог</a><a href="/privacy">Конфіденційність</a><a href="/terms">Умови</a><a href="/offer">Оферта</a><a href="/jobs">Вакансії</a>
-    <a href="/support">Підтримка</a></div>
-  <div class="fc">© 2026 Базар Толока 🇺🇦</div>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="/">Головна</a>
+      <a href="/blog">Блог</a>
+      <a href="/compare">Порівняння</a>
+      <a href="/jobs">Вакансії</a>
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови</a>
+      <a href="/offer">Оферта</a>
+      <a href="/support">Підтримка</a>
+    </div>
+    <div class="fcontact"><a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
 </footer>
 
 <script>
-// Parse URL params: /upgrade?uid=XXX&plan=kramar
 const params = new URLSearchParams(window.location.search);
 const uid = params.get('uid');
 const preselect = params.get('plan');
 
 if (uid) {
-  document.getElementById('userBanner').style.display = 'flex';
+  document.getElementById('userBanner').style.display = 'block';
   document.getElementById('ubName').textContent = 'ID: ' + uid;
-  document.getElementById('ubPlan').textContent = 'Оберіть пакет для підключення';
 }
-
 if (preselect) {
   const el = document.getElementById('plan-' + preselect);
-  if (el) {
-    el.style.borderColor = 'var(--amber)';
-    setTimeout(() => el.scrollIntoView({behavior:'smooth', block:'center'}), 300);
-  }
+  if (el) setTimeout(() => el.scrollIntoView({behavior:'smooth', block:'center'}), 300);
+}
+
+// Акція закінчилась — прибираємо прomo після 01.08.2026
+const wave1end = new Date('2026-08-01');
+const wave2end = new Date('2026-09-01');
+const now = new Date();
+if (now >= wave1end && now < wave2end) {
+  ['promo-majster','promo-kramar','promo-kupets'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = '🎁 +1 міс у подарунок до 01.09';
+  });
+} else if (now >= wave2end) {
+  ['promo-majster','promo-kramar','promo-kupets'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
+  const banner = document.querySelector('.promo-banner');
+  if (banner) banner.style.display = 'none';
 }
 
 function startPayment(plan) {
-  // TODO: redirect to backend payment endpoint
-  // e.g. https://bazar-backend-production-59da.up.railway.app/payment/create?plan=kramar&uid=XXX
   const backendUrl = 'https://bazar-backend-production-59da.up.railway.app/payment/create';
-  const paymentUrl = backendUrl + '?plan=' + plan + (uid ? '&uid=' + uid : '');
-  window.location.href = paymentUrl;
+  window.location.href = backendUrl + '?plan=' + plan + (uid ? '&uid=' + uid : '');
 }
 </script>
-</body></html>
+</body>
+</html>

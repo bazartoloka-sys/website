@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Базар vs OLX vs Prom vs TikTok — Порівняння платформ</title>
+<meta name="description" content="Порівняйте Базар Толока з OLX, Prom.ua та TikTok. Комісія 0%, відео-оголошення, тільки верифіковані ФОП. Перша чесна платформа України.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F5X711EZGE');
+</script>
+<style>
+:root{--clay:#1A0F08;--clay2:#261508;--clay3:#321C0A;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--red:#E24B4A;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.22);--aborder:rgba(232,160,48,.22)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.nlogo b{color:var(--amber)}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover{color:var(--green)}
+.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
+
+/* HERO */
+.hero{padding:60px 5% 48px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(232,160,48,.05) 0%,transparent 70%);pointer-events:none}
+.hero-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(226,75,74,.1);border:1px solid rgba(226,75,74,.25);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--red);margin-bottom:20px;letter-spacing:.5px}
+.hero h1{font-family:'Unbounded',sans-serif;font-size:clamp(28px,5.5vw,52px);font-weight:900;line-height:1.05;letter-spacing:-1px;margin-bottom:16px}
+.hero h1 .red{color:var(--red)}
+.hero h1 .green{color:var(--green)}
+.hero-sub{font-size:16px;color:var(--cream2);max-width:560px;margin:0 auto;line-height:1.7}
+
+/* SECTION */
+.section{max-width:1040px;margin:0 auto;padding:48px 5%}
+.section-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--cream3);text-transform:uppercase;margin-bottom:8px}
+.section-title{font-family:'Unbounded',sans-serif;font-size:clamp(20px,3.5vw,32px);font-weight:900;margin-bottom:32px;line-height:1.2}
+.section-title span{color:var(--amber)}
+
+/* COMPARE CARDS */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.ccard{background:var(--clay2);border:1.5px solid var(--border);border-radius:20px;padding:24px}
+.ccard.bazar{border-color:var(--green);border-width:2px}
+.ccard-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.ccard-name{font-family:'Unbounded',sans-serif;font-size:15px;font-weight:900}
+.ccard-name.bad{color:var(--cream3)}
+.ccard-name.good{color:var(--green)}
+.ccard-equiv{font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:100px;border:1px solid var(--border);color:var(--cream3)}
+.ccard ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ccard li{font-size:13px;line-height:1.5;display:flex;justify-content:space-between;align-items:center;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.ccard li:last-child{border-bottom:none;padding-bottom:0}
+.li-label{color:var(--cream3)}
+.li-val{font-weight:700;text-align:right}
+.li-val.bad{color:var(--red)}
+.li-val.good{color:var(--green)}
+.li-val.neutral{color:var(--cream2)}
+
+/* COST BLOCK */
+.cost-block{background:var(--clay2);border:1px solid var(--border);border-radius:24px;padding:32px;margin-bottom:48px}
+.cost-title{font-family:'Unbounded',sans-serif;font-size:16px;font-weight:700;color:var(--cream);margin-bottom:6px}
+.cost-sub{font-size:13px;color:var(--cream3);margin-bottom:24px}
+.cost-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.cost-item{background:var(--clay3);border-radius:16px;padding:20px;text-align:center}
+.cost-item.highlight{background:rgba(46,204,142,.07);border:1px solid rgba(46,204,142,.2)}
+.cost-platform{font-size:11px;font-weight:700;color:var(--cream3);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.cost-platform.good{color:var(--green)}
+.cost-num{font-family:'Unbounded',sans-serif;font-size:26px;font-weight:900;margin-bottom:4px}
+.cost-num.bad{color:var(--red)}
+.cost-num.good{color:var(--green)}
+.cost-desc{font-size:11px;color:var(--cream3);line-height:1.5}
+
+/* TIKTOK BLOCK */
+.tiktok-block{background:linear-gradient(135deg,rgba(226,75,74,.06) 0%,var(--clay2) 100%);border:1px solid rgba(226,75,74,.2);border-radius:24px;padding:32px;margin-bottom:48px}
+.tiktok-title{font-family:'Unbounded',sans-serif;font-size:16px;font-weight:700;color:var(--red);margin-bottom:6px}
+.tiktok-sub{font-size:13px;color:var(--cream2);margin-bottom:24px;line-height:1.6}
+.tiktok-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:20px}
+.ts-item{background:var(--clay3);border-radius:14px;padding:16px;text-align:center}
+.ts-num{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;color:var(--red);margin-bottom:4px}
+.ts-label{font-size:11px;color:var(--cream3);line-height:1.5}
+.tiktok-note{font-size:13px;color:var(--cream2);line-height:1.7;padding:16px;background:rgba(226,75,74,.05);border-radius:12px;border-left:3px solid var(--red)}
+
+/* VS TABLE */
+.vs-table-wrap{overflow-x:auto;margin-bottom:48px}
+.vs-table{width:100%;border-collapse:collapse;min-width:600px}
+.vs-table th{padding:12px 16px;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;border-bottom:2px solid var(--border);text-align:center}
+.vs-table th:first-child{text-align:left;color:var(--cream3)}
+.vs-table th.bazar-col{color:var(--green)}
+.vs-table td{padding:11px 16px;border-bottom:1px solid var(--border);font-size:13px;text-align:center;color:var(--cream2)}
+.vs-table td:first-child{text-align:left;color:var(--cream3);font-size:12px}
+.vs-table tr:last-child td{border-bottom:none}
+.vs-table tr:hover td{background:rgba(245,230,200,.02)}
+.vs-table td.bazar-col{color:var(--green);font-weight:700}
+.check-icon{color:var(--green);font-size:16px}
+.cross-icon{color:var(--red);font-size:14px}
+.warn-icon{color:var(--amber);font-size:14px}
+
+/* ONE LINE */
+.one-liner{margin-bottom:48px}
+.ol-title{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:700;color:var(--cream);margin-bottom:16px}
+.ol-rows{display:flex;flex-direction:column;gap:10px}
+.ol-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ol-bad{background:rgba(226,75,74,.05);border:1px solid rgba(226,75,74,.15);border-radius:12px;padding:12px 16px;font-size:13px;color:var(--cream3)}
+.ol-bad strong{color:var(--cream2);display:block;font-size:11px;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.ol-good{background:rgba(46,204,142,.06);border:1px solid rgba(46,204,142,.15);border-radius:12px;padding:12px 16px;font-size:13px;color:var(--cream2)}
+.ol-good strong{color:var(--green);display:block;font-size:11px;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+
+/* FINAL */
+.final{text-align:center;background:linear-gradient(135deg,var(--clay2) 0%,rgba(46,204,142,.05) 100%);border:1px solid var(--gborder);border-radius:28px;padding:48px 32px;margin-bottom:0}
+.final h2{font-family:'Unbounded',sans-serif;font-size:clamp(22px,4vw,36px);font-weight:900;line-height:1.15;margin-bottom:14px}
+.final h2 span{color:var(--green)}
+.final p{font-size:15px;color:var(--cream2);max-width:480px;margin:0 auto 28px;line-height:1.7}
+.btn-final{display:inline-block;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;padding:15px 36px;border-radius:100px;transition:opacity .2s,transform .15s;margin-bottom:12px}
+.btn-final:hover{opacity:.88;transform:translateY(-2px)}
+.final-sub{font-size:12px;color:var(--cream3)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:32px 5%;margin-top:0}
+.foot-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;letter-spacing:3px}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.flinks a{font-size:12px;color:var(--cream3);transition:color .2s}
+.flinks a:hover{color:var(--cream)}
+.fcopy{font-size:11px;color:var(--cream4)}
+
+@media(max-width:680px){
+  .nlinks{display:none}
+  .compare-grid{grid-template-columns:1fr}
+  .ol-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nlinks">
+    <a href="/">Головна</a>
+    <a href="/blog">Блог</a>
+    <a href="/upgrade">Тарифи</a>
+    <a href="/support">Підтримка</a>
+  </div>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-chip">💸 Ти платиш OLX, Prom і TikTok</div>
+  <h1>Вони забирають<br><span class="red">твоє.</span></h1>
+  <p class="hero-sub">Базар дає те саме що OLX, Prom і Розетка разом — але без відсотку з продажів і без шахраїв-блогерів.</p>
+</div>
+
+<!-- OLX vs МАЙСТЕР / PROM vs КРАМАР -->
+<div class="section">
+  <div class="section-label">Детальне порівняння</div>
+  <div class="section-title">OLX і Prom — <span>скільки ти переплачуєш</span></div>
+
+  <div class="compare-grid">
+    <div class="ccard">
+      <div class="ccard-header">
+        <div class="ccard-name bad">OLX</div>
+        <div class="ccard-equiv">≈ Господар + Майстер</div>
+      </div>
+      <ul>
+        <li><span class="li-label">Безкоштовно</span><span class="li-val bad">Так, але з лімітом</span></li>
+        <li><span class="li-label">40–50 оголошень</span><span class="li-val bad">~3 000 ₴/міс</span></li>
+        <li><span class="li-label">Комісія з продажу</span><span class="li-val bad">1% + 10 ₴ кожна угода</span></li>
+        <li><span class="li-label">Просування VIP/TOP</span><span class="li-val bad">50–500 ₴/огол.</span></li>
+        <li><span class="li-label">Відео</span><span class="li-val bad">Немає</span></li>
+        <li><span class="li-label">Фермери / автентика</span><span class="li-val bad">Не їхня аудиторія</span></li>
+      </ul>
+    </div>
+
+    <div class="ccard bazar">
+      <div class="ccard-header">
+        <div class="ccard-name good">Базар — Майстер</div>
+        <div class="ccard-equiv" style="border-color:var(--gborder);color:var(--green)">100 оголошень</div>
+      </div>
+      <ul>
+        <li><span class="li-label">Ціна</span><span class="li-val good">249 ₴/міс</span></li>
+        <li><span class="li-label">100 оголошень</span><span class="li-val good">Включено</span></li>
+        <li><span class="li-label">Комісія з продажу</span><span class="li-val good">0% — назавжди</span></li>
+        <li><span class="li-label">Просування</span><span class="li-val good">Включено в пакет</span></li>
+        <li><span class="li-label">Відео-оголошення</span><span class="li-val good">Так ✓</span></li>
+        <li><span class="li-label">Фермери / автентика</span><span class="li-val good">Тільки для них ✓</span></li>
+      </ul>
+    </div>
+
+    <div class="ccard">
+      <div class="ccard-header">
+        <div class="ccard-name bad">Prom.ua</div>
+        <div class="ccard-equiv">≈ Крамар</div>
+      </div>
+      <ul>
+        <li><span class="li-label">Мінімальний вхід</span><span class="li-val bad">5 900 ₴/рік</span></li>
+        <li><span class="li-label">1 000 товарів</span><span class="li-val bad">≈ 492 ₴/міс</span></li>
+        <li><span class="li-label">Комісія з продажу</span><span class="li-val bad">6–18% кожна угода</span></li>
+        <li><span class="li-label">Реклама ProSale</span><span class="li-val bad">Окремо, дорого</span></li>
+        <li><span class="li-label">Відео</span><span class="li-val bad">Немає</span></li>
+        <li><span class="li-label">Безкоштовний старт</span><span class="li-val bad">Закрито з 11.2024</span></li>
+      </ul>
+    </div>
+
+    <div class="ccard bazar">
+      <div class="ccard-header">
+        <div class="ccard-name good">Базар — Крамар</div>
+        <div class="ccard-equiv" style="border-color:var(--gborder);color:var(--green)">1 000 оголошень</div>
+      </div>
+      <ul>
+        <li><span class="li-label">Ціна</span><span class="li-val good">299 ₴/міс = 3 588 ₴/рік</span></li>
+        <li><span class="li-label">1 000 оголошень</span><span class="li-val good">Включено</span></li>
+        <li><span class="li-label">Комісія з продажу</span><span class="li-val good">0% — назавжди</span></li>
+        <li><span class="li-label">Власний магазин</span><span class="li-val good">Включено ✓</span></li>
+        <li><span class="li-label">Відео-оголошення</span><span class="li-val good">Так ✓</span></li>
+        <li><span class="li-label">Безкоштовний старт</span><span class="li-val good">Так, без карти ✓</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- СКІЛЬКИ ВІДДАЄШ ЗА ПОВІТРЯ -->
+  <div class="cost-block">
+    <div class="cost-title">💸 Скільки ти зараз віддаєш «за повітря»</div>
+    <div class="cost-sub">Реальні річні витрати активного продавця</div>
+    <div class="cost-grid">
+      <div class="cost-item">
+        <div class="cost-platform">OLX Активний</div>
+        <div class="cost-num bad">~36 000 ₴</div>
+        <div class="cost-desc">на рік за просування + комісія з кожного продажу</div>
+      </div>
+      <div class="cost-item">
+        <div class="cost-platform">Prom.ua Крамар</div>
+        <div class="cost-num bad">від 15 000 ₴</div>
+        <div class="cost-desc">на рік підписка + реклама ProSale + 6–18% комісія</div>
+      </div>
+      <div class="cost-item">
+        <div class="cost-platform">TikTok Блогер</div>
+        <div class="cost-num bad">5 000–30 000 ₴</div>
+        <div class="cost-desc">один пост без гарантій. Підписники — не покупці</div>
+      </div>
+      <div class="cost-item highlight">
+        <div class="cost-platform good">Базар Крамар</div>
+        <div class="cost-num good">3 588 ₴</div>
+        <div class="cost-desc">на рік. Комісія 0%. Цільова аудиторія — завжди</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TIKTOK ПАСТКА -->
+<div class="section" style="padding-top:0">
+  <div class="tiktok-block">
+    <div class="tiktok-title">⚠️ TikTok-реклама: чому це пастка для фермерів і майстрів</div>
+    <div class="tiktok-sub">Блогер з 100 000 підписників бере 5 000–30 000 ₴ за один пост. Але його аудиторія — це розважальні глядачі, не покупці.</div>
+    <div class="tiktok-stats">
+      <div class="ts-item">
+        <div class="ts-num">0.1–0.5%</div>
+        <div class="ts-label">конверсія в продаж з 100 000 переглядів</div>
+      </div>
+      <div class="ts-item">
+        <div class="ts-num">10–50</div>
+        <div class="ts-label">реальних покупців з одного поста</div>
+      </div>
+      <div class="ts-item">
+        <div class="ts-num">300–750 ₴</div>
+        <div class="ts-label">ціна одного покупця без гарантій</div>
+      </div>
+      <div class="ts-item" style="background:rgba(46,204,142,.07);border:1px solid rgba(46,204,142,.2)">
+        <div class="ts-num" style="color:var(--green)">3 588 ₴</div>
+        <div class="ts-label" style="color:var(--cream2)">Базар Крамар/рік — цільова аудиторія 24/7</div>
+      </div>
+    </div>
+    <div class="tiktok-note">
+      Витрата на блогера — <strong>15 000 ₴</strong> один пост. Реальних покупців — <strong>20–50</strong> якщо пощастить. Ціна одного покупця — <strong>300–750 ₴</strong> без гарантій. Базар Крамар на рік — <strong>3 588 ₴</strong>, цільова аудиторія 24/7.
+    </div>
+  </div>
+
+  <!-- ПОВНА ТАБЛИЦЯ -->
+  <div class="section-title" style="margin-bottom:20px">Базар vs всі — <span>повна таблиця</span></div>
+  <div class="vs-table-wrap">
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th>Параметр</th>
+          <th>OLX</th>
+          <th>Prom.ua</th>
+          <th>TikTok</th>
+          <th>Розетка</th>
+          <th class="bazar-col">Базар</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Комісія з продажів</td>
+          <td><span style="color:var(--red)">1%+10₴</span></td>
+          <td><span style="color:var(--red)">6–18%</span></td>
+          <td><span style="color:var(--amber)">Немає*</span></td>
+          <td><span style="color:var(--red)">15–25%</span></td>
+          <td class="bazar-col">0% назавжди</td>
+        </tr>
+        <tr>
+          <td>Відео-оголошення</td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="check-icon">✓</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td class="bazar-col">✓ Всі тарифи</td>
+        </tr>
+        <tr>
+          <td>Тільки ФОП / верифіковані</td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="warn-icon">~</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="warn-icon">~</span></td>
+          <td class="bazar-col">✓ Обов'язково</td>
+        </tr>
+        <tr>
+          <td>Фермери / автентика</td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td class="bazar-col">✓ Цільова аудиторія</td>
+        </tr>
+        <tr>
+          <td>Безкоштовний старт</td>
+          <td><span class="warn-icon">Ліміт</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="check-icon">✓</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td class="bazar-col">✓ 1 міс + 1 огол.</td>
+        </tr>
+        <tr>
+          <td>Власний магазин</td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="check-icon">✓</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="check-icon">✓</span></td>
+          <td class="bazar-col">✓ Крамар+</td>
+        </tr>
+        <tr>
+          <td>ШІ-помічник</td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td class="bazar-col">✓ Майстер+</td>
+        </tr>
+        <tr>
+          <td>Трекінг Нова Пошта</td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="warn-icon">Інтеграція</span></td>
+          <td><span class="cross-icon">✗</span></td>
+          <td><span class="check-icon">✓</span></td>
+          <td class="bazar-col">✓ Всі тарифи</td>
+        </tr>
+        <tr>
+          <td>Скасування підписки</td>
+          <td><span class="check-icon">✓</span></td>
+          <td><span class="warn-icon">Складно</span></td>
+          <td><span class="check-icon">✓</span></td>
+          <td><span class="warn-icon">Складно</span></td>
+          <td class="bazar-col">✓ Одна кнопка</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ОДИН РЯДОК ВІДПОВІДІ -->
+  <div class="one-liner">
+    <div class="ol-title">Базар vs всі — один рядок відповіді</div>
+    <div class="ol-rows">
+      <div class="ol-row">
+        <div class="ol-bad"><strong>Вони</strong>OLX: безкоштовно поки не треба продавати</div>
+        <div class="ol-good"><strong>Базар</strong>Безкоштовно — і без прихованих комісій</div>
+      </div>
+      <div class="ol-row">
+        <div class="ol-bad"><strong>Вони</strong>Prom: 5 900 ₴/рік + 6–18% з кожного продажу</div>
+        <div class="ol-good"><strong>Базар</strong>Крамар 3 588 ₴/рік. Комісія 0%. Крапка.</div>
+      </div>
+      <div class="ol-row">
+        <div class="ol-bad"><strong>Вони</strong>TikTok: платиш блогеру — результат невідомий</div>
+        <div class="ol-good"><strong>Базар</strong>Відео-оголошення: сам блогер свого товару</div>
+      </div>
+      <div class="ol-row">
+        <div class="ol-bad"><strong>Вони</strong>Розетка: для масового товару, не для автентики</div>
+        <div class="ol-good"><strong>Базар</strong>Купець: масштаб Розетки + душа українського ринку</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ФІНАЛ -->
+  <div class="final">
+    <h2>Базар — це не ще одна платформа.<br><span>Це перша чесна.</span></h2>
+    <p>OLX для всього. Prom для магазинів. TikTok для розваг.<br><strong>Базар — для тих хто вирощує, робить і продає чесно.</strong><br>Єдина де відео-оголошення коштують стільки ж скільки текстове.</p>
+    <a href="/upgrade" class="btn-final">ОБРАТИ ТАРИФ →</a><br>
+    <span class="final-sub">Комісія 0% · Перший місяць безкоштовно · Скасування будь-коли</span>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="/">Головна</a>
+      <a href="/blog">Блог</a>
+      <a href="/upgrade">Тарифи</a>
+      <a href="/jobs">Вакансії</a>
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови</a>
+      <a href="/offer">Оферта</a>
+      <a href="/support">Підтримка</a>
+    </div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
+</footer>
+</body>
+</html>
