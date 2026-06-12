@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Вакансії — Базар Толока</title>
+<meta name="description" content="Приєднуйся до команди Базар Толока. Шукаємо Flutter Developer та Блогера для співпраці.">
+<meta property="og:title" content="Вакансії — Базар Толока">
+<meta property="og:description" content="Шукаємо Flutter Developer та Блогера. Віддалено, гнучкий графік, пряма комунікація.">
+<meta property="og:url" content="https://bazar.in.ua/jobs">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F5X711EZGE');
+</script>
+<style>
+:root{--clay:#1A0F08;--clay2:#261508;--clay3:#321C0A;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.22);--aborder:rgba(232,160,48,.22)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.nlogo b{color:var(--amber)}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover{color:var(--green)}
+.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
+
+/* HERO */
+.hero{padding:64px 5% 52px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(46,204,142,.06) 0%,transparent 70%);pointer-events:none}
+.hero-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(46,204,142,.1);border:1px solid rgba(46,204,142,.22);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--green);margin-bottom:20px;letter-spacing:.5px}
+.hero-title{font-family:'Unbounded',sans-serif;font-size:clamp(32px,6vw,58px);font-weight:900;line-height:1;letter-spacing:-1px;margin-bottom:14px}
+.hero-title span{color:var(--green)}
+.hero-sub{font-size:16px;color:var(--cream2);max-width:520px;margin:0 auto;line-height:1.7;font-style:italic}
+
+/* STATS */
+.stats{display:flex;justify-content:center;gap:40px;padding:0 5% 56px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-num{font-family:'Unbounded',sans-serif;font-size:28px;font-weight:900;color:var(--green)}
+.stat-label{font-size:12px;color:var(--cream3);margin-top:4px}
+
+/* JOBS GRID */
+.jobs{display:flex;flex-direction:column;gap:32px;max-width:860px;margin:0 auto;padding:0 5% 80px}
+
+/* JOB CARD */
+.job-card{background:var(--clay2);border:1px solid var(--border);border-radius:28px;overflow:hidden;transition:border-color .2s}
+.job-card:hover{border-color:var(--gborder)}
+.job-head{padding:32px 36px 24px;border-bottom:1px solid var(--border)}
+.job-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+.job-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.job-icon.blue{background:rgba(52,152,219,.12);border:1px solid rgba(52,152,219,.2)}
+.job-icon.amber{background:rgba(232,160,48,.1);border:1px solid var(--aborder)}
+.job-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.badge{display:inline-flex;align-items:center;gap:5px;border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:.3px}
+.badge.remote{background:rgba(46,204,142,.1);border:1px solid rgba(46,204,142,.2);color:var(--green)}
+.badge.project{background:rgba(232,160,48,.1);border:1px solid rgba(232,160,48,.2);color:var(--amber)}
+.badge.collab{background:rgba(52,152,219,.1);border:1px solid rgba(52,152,219,.2);color:#5DADE2}
+.job-title{font-family:'Unbounded',sans-serif;font-size:clamp(18px,3vw,24px);font-weight:900;line-height:1.2;margin-bottom:8px}
+.job-sub{font-size:14px;color:var(--cream2);line-height:1.65}
+
+/* JOB BODY */
+.job-body{padding:28px 36px 32px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.job-section h3{font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--amber);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.job-section ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.job-section li{font-size:13px;color:var(--cream2);line-height:1.6;display:flex;gap:10px;align-items:flex-start}
+.job-section li::before{content:'→';color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px}
+.job-section li strong{color:var(--cream)}
+
+/* OFFER BLOCK */
+.job-offer{grid-column:1/-1;background:var(--clay3);border:1px solid var(--border);border-radius:16px;padding:20px 24px}
+.job-offer h3{font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
+.offer-items{display:flex;flex-wrap:wrap;gap:10px}
+.offer-item{background:rgba(46,204,142,.06);border:1px solid rgba(46,204,142,.15);border-radius:12px;padding:10px 16px;font-size:13px;color:var(--cream2);line-height:1.5}
+.offer-item strong{color:var(--cream);display:block;font-size:12px;margin-bottom:2px}
+
+/* CTA */
+.job-cta{padding:0 36px 32px}
+.job-cta-inner{background:linear-gradient(135deg,rgba(46,204,142,.06) 0%,var(--clay3) 100%);border:1px solid var(--gborder);border-radius:18px;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.job-cta-text p{font-size:13px;color:var(--cream2);line-height:1.65;margin-top:4px}
+.job-cta-text strong{font-size:14px;color:var(--cream)}
+.btn-apply{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:13px 26px;border-radius:100px;transition:opacity .2s,transform .15s;white-space:nowrap}
+.btn-apply:hover{opacity:.88;transform:translateY(-2px)}
+.btn-apply.amber{background:var(--amber)}
+
+/* OPEN POSITIONS COUNTER */
+.open-label{text-align:center;font-size:12px;font-weight:700;color:var(--cream3);letter-spacing:1px;text-transform:uppercase;padding:0 5% 24px}
+.open-label b{color:var(--green)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:32px 5%}
+.foot-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;letter-spacing:3px}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.flinks a{font-size:12px;color:var(--cream3);transition:color .2s}
+.flinks a:hover{color:var(--cream)}
+.fcontact a{font-size:13px;color:var(--cream2)}
+.fcopy{font-size:11px;color:var(--cream4)}
+
+@media(max-width:680px){
+  .nlinks{display:none}
+  .job-body{grid-template-columns:1fr}
+  .job-offer{grid-column:1}
+  .job-head,.job-body,.job-cta{padding-left:20px;padding-right:20px}
+  .job-cta-inner{flex-direction:column;align-items:flex-start}
+  .stats{gap:24px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nlinks">
+    <a href="/">Головна</a>
+    <a href="/blog">Блог</a>
+    <a href="/upgrade">Тарифи</a>
+    <a href="/support">Підтримка</a>
+  </div>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-chip">🇺🇦 Команда Базар Толока</div>
+  <h1 class="hero-title">Будуємо<br><span>разом</span></h1>
+  <p class="hero-sub">Шукаємо людей, які вірять що чесний ринок в Україні — це реально. Без бюрократії, з прямою комунікацією і реальним продуктом.</p>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Remote</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">2</div>
+    <div class="stat-label">Відкриті вакансії</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">0</div>
+    <div class="stat-label">Зайвої бюрократії</div>
+  </div>
+</div>
+
+<div class="open-label">Відкриті позиції · <b>2 вакансії</b></div>
+
+<div class="jobs">
+
+  <!-- ===== ВАКАНСІЯ 1: FLUTTER ===== -->
+  <div class="job-card">
+    <div class="job-head">
+      <div class="job-top">
+        <div style="display:flex;gap:16px;align-items:center">
+          <div class="job-icon blue">📱</div>
+          <div>
+            <div class="job-badges">
+              <span class="badge remote">🌍 Remote</span>
+              <span class="badge project">⚡ Проєкт → Long-term</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="job-title">Flutter Developer</div>
+      <p class="job-sub">Розробка та технічний супровід маркетплейсу v2.0 — рефакторинг, нові модулі, масштабування архітектури. Шукаємо людину, яка будує код правильно і готова до довгострокової співпраці.</p>
+    </div>
+
+    <div class="job-body">
+      <div class="job-section">
+        <h3>📌 Завдання</h3>
+        <ul>
+          <li>Рефакторинг і запуск <strong>v2.0</strong> — оптимізація поточного функціоналу, нові модулі, масштабування архітектури</li>
+          <li>Інтеграція відеоконтенту — завантаження, кешування, плавне відтворення всередині додатка</li>
+          <li>Проєктування та оптимізація локальних і хмарних баз даних</li>
+          <li>Моніторинг стабільності, bug fixing, релізи у <strong>Google Play / App Store</strong></li>
+        </ul>
+      </div>
+
+      <div class="job-section">
+        <h3>🛠 Вимоги</h3>
+        <ul>
+          <li>Комерційний досвід Flutter / Dart від <strong>2–3 років</strong></li>
+          <li>Глибокі знання БД — проєктування зв'язків, оптимізація запитів</li>
+          <li>Досвід з відео-модулями — стримінг, стиснення, плеєри, оптимізація трафіку</li>
+          <li>Архітектурні патерни: <strong>BLoC, Riverpod або Provider</strong></li>
+          <li>Інтеграція REST API, платіжних систем, сторонніх сервісів</li>
+          <li>Випущені додатки у сторах — <strong>буде плюсом</strong></li>
+        </ul>
+      </div>
+
+      <div class="job-offer">
+        <h3>💼 Що пропонуємо</h3>
+        <div class="offer-items">
+          <div class="offer-item"><strong>Формат</strong>Remote, гнучкий графік</div>
+          <div class="offer-item"><strong>Зайнятість</strong>Проєкт → довгостроковий супровід</div>
+          <div class="offer-item"><strong>Комунікація</strong>Чіткі ТЗ, пряма взаємодія</div>
+          <div class="offer-item"><strong>Оплата</strong>Погодинна або за спринти — обговорюємо</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-cta">
+      <div class="job-cta-inner">
+        <div class="job-cta-text">
+          <strong>Готовий до співпраці?</strong>
+          <p>Надішли резюме / портфоліо, GitHub або посилання на додатки в сторах.<br>Вкажи бажану ставку або рейтинг.</p>
+        </div>
+        <a href="mailto:bazartoloka@gmail.com?subject=Flutter Developer — відгук на вакансію" class="btn-apply">НАДІСЛАТИ РЕЗЮМЕ →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ВАКАНСІЯ 2: БЛОГЕР ===== -->
+  <div class="job-card">
+    <div class="job-head">
+      <div class="job-top">
+        <div style="display:flex;gap:16px;align-items:center">
+          <div class="job-icon amber">🎥</div>
+          <div>
+            <div class="job-badges">
+              <span class="badge remote">🌍 Remote</span>
+              <span class="badge collab">🤝 Партнерство</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="job-title">Блогер / Контент-партнер</div>
+      <p class="job-sub">Шукаємо талановитого блогера для висвітлення новин Базар Толока та проведення навчальних програм для продавців і покупців. Якщо тебе драйвить тема чесного ринку в Україні — це твоє.</p>
+    </div>
+
+    <div class="job-body">
+      <div class="job-section">
+        <h3>📌 Чим будеш займатись</h3>
+        <ul>
+          <li>Висвітлення новин, оновлень і подій платформи <strong>Базар Толока</strong></li>
+          <li>Навчальні матеріали для продавців — як продавати, оформляти оголошення, будувати репутацію</li>
+          <li>Огляди функцій додатка, поради покупцям</li>
+          <li>Формат та канал — <strong>на твій розсуд</strong> (YouTube, TikTok, Instagram, Telegram)</li>
+        </ul>
+      </div>
+
+      <div class="job-section">
+        <h3>🎯 Кого шукаємо</h3>
+        <ul>
+          <li>Людину з аудиторією або бажанням її будувати</li>
+          <li>Вміння пояснювати складне просто і цікаво</li>
+          <li>Розуміння теми малого бізнесу, ринків, е-комерції</li>
+          <li>Самостійність і відповідальність за свій контент</li>
+        </ul>
+      </div>
+
+      <div class="job-offer">
+        <h3>💼 Що пропонуємо</h3>
+        <div class="offer-items">
+          <div class="offer-item"><strong>Ексклюзив</strong>Права на офіційний контент Базару</div>
+          <div class="offer-item"><strong>Доступ</strong>Всі матеріали, скріни, дані платформи</div>
+          <div class="offer-item"><strong>Підтримка</strong>Пряма комунікація з командою</div>
+          <div class="offer-item"><strong>Умови</strong>Обговорюємо індивідуально</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-cta">
+      <div class="job-cta-inner">
+        <div class="job-cta-text">
+          <strong>Хочеш співпрацювати?</strong>
+          <p>Розкажи про себе, свою аудиторію та формат контенту який робиш.<br>Прикріпи приклади робіт якщо є.</p>
+        </div>
+        <a href="mailto:bazartoloka@gmail.com?subject=Блогер — відгук на партнерство" class="btn-apply amber">НАПИСАТИ НАМ →</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="/">Головна</a>
+      <a href="/blog">Блог</a>
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови використання</a>
+      <a href="/offer">Публічна оферта</a>
+      <a href="/upgrade">Тарифи</a>
+      <a href="/support">Підтримка</a>
+    </div>
+    <div class="fcontact"><a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
+</footer>
+
+</body>
+</html>
