@@ -397,6 +397,43 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 .import-time-text{font-size:12px;color:var(--cream2);line-height:1.4}
 @media(max-width:700px){.import-grid{grid-template-columns:1fr;gap:28px}.import-inner{padding:24px 20px}}
 
+/* ROLES INTERACTIVE */
+.roles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.rcard{background:var(--clay2);border:1px solid var(--border);border-radius:16px;padding:18px 14px;text-align:center;transition:border-color .25s,transform .2s;cursor:pointer;position:relative;overflow:hidden}
+.rcard:hover{border-color:var(--amber);transform:translateY(-3px)}
+.rcard.active{border-color:var(--amber);transform:translateY(0)}
+.rcard-ico{font-size:32px;margin-bottom:10px;display:block}
+.rcard-name{font-size:13px;font-weight:700;color:var(--amber);margin-bottom:5px}
+.rcard-desc{font-size:12px;color:var(--cream3);line-height:1.5}
+.rcard-hint{font-size:10px;color:var(--cream4);margin-top:8px;letter-spacing:.3px}
+
+/* ROLE DETAIL PANEL */
+.role-detail{display:none;background:var(--clay2);border:1px solid var(--aborder);border-radius:20px;padding:28px;margin-top:16px;position:relative;overflow:hidden;animation:fadeSlide .25s ease}
+.role-detail.visible{display:block}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.role-detail-glow{position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;filter:blur(60px);opacity:.08;pointer-events:none}
+.role-detail-top{display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.role-detail-icon{font-size:44px}
+.role-detail-info{flex:1}
+.role-detail-name{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;color:var(--cream);margin-bottom:4px}
+.role-detail-niche{font-size:13px;color:var(--cream2)}
+.role-detail-price-block{text-align:right}
+.role-detail-price{font-family:'Unbounded',sans-serif;font-size:26px;font-weight:900;color:var(--amber);line-height:1}
+.role-detail-price-note{font-size:11px;color:var(--cream3);margin-top:3px}
+.role-detail-promo{display:inline-block;background:rgba(46,204,142,.12);border:1px solid rgba(46,204,142,.25);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700;color:var(--green);margin-bottom:16px}
+.role-features-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.role-feature{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--cream2)}
+.role-feature::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+.role-feature.dim{color:var(--cream4)}
+.role-feature.dim::before{content:'—';color:var(--cream4)}
+.role-detail-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--border);padding-top:16px}
+.role-commission{background:rgba(46,204,142,.1);border:1px solid rgba(46,204,142,.2);border-radius:100px;padding:6px 16px;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--green)}
+.role-detail-cta{background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:12px 24px;border-radius:100px;border:none;cursor:pointer;transition:opacity .2s}
+.role-detail-cta:hover{opacity:.88}
+.role-detail-close{position:absolute;top:14px;right:14px;background:rgba(245,230,200,.07);border:none;color:var(--cream3);font-size:16px;width:28px;height:28px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.role-detail-close:hover{background:rgba(245,230,200,.14)}
+@media(max-width:500px){.role-features-grid{grid-template-columns:1fr}.role-detail-price-block{text-align:left}.role-detail-top{flex-direction:column;align-items:flex-start}}
+
 </style>
 </head>
 <body>
@@ -716,10 +753,53 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
     <p class="ss">Від домашнього господаря до великого магазину — кожен знайде свій рівень.</p>
   </div>
   <div class="roles-grid">
-    <div class="rcard"><span class="rcard-ico">🌾</span><div class="rcard-name">Господар</div><div class="rcard-desc">Власна с/г продукція. 1 фото + 1 відео на місяць. Верифікація через Google.</div></div>
-    <div class="rcard"><span class="rcard-ico">🎨</span><div class="rcard-name">Майстер</div><div class="rcard-desc">Хендмейд та авторські вироби. Розширені ліміти.</div></div>
-    <div class="rcard"><span class="rcard-ico">🏪</span><div class="rcard-name">Крамар</div><div class="rcard-desc">ФОП, малий бізнес. Верифікація через Дія. Фіскальні чеки ПРРО.</div></div>
-    <div class="rcard"><span class="rcard-ico">🏢</span><div class="rcard-name">Купець</div><div class="rcard-desc">Великий бізнес. API інтеграція. ШІ-продавець. Повний доступ.</div></div>
+    <div class="rcard" onclick="showRole('hospodar')">
+      <span class="rcard-ico">🌾</span>
+      <div class="rcard-name">Господар</div>
+      <div class="rcard-desc">Власна с/г продукція. 1 фото + 1 відео на місяць.</div>
+      <div class="rcard-hint">Натисни — деталі →</div>
+    </div>
+    <div class="rcard" onclick="showRole('majster')">
+      <span class="rcard-ico">🎨</span>
+      <div class="rcard-name">Майстер</div>
+      <div class="rcard-desc">Хендмейд та авторські вироби. Розширені ліміти.</div>
+      <div class="rcard-hint">Натисни — деталі →</div>
+    </div>
+    <div class="rcard" onclick="showRole('kramar')">
+      <span class="rcard-ico">🏪</span>
+      <div class="rcard-name">Крамар</div>
+      <div class="rcard-desc">ФОП, малий бізнес. Верифікація через Дія.</div>
+      <div class="rcard-hint">Натисни — деталі →</div>
+    </div>
+    <div class="rcard" onclick="showRole('kupets')">
+      <span class="rcard-ico">🏢</span>
+      <div class="rcard-name">Купець</div>
+      <div class="rcard-desc">Великий бізнес. API інтеграція. ШІ-продавець.</div>
+      <div class="rcard-hint">Натисни — деталі →</div>
+    </div>
+  </div>
+
+  <!-- DETAIL PANEL -->
+  <div class="role-detail" id="roleDetail">
+    <button class="role-detail-close" onclick="closeRole()">✕</button>
+    <div class="role-detail-glow" id="roleGlow"></div>
+    <div class="role-detail-top">
+      <div class="role-detail-icon" id="roleIcon"></div>
+      <div class="role-detail-info">
+        <div class="role-detail-name" id="roleName"></div>
+        <div class="role-detail-niche" id="roleNiche"></div>
+      </div>
+      <div class="role-detail-price-block">
+        <div class="role-detail-price" id="rolePrice"></div>
+        <div class="role-detail-price-note" id="rolePriceNote"></div>
+      </div>
+    </div>
+    <div class="role-detail-promo" id="rolePromo"></div>
+    <div class="role-features-grid" id="roleFeatures"></div>
+    <div class="role-detail-footer">
+      <div class="role-commission">КОМІСІЯ 0% НАЗАВЖДИ</div>
+      <button class="role-detail-cta" id="roleBtn" onclick="goToTariff()">ДЕТАЛЬНІШЕ →</button>
+    </div>
   </div>
 </div>
 
@@ -907,5 +987,103 @@ function submitLaunch() {
 })();
 </script>
 
+
+<script>
+const ROLES = {
+  hospodar: {
+    icon:'🌾', name:'Господар', niche:'Сільськогосподарська продукція',
+    price:'0₴', priceNote:'1 місяць безкоштовно, далі 150 ₴/міс',
+    promo:'🎁 Перший місяць — безкоштовно',
+    glow:'#2ECC8E',
+    features:[
+      {t:'10 оголошень',dim:false},{t:'Фото та відео',dim:false},
+      {t:'Оплата NovaPay',dim:false},{t:'Трекінг Нова Пошта',dim:false},
+      {t:'Пріоритет у пошуку',dim:true},{t:'ШІ-чернетка',dim:true}
+    ],
+    plan:'hospodar'
+  },
+  majster: {
+    icon:'🎨', name:'Майстер', niche:'Хендмейд, майстерня, ремесло',
+    price:'249₴', priceNote:'на місяць',
+    promo:'🔥 +3 міс у подарунок до 01.08',
+    glow:'#2ECC8E',
+    features:[
+      {t:'100 оголошень',dim:false},{t:'Фото та відео',dim:false},
+      {t:'Пріоритет у пошуку',dim:false},{t:'Статистика продажів',dim:false},
+      {t:'ШІ-чернетка оголошення',dim:false},{t:'Власний магазин',dim:true}
+    ],
+    plan:'majster'
+  },
+  kramar: {
+    icon:'🏪', name:'Крамар', niche:'ФОП, малий бізнес',
+    price:'499₴', priceNote:'на місяць · 5 988 ₴/рік',
+    promo:'🔥 +3 міс у подарунок до 01.08',
+    glow:'#E8A030',
+    features:[
+      {t:'1 000 оголошень',dim:false},{t:'Власний магазин',dim:false},
+      {t:'ФОП верифікація через Дія',dim:false},{t:'Пріоритет у пошуку ×2',dim:false},
+      {t:'Веб-кабінет',dim:false},{t:'ШІ-чернетка оголошення',dim:false}
+    ],
+    plan:'kramar'
+  },
+  kupets: {
+    icon:'🏢', name:'Купець', niche:'ТОВ, середній та великий бізнес',
+    price:'від 2000₴', priceNote:'на місяць',
+    promo:'🔥 +3 міс у подарунок до 01.08',
+    glow:'#E8A030',
+    features:[
+      {t:'10 000 оголошень',dim:false},{t:'Брендований магазин',dim:false},
+      {t:'ШІ-продавець 24/7',dim:false},{t:'Пріоритет у пошуку ×5',dim:false},
+      {t:'API доступ',dim:false},{t:'До 10 робочих місць',dim:false}
+    ],
+    plan:'kupets'
+  }
+};
+
+let activeRole = null;
+
+function showRole(key) {
+  const r = ROLES[key];
+  if (!r) return;
+
+  // Підсвічуємо активну картку
+  document.querySelectorAll('.rcard').forEach(c => c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+
+  // Якщо та сама — закриваємо
+  if (activeRole === key) { closeRole(); return; }
+  activeRole = key;
+
+  // Заповнюємо дані
+  document.getElementById('roleIcon').textContent = r.icon;
+  document.getElementById('roleName').textContent = r.name;
+  document.getElementById('roleNiche').textContent = r.niche;
+  document.getElementById('rolePrice').textContent = r.price;
+  document.getElementById('rolePriceNote').textContent = r.priceNote;
+  document.getElementById('rolePromo').textContent = r.promo;
+  document.getElementById('roleGlow').style.background = r.glow;
+  document.getElementById('roleBtn').dataset.plan = r.plan;
+
+  const feat = document.getElementById('roleFeatures');
+  feat.innerHTML = r.features.map(f =>
+    `<div class="role-feature${f.dim?' dim':''}">${f.t}</div>`
+  ).join('');
+
+  const panel = document.getElementById('roleDetail');
+  panel.classList.add('visible');
+  setTimeout(() => panel.scrollIntoView({behavior:'smooth', block:'nearest'}), 50);
+}
+
+function closeRole() {
+  document.getElementById('roleDetail').classList.remove('visible');
+  document.querySelectorAll('.rcard').forEach(c => c.classList.remove('active'));
+  activeRole = null;
+}
+
+function goToTariff() {
+  const plan = document.getElementById('roleBtn').dataset.plan;
+  window.location.href = '/upgrade?plan=' + (plan||'');
+}
+</script>
 </body>
 </html>
