@@ -162,7 +162,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;margin-top:60px}
     <a href="/jobs">Вакансії</a>
     <a href="/support">Підтримка</a>
   </div>
-  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">GOOGLE PLAY →</a>
 </nav>
 
 <div class="hero">
@@ -446,8 +446,52 @@ if (now >= wave1end && now < wave2end) {
 }
 
 function startPayment(plan) {
+  const LAUNCH = new Date('2026-08-01T00:00:00+03:00');
+
+  // ── До запуску — pre-registration modal ──
+  if (Date.now() < LAUNCH.getTime()) {
+    const names = {hospodar:'Господар 🌾',majster:'Майстер 🎨',kramar:'Крамар 🏪',kupets:'Купець 🏢'};
+    const old = document.getElementById('preregModal');
+    if (old) old.remove();
+    const modal = document.createElement('div');
+    modal.id = 'preregModal';
+    modal.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(15,8,4,.88);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:20px';
+    modal.innerHTML = `
+      <div style="background:var(--clay2);border:1px solid var(--aborder);border-radius:24px;padding:32px 28px;max-width:400px;width:100%;text-align:center;position:relative">
+        <button onclick="document.getElementById('preregModal').remove()" style="position:absolute;top:14px;right:18px;background:none;border:none;color:var(--cream3);font-size:20px;cursor:pointer;line-height:1">✕</button>
+        <div style="font-size:44px;margin-bottom:14px">🔒</div>
+        <div style="font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;line-height:1.2;margin-bottom:10px">Оплата відкриється<br><span style="color:var(--amber)">1 серпня 2026</span></div>
+        <p style="font-size:13px;color:var(--cream2);line-height:1.65;margin-bottom:20px">Ви обрали <strong style="color:var(--cream)">${names[plan]||plan}</strong>.<br>Залиш email — будеш першим і отримаєш ціну першої хвилі.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center" id="preregForm">
+          <input type="email" id="preregEmail" placeholder="твій@email.com" style="flex:1;min-width:190px;background:var(--clay);border:1px solid rgba(245,230,200,.15);border-radius:100px;padding:12px 18px;font-size:14px;color:var(--cream);font-family:'Nunito',sans-serif;outline:none">
+          <button onclick="submitPrereg('${plan}')" style="background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:12px 20px;border-radius:100px;border:none;cursor:pointer;white-space:nowrap">ЗАПИСАТИСЬ →</button>
+        </div>
+        <div id="preregOk" style="display:none;margin-top:16px;background:rgba(46,204,142,.1);border:1px solid rgba(46,204,142,.25);border-radius:12px;padding:12px;font-size:14px;font-weight:700;color:var(--green)">
+          ✅ Записано! Повідомимо 1 серпня 🎉
+        </div>
+        <p style="font-size:11px;color:var(--cream4);margin-top:14px">Погоджуєтесь з <a href="/terms" style="color:var(--cream2)">Умовами</a> та <a href="/privacy" style="color:var(--cream2)">Конфіденційністю</a></p>
+      </div>`;
+    document.body.appendChild(modal);
+    modal.addEventListener('click', e => { if (e.target===modal) modal.remove(); });
+    return;
+  }
+
+  // ── Після запуску — реальна оплата ──
   const backendUrl = 'https://bazar-backend-production-59da.up.railway.app/payment/create';
   window.location.href = backendUrl + '?plan=' + plan + (uid ? '&uid=' + uid : '');
+}
+
+function submitPrereg(plan) {
+  const email = document.getElementById('preregEmail').value;
+  if (!email || !email.includes('@')) {
+    document.getElementById('preregEmail').style.borderColor='#E24B4A';
+    setTimeout(()=>document.getElementById('preregEmail').style.borderColor='',2000);
+    return;
+  }
+  document.getElementById('preregForm').style.display='none';
+  document.getElementById('preregOk').style.display='block';
+  // TODO: підключити до Google Sheets або backend
+  fetch('mailto:bazartoloka@gmail.com'); // fallback
 }
 </script>
 </body>

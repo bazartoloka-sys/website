@@ -309,18 +309,31 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 .stat-label{font-size:11px;color:var(--cream3);margin-top:6px;letter-spacing:.3px}
 @media(max-width:600px){.float-chip{display:none}.stats-row{grid-template-columns:1fr 1fr}.feat-card.large{grid-column:auto}}
 
+/* COUNTDOWN */
+.countdown-wrap{width:100%;max-width:540px;margin:0 auto 32px;text-align:center}
+.cd-label{font-size:11px;color:var(--cream3);font-weight:700;letter-spacing:1px;margin-bottom:16px;text-transform:uppercase}
+.cd-blocks{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:24px}
+.cd-block{background:var(--clay2);border:1px solid var(--aborder);border-radius:16px;padding:14px 16px;min-width:70px;text-align:center}
+.cd-num{font-family:'Unbounded',sans-serif;font-size:30px;font-weight:900;color:var(--amber);line-height:1;display:block}
+.cd-unit{font-size:9px;color:var(--cream3);margin-top:5px;letter-spacing:1px;text-transform:uppercase}
+.cd-sep{font-family:'Unbounded',sans-serif;font-size:26px;font-weight:900;color:var(--cream4);margin-bottom:20px}
+.btn-upgrade-hero{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid var(--aborder);color:var(--amber);font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:13px 28px;border-radius:100px;transition:all .2s;margin-top:4px}
+.btn-upgrade-hero:hover{background:rgba(232,160,48,.08);border-color:var(--amber)}
+@media(max-width:440px){.cd-block{padding:10px 10px;min-width:54px}.cd-num{font-size:22px}.cd-sep{font-size:20px}}
+
 </style>
 </head>
 <body>
 
 <nav class="nav">
-  <div class="nlogo">БАЗАР<b>.</b></div>
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
   <div class="nlinks">
-    <a href="#video">Відео</a>
-    <a href="#invest">Інвесторам</a>
+    <a href="/upgrade">Тарифи</a>
+    <a href="/panas">Навчання</a>
+    <a href="/blog">Блог</a>
     <a href="/support">Підтримка</a>
   </div>
-  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">GOOGLE PLAY →</a>
 </nav>
 
 <section class="hero" id="top">
@@ -332,9 +345,31 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
     <div class="bd bd1"></div><div class="bd bd2"></div>
     <div class="bd bd3"></div><div class="bd bd4"></div><div class="bd bd5"></div>
   </div>
-  <div class="sbadge"><div class="dot"></div>Вже в Google Play</div>
+  <div class="sbadge" id="heroBadge"><div class="dot"></div>Офіційний запуск · 1 серпня 2026</div>
   <h1>БАЗАР<b>ТОЛОКА</b></h1>
   <p class="hsub">Де справжнє українське зустрічає свого покупця</p>
+
+  <!-- COUNTDOWN -->
+  <div class="countdown-wrap">
+    <div class="cd-label" id="cdLabel">⏳ До офіційного запуску залишилось</div>
+    <div class="cd-blocks">
+      <div class="cd-block"><div class="cd-num" id="cd-days">--</div><div class="cd-unit">днів</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><div class="cd-num" id="cd-hours">--</div><div class="cd-unit">годин</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><div class="cd-num" id="cd-mins">--</div><div class="cd-unit">хвилин</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><div class="cd-num" id="cd-secs">--</div><div class="cd-unit">секунд</div></div>
+    </div>
+    <div class="hero-btns">
+      <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="btn-play" id="mainCta">
+        <span>▶</span> ЗАВАНТАЖИТИ В GOOGLE PLAY
+      </a>
+      <a href="/upgrade" class="btn-upgrade-hero">🌾 ТАРИФИ ДЛЯ ПРОДАВЦІВ →</a>
+    </div>
+    <p class="hlegal" style="margin-top:12px">Погоджуєтесь з <a href="/terms">Угодою</a> та <a href="/privacy">Конфіденційністю</a></p>
+  </div>
+
   <!-- 3 VALUE CARDS -->
   <div class="value-cards">
     <div class="vc vc-green">
@@ -354,20 +389,6 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
     </div>
   </div>
 
-  <!-- NOTIFY FORM -->
-  <div class="notify-wrap">
-    <div class="notify-chip">🚀 Незабаром в Google Play</div>
-    <p class="notify-title">Будь першим!</p>
-    <p class="notify-sub">Залиш email — повідомимо одразу як додаток з'явиться в Play Market</p>
-    <div class="notify-form" id="notifyForm">
-      <input type="email" id="notifyEmail" placeholder="твій@email.com" class="notify-input">
-      <button class="notify-btn" onclick="submitNotify()">ПОВІДОМИТИ МЕНЕ →</button>
-    </div>
-    <div class="notify-success" id="notifySuccess" style="display:none">
-      ✅ Чудово! Повідомимо як тільки вийдемо в Play Market 🎉
-    </div>
-    <p class="hlegal" style="margin-top:12px">Погоджуєтесь з <a href="/terms">Угодою</a> та <a href="/privacy">Конфіденційністю</a></p>
-  </div>
 </section>
 
 <div class="pills">
@@ -639,49 +660,48 @@ function handleInvestForm(e) {
 </script>
 
 <script>
-
-function submitNotify() {
-  const email = document.getElementById('notifyEmail').value;
-  if (!email || !email.includes('@')) {
-    document.getElementById('notifyEmail').style.borderColor = '#E24B4A';
-    setTimeout(() => document.getElementById('notifyEmail').style.borderColor = '', 2000);
-    return;
+// ── COUNTDOWN до 1.08.2026 ──
+(function() {
+  const LAUNCH = new Date('2026-08-01T00:00:00+03:00').getTime();
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick() {
+    const diff = LAUNCH - Date.now();
+    if (diff <= 0) {
+      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id=>{
+        const el=document.getElementById(id); if(el) el.textContent='00';
+      });
+      const lbl=document.getElementById('cdLabel');
+      if(lbl) lbl.textContent='🎉 БАЗАР ТОЛОКА ЗАПУЩЕНО!';
+      const badge=document.getElementById('heroBadge');
+      if(badge) badge.innerHTML='<div class="dot"></div>Вже в Google Play ✅';
+      const cta=document.getElementById('mainCta');
+      if(cta){ cta.style.boxShadow='0 0 60px rgba(46,204,142,.45)'; }
+      clearInterval(timer); return;
+    }
+    const d=Math.floor(diff/86400000);
+    const h=Math.floor((diff%86400000)/3600000);
+    const m=Math.floor((diff%3600000)/60000);
+    const s=Math.floor((diff%60000)/1000);
+    document.getElementById('cd-days').textContent=pad(d);
+    document.getElementById('cd-hours').textContent=pad(h);
+    document.getElementById('cd-mins').textContent=pad(m);
+    document.getElementById('cd-secs').textContent=pad(s);
   }
-  document.getElementById('notifyForm').style.display = 'none';
-  document.getElementById('notifySuccess').style.display = 'block';
-  // Send to email
-  window.location.href = 'mailto:bazartoloka@gmail.com?subject=Підписка на запуск&body=Email для сповіщення: ' + encodeURIComponent(email);
-}
+  tick();
+  const timer=setInterval(tick,1000);
+})();
 
-// Seasonal Panas
+// ── Seasonal Panas ──
 (function() {
   const m = new Date().getMonth();
-  const seasons = {
-    spring: [2,3,4],
-    summer: [5,6,7],
-    autumn: [8,9,10],
-    winter: [11,0,1]
-  };
-  const files = {
-    spring: 'splash_spring.png',
-    summer: 'summer.png',
-    autumn: 'splash_autumn.png',
-    winter: 'splash_winter.png'
-  };
-  const labels = {
-    spring: 'Весна на базарі! 🌸',
-    summer: 'Літо на базарі! ☀️',
-    autumn: 'Осінь на базарі! 🍂',
-    winter: 'Зима на базарі! ❄️'
-  };
+  const seasons = {spring:[2,3,4],summer:[5,6,7],autumn:[8,9,10],winter:[11,0,1]};
+  const files = {spring:'splash_spring.png',summer:'summer.png',autumn:'splash_autumn.png',winter:'splash_winter.png'};
   let season = 'summer';
   for (const [s, months] of Object.entries(seasons)) {
     if (months.includes(m)) { season = s; break; }
   }
   const img = document.getElementById('panasImg');
   if (img) img.src = files[season];
-  const badge = document.querySelector('.sbadge');
-  if (badge) badge.innerHTML = '<div class="dot"></div>' + labels[season];
 })();
 </script>
 
