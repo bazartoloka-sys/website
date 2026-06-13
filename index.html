@@ -321,6 +321,47 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 .btn-upgrade-hero:hover{background:rgba(232,160,48,.08);border-color:var(--amber)}
 @media(max-width:440px){.cd-block{padding:10px 10px;min-width:54px}.cd-num{font-size:22px}.cd-sep{font-size:20px}}
 
+/* PANAS SEC */
+.panas-sec{margin:0 5% 48px}
+.panas-sec-inner{display:flex;align-items:center;gap:32px;background:var(--clay2);border:1px solid var(--aborder);border-radius:28px;padding:36px 40px;position:relative;overflow:hidden}
+.panas-sec-glow{position:absolute;left:-60px;bottom:-60px;width:280px;height:280px;border-radius:50%;background:var(--amber);filter:blur(80px);opacity:.05;pointer-events:none}
+.panas-sec-img{flex-shrink:0;width:140px;height:140px;border-radius:50%;overflow:hidden;border:3px solid var(--aborder);background:var(--clay);box-shadow:0 0 40px rgba(232,160,48,.15)}
+.panas-sec-img img{width:100%;height:100%;object-fit:cover;object-position:top}
+.panas-sec-body{flex:1}
+.panas-sec-label{font-size:10px;font-weight:700;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.panas-sec-title{font-family:'Unbounded',sans-serif;font-size:clamp(22px,3.5vw,32px);font-weight:900;color:var(--cream);margin-bottom:12px;line-height:1.15}
+.panas-sec-sub{font-size:14px;color:var(--cream2);line-height:1.7;margin-bottom:18px;max-width:460px}
+.panas-sec-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.panas-tag{background:var(--clay);border:1px solid var(--aborder);border-radius:100px;padding:5px 14px;font-size:12px;color:var(--cream2);font-weight:700}
+.panas-sec-cta{display:inline-flex;align-items:center;background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;letter-spacing:.5px;padding:13px 28px;border-radius:100px;transition:opacity .2s}
+.panas-sec-cta:hover{opacity:.88}
+@media(max-width:640px){.panas-sec-inner{flex-direction:column;text-align:center;padding:28px 20px}.panas-sec-tags{justify-content:center}.panas-sec-img{width:110px;height:110px}}
+
+/* LAUNCH SECTION */
+.launch-sec{margin:0 5% 60px;border-radius:28px;background:linear-gradient(135deg,var(--clay2) 0%,rgba(50,28,10,.8) 100%);border:1px solid var(--aborder);overflow:hidden;position:relative}
+.launch-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(232,160,48,.05) 0%,transparent 70%);pointer-events:none}
+.launch-glow-top{height:3px;background:linear-gradient(90deg,transparent,var(--amber),transparent)}
+.launch-inner{padding:48px 40px;text-align:center;position:relative}
+.launch-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(232,160,48,.12);border:1px solid var(--aborder);border-radius:100px;padding:6px 18px;font-size:11px;font-weight:700;color:var(--amber);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+.launch-title{font-family:'Unbounded',sans-serif;font-size:clamp(24px,4vw,40px);font-weight:900;line-height:1.1;margin-bottom:12px}
+.launch-title span{color:var(--amber)}
+.launch-sub{font-size:15px;color:var(--cream2);line-height:1.65;max-width:500px;margin:0 auto 32px}
+.launch-cd{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:36px}
+.launch-cd-block{background:var(--clay);border:1px solid var(--aborder);border-radius:18px;padding:18px 20px;min-width:82px;text-align:center}
+.launch-cd-num{font-family:'Unbounded',sans-serif;font-size:36px;font-weight:900;color:var(--amber);line-height:1;display:block}
+.launch-cd-unit{font-size:10px;color:var(--cream3);margin-top:6px;letter-spacing:1px;text-transform:uppercase}
+.launch-cd-sep{font-family:'Unbounded',sans-serif;font-size:32px;font-weight:900;color:var(--cream4);margin-bottom:22px}
+.launch-email-wrap{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:460px;margin:0 auto 16px}
+.launch-email-input{flex:1;min-width:220px;background:var(--clay);border:1px solid rgba(245,230,200,.15);border-radius:100px;padding:14px 22px;font-size:14px;color:var(--cream);font-family:'Nunito',sans-serif;outline:none;transition:border-color .2s}
+.launch-email-input:focus{border-color:var(--amber)}
+.launch-email-input::placeholder{color:var(--cream4)}
+.launch-btn{background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;letter-spacing:.5px;padding:14px 26px;border-radius:100px;border:none;cursor:pointer;transition:opacity .2s;white-space:nowrap}
+.launch-btn:hover{opacity:.88}
+.launch-ok{display:none;background:rgba(46,204,142,.1);border:1px solid rgba(46,204,142,.25);border-radius:14px;padding:14px 20px;font-size:14px;font-weight:700;color:var(--green);max-width:400px;margin:0 auto}
+.launch-legal{font-size:11px;color:var(--cream4);margin-top:12px}
+.launch-legal a{color:var(--cream3)}
+@media(max-width:500px){.launch-inner{padding:32px 20px}.launch-cd-block{padding:12px 14px;min-width:62px}.launch-cd-num{font-size:26px}.launch-cd-sep{font-size:24px}}
+
 </style>
 </head>
 <body>
@@ -333,7 +374,7 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
     <a href="/blog">Блог</a>
     <a href="/support">Підтримка</a>
   </div>
-  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">GOOGLE PLAY →</a>
+  <a href="#launch" class="ncta" id="navCta">⏳ 1 СЕРПНЯ →</a>
 </nav>
 
 <section class="hero" id="top">
@@ -362,8 +403,8 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
       <div class="cd-block"><div class="cd-num" id="cd-secs">--</div><div class="cd-unit">секунд</div></div>
     </div>
     <div class="hero-btns">
-      <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="btn-play" id="mainCta">
-        <span>▶</span> ЗАВАНТАЖИТИ В GOOGLE PLAY
+      <a href="#launch" class="btn-play" id="mainCta">
+        <span>⏳</span> ВІДКРИЄТЬСЯ 1 СЕРПНЯ 2026
       </a>
       <a href="/upgrade" class="btn-upgrade-hero">🌾 ТАРИФИ ДЛЯ ПРОДАВЦІВ →</a>
     </div>
@@ -401,19 +442,27 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 </div>
 
 
-<!-- ПАНАС ВІДПОВІДАЄ BANNER -->
-<a href="/panas" class="panas-banner">
-  <div class="panas-banner-img">
-    <img src="panas.png" alt="Панас">
+<!-- ПАНАС ВІДПОВІДАЄ — СЕКЦІЯ -->
+<div class="panas-sec">
+  <div class="panas-sec-inner">
+    <div class="panas-sec-img">
+      <img src="panas.png" alt="Панас">
+    </div>
+    <div class="panas-sec-body">
+      <div class="panas-sec-label">🎓 Навчання</div>
+      <h2 class="panas-sec-title">Панас відповідає</h2>
+      <p class="panas-sec-sub">Як знайти товар? Що таке Escrow? Як стати продавцем за 30 секунд?<br>Панас пояснює просто і чесно — без зайвих слів.</p>
+      <div class="panas-sec-tags">
+        <span class="panas-tag">🛍️ Покупцям</span>
+        <span class="panas-tag">🏪 Продавцям</span>
+        <span class="panas-tag">🛡️ Безпека</span>
+        <span class="panas-tag">💳 Оплата</span>
+      </div>
+      <a href="/panas" class="panas-sec-cta">ЧИТАТИ ВІДПОВІДІ →</a>
+    </div>
+    <div class="panas-sec-glow"></div>
   </div>
-  <div class="panas-banner-body">
-    <div class="panas-banner-label">🎓 Навчання</div>
-    <div class="panas-banner-title">Панас відповідає</div>
-    <div class="panas-banner-sub">Реальні питання продавців і покупців — чесні відповіді. Дізнайтесь все про Базар Толоку.</div>
-    <div class="panas-banner-cta">Читати відповіді →</div>
-  </div>
-  <div class="panas-banner-glow"></div>
-</a>
+</div>
 
 <!-- PHONE MOCKUP -->
 <div class="phone-section">
@@ -625,7 +674,32 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 <div class="seller-sec">
   <h2>🌾 Ти продаєш?</h2>
   <p>1 фото + 1 відео на місяць безкоштовно.<br>Реєстрація через Google за 30 секунд.</p>
-  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="btn-seller">ЗАВАНТАЖИТИ І ПОЧАТИ →</a>
+  <a href="#launch" class="btn-seller">🌾 ЗАПИСАТИСЬ У ПЕРШИЙ СПИСОК →</a>
+</div>
+
+<!-- LAUNCH SECTION -->
+<div class="launch-sec" id="launch">
+  <div class="launch-glow-top"></div>
+  <div class="launch-inner">
+    <div class="launch-chip">🚀 Офіційний запуск</div>
+    <h2 class="launch-title">Базар відкривається<br><span>1 серпня 2026</span></h2>
+    <p class="launch-sub">Перші продавці отримають спеціальну ціну і пріоритетне розміщення. Залиш email — повідомимо в день запуску.</p>
+    <div class="launch-cd">
+      <div class="launch-cd-block"><span class="launch-cd-num" id="l-days">--</span><div class="launch-cd-unit">днів</div></div>
+      <div class="launch-cd-sep">:</div>
+      <div class="launch-cd-block"><span class="launch-cd-num" id="l-hours">--</span><div class="launch-cd-unit">годин</div></div>
+      <div class="launch-cd-sep">:</div>
+      <div class="launch-cd-block"><span class="launch-cd-num" id="l-mins">--</span><div class="launch-cd-unit">хвилин</div></div>
+      <div class="launch-cd-sep">:</div>
+      <div class="launch-cd-block"><span class="launch-cd-num" id="l-secs">--</span><div class="launch-cd-unit">секунд</div></div>
+    </div>
+    <div class="launch-email-wrap" id="launchForm">
+      <input type="email" id="launchEmail" class="launch-email-input" placeholder="твій@email.com">
+      <button class="launch-btn" onclick="submitLaunch()">ЗАПИСАТИСЬ →</button>
+    </div>
+    <div class="launch-ok" id="launchOk">✅ Записано! Повідомимо 1 серпня 🎉</div>
+    <p class="launch-legal">Погоджуєтесь з <a href="/terms">Угодою</a> та <a href="/privacy">Конфіденційністю</a></p>
+  </div>
 </div>
 
 <footer>
@@ -690,6 +764,47 @@ function handleInvestForm(e) {
   tick();
   const timer=setInterval(tick,1000);
 })();
+
+// ── Launch section countdown ──
+(function() {
+  const LAUNCH = new Date('2026-08-01T00:00:00+03:00').getTime();
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick() {
+    const diff = LAUNCH - Date.now();
+    if (diff <= 0) {
+      ['l-days','l-hours','l-mins','l-secs'].forEach(id=>{
+        const el=document.getElementById(id); if(el) el.textContent='00';
+      });
+      // Оновлюємо nav кнопку на Play
+      const nav=document.getElementById('navCta');
+      if(nav){ nav.textContent='GOOGLE PLAY →'; nav.href='https://play.google.com/store/apps/details?id=ua.bazartoloka.app'; }
+      clearInterval(t2); return;
+    }
+    const d=Math.floor(diff/86400000);
+    const h=Math.floor((diff%86400000)/3600000);
+    const m=Math.floor((diff%3600000)/60000);
+    const s=Math.floor((diff%60000)/1000);
+    const el = (id) => document.getElementById(id);
+    if(el('l-days')) el('l-days').textContent=pad(d);
+    if(el('l-hours')) el('l-hours').textContent=pad(h);
+    if(el('l-mins')) el('l-mins').textContent=pad(m);
+    if(el('l-secs')) el('l-secs').textContent=pad(s);
+  }
+  tick();
+  const t2 = setInterval(tick, 1000);
+})();
+
+function submitLaunch() {
+  const email = document.getElementById('launchEmail').value;
+  if (!email || !email.includes('@')) {
+    document.getElementById('launchEmail').style.borderColor='#E24B4A';
+    setTimeout(()=>document.getElementById('launchEmail').style.borderColor='',2000);
+    return;
+  }
+  document.getElementById('launchForm').style.display='none';
+  document.getElementById('launchOk').style.display='block';
+  window.open('mailto:bazartoloka@gmail.com?subject=Запис на запуск&body=Email: '+encodeURIComponent(email),'_blank');
+}
 
 // ── Seasonal Panas ──
 (function() {
