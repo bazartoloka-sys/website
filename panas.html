@@ -7,6 +7,76 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+
+/* ============ LIGHT THEME (panas-specific) ============ */
+:root[data-theme="light"]{
+  --clay:#F5E6C8;
+  --clay2:#EFD9B0;
+  --clay3:#E6C898;
+  --border:rgba(26,15,8,.12);
+  --amber:#B8700C;
+  --amber2:#D89020;
+  --green:#1FA670;
+  --cream:#2A1810;
+  --cream2:#5A3318;
+  --cream3:#735030;
+  --cream4:#8B6440;
+  --red:#C0392B;
+  --blue:#2670A8;
+}
+:root[data-theme="light"] body{background:linear-gradient(180deg,#F5E6C8 0%,#EBD5A8 100%);background-attachment:fixed}
+:root[data-theme="light"] nav{background:rgba(245,230,200,.94)!important;border-bottom-color:var(--border)}
+:root[data-theme="light"] .ncta{background:var(--amber);color:#fff!important;box-shadow:0 4px 12px rgba(184,112,12,.32)}
+
+/* Carousel wrap & gradient overlays — must use light clay too */
+:root[data-theme="light"] .carousel-wrap{background:var(--clay)}
+:root[data-theme="light"] .carousel-wrap::before{background:linear-gradient(to bottom,#F5E6C8 0%,transparent 100%)!important}
+:root[data-theme="light"] .carousel-wrap::after{background:linear-gradient(to top,#F5E6C8 0%,transparent 100%)!important}
+
+/* Carousel buttons (prev/next) — invert dark rgba bg */
+:root[data-theme="light"] .carousel-btn{background:rgba(245,230,200,.88)!important;border-color:rgba(26,15,8,.20);color:var(--amber);box-shadow:0 4px 12px rgba(26,15,8,.12)}
+:root[data-theme="light"] .carousel-btn:hover{background:var(--amber)!important;color:#fff;border-color:var(--amber)}
+
+/* Slide counter */
+:root[data-theme="light"] .slide-counter{background:rgba(245,230,200,.85)!important;border-color:rgba(26,15,8,.12);color:var(--amber)}
+
+/* Carousel dots */
+:root[data-theme="light"] .cdot{background:rgba(26,15,8,.20)}
+:root[data-theme="light"] .cdot.active{background:var(--amber)}
+
+/* Tabs */
+:root[data-theme="light"] .tabs{background:var(--clay2);border-color:rgba(26,15,8,.10)}
+:root[data-theme="light"] .tab{color:var(--cream2)}
+:root[data-theme="light"] .tab.active{background:var(--amber);color:#fff}
+
+/* QA cards */
+:root[data-theme="light"] .qa-card{background:var(--clay2);border-color:rgba(26,15,8,.10);box-shadow:0 2px 8px rgba(26,15,8,.05)}
+:root[data-theme="light"] .qa-card:hover{box-shadow:0 8px 24px rgba(26,15,8,.15)}
+:root[data-theme="light"] .qa-q-icon{background:rgba(184,112,12,.14);border-color:rgba(184,112,12,.30)}
+:root[data-theme="light"] .qa-answer{border-top-color:rgba(26,15,8,.10)}
+:root[data-theme="light"] .qa-answer-inner{background:rgba(31,166,112,.08);border-left-color:var(--green)}
+
+/* CTA button */
+:root[data-theme="light"] .cta-btn{background:var(--amber);color:#fff!important;box-shadow:0 4px 12px rgba(184,112,12,.28)}
+:root[data-theme="light"] .cta-btn:hover{background:var(--amber2);box-shadow:0 8px 24px rgba(184,112,12,.40)}
+
+/* Carousel image shadow — softer on light bg */
+:root[data-theme="light"] .carousel-slide img{filter:drop-shadow(0 20px 50px rgba(26,15,8,.20))}
+
+/* Footer */
+:root[data-theme="light"] footer{border-top-color:rgba(26,15,8,.10)}
+
+/* Theme toggle button (inline in nav) */
+.theme-toggle{background:transparent;border:1px solid var(--border);color:var(--cream3);width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;margin-right:10px;transition:background .2s,border-color .2s,transform .15s;flex-shrink:0;padding:0;font-family:inherit}
+.theme-toggle:hover{background:rgba(232,160,48,.10);border-color:var(--amber);transform:scale(1.08)}
+:root[data-theme="light"] .theme-toggle{border-color:rgba(26,15,8,.20);color:var(--cream2)}
+:root[data-theme="light"] .theme-toggle:hover{background:rgba(184,112,12,.10);border-color:var(--amber)}
+.nav-right{display:flex;align-items:center;gap:0}
+
+/* Body transition for smooth switching */
+body{transition:background-color .4s ease,color .4s ease}
+/* ====================================== */
+
 :root{
   --clay:#1a1208;--clay2:#221a0c;--clay3:#2c2010;
   --border:rgba(255,220,100,.1);--amber:#E8A030;--amber2:#F5C842;
@@ -104,8 +174,8 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
 <nav>
   <a href="/" class="nlogo">БАЗАР<b>.</b></a>
   <a href="/" class="nav-back">← Головна</a>
-  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">GOOGLE PLAY →</a>
-</nav>
+  <div class="nav-right"><button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button><a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">GOOGLE PLAY →</a></div>
+  </nav>
 
 <!-- CAROUSEL -->
 <div class="carousel-wrap" id="carousel">
@@ -517,5 +587,35 @@ cw.addEventListener('touchend',e=>{
   if(Math.abs(d)>40) slideBy(d>0?1:-1);
 });
 </script>
+
+<script>
+/* ============ THEME SWITCHER ============ */
+(function(){
+  const KEY = 'bazar-theme';
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  function apply(theme){
+    if(theme === 'light'){
+      root.setAttribute('data-theme', 'light');
+      btn.textContent = '☀️';
+      btn.title = 'Темна тема';
+    } else {
+      root.removeAttribute('data-theme');
+      btn.textContent = '🌙';
+      btn.title = 'Світла тема';
+    }
+  }
+  const saved = localStorage.getItem(KEY) || 'dark';
+  apply(saved);
+  btn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    const next = current === 'light' ? 'dark' : 'light';
+    localStorage.setItem(KEY, next);
+    apply(next);
+  });
+})();
+</script>
+
 </body>
 </html>
