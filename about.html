@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Про нас — Базар Толока | Перший чесний маркетплейс України</title>
+<meta name="description" content="Базар Толока — перший український маркетплейс без комісій для верифікованих підприємців. Дізнайся хто ми, навіщо ми і чому це інакше.">
+<meta property="og:title" content="Про нас — Базар Толока">
+<meta property="og:description" content="Базар Толока — перший чесний маркетплейс для фермерів, майстрів і малого бізнесу України. Нуль комісій. Ескроу-захист. Зроблено в Україні.">
+<meta property="og:url" content="https://bazar.in.ua/about">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F5X711EZGE');
+</script>
+<style>
+:root{--clay:#1A0F08;--clay2:#261508;--clay3:#321C0A;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.22);--aborder:rgba(232,160,48,.22)}
+
+/* ===== LIGHT THEME ===== */
+:root[data-theme="light"]{--clay:#F5E6C8;--clay2:#EFD9B0;--clay3:#E8CFA0;--cream:#1A0F08;--cream2:#3A2010;--cream3:#6A4828;--cream4:#9A7848;--border:rgba(26,15,8,.10);--gborder:rgba(46,204,142,.30);--aborder:rgba(184,112,12,.30)}
+:root[data-theme="light"] body{background:linear-gradient(180deg,#F5E6C8 0%,#EBD5A8 100%);background-attachment:fixed}
+:root[data-theme="light"] .nav{background:rgba(245,230,200,.94)!important;border-bottom-color:var(--aborder)}
+:root[data-theme="light"] .stat-cell{background:#EFD9B0}
+:root[data-theme="light"] .value-card{background:#EFD9B0}
+:root[data-theme="light"] .tech-item{background:#EFD9B0}
+:root[data-theme="light"] .badge{background:#EFD9B0}
+:root[data-theme="light"] .mission-block{background:linear-gradient(135deg,#E8CFA0,#EFD9B0)}
+:root[data-theme="light"] .founder-card{background:linear-gradient(135deg,#E8CFA0,#EFD9B0)}
+:root[data-theme="light"] .art-cta{background:#EFD9B0}
+:root[data-theme="light"] .roles-table th{background:#E8CFA0}
+:root[data-theme="light"] .compare-table th{background:#E8CFA0}
+:root[data-theme="light"] .art-body h2{border-bottom-color:rgba(26,15,8,.10)}
+:root[data-theme="light"] .art-divider{border-top-color:rgba(26,15,8,.10)}
+:root[data-theme="light"] footer{border-top-color:rgba(26,15,8,.10)}
+:root[data-theme="light"] .ncta{box-shadow:0 4px 12px rgba(31,166,112,.30)}
+
+/* theme toggle */
+.theme-toggle{background:transparent;border:1px solid var(--aborder);border-radius:100px;width:36px;height:36px;font-size:16px;cursor:pointer;transition:background .2s,border-color .2s;display:flex;align-items:center;justify-content:center}
+.theme-toggle:hover{background:rgba(184,112,12,.10);border-color:var(--amber)}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.nlogo b{color:var(--amber)}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover{color:var(--green)}
+.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
+
+/* BREADCRUMB */
+.breadcrumb{padding:20px 5% 0;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--cream3)}
+.breadcrumb a{color:var(--cream3);transition:color .2s}
+.breadcrumb a:hover{color:var(--amber)}
+.breadcrumb span{color:var(--cream4)}
+
+/* HERO */
+.about-hero{padding:60px 5% 56px;max-width:860px;margin:0 auto;text-align:center}
+.hero-label{display:inline-block;background:rgba(232,160,48,.1);border:1px solid rgba(232,160,48,.2);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--amber);letter-spacing:1px;text-transform:uppercase;margin-bottom:22px}
+.hero-title{font-family:'Unbounded',sans-serif;font-size:clamp(30px,6vw,56px);font-weight:900;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px}
+.hero-title span{color:var(--amber)}
+.hero-lead{font-size:18px;color:var(--cream2);line-height:1.75;max-width:640px;margin:0 auto}
+
+/* STATS ROW */
+.stats-band{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:20px;overflow:hidden;max-width:860px;margin:0 auto 72px;padding:0 5%}
+.stat-cell{background:var(--clay2);padding:28px 16px;text-align:center}
+.stat-num{font-family:'Unbounded',sans-serif;font-size:32px;font-weight:900;color:var(--amber);line-height:1}
+.stat-label{font-size:12px;color:var(--cream3);margin-top:6px;font-weight:700}
+
+/* BODY */
+.art-body{max-width:800px;margin:0 auto;padding:0 5% 80px}
+.art-body h2{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:700;color:var(--cream);margin:56px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.art-body h3{font-family:'Unbounded',sans-serif;font-size:15px;font-weight:700;color:var(--amber);margin:32px 0 12px}
+.art-body p{font-size:16px;line-height:1.8;color:var(--cream2);margin-bottom:20px}
+.art-body p strong{color:var(--cream);font-weight:700}
+.art-body ul,.art-body ol{padding-left:24px;margin-bottom:20px}
+.art-body li{font-size:15px;line-height:1.75;color:var(--cream2);margin-bottom:8px}
+.art-body li strong{color:var(--cream)}
+.art-body a{color:var(--amber);border-bottom:1px solid rgba(232,160,48,.3);transition:border-color .2s}
+.art-body a:hover{border-color:var(--amber)}
+
+/* HIGHLIGHT */
+.highlight{background:rgba(232,160,48,.07);border:1px solid rgba(232,160,48,.2);border-radius:16px;padding:20px 24px;margin:28px 0}
+.highlight p{margin:0;color:var(--cream)}
+.highlight.green{background:rgba(46,204,142,.07);border-color:rgba(46,204,142,.2)}
+.highlight.blue{background:rgba(52,152,219,.08);border-color:rgba(52,152,219,.2)}
+.highlight.blue p{color:var(--cream)}
+
+/* MISSION BLOCK */
+.mission-block{background:linear-gradient(135deg,var(--clay3) 0%,var(--clay2) 100%);border:1px solid var(--aborder);border-radius:24px;padding:40px 36px;margin:40px 0;text-align:center}
+.mission-block .mission-icon{font-size:48px;margin-bottom:16px;display:block}
+.mission-block h3{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;color:var(--cream);margin-bottom:12px}
+.mission-block p{font-size:16px;color:var(--cream2);line-height:1.75;margin:0}
+.mission-block p em{color:var(--amber);font-style:normal;font-weight:700}
+
+/* VALUES GRID */
+.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:28px 0}
+.value-card{background:var(--clay2);border:1px solid var(--border);border-radius:18px;padding:22px 20px;transition:border-color .25s}
+.value-card:hover{border-color:var(--aborder)}
+.value-card .vc-icon{font-size:26px;margin-bottom:10px;display:block}
+.value-card .vc-title{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--cream);margin-bottom:8px}
+.value-card .vc-desc{font-size:13px;color:var(--cream3);line-height:1.65}
+
+/* ROLES TABLE */
+.roles-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+.roles-table th{background:var(--clay3);color:var(--amber);font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:12px 16px;text-align:left;letter-spacing:.5px}
+.roles-table td{padding:14px 16px;border-bottom:1px solid var(--border);color:var(--cream2);vertical-align:top;line-height:1.6}
+.roles-table tr:last-child td{border-bottom:none}
+.roles-table td:first-child{font-weight:700;color:var(--cream);white-space:nowrap}
+.roles-table .role-emoji{font-size:18px;margin-right:6px}
+
+/* COMPARE TABLE */
+.compare-wrap{overflow-x:auto;margin:28px 0}
+.compare-table{width:100%;border-collapse:collapse;font-size:13px}
+.compare-table th{background:var(--clay3);color:var(--amber);font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;padding:10px 14px;text-align:left;letter-spacing:.5px;white-space:nowrap}
+.compare-table th.bazar{color:var(--green)}
+.compare-table td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--cream2);vertical-align:middle}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table .feature{font-weight:700;color:var(--cream);font-size:12px}
+.compare-table .yes{color:var(--green);font-weight:700}
+.compare-table .no{color:var(--cream4)}
+.compare-table .bazar-col{font-weight:700;color:var(--green)}
+
+/* TECH STACK */
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+.tech-item{background:var(--clay2);border:1px solid var(--border);border-radius:14px;padding:16px;text-align:center}
+.tech-item .ti-icon{font-size:22px;margin-bottom:8px;display:block}
+.tech-item .ti-name{font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--cream);margin-bottom:4px}
+.tech-item .ti-desc{font-size:11px;color:var(--cream3);line-height:1.5}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-family:'Unbounded',sans-serif;font-size:14px;font-weight:700;color:var(--cream);margin-bottom:10px;cursor:pointer;display:flex;align-items:flex-start;gap:12px}
+.faq-q::before{content:"?";background:rgba(232,160,48,.12);color:var(--amber);font-size:12px;min-width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.faq-a{font-size:15px;color:var(--cream2);line-height:1.75;padding-left:36px}
+
+/* LEGAL BADGES */
+.legal-badges{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.badge{background:var(--clay2);border:1px solid var(--border);border-radius:100px;padding:8px 16px;font-size:12px;color:var(--cream2);display:flex;align-items:center;gap:6px}
+.badge .bdot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}
+
+/* FOUNDER */
+.founder-card{background:linear-gradient(135deg,var(--clay3),var(--clay2));border:1px solid var(--gborder);border-radius:24px;padding:32px;margin:40px 0;display:flex;align-items:flex-start;gap:24px}
+.founder-avatar{width:64px;height:64px;background:linear-gradient(135deg,var(--amber),#c07020);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0}
+.founder-info .fi-title{font-size:11px;color:var(--green);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.founder-info .fi-name{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;color:var(--cream);margin-bottom:10px}
+.founder-info .fi-quote{font-size:15px;color:var(--cream2);line-height:1.7;font-style:italic}
+
+/* DIVIDER */
+.art-divider{border:none;border-top:1px solid var(--border);margin:40px 0}
+
+/* CTA */
+.art-cta{background:var(--clay2);border:1px solid var(--aborder);border-radius:24px;padding:36px;text-align:center;margin:48px 0}
+.art-cta h3{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;margin-bottom:10px}
+.art-cta p{color:var(--cream2);font-size:14px;margin-bottom:22px}
+.btn-cta{display:inline-block;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:13px 28px;border-radius:100px;transition:opacity .2s}
+.btn-cta:hover{opacity:.88}
+.btn-cta.amber{background:var(--amber)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:32px 5%}
+.foot-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;letter-spacing:3px}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.flinks a{font-size:12px;color:var(--cream3);transition:color .2s}
+.flinks a:hover{color:var(--cream)}
+.fcontact a{font-size:13px;color:var(--cream2)}
+.fcopy{font-size:11px;color:var(--cream4)}
+
+@media(max-width:700px){
+  .nlinks{display:none}
+  .stats-band{grid-template-columns:repeat(2,1fr)}
+  .values-grid{grid-template-columns:1fr}
+  .tech-grid{grid-template-columns:repeat(2,1fr)}
+  .founder-card{flex-direction:column}
+  .about-hero{padding:40px 4% 40px}
+  .art-body{padding:0 4% 60px}
+}
+@media(max-width:480px){
+  .tech-grid{grid-template-columns:1fr 1fr}
+  .stats-band{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nlinks">
+    <a href="/">Головна</a>
+    <a href="/blog">Блог</a>
+    <a href="/upgrade">Тарифи</a>
+    <a href="/support">Підтримка</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button>
+    <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">Головна</a>
+  <span>›</span>
+  <span>Про нас</span>
+</div>
+
+<!-- HERO -->
+<div class="about-hero">
+  <div class="hero-label">🇺🇦 Зроблено в Україні</div>
+  <h1 class="hero-title">Торгуй<br><span>по-людськи</span></h1>
+  <p class="hero-lead">Базар Толока — перший український маркетплейс, де продавець отримує повну суму від покупця, а гроші захищені ескроу до підтвердження доставки.</p>
+</div>
+
+<!-- STATS -->
+<div style="padding:0 5%;max-width:860px;margin:0 auto 72px">
+  <div class="stats-band" style="padding:0;margin:0">
+    <div class="stat-cell">
+      <div class="stat-num">0%</div>
+      <div class="stat-label">Комісія з продажів</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Захист платежу</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Ролі продавців</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Довіра громади</div>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="art-body">
+
+  <h2>Що таке Базар Толока?</h2>
+
+  <p>
+    Базар Толока — онлайн-платформа для купівлі та продажу товарів в Україні, створена як <strong>безпечна альтернатива OLX, Prom.ua та Rozetka</strong>. Ми поєднали класичну торгівлю з відео-форматом у стилі TikTok: продавець завантажує коротке відео свого товару, покупець гортає стрічку і одразу купує.
+  </p>
+
+  <p>
+    Платформа працює у форматі мобільного додатку для Android (незабаром iOS) та веб-платформи <strong>bazar.in.ua</strong>, розроблених українською командою.
+  </p>
+
+  <div class="mission-block">
+    <span class="mission-icon">🤝</span>
+    <h3>Наша місія</h3>
+    <p>Зробити онлайн-торгівлю в Україні <em>чесною, безпечною та доступною</em> для кожного — від фермера до міського майстра.</p>
+  </div>
+
+  <h2>Ключові цінності</h2>
+
+  <div class="values-grid">
+    <div class="value-card">
+      <span class="vc-icon">🪙</span>
+      <div class="vc-title">Нуль комісії</div>
+      <div class="vc-desc">Продавець отримує повну суму від покупця — без прихованих відсотків і агрегаторських поборів.</div>
+    </div>
+    <div class="value-card">
+      <span class="vc-icon">🛡️</span>
+      <div class="vc-title">Захист від шахраїв</div>
+      <div class="vc-desc">Схеми OLX технічно неможливі завдяки архітектурі платформи. Продавець не отримує реквізити покупця.</div>
+    </div>
+    <div class="value-card">
+      <span class="vc-icon">🌾</span>
+      <div class="vc-title">Автентичність</div>
+      <div class="vc-desc">Тільки власні товари. Ми підтримуємо фермерів, майстрів і малий бізнес — не перекупників китайського.</div>
+    </div>
+    <div class="value-card">
+      <span class="vc-icon">🔍</span>
+      <div class="vc-title">Прозорість</div>
+      <div class="vc-desc">Продавець завжди знає причину будь-якого рішення платформи. Без безмовних блокувань.</div>
+    </div>
+  </div>
+
+  <h2>Для кого ми?</h2>
+
+  <h3>Для продавців</h3>
+
+  <table class="roles-table">
+    <thead>
+      <tr>
+        <th>Роль</th>
+        <th>Хто це</th>
+        <th>ФОП потрібен?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="role-emoji">🌾</span>Господар</td>
+        <td>Фермер, городник, садівник — продає власну сільськогосподарську продукцію</td>
+        <td>Ні</td>
+      </tr>
+      <tr>
+        <td><span class="role-emoji">🎨</span>Майстер</td>
+        <td>Хендмейд-виробник — кераміка, свічки, вишивка, в'язання, мило, авторські вироби</td>
+        <td>Ні</td>
+      </tr>
+      <tr>
+        <td><span class="role-emoji">🏪</span>Крамар</td>
+        <td>Малий бізнес з ФОП — власний магазин із перепродажем або виробництвом</td>
+        <td>Так</td>
+      </tr>
+      <tr>
+        <td><span class="role-emoji">💼</span>Купець</td>
+        <td>Середній бізнес, ТОВ — повноцінний магазин з командою до 10 осіб</td>
+        <td>Так</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Для покупців</h3>
+
+  <p>
+    Кожен покупець на Базарі — <strong>Козак або Козачка</strong>. Гроші заморожуються до підтвердження отримання товару. Оплата без картки — через НП Кредит (готівкою на відділенні). Кожен продавець верифікований — не анонім.
+  </p>
+
+  <h2>Як це працює?</h2>
+
+  <h3>Для продавця — 4 кроки</h3>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Реєстрація через Google</h4>
+        <p>Без SMS, без ФОП для Господаря і Майстра. Займає 30 секунд — тільки Google-акаунт.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Завантаження товару</h4>
+        <p>Фото або відео у форматі TikTok (вертикальне 9:16). ШІ автоматично генерує опис товару.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Покупець знаходить і купує</h4>
+        <p>Через відео-стрічку або ШІ-пошук природною мовою. Натискає «Купити» — гроші заморожуються на ескроу.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Гроші надходять продавцю</h4>
+        <p>Після підтвердження доставки через Нову Пошту. Якщо покупець не забрав — вартість доставки утримується з нього, не з продавця.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p>🛡️ <strong>Ключовий захист:</strong> шахрайські схеми OLX ("передоплата + зникнення") на Базарі Толока <strong>технічно неможливі</strong> — продавець не отримує реквізити покупця, покупець не передає гроші напряму продавцю.</p>
+  </div>
+
+  <h2>Чим ми відрізняємось?</h2>
+
+  <div class="compare-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Функція</th>
+          <th class="bazar">Базар Толока</th>
+          <th>OLX</th>
+          <th>Prom / Rozetka</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="feature">Комісія з продажів</td>
+          <td class="bazar-col">0%</td>
+          <td class="no">є</td>
+          <td class="no">4–24%</td>
+        </tr>
+        <tr>
+          <td class="feature">Ескроу-захист грошей</td>
+          <td class="bazar-col yes">завжди</td>
+          <td class="no">платно</td>
+          <td class="no">немає</td>
+        </tr>
+        <tr>
+          <td class="feature">Реєстрація без ФОП</td>
+          <td class="bazar-col yes">так</td>
+          <td class="yes">так</td>
+          <td class="no">ні</td>
+        </tr>
+        <tr>
+          <td class="feature">Відео-формат товару</td>
+          <td class="bazar-col">TikTok-стиль</td>
+          <td class="no">ні</td>
+          <td class="no">ні</td>
+        </tr>
+        <tr>
+          <td class="feature">Захист від фішингу</td>
+          <td class="bazar-col">архітектурно</td>
+          <td class="no">ні</td>
+          <td class="no">частково</td>
+        </tr>
+        <tr>
+          <td class="feature">Блокування з поясненням</td>
+          <td class="bazar-col yes">завжди</td>
+          <td class="no">ні</td>
+          <td class="no">частково</td>
+        </tr>
+        <tr>
+          <td class="feature">Оплата без картки (НП Кредит)</td>
+          <td class="bazar-col yes">так</td>
+          <td class="no">ні</td>
+          <td class="no">ні</td>
+        </tr>
+        <tr>
+          <td class="feature">Авто-верифікація ФОП</td>
+          <td class="bazar-col yes">так</td>
+          <td class="no">ні</td>
+          <td class="no">ручна</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Технологічна платформа</h2>
+
+  <p>Базар Толока — повністю українська розробка, побудована на сучасному стеку зі штучним інтелектом у кожному ключовому вузлі.</p>
+
+  <div class="tech-grid">
+    <div class="tech-item">
+      <span class="ti-icon">📱</span>
+      <div class="ti-name">Flutter</div>
+      <div class="ti-desc">Мобільний додаток Android (Play Market) та iOS</div>
+    </div>
+    <div class="tech-item">
+      <span class="ti-icon">🎬</span>
+      <div class="ti-name">Відео-стрічка</div>
+      <div class="ti-desc">Вертикальний формат 9:16, автоплей, TikTok-логіка</div>
+    </div>
+    <div class="tech-item">
+      <span class="ti-icon">🔐</span>
+      <div class="ti-name">Firebase Auth</div>
+      <div class="ti-desc">Google авторизація, без SMS, без збереження карток</div>
+    </div>
+    <div class="tech-item">
+      <span class="ti-icon">💳</span>
+      <div class="ti-name">NovaPay + WayForPay</div>
+      <div class="ti-desc">Ескроу-рахунки та карткова оплата</div>
+    </div>
+    <div class="tech-item">
+      <span class="ti-icon">📦</span>
+      <div class="ti-name">Нова Пошта</div>
+      <div class="ti-desc">Трекінг посилки в реальному часі</div>
+    </div>
+    <div class="tech-item">
+      <span class="ti-icon">🧾</span>
+      <div class="ti-name">Вчасно.Каса</div>
+      <div class="ti-desc">ПРРО — автоматичні фіскальні чеки для ФОП</div>
+    </div>
+    <div class="tech-item">
+      <span class="ti-icon">🤖</span>
+      <div class="ti-name">Claude AI</div>
+      <div class="ti-desc">Авто-описи товарів, перевірка фото, ШІ-пошук</div>
+    </div>
+    <div class="tech-item">
+      <span class="ti-icon">🔍</span>
+      <div class="ti-name">Семантичний пошук</div>
+      <div class="ti-desc">«Хочу солодкі яблука з Карпат» — і ось вони</div>
+    </div>
+    <div class="tech-item">
+      <span class="ti-icon">🇺🇦</span>
+      <div class="ti-name">100% Україна</div>
+      <div class="ti-desc">Дані не виходять за межі України</div>
+    </div>
+  </div>
+
+  <h2>Юридичний статус</h2>
+
+  <div class="legal-badges">
+    <div class="badge"><span class="bdot"></span>Офіційно зареєстровано в ДПА України</div>
+    <div class="badge"><span class="bdot"></span>Верифіковано як TikTok Business-акаунт</div>
+    <div class="badge"><span class="bdot"></span>Реєстрація в ЄС — подана</div>
+    <div class="badge"><span class="bdot"></span>NovaPay — ліцензований фінансовий посередник</div>
+    <div class="badge"><span class="bdot"></span>ПРРО Вчасно.Каса — автоматичні фіскальні чеки</div>
+  </div>
+
+  <h2>Поширені запитання</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Чи безпечно продавати на Базар Толока?</div>
+    <div class="faq-a">Так. Гроші покупця надходять на ескроу-рахунок NovaPay і заморожуються до підтвердження доставки. Продавець не отримує гроші до тих пір, поки покупець не підтвердив отримання товару. Шахрайські схеми передоплати технічно неможливі.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Чи потрібен ФОП щоб продавати?</div>
+    <div class="faq-a">Ні. Ролі Господар і Майстер — для фермерів та хендмейд-майстрів, які продають власноручно зроблені або вирощені товари. Реєстрація через Google без ФОП. Ліміт: 10 оголошень.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Яка комісія на Базар Толока?</div>
+    <div class="faq-a">Комісія з продажів — 0%. Продавець отримує повну суму від покупця. Монетизація платформи відбувається через платні підписки для бізнес-акаунтів (Крамар, Купець) та внутрішню рекламу.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Як покупець може оплатити товар?</div>
+    <div class="faq-a">Три способи: накладений платіж через NovaPay (готівкою на відділенні Нової Пошти), оплата карткою онлайн через WayForPay, або безготівковий переказ на рахунок ФОП.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Що таке «Толока» в назві?</div>
+    <div class="faq-a">Толока — традиційна українська практика взаємодопомоги: коли громада збирається разом щоб допомогти одне одному. Назва відображає ідею платформи: об'єднати українських виробників і покупців у чесній торгівлі без посередників-шахраїв.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Де знайти Базар Толока?</div>
+    <div class="faq-a">Сайт: <a href="https://bazar.in.ua">bazar.in.ua</a> · Android: Google Play Market (Базар Толока) · TikTok: <a href="https://tiktok.com/@bazartoloka">@bazartoloka</a> · Instagram: <a href="https://instagram.com/bazar.toloka">@bazar.toloka</a> · Telegram: <a href="https://t.me/bazartloka">t.me/bazartloka</a></div>
+  </div>
+
+  <hr class="art-divider">
+
+  <!-- ЗАСНОВНИК -->
+  <div class="founder-card">
+    <div class="founder-avatar">🌻</div>
+    <div class="founder-info">
+      <div class="fi-title">Засновниця · ФОП Торкотюк О.П.</div>
+      <div class="fi-name">Оксана Петрівна Торкотюк</div>
+      <div class="fi-quote">«Базар Толока — це не черговий маркетплейс. Ми будуємо місце, де фермер з Полтавщини продає мед так само просто, як велика мережа продає техніку. Де кожен продавець знає: його не обманять, не заблокують мовчки і не заберуть відсоток із кожної копійки.»</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="art-cta">
+    <h3>Готовий торгувати по-людськи?</h3>
+    <p>Завантажуй додаток і почни продавати або купувати вже сьогодні — реєстрація через Google за 30 секунд. Нуль комісій назавжди для всіх активних продавців.</p>
+    <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="btn-cta">ЗАВАНТАЖИТИ БЕЗКОШТОВНО →</a>
+  </div>
+
+  <a href="/" class="back-link" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--cream3);transition:color .2s;margin-bottom:0">← На головну</a>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови використання</a>
+      <a href="/offer">Публічна оферта</a>
+      <a href="/upgrade">Тарифи</a>
+      <a href="/support">Підтримка</a>
+      <a href="/about">Про нас</a>
+    </div>
+    <div class="fcontact"><a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  const KEY = 'bazar-theme';
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  function applyTheme(t){
+    if(t === 'light'){
+      root.setAttribute('data-theme','light');
+      btn.textContent = '☀️';
+    } else {
+      root.removeAttribute('data-theme');
+      btn.textContent = '🌙';
+    }
+  }
+  const saved = localStorage.getItem(KEY) || 'dark';
+  applyTheme(saved);
+  btn.addEventListener('click', function(){
+    const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    const next = current === 'light' ? 'dark' : 'light';
+    applyTheme(next);
+    localStorage.setItem(KEY, next);
+  });
+})();
+</script>
+</body>
+</html>
