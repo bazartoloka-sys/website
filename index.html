@@ -548,6 +548,15 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
   .car-caption{text-align:center;max-width:100%}
   .car-btn{display:none}
 }
+
+/* УТП чіпи */
+.utp-chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:16px 0 24px}
+.utp-chip{display:inline-flex;align-items:center;gap:6px;background:rgba(245,230,200,.06);border:1px solid rgba(245,230,200,.12);border-radius:100px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--cream2);letter-spacing:.3px}
+.utp-chip span{font-size:14px}
+:root[data-theme="light"] .utp-chip{background:rgba(26,15,8,.05);border-color:rgba(26,15,8,.12)}
+/* Кнопка блогерам */
+.btn-partners-hero{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--aborder);color:var(--amber);font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:12px 22px;border-radius:100px;transition:all .2s;letter-spacing:.5px}
+.btn-partners-hero:hover{background:rgba(232,160,48,.08);border-color:var(--amber)}
 </style>
 </head>
 <body>
@@ -577,6 +586,11 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
   <div class="sbadge" id="heroBadge"><div class="dot"></div>Офіційний запуск · 1 серпня 2026</div>
   <h1>БАЗАР<b>ТОЛОКА</b></h1>
   <p class="hsub">Де справжнє українське зустрічає свого покупця</p>
+  <div class="utp-chips">
+    <div class="utp-chip"><span>🇺🇦</span> 100% українські дані</div>
+    <div class="utp-chip"><span>🤖</span> ШІ-захист 360°</div>
+    <div class="utp-chip"><span>🪙</span> 0% комісії для виробника</div>
+  </div>
 
   <!-- COUNTDOWN -->
   <div class="countdown-wrap">
@@ -595,6 +609,7 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
         <span>⏳</span> ВІДКРИЄТЬСЯ 1 СЕРПНЯ 2026
       </a>
       <a href="/upgrade" class="btn-upgrade-hero">🌾 ТАРИФИ ДЛЯ ПРОДАВЦІВ →</a>
+      <a href="/partners" class="btn-partners-hero">🎬 БЛОГЕРАМ →</a>
     </div>
     <p class="hlegal" style="margin-top:12px">Погоджуєтесь з <a href="/terms">Угодою</a> та <a href="/privacy">Конфіденційністю</a></p>
   </div>
