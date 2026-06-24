@@ -305,7 +305,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
           <strong>Готовий до співпраці?</strong>
           <p>Надішли резюме / портфоліо, GitHub або посилання на додатки в сторах.<br>Вкажи бажану ставку або рейтинг.</p>
         </div>
-        <a href="mailto:bazartoloka@gmail.com?subject=Flutter Developer — відгук на вакансію" class="btn-apply">НАДІСЛАТИ РЕЗЮМЕ →</a>
+        <button class="btn-apply" id="btnFlutter" onclick="applyJob(this,'flutter')">НАДІСЛАТИ РЕЗЮМЕ →</button>
       </div>
     </div>
   </div>
@@ -366,7 +366,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
           <strong>Хочеш співпрацювати?</strong>
           <p>Розкажи про себе, свою аудиторію та формат контенту який робиш.<br>Прикріпи приклади робіт якщо є.</p>
         </div>
-        <a href="mailto:bazartoloka@gmail.com?subject=Блогер — відгук на партнерство" class="btn-apply amber">НАПИСАТИ НАМ →</a>
+        <button class="btn-apply amber" id="btnBlogger" onclick="applyJob(this,'blogger')">НАПИСАТИ НАМ →</button>
       </div>
     </div>
   </div>
@@ -385,7 +385,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
       <a href="/upgrade">Тарифи</a>
       <a href="/support">Підтримка</a>
     </div>
-    <div class="fcontact"><a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></div>
+    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
     <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
   </div>
 </footer>
@@ -418,6 +418,77 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
     apply(next);
   });
 })();
+</script>
+
+
+<script>
+/* ── TG form helper ── */
+function _tgBtn(btn, fetchPromise, okText) {
+  btn._orig = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = '⏳ Надсилаємо...';
+  fetchPromise
+    .then(r => r.json())
+    .then(d => {
+      btn.textContent = d.ok ? (okText||'✅ Надіслано!') : '⚠️ Помилка. Спробуйте ще раз.';
+      if (d.ok) { btn.style.background='var(--green)'; btn.style.color='#05200F'; }
+      else { setTimeout(()=>{ btn.textContent=btn._orig; btn.disabled=false; },3000); }
+    })
+    .catch(()=>{ btn.textContent='⚠️ Немає зв'язку.'; setTimeout(()=>{ btn.textContent=btn._orig; btn.disabled=false; },3000); });
+}
+</script>
+
+
+<!-- ── Модальна форма вакансій ── -->
+<div id="jobModal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px">
+  <div style="background:var(--clay2);border:1px solid var(--aborder);border-radius:20px;padding:28px 24px;max-width:480px;width:100%;position:relative">
+    <button onclick="closeJobModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;color:var(--cream3);font-size:20px;cursor:pointer;line-height:1">✕</button>
+    <div style="font-family:'Unbounded',sans-serif;font-size:16px;font-weight:900;margin-bottom:6px" id="jmTitle"></div>
+    <div style="font-size:13px;color:var(--cream2);margin-bottom:20px" id="jmSub"></div>
+    <div class="field"><label>Ваше ім'я</label><input type="text" id="jName" placeholder="Іван Петренко"></div>
+    <div class="field"><label>Як з вами зв'язатись</label><input type="text" id="jContact" placeholder="тел / email / Telegram — що зручно"></div>
+    <div class="field"><label>Про себе</label><textarea id="jMsg" style="min-height:90px" placeholder=""></textarea></div>
+    <button class="btn-apply" id="jSendBtn" style="width:100%;margin-top:4px;border:none;cursor:pointer" onclick="sendJobForm()">НАДІСЛАТИ →</button>
+    <p style="font-size:11px;color:var(--cream4);text-align:center;margin-top:10px">Відповідаємо протягом 48 годин</p>
+  </div>
+</div>
+<script>
+var _jobType='';
+function applyJob(btn,type){
+  _jobType=type;
+  var cfg={
+    flutter:['💼 Flutter Developer','Резюме / GitHub / посилання на додатки / ставка','GitHub, посилання на додатки в сторах, бажана ставка або рейтинг...'],
+    blogger:['🎥 Блогер / Контент-партнер','Розкажи про себе та свій контент','Канал / платформа / аудиторія / формат — і приклади робіт якщо є...']
+  };
+  document.getElementById('jmTitle').textContent=cfg[type][0];
+  document.getElementById('jmSub').textContent=cfg[type][1];
+  document.getElementById('jMsg').placeholder=cfg[type][2];
+  ['jName','jContact','jMsg'].forEach(function(id){document.getElementById(id).value='';}); 
+  var sb=document.getElementById('jSendBtn');
+  sb.textContent='НАДІСЛАТИ →'; sb.style.background=''; sb.style.color=''; sb.disabled=false;
+  document.getElementById('jobModal').style.display='flex';
+}
+function closeJobModal(){document.getElementById('jobModal').style.display='none';}
+function sendJobForm(){
+  var name=document.getElementById('jName').value.trim();
+  var contact=document.getElementById('jContact').value.trim();
+  var msg=document.getElementById('jMsg').value.trim();
+  if(!name||!contact){alert('Заповніть ім\'я та контакт');return;}
+  var isPartner=(_jobType==='blogger');
+  var label=isPartner?'🎥 БЛОГЕР/ПАРТНЕР':'💼 ВАКАНСІЯ Flutter Dev';
+  var token=isPartner?'8418921685:AAFclYUzyMOT6m175aamuuQu5zxPCjL2usI':'8795038063:AAENx96nwISwor2uFYaTmr-rWS-xE1Aru1s';
+  var chat=isPartner?'-5357452804':'-1004401892962';
+  var text=label+'\n━━━━━━━━━━━━━━━━\n'
+    +'👤 <b>Ім\'я:</b> '+name+'\n'
+    +'📞 <b>Контакт:</b> '+contact+'\n'
+    +'━━━━━━━━━━━━━━━━\n'
+    +(msg?'💬 '+msg+'\n':'')
+    +'━━━━━━━━━━━━━━━━\n'
+    +'🕐 '+new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'});
+  var btn=document.getElementById('jSendBtn');
+  _tgBtn(btn,fetch('https://api.telegram.org/bot'+token+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:chat,text:text,parse_mode:'HTML'})}));
+}
+document.getElementById('jobModal').addEventListener('click',function(e){if(e.target===this)closeJobModal();});
 </script>
 
 </body>

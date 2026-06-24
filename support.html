@@ -162,7 +162,7 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
     <div class="contact-card">
       <span class="cc-icon">📧</span>
       <div class="cc-name">Email</div>
-      <a href="mailto:bazartoloka@gmail.com" class="cc-val">bazartoloka@gmail.com</a>
+      <a href="mailto:info.bazartoloka@gmail.com" class="cc-val">info.bazartoloka@gmail.com</a>
       <div class="cc-note">Відповідь протягом 24 год</div>
     </div>
     <div class="contact-card">
@@ -280,7 +280,7 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
     <div class="form-title">Напиши нам</div>
     <div class="form-sub">Не знайшли відповідь? Опишіть проблему і ми допоможемо.</div>
     <div class="field"><label>Ваше ім'я</label><input type="text" placeholder="Іван Петренко" id="sName"></div>
-    <div class="field"><label>Email для відповіді</label><input type="email" placeholder="ivan@example.com" id="sEmail"></div>
+    <div class="field"><label>Як з вами зв'язатись</label><input type="text" placeholder="тел / email / Telegram — що зручно" id="sContact"></div>
     <div class="field"><label>Тема звернення</label>
       <select id="sTopic">
         <option>Проблема з оголошенням</option>
@@ -294,7 +294,7 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
       </select>
     </div>
     <div class="field"><label>Опис</label><textarea placeholder="Опишіть ситуацію детально..." id="sMsg"></textarea></div>
-    <button class="btn-send" onclick="sendSupport()">НАДІСЛАТИ ЗВЕРНЕННЯ →</button>
+    <button class="btn-send" id="sSendBtn" onclick="sendSupport()">НАДІСЛАТИ ЗВЕРНЕННЯ →</button>
     <p class="form-note">Відповідаємо протягом 24 годин у робочі дні</p>
   </div>
 </div>
@@ -314,12 +314,21 @@ function toggleFaq(el) {
   if (!isOpen) { item.classList.add('open'); el.querySelector('span').textContent = '−'; }
 }
 function sendSupport() {
-  const name = document.getElementById('sName').value;
-  const email = document.getElementById('sEmail').value;
-  const topic = document.getElementById('sTopic').value;
-  const msg = document.getElementById('sMsg').value;
-  if (!name || !email || !msg) { alert('Заповніть ім\'я, email та опис'); return; }
-  window.location.href = 'mailto:bazartoloka@gmail.com?subject=' + encodeURIComponent('[Підтримка] ' + topic + ' — ' + name) + '&body=' + encodeURIComponent('Від: ' + name + '\nEmail: ' + email + '\n\n' + msg);
+  const name    = document.getElementById('sName').value.trim();
+  const contact = document.getElementById('sContact').value.trim();
+  const topic   = document.getElementById('sTopic').value;
+  const msg     = document.getElementById('sMsg').value.trim();
+  if (!name || !contact || !msg) { alert('Заповніть ім\'я, контакт та опис'); return; }
+  const btn = document.getElementById('sSendBtn');
+  const text = '🆘 <b>ПІДТРИМКА</b>\n━━━━━━━━━━━━━━━━\n'
+    + '👤 <b>Ім\'я:</b> ' + name + '\n'
+    + '📞 <b>Контакт:</b> ' + contact + '\n'
+    + '📋 <b>Тема:</b> ' + topic + '\n'
+    + '━━━━━━━━━━━━━━━━\n'
+    + '💬 ' + msg + '\n'
+    + '━━━━━━━━━━━━━━━━\n'
+    + '🕐 ' + new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'});
+  _tgBtn(btn, fetch('https://api.telegram.org/bot8633813845:AAFMN5eAMoxJ4nRb8XHU3Gwr61l-YlrEseo/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1003863469324',text:text,parse_mode:'HTML'})}), '✅ Звернення надіслано!');
 }
 </script>
 
@@ -350,6 +359,24 @@ function sendSupport() {
     apply(next);
   });
 })();
+</script>
+
+
+<script>
+/* ── TG form helper ── */
+function _tgBtn(btn, fetchPromise, okText) {
+  btn._orig = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = '⏳ Надсилаємо...';
+  fetchPromise
+    .then(r => r.json())
+    .then(d => {
+      btn.textContent = d.ok ? (okText||'✅ Надіслано!') : '⚠️ Помилка. Спробуйте ще раз.';
+      if (d.ok) { btn.style.background='var(--green)'; btn.style.color='#05200F'; }
+      else { setTimeout(()=>{ btn.textContent=btn._orig; btn.disabled=false; },3000); }
+    })
+    .catch(()=>{ btn.textContent='⚠️ Немає зв'язку.'; setTimeout(()=>{ btn.textContent=btn._orig; btn.disabled=false; },3000); });
+}
 </script>
 
 </body></html>

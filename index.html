@@ -483,7 +483,9 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 .import-time{display:flex;align-items:center;gap:8px;background:rgba(232,160,48,.1);border:1px solid rgba(232,160,48,.2);border-radius:12px;padding:10px 16px}
 .import-time-num{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;color:var(--amber)}
 .import-time-text{font-size:12px;color:var(--cream2);line-height:1.4}
-@media(max-width:700px){.import-grid{grid-template-columns:1fr;gap:28px}.import-inner{padding:24px 20px}}
+.import-seller-btn{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;padding:13px 26px;border-radius:100px;border:none;cursor:pointer;transition:opacity .2s,transform .15s}
+.import-seller-btn:hover{opacity:.9;transform:translateY(-2px)}
+@media(max-width:700px){.import-grid{grid-template-columns:1fr;gap:28px}.import-inner{padding:24px 20px}.import-seller-btn{width:100%;justify-content:center}}
 
 /* ROLES INTERACTIVE */
 .roles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
@@ -759,6 +761,7 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
           </div>
         </div>
         <div class="import-badge">🐱 БУДЕ 100% У ПЕРШІЙ ВЕРСІЇ!</div>
+        <button class="import-seller-btn" onclick="openSellerModal()">🌾 ХОЧУ СТАТИ ПРОДАВЦЕМ →</button>
       </div>
       <div class="import-right">
         <div class="import-platforms">
@@ -1055,7 +1058,7 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
       <a href="/offer">Оферта</a>
       <a href="/jobs">Вакансії</a>
     </div>
-    <div class="fcontact"><a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></div>
+    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
     <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
   </div>
 </footer>
@@ -1064,14 +1067,21 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 function handleInvestForm(e) {
   e.preventDefault();
   const btn = e.target;
-  const name = btn.closest('.invest-form').querySelector('input[type=text]').value;
-  const email = btn.closest('.invest-form').querySelector('input[type=email]').value;
-  if (!name || !email) { btn.textContent = '⚠️ Заповніть ім\'я та email'; setTimeout(()=>btn.textContent='НАДІСЛАТИ ЗАЯВКУ →',2000); return; }
-  btn.textContent = '✅ Заявку надіслано!';
-  btn.style.background = 'var(--green)';
-  btn.style.color = '#05200F';
-  // TODO: replace with actual form submission to backend
-  window.location.href = 'mailto:bazartoloka@gmail.com?subject=Заявка від ' + encodeURIComponent(name) + '&body=Email: ' + encodeURIComponent(email);
+  const form = btn.closest('.invest-form');
+  const name    = form.querySelector('input[type=text]').value.trim();
+  const contact = (form.querySelector('input[type=email]')||{}).value||'';
+  const role    = (form.querySelector('select')||{}).value||'';
+  const about   = (form.querySelector('textarea')||{}).value||'';
+  if (!name || !contact) { btn.textContent='⚠️ Заповніть ім\'я та контакт'; setTimeout(()=>btn.textContent='НАДІСЛАТИ ЗАЯВКУ →',2000); return; }
+  const text = '💰 <b>ІНВЕСТОР/ПАРТНЕР</b>\n━━━━━━━━━━━━━━━━\n'
+    + '👤 <b>Ім\'я:</b> ' + name + '\n'
+    + '📞 <b>Контакт:</b> ' + contact.trim() + '\n'
+    + (role?'📋 <b>Роль:</b> '+role+'\n':'')
+    + '━━━━━━━━━━━━━━━━\n'
+    + (about.trim()?'💬 '+about.trim()+'\n':'')
+    + '━━━━━━━━━━━━━━━━\n'
+    + '🕐 ' + new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'});
+  _tgBtn(btn, fetch('https://api.telegram.org/bot8699311467:AAFxYGz3v1zW56B9Zpokq8NHl1UW_i1iz5M/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1004471347053',text:text,parse_mode:'HTML'})}), '✅ Заявку надіслано!');
 }
 </script>
 
@@ -1137,15 +1147,28 @@ function handleInvestForm(e) {
 })();
 
 function submitLaunch() {
-  const email = document.getElementById('launchEmail').value;
+  const emailEl = document.getElementById('launchEmail');
+  const email = emailEl.value.trim();
   if (!email || !email.includes('@')) {
-    document.getElementById('launchEmail').style.borderColor='#E24B4A';
-    setTimeout(()=>document.getElementById('launchEmail').style.borderColor='',2000);
+    emailEl.style.borderColor='#E24B4A';
+    setTimeout(()=>emailEl.style.borderColor='',2000);
     return;
   }
-  document.getElementById('launchForm').style.display='none';
-  document.getElementById('launchOk').style.display='block';
-  window.open('mailto:bazartoloka@gmail.com?subject=Запис на запуск&body=Email: '+encodeURIComponent(email),'_blank');
+  const btn = document.querySelector('.launch-btn');
+  if (!btn) return;
+  const text = '🚀 <b>ПІДПИСКА НА ЗАПУСК</b>\n━━━━━━━━━━━━━━━━\n'
+    + '📧 <b>Email:</b> ' + email + '\n'
+    + '🕐 ' + new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'});
+  btn.disabled=true; btn.textContent='⏳...';
+  fetch('https://api.telegram.org/bot8699311467:AAFxYGz3v1zW56B9Zpokq8NHl1UW_i1iz5M/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1004471347053',text:text,parse_mode:'HTML'})})
+    .then(()=>{
+      document.getElementById('launchForm').style.display='none';
+      document.getElementById('launchOk').style.display='block';
+    })
+    .catch(()=>{
+      document.getElementById('launchForm').style.display='none';
+      document.getElementById('launchOk').style.display='block';
+    });
 }
 
 // ── Seasonal Panas ──
@@ -1328,5 +1351,63 @@ function goToTariff() {
   setInterval(function(){carMove(1);},8000);
 })();
 </script>
+
+<script>
+/* ── TG form helper ── */
+function _tgBtn(btn, fetchPromise, okText) {
+  btn._orig = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = '⏳ Надсилаємо...';
+  fetchPromise
+    .then(r => r.json())
+    .then(d => {
+      btn.textContent = d.ok ? (okText||'✅ Надіслано!') : '⚠️ Помилка. Спробуйте ще раз.';
+      if (d.ok) { btn.style.background='var(--green)'; btn.style.color='#05200F'; }
+      else { setTimeout(()=>{ btn.textContent=btn._orig; btn.disabled=false; },3000); }
+    })
+    .catch(()=>{ btn.textContent='⚠️ Немає зв'язку.'; setTimeout(()=>{ btn.textContent=btn._orig; btn.disabled=false; },3000); });
+}
+</script>
+
+
+<!-- ── Модалка заявки продавця ── -->
+<div id="sellerModal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px">
+  <div style="background:var(--clay2);border:1px solid var(--aborder);border-radius:20px;padding:28px 24px;max-width:480px;width:100%;position:relative">
+    <button onclick="closeSellerModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;color:var(--cream3);font-size:20px;cursor:pointer;line-height:1">✕</button>
+    <div style="font-family:'Unbounded',sans-serif;font-size:16px;font-weight:900;margin-bottom:6px">🌾 Заявка продавця</div>
+    <div style="font-size:13px;color:var(--cream2);margin-bottom:20px">Залиш контакти — допоможемо стартувати на Базарі</div>
+    <div class="field"><label>Ваше ім'я / назва бізнесу</label><input type="text" id="seName" placeholder="Іван Петренко / ФОП Петренко"></div>
+    <div class="field"><label>Як з вами зв'язатись</label><input type="text" id="seContact" placeholder="тел / email / Telegram — що зручно"></div>
+    <div class="field"><label>Що продаєте</label><textarea id="seMsg" style="min-height:80px" placeholder="Коротко про товар: овочі, мед, хендмейд, одяг... Чи вже торгуєте у TikTok/Instagram?"></textarea></div>
+    <button class="import-seller-btn" id="seSendBtn" style="width:100%;justify-content:center;margin-top:4px" onclick="sendSellerForm()">НАДІСЛАТИ ЗАЯВКУ →</button>
+    <p style="font-size:11px;color:var(--cream4);text-align:center;margin-top:10px">Відповідаємо протягом 24 годин</p>
+  </div>
+</div>
+<script>
+function openSellerModal(){
+  ['seName','seContact','seMsg'].forEach(function(id){document.getElementById(id).value='';});
+  var b=document.getElementById('seSendBtn');
+  b.textContent='НАДІСЛАТИ ЗАЯВКУ →'; b.style.background=''; b.style.color=''; b.disabled=false;
+  document.getElementById('sellerModal').style.display='flex';
+}
+function closeSellerModal(){document.getElementById('sellerModal').style.display='none';}
+function sendSellerForm(){
+  var name=document.getElementById('seName').value.trim();
+  var contact=document.getElementById('seContact').value.trim();
+  var msg=document.getElementById('seMsg').value.trim();
+  if(!name||!contact){alert('Заповніть ім\'я та контакт');return;}
+  var text='🏪 <b>ЗАЯВКА ПРОДАВЦЯ</b>\n━━━━━━━━━━━━━━━━\n'
+    +'👤 <b>Ім\'я/бізнес:</b> '+name+'\n'
+    +'📞 <b>Контакт:</b> '+contact+'\n'
+    +'━━━━━━━━━━━━━━━━\n'
+    +(msg?'💬 '+msg+'\n':'')
+    +'━━━━━━━━━━━━━━━━\n'
+    +'🕐 '+new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'});
+  var btn=document.getElementById('seSendBtn');
+  _tgBtn(btn,fetch('https://api.telegram.org/bot8898378336:AAHAPpy5HFTxp5J58TfSP4HoVJkZVJiPHuM/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1003989090256',text:text,parse_mode:'HTML'})}),'✅ Заявку надіслано!');
+}
+document.getElementById('sellerModal').addEventListener('click',function(e){if(e.target===this)closeSellerModal();});
+</script>
+
 </body>
 </html>
