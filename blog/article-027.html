@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B2B-торгівля, аукціони та тендери в одному додатку — Базар Толока</title>
+<meta name="description" content="Як B2B-функціонал Базар Толока — аукціони, тендери, торгівля з ПДВ і ескроу для великих угод — допомагає дистриб'юторам і виробникам.">
+<meta property="og:title" content="Великий опт в Україні: як працює B2B-торгівля, тендери та аукціони всередині єдиного додатка">
+<meta property="og:description" content="Виробники та дистриб'ютори можуть виставити гуртову партію на аукціон або взяти участь у тендері — прямо в Базар Толока.">
+<meta property="og:url" content="https://bazar.in.ua/blog/article-027.html">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5X711EZGE');</script>
+<style>
+:root{--clay:#1A0F08;--clay2:#261508;--clay3:#321C0A;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.22);--aborder:rgba(232,160,48,.22)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.nlogo b{color:var(--amber)}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover{color:var(--green)}
+.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
+.breadcrumb{padding:20px 5% 0;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--cream3)}
+.breadcrumb a{color:var(--cream3);transition:color .2s}
+.breadcrumb a:hover{color:var(--amber)}
+.breadcrumb span{color:var(--cream4)}
+.art-header{padding:40px 5% 48px;max-width:800px;margin:0 auto}
+.art-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.art-tag{background:rgba(232,160,48,.12);border:1px solid rgba(232,160,48,.2);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:700;color:var(--amber);letter-spacing:.5px;text-transform:uppercase}
+.art-date{font-size:12px;color:var(--cream3)}
+.art-time{font-size:12px;color:var(--cream3)}
+.art-title{font-family:'Unbounded',sans-serif;font-size:clamp(26px,5vw,44px);font-weight:900;line-height:1.15;letter-spacing:-1px;margin-bottom:16px}
+.art-title span{color:var(--amber)}
+.art-lead{font-size:17px;color:var(--cream2);line-height:1.7;font-style:italic;border-left:3px solid var(--amber);padding-left:18px}
+.art-cover{width:100%;max-width:800px;margin:0 auto 48px;padding:0 5%}
+.art-cover-placeholder{width:100%;height:300px;background:linear-gradient(135deg,var(--clay3) 0%,rgba(232,160,48,.08) 100%);border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:1px solid var(--aborder)}
+.art-cover-placeholder .cover-icon{font-size:72px}
+.art-cover-placeholder .cover-label{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--amber);letter-spacing:2px}
+.art-body{max-width:800px;margin:0 auto;padding:0 5% 80px}
+.art-body h2{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:700;color:var(--cream);margin:48px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.art-body p{font-size:16px;line-height:1.85;color:var(--cream2);margin-bottom:20px}
+.art-body p strong{color:var(--cream);font-weight:700}
+.highlight{background:rgba(232,160,48,.07);border:1px solid rgba(232,160,48,.2);border-radius:16px;padding:20px 24px;margin:28px 0}
+.highlight p{margin:0;color:var(--cream);font-size:15px;line-height:1.7}
+.highlight.green{background:rgba(46,204,142,.07);border-color:rgba(46,204,142,.2)}
+.art-table-wrap{overflow-x:auto;margin:28px 0}
+.art-table{width:100%;border-collapse:collapse;font-size:14px}
+.art-table th{background:var(--clay3);color:var(--amber);font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:12px 16px;text-align:left;border-bottom:2px solid var(--aborder)}
+.art-table td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--cream2);vertical-align:top;line-height:1.6}
+.art-table tr:last-child td{border-bottom:none}
+.art-table tr:hover td{background:rgba(245,230,200,.02)}
+.art-table td strong{color:var(--cream)}
+.badge-green{display:inline-block;background:rgba(46,204,142,.12);border:1px solid rgba(46,204,142,.25);border-radius:6px;padding:2px 10px;font-size:11px;font-weight:700;color:#2ECC8E}
+.steps{display:flex;flex-direction:column;gap:16px;margin:28px 0}
+.step{display:flex;gap:18px;align-items:flex-start;background:var(--clay2);border:1px solid var(--border);border-radius:16px;padding:20px}
+.step-num{min-width:36px;height:36px;background:var(--amber);color:#1A0F08;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Unbounded',sans-serif;font-size:14px;font-weight:900;flex-shrink:0}
+.step-content h4{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--cream);margin-bottom:6px}
+.step-content p{font-size:14px;color:var(--cream2);line-height:1.65;margin:0}
+.art-share{display:flex;align-items:center;gap:12px;margin:40px 0;flex-wrap:wrap}
+.art-share span{font-size:13px;font-weight:700;color:var(--cream3)}
+.share-btn{background:var(--clay2);border:1px solid var(--border);border-radius:100px;padding:8px 18px;font-size:12px;font-weight:700;color:var(--cream2);cursor:pointer;transition:all .2s;font-family:'Nunito',sans-serif}
+.share-btn:hover{border-color:var(--aborder);color:var(--amber)}
+.art-cta{background:linear-gradient(135deg,var(--clay2) 0%,rgba(232,160,48,.05) 100%);border:1px solid var(--aborder);border-radius:24px;padding:40px;text-align:center;margin:48px 0}
+.art-cta .cta-icon{font-size:48px;margin-bottom:16px}
+.art-cta h3{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;margin-bottom:10px}
+.art-cta h3 span{color:var(--amber)}
+.art-cta p{color:var(--cream2);font-size:15px;margin-bottom:24px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.65}
+.btn-cta{display:inline-block;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:14px 32px;border-radius:100px;transition:opacity .2s,transform .15s}
+.btn-cta:hover{opacity:.88;transform:translateY(-2px)}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--cream3);transition:color .2s;margin-bottom:48px}
+.back-link:hover{color:var(--amber)}
+footer{border-top:1px solid var(--border);padding:32px 5%}
+.foot-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;letter-spacing:3px}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.flinks a{font-size:12px;color:var(--cream3);transition:color .2s}
+.flinks a:hover{color:var(--cream)}
+.fcontact a{font-size:13px;color:var(--cream2)}
+.fcopy{font-size:11px;color:var(--cream4)}
+@media(max-width:600px){.nlinks{display:none}.art-header{padding:28px 5% 32px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nlinks">
+    <a href="/">Головна</a>
+    <a href="/blog">Блог</a>
+    <a href="/upgrade">Тарифи</a>
+    <a href="/support">Підтримка</a>
+  </div>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
+</nav>
+<div class="breadcrumb">
+  <a href="/">Головна</a><span>/</span>
+  <a href="/blog">Блог</a><span>/</span>
+  B2B-торгівля, аукціони та тендери на Базар Толока
+</div>
+<div class="art-header">
+  <div class="art-meta">
+    <span class="art-tag">Продавцям</span>
+    <span class="art-date">25 червня 2026</span>
+    <span class="art-time">⏱ 7 хв читання</span>
+  </div>
+  <h1 class="art-title">Великий опт: B2B-торгівля, аукціони та тендери <span>в одному додатку</span></h1>
+  <p class="art-lead">Базар Толока — не тільки для роздробу. Платформа підтримує повноцінну B2B-торгівлю: аукціони, тендери, безготівкові розрахунки з ПДВ та ескроу для великих угод між юридичними особами.</p>
+</div>
+<div class="art-cover">
+  <div class="art-cover-placeholder">
+    <div class="cover-icon">🏭</div>
+    <div class="cover-label">B2B НА БАЗАРІ</div>
+  </div>
+</div>
+<div class="art-body">
+
+<h2>Інструменти B2B-торгівлі на Базар Толока</h2>
+
+<div class="art-table-wrap">
+<table class="art-table">
+<thead>
+<tr><th>Функція</th><th>Опис</th><th>Для кого</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Торгівля з ПДВ</strong></td><td>Повна підтримка для платників ПДВ на 3-й групі</td><td><span class="badge-green">ТОВ, ФОП 3-ї групи з ПДВ</span></td></tr>
+<tr><td><strong>IBAN-розрахунок</strong></td><td>Виставлення офіційних рахунків-фактур для корпоративних покупців</td><td><span class="badge-green">Корпоративні клієнти</span></td></tr>
+<tr><td><strong>Аукціони</strong></td><td>Виставлення партії товару на відкриті торги із стартовою ціною</td><td><span class="badge-green">Дистриб'ютори, виробники</span></td></tr>
+<tr><td><strong>Тендери</strong></td><td>Оголошення або участь у закупівельних тендерах</td><td><span class="badge-green">Підприємства, кооперативи</span></td></tr>
+<tr><td><strong>Ескроу для B2B</strong></td><td>Захищений депозит для великих угод між юрособами</td><td><span class="badge-green">Обидві сторони угоди</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Як виставити партію на аукціон — три кроки</h2>
+
+<div class="steps">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h4>Оберіть режим «Аукціон» при створенні картки</h4>
+      <p>Вкажіть стартову ціну, мінімальний крок ставки та дату закінчення торгів. Система автоматично відстежує всі ставки і визначає переможця.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h4>Завантажте відео-огляд партії</h4>
+      <p>Покажіть якість, кількість і пакування. B2B-покупці так само цінують наочність, як і роздрібні — відео знімає більшість технічних питань ще до торгів.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h4>Отримайте оплату через ескроу</h4>
+      <p>Переможець аукціону вносить оплату на захищений транзитний рахунок. Кошти переходять до вас після відправки та підтвердження отримання. Нульовий ризик для обох сторін.</p>
+    </div>
+  </div>
+</div>
+
+<div class="highlight green">
+  <p>✅ <strong>Перевага над OLX і Prom.ua:</strong> На жодній з цих платформ немає вбудованих аукціонів і тендерів для B2B-торгівлі. Базар Толока — перший в Україні маркетплейс де роздріб і великий опт об'єднані в одному додатку.</p>
+</div>
+
+<p>Реєстрація кабінетів продавців відкривається <strong>1 серпня 2026 року</strong>. Якщо ваш бізнес працює і з роздрібними покупцями, і з корпоративними клієнтами — Базар Толока закриває обидва напрямки в одному місці.</p>
+
+<div class="art-cta">
+  <div class="cta-icon">🤝</div>
+  <h3>Великі угоди — <span>без ризику</span></h3>
+  <p>Аукціони, тендери, ескроу для B2B. Корпоративна торгівля на новому рівні захисту і прозорості.</p>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="btn-cta">ЗАВАНТАЖИТИ БАЗАР →</a>
+</div>
+
+<div class="art-share">
+  <span>Поділитись:</span>
+  <button class="share-btn" onclick="shareArticle('telegram')">📱 Telegram</button>
+  <button class="share-btn" onclick="shareArticle('viber')">💬 Viber</button>
+  <button class="share-btn" onclick="shareArticle('copy')">🔗 Скопіювати посилання</button>
+</div>
+<a href="/blog" class="back-link">← Повернутись до блогу</a>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови використання</a>
+      <a href="/offer">Публічна оферта</a>
+      <a href="/upgrade">Тарифи</a>
+      <a href="/support">Підтримка</a>
+    </div>
+    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
+</footer>
+<script>
+function shareArticle(platform){const url=window.location.href;const title=document.title;if(platform==='telegram'){window.open('https://t.me/share/url?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(title));}else if(platform==='viber'){window.open('viber://forward?text='+encodeURIComponent(title+' '+url));}else if(platform==='copy'){navigator.clipboard.writeText(url).then(()=>{const btn=event.target;btn.textContent='✅ Скопійовано!';setTimeout(()=>btn.textContent='🔗 Скопіювати посилання',2000);});}}
+</script>
+</body>
+</html>

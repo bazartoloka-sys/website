@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Оптимізація описів товарів для ШІ-пошуку Google та Gemini у 2026 — Базар Толока</title>
+<meta name="description" content="Як вбудований ШІ-асистент Claude в адмінпанелі Базар Толока автоматично оптимізує картки під нові алгоритми Google SGE і Gemini у 2026 році.">
+<meta property="og:title" content="Оптимізація описів товарів для ШІ-пошуку: як зробити так, щоб ваш товар знаходили в Google та Gemini">
+<meta property="og:description" content="Покупці шукають через голосові ШІ-запити. Вбудований Claude аналізує відео і текст та автоматично оптимізує картку під нові алгоритми.">
+<meta property="og:url" content="https://bazar.in.ua/blog/article-020.html">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5X711EZGE');</script>
+<style>
+:root{--clay:#1A0F08;--clay2:#261508;--clay3:#321C0A;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.22);--aborder:rgba(232,160,48,.22)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.nlogo b{color:var(--amber)}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover{color:var(--green)}
+.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
+.breadcrumb{padding:20px 5% 0;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--cream3)}
+.breadcrumb a{color:var(--cream3);transition:color .2s}
+.breadcrumb a:hover{color:var(--amber)}
+.breadcrumb span{color:var(--cream4)}
+.art-header{padding:40px 5% 48px;max-width:800px;margin:0 auto}
+.art-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.art-tag{background:rgba(46,204,142,.1);border:1px solid rgba(46,204,142,.2);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:700;color:var(--green);letter-spacing:.5px;text-transform:uppercase}
+.art-date{font-size:12px;color:var(--cream3)}
+.art-time{font-size:12px;color:var(--cream3)}
+.art-title{font-family:'Unbounded',sans-serif;font-size:clamp(26px,5vw,44px);font-weight:900;line-height:1.15;letter-spacing:-1px;margin-bottom:16px}
+.art-title span{color:var(--amber)}
+.art-lead{font-size:17px;color:var(--cream2);line-height:1.7;font-style:italic;border-left:3px solid var(--amber);padding-left:18px}
+.art-cover{width:100%;max-width:800px;margin:0 auto 48px;padding:0 5%}
+.art-cover-placeholder{width:100%;height:300px;background:linear-gradient(135deg,var(--clay3) 0%,rgba(46,204,142,.06) 100%);border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:1px solid var(--gborder)}
+.art-cover-placeholder .cover-icon{font-size:72px}
+.art-cover-placeholder .cover-label{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--green);letter-spacing:2px}
+.art-body{max-width:800px;margin:0 auto;padding:0 5% 80px}
+.art-body h2{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:700;color:var(--cream);margin:48px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.art-body p{font-size:16px;line-height:1.85;color:var(--cream2);margin-bottom:20px}
+.art-body p strong{color:var(--cream);font-weight:700}
+.highlight{background:rgba(232,160,48,.07);border:1px solid rgba(232,160,48,.2);border-radius:16px;padding:20px 24px;margin:28px 0}
+.highlight p{margin:0;color:var(--cream);font-size:15px;line-height:1.7}
+.highlight.green{background:rgba(46,204,142,.07);border-color:rgba(46,204,142,.2)}
+.query-example{background:var(--clay2);border:1px solid var(--gborder);border-radius:14px;padding:18px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+.query-icon{font-size:22px;flex-shrink:0}
+.query-text{font-size:14px;color:var(--cream2);line-height:1.6;font-style:italic}
+.query-text strong{color:var(--green);font-style:normal}
+.art-table-wrap{overflow-x:auto;margin:28px 0}
+.art-table{width:100%;border-collapse:collapse;font-size:14px}
+.art-table th{background:var(--clay3);color:var(--amber);font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:12px 16px;text-align:left;border-bottom:2px solid var(--aborder)}
+.art-table td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--cream2);vertical-align:top;line-height:1.6}
+.art-table tr:last-child td{border-bottom:none}
+.art-table tr:hover td{background:rgba(245,230,200,.02)}
+.art-table td strong{color:var(--cream)}
+.badge-green{display:inline-block;background:rgba(46,204,142,.12);border:1px solid rgba(46,204,142,.25);border-radius:6px;padding:2px 10px;font-size:11px;font-weight:700;color:#2ECC8E}
+.art-share{display:flex;align-items:center;gap:12px;margin:40px 0;flex-wrap:wrap}
+.art-share span{font-size:13px;font-weight:700;color:var(--cream3)}
+.share-btn{background:var(--clay2);border:1px solid var(--border);border-radius:100px;padding:8px 18px;font-size:12px;font-weight:700;color:var(--cream2);cursor:pointer;transition:all .2s;font-family:'Nunito',sans-serif}
+.share-btn:hover{border-color:var(--aborder);color:var(--amber)}
+.art-cta{background:linear-gradient(135deg,var(--clay2) 0%,rgba(46,204,142,.04) 100%);border:1px solid var(--gborder);border-radius:24px;padding:40px;text-align:center;margin:48px 0}
+.art-cta .cta-icon{font-size:48px;margin-bottom:16px}
+.art-cta h3{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;margin-bottom:10px}
+.art-cta h3 span{color:var(--amber)}
+.art-cta p{color:var(--cream2);font-size:15px;margin-bottom:24px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.65}
+.btn-cta{display:inline-block;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:14px 32px;border-radius:100px;transition:opacity .2s,transform .15s}
+.btn-cta:hover{opacity:.88;transform:translateY(-2px)}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--cream3);transition:color .2s;margin-bottom:48px}
+.back-link:hover{color:var(--amber)}
+footer{border-top:1px solid var(--border);padding:32px 5%}
+.foot-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;letter-spacing:3px}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.flinks a{font-size:12px;color:var(--cream3);transition:color .2s}
+.flinks a:hover{color:var(--cream)}
+.fcontact a{font-size:13px;color:var(--cream2)}
+.fcopy{font-size:11px;color:var(--cream4)}
+@media(max-width:600px){.nlinks{display:none}.art-header{padding:28px 5% 32px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nlinks">
+    <a href="/">Головна</a>
+    <a href="/blog">Блог</a>
+    <a href="/upgrade">Тарифи</a>
+    <a href="/support">Підтримка</a>
+  </div>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">Головна</a><span>/</span>
+  <a href="/blog">Блог</a><span>/</span>
+  Оптимізація описів для ШІ-пошуку Google та Gemini
+</div>
+
+<div class="art-header">
+  <div class="art-meta">
+    <span class="art-tag">Навчання</span>
+    <span class="art-date">25 червня 2026</span>
+    <span class="art-time">⏱ 5 хв читання</span>
+  </div>
+  <h1 class="art-title">Оптимізація описів товарів для <span>ШІ-пошуку</span>: Google SGE та Gemini у 2026</h1>
+  <p class="art-lead">У 2026 році покупці шукають через розгорнуті голосові запити до ШІ-асистентів. Базар Толока автоматизує оптимізацію карток під нову реальність пошуку через вбудований Claude — без SEO-фахівців і ручної роботи.</p>
+</div>
+
+<div class="art-cover">
+  <div class="art-cover-placeholder">
+    <div class="cover-icon">🔍</div>
+    <div class="cover-label">ШІ-ПОШУК 2026</div>
+  </div>
+</div>
+
+<div class="art-body">
+
+<h2>Як насправді шукають покупці у 2026 році</h2>
+
+<p>Сучасний покупець більше не набирає в Google два слова. Він формує складні розмовні запити до голосових ШІ-асистентів — і очікує точну відповідь з посиланням на конкретний товар.</p>
+
+<div class="query-example">
+  <div class="query-icon">🎤</div>
+  <div class="query-text"><strong>Реальний голосовий запит:</strong> «Знайди теплий крафтовий плед великого розміру з натуральної вовни українського виробництва, який не кошлатиться після прання і може встигнути до п'ятниці в Полтаву»</div>
+</div>
+
+<p>ШІ Google аналізує контекст і семантику, перевіряє відгуки, сканує відеоконтент. Якщо вашої сторінки немає в індексі ШІ — ви просто не існуєте для цього покупця.</p>
+
+<h2>Три інструменти Claude в адмінпанелі Базар Толока</h2>
+
+<div class="art-table-wrap">
+<table class="art-table">
+<thead>
+<tr><th>Функція ШІ</th><th>Що робить</th><th>Результат</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>ШІ форматування опису</strong></td>
+  <td>Інтегрує LSI-запити та семантичні маркери під Google SGE і Gemini</td>
+  <td><span class="badge-green">Органічний трафік без рекламного бюджету</span></td>
+</tr>
+<tr>
+  <td><strong>Автозаповнення характеристик</strong></td>
+  <td>Генерує структурований опис зі структурою що продає з ваших нотаток</td>
+  <td><span class="badge-green">Картка готова за секунди замість годин</span></td>
+</tr>
+<tr>
+  <td><strong>ШІ підбір тегів</strong></td>
+  <td>Аналізує відео та текст, генерує хмариння тегів під цільову аудиторію</td>
+  <td><span class="badge-green">Попадання в рекомендації потрібним покупцям</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="highlight green">
+  <p>✅ <strong>Ключова відмінність від конкурентів:</strong> Claude аналізує не тільки ваш текст, а й саме відео. Він розпізнає об'єкти в кадрі та генерує приховані мета-дані для пошукових роботів — автоматично, без вашої участі.</p>
+</div>
+
+<h2>Чому це важливо саме зараз</h2>
+
+<p>Пошукові алгоритми змінюються швидше ніж будь-коли. Магазини, які сьогодні оптимізують картки під ШІ-семантику, через кілька місяців отримуватимуть органічний трафік, який конкурентам не купити за жодні гроші в рекламному кабінеті.</p>
+
+<p>Реєстрація продавців на Базар Толока — <strong>1 серпня 2026 року</strong>. Старт для покупців — <strong>1 вересня 2026</strong>. Потрапте до перших продавців і закріпіть позиції в пошуку ще до масового заходу конкурентів.</p>
+
+<div class="art-cta">
+  <div class="cta-icon">🤖</div>
+  <h3>ШІ оптимізує — <span>ви продаєте</span></h3>
+  <p>Вбудований Claude аналізує відео, генерує теги і форматує опис під Google SGE і Gemini — автоматично.</p>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="btn-cta">ЗАВАНТАЖИТИ БАЗАР →</a>
+</div>
+
+<div class="art-share">
+  <span>Поділитись:</span>
+  <button class="share-btn" onclick="shareArticle('telegram')">📱 Telegram</button>
+  <button class="share-btn" onclick="shareArticle('viber')">💬 Viber</button>
+  <button class="share-btn" onclick="shareArticle('copy')">🔗 Скопіювати посилання</button>
+</div>
+
+<a href="/blog" class="back-link">← Повернутись до блогу</a>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови використання</a>
+      <a href="/offer">Публічна оферта</a>
+      <a href="/upgrade">Тарифи</a>
+      <a href="/support">Підтримка</a>
+    </div>
+    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
+</footer>
+
+<script>
+function shareArticle(platform){const url=window.location.href;const title=document.title;if(platform==='telegram'){window.open('https://t.me/share/url?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(title));}else if(platform==='viber'){window.open('viber://forward?text='+encodeURIComponent(title+' '+url));}else if(platform==='copy'){navigator.clipboard.writeText(url).then(()=>{const btn=event.target;btn.textContent='✅ Скопійовано!';setTimeout(()=>btn.textContent='🔗 Скопіювати посилання',2000);});}}
+</script>
+</body>
+</html>

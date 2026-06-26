@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Автоматизація ПРРО: як законно видавати чеки без рутини — Базар Толока</title>
+<meta name="description" content="Як інтеграція ПРРО Вчасно.Каса і Checkbox у Базар Толока автоматизує фіскалізацію: підключіть один раз і система видає чеки при кожному замовленні.">
+<meta property="og:title" content="Автоматизація ПРРО: як законно видавати чеки покупцям та не потонути в рутині">
+<meta property="og:description" content="Підключіть Вчасно.Каса або Checkbox один раз — і кожне замовлення автоматично отримує фіскальний чек без вашої участі.">
+<meta property="og:url" content="https://bazar.in.ua/blog/article-015.html">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5X711EZGE');</script>
+<style>
+:root{--clay:#1A0F08;--clay2:#261508;--clay3:#321C0A;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.22);--aborder:rgba(232,160,48,.22)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.nlogo b{color:var(--amber)}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover{color:var(--green)}
+.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
+.breadcrumb{padding:20px 5% 0;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--cream3)}
+.breadcrumb a{color:var(--cream3);transition:color .2s}
+.breadcrumb a:hover{color:var(--amber)}
+.breadcrumb span{color:var(--cream4)}
+.art-header{padding:40px 5% 48px;max-width:800px;margin:0 auto}
+.art-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.art-tag{background:rgba(46,204,142,.1);border:1px solid rgba(46,204,142,.2);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:700;color:var(--green);letter-spacing:.5px;text-transform:uppercase}
+.art-date{font-size:12px;color:var(--cream3)}
+.art-time{font-size:12px;color:var(--cream3)}
+.art-title{font-family:'Unbounded',sans-serif;font-size:clamp(26px,5vw,44px);font-weight:900;line-height:1.15;letter-spacing:-1px;margin-bottom:16px}
+.art-title span{color:var(--amber)}
+.art-lead{font-size:17px;color:var(--cream2);line-height:1.7;font-style:italic;border-left:3px solid var(--amber);padding-left:18px}
+.art-cover{width:100%;max-width:800px;margin:0 auto 48px;padding:0 5%}
+.art-cover-placeholder{width:100%;height:300px;background:linear-gradient(135deg,var(--clay3) 0%,rgba(46,204,142,.06) 100%);border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:1px solid var(--gborder)}
+.art-cover-placeholder .cover-icon{font-size:72px}
+.art-cover-placeholder .cover-label{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--green);letter-spacing:2px}
+.art-body{max-width:800px;margin:0 auto;padding:0 5% 80px}
+.art-body h2{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:700;color:var(--cream);margin:48px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.art-body p{font-size:16px;line-height:1.85;color:var(--cream2);margin-bottom:20px}
+.art-body p strong{color:var(--cream);font-weight:700}
+.highlight{background:rgba(232,160,48,.07);border:1px solid rgba(232,160,48,.2);border-radius:16px;padding:20px 24px;margin:28px 0}
+.highlight p{margin:0;color:var(--cream);font-size:15px;line-height:1.7}
+.highlight.green{background:rgba(46,204,142,.07);border-color:rgba(46,204,142,.2)}
+.steps{display:flex;flex-direction:column;gap:16px;margin:28px 0}
+.step{display:flex;gap:18px;align-items:flex-start;background:var(--clay2);border:1px solid var(--border);border-radius:16px;padding:20px}
+.step-num{min-width:36px;height:36px;background:var(--amber);color:#1A0F08;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Unbounded',sans-serif;font-size:14px;font-weight:900;flex-shrink:0}
+.step-content h4{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--cream);margin-bottom:6px}
+.step-content p{font-size:14px;color:var(--cream2);line-height:1.65;margin:0}
+.flow-chain{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--clay2);border:1px solid var(--gborder);border-radius:14px;padding:18px 20px;margin:28px 0}
+.flow-node{background:var(--clay3);border:1px solid var(--border);border-radius:8px;padding:7px 14px;font-size:12px;color:var(--cream2);font-weight:700;white-space:nowrap}
+.flow-node.green{border-color:var(--gborder);color:var(--green)}
+.flow-sep{color:var(--green);font-size:16px;font-weight:700}
+.vs-block{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0}
+.vs-card{background:var(--clay2);border:1px solid var(--border);border-radius:16px;padding:22px}
+.vs-card.good{border-color:rgba(46,204,142,.25)}
+.vs-card.bad{border-color:rgba(226,75,74,.2)}
+.vs-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+.vs-card.good .vs-label{color:var(--green)}
+.vs-card.bad .vs-label{color:#E24B4A}
+.vs-card ul{padding-left:18px;margin:0}
+.vs-card li{font-size:13px;color:var(--cream2);line-height:1.7;margin-bottom:6px}
+.art-share{display:flex;align-items:center;gap:12px;margin:40px 0;flex-wrap:wrap}
+.art-share span{font-size:13px;font-weight:700;color:var(--cream3)}
+.share-btn{background:var(--clay2);border:1px solid var(--border);border-radius:100px;padding:8px 18px;font-size:12px;font-weight:700;color:var(--cream2);cursor:pointer;transition:all .2s;font-family:'Nunito',sans-serif}
+.share-btn:hover{border-color:var(--aborder);color:var(--amber)}
+.art-cta{background:linear-gradient(135deg,var(--clay2) 0%,rgba(46,204,142,.04) 100%);border:1px solid var(--gborder);border-radius:24px;padding:40px;text-align:center;margin:48px 0}
+.art-cta .cta-icon{font-size:48px;margin-bottom:16px}
+.art-cta h3{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;margin-bottom:10px}
+.art-cta h3 span{color:var(--amber)}
+.art-cta p{color:var(--cream2);font-size:15px;margin-bottom:24px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.65}
+.btn-cta{display:inline-block;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:14px 32px;border-radius:100px;transition:opacity .2s,transform .15s}
+.btn-cta:hover{opacity:.88;transform:translateY(-2px)}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--cream3);transition:color .2s;margin-bottom:48px}
+.back-link:hover{color:var(--amber)}
+footer{border-top:1px solid var(--border);padding:32px 5%}
+.foot-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;letter-spacing:3px}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.flinks a{font-size:12px;color:var(--cream3);transition:color .2s}
+.flinks a:hover{color:var(--cream)}
+.fcontact a{font-size:13px;color:var(--cream2)}
+.fcopy{font-size:11px;color:var(--cream4)}
+@media(max-width:600px){.nlinks{display:none}.vs-block{grid-template-columns:1fr}.art-header{padding:28px 5% 32px}.flow-chain{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nlinks">
+    <a href="/">Головна</a>
+    <a href="/blog">Блог</a>
+    <a href="/upgrade">Тарифи</a>
+    <a href="/support">Підтримка</a>
+  </div>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">Головна</a><span>/</span>
+  <a href="/blog">Блог</a><span>/</span>
+  Автоматизація ПРРО: чеки без рутини
+</div>
+
+<div class="art-header">
+  <div class="art-meta">
+    <span class="art-tag">Навчання</span>
+    <span class="art-date">25 червня 2026</span>
+    <span class="art-time">⏱ 6 хв читання</span>
+  </div>
+  <h1 class="art-title">Автоматизація ПРРО: як законно видавати чеки покупцям та не потонути <span>в рутині</span></h1>
+  <p class="art-lead">Закон зобов'язує інтернет-магазини видавати фіскальний чек при кожній оплаті. Ручне введення кожного замовлення в додаток ДПС — це операційне пекло, особливо під час сезонних розпродажів. Рішення — програмний РРО, інтегрований прямо в маркетплейс.</p>
+</div>
+
+<div class="art-cover">
+  <div class="art-cover-placeholder">
+    <div class="cover-icon">🧾</div>
+    <div class="cover-label">АВТО-ФІСКАЛІЗАЦІЯ</div>
+  </div>
+</div>
+
+<div class="art-body">
+
+<h2>Як працює автоматизація ПРРО на Базар Толока</h2>
+
+<p>Платформа підтримує нативну інтеграцію з провідними українськими сервісами <strong>Вчасно.Каса</strong> та <strong>Checkbox</strong>. Вам достатньо один раз підключити API-ключ у кабінеті продавця — далі система працює повністю самостійно.</p>
+
+<div class="flow-chain">
+  <div class="flow-node">Замовлення</div>
+  <div class="flow-sep">→</div>
+  <div class="flow-node">Платіж через шлюз</div>
+  <div class="flow-sep">→</div>
+  <div class="flow-node">Запит до ПРРО</div>
+  <div class="flow-sep">→</div>
+  <div class="flow-node">Реєстрація в ДПС</div>
+  <div class="flow-sep">→</div>
+  <div class="flow-node green">Чек клієнту у SMS</div>
+</div>
+
+<div class="steps">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h4>Підключіть API-ключ один раз</h4>
+      <p>Зайдіть у кабінет продавця → «Інтеграції» → «ПРРО». Введіть API-ключ від Вчасно.Каса або Checkbox. Це займає менше п'яти хвилин.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h4>Система працює самостійно 24/7</h4>
+      <p>Кожне замовлення через будь-яку з 4 форм оплати — картка, IBAN, Післяплата або Ескроу — автоматично ініціює випуск фіскального чека. Ручна участь — нульова.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h4>Покупець отримує чек миттєво</h4>
+      <p>Посилання на офіційний фіскальний чек ДПС надходить клієнту через SMS або месенджер одночасно з підтвердженням замовлення. Ніяких ручних надсилань.</p>
+    </div>
+  </div>
+</div>
+
+<h2>Чому конкуренти програють у питанні фіскалізації</h2>
+
+<div class="vs-block">
+  <div class="vs-card bad">
+    <div class="vs-label">❌ Instagram / TikTok / OLX</div>
+    <ul>
+      <li>ПРРО відсутній як явище в соцмережах</li>
+      <li>OLX: фіскалізація для ФОП заблокована</li>
+      <li>Prom.ua: потрібні платні сторонні модулі</li>
+      <li>Ручне введення кожного замовлення</li>
+    </ul>
+  </div>
+  <div class="vs-card good">
+    <div class="vs-label">✅ Базар Толока</div>
+    <ul>
+      <li>Нативна інтеграція Вчасно.Каса і Checkbox</li>
+      <li>Чеки для всіх 4 форм оплати автоматично</li>
+      <li>Підтримка B2B з ПДВ і великих угод</li>
+      <li>Нульова ручна участь після першого налаштування</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight green">
+  <p>✅ <strong>Результат:</strong> Ви фокусуєтесь на знімці нового відео та спілкуванні з клієнтами, поки ПРРО автоматично веде всю фінансову документацію замість вас.</p>
+</div>
+
+<div class="art-cta">
+  <div class="cta-icon">🧾</div>
+  <h3>ПРРО на <span>автопілоті</span></h3>
+  <p>Підключіть Вчасно.Каса або Checkbox один раз — і система видаватиме чеки при кожному замовленні, 24/7, без вашої участі.</p>
+  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="btn-cta">ЗАВАНТАЖИТИ БАЗАР →</a>
+</div>
+
+<div class="art-share">
+  <span>Поділитись:</span>
+  <button class="share-btn" onclick="shareArticle('telegram')">📱 Telegram</button>
+  <button class="share-btn" onclick="shareArticle('viber')">💬 Viber</button>
+  <button class="share-btn" onclick="shareArticle('copy')">🔗 Скопіювати посилання</button>
+</div>
+
+<a href="/blog" class="back-link">← Повернутись до блогу</a>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови використання</a>
+      <a href="/offer">Публічна оферта</a>
+      <a href="/upgrade">Тарифи</a>
+      <a href="/support">Підтримка</a>
+    </div>
+    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
+</footer>
+
+<script>
+function shareArticle(platform) {
+  const url = window.location.href;
+  const title = document.title;
+  if (platform === 'telegram') {
+    window.open('https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(title));
+  } else if (platform === 'viber') {
+    window.open('viber://forward?text=' + encodeURIComponent(title + ' ' + url));
+  } else if (platform === 'copy') {
+    navigator.clipboard.writeText(url).then(() => {
+      const btn = event.target;
+      btn.textContent = '✅ Скопійовано!';
+      setTimeout(() => btn.textContent = '🔗 Скопіювати посилання', 2000);
+    });
+  }
+}
+</script>
+
+</body>
+</html>
