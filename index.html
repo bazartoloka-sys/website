@@ -438,6 +438,14 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 .launch-cd-block{background:var(--clay);border:1px solid var(--aborder);border-radius:18px;padding:18px 20px;min-width:82px;text-align:center}
 .launch-cd-num{font-family:'Unbounded',sans-serif;font-size:36px;font-weight:900;color:var(--amber);line-height:1;display:block}
 .launch-cd-unit{font-size:10px;color:var(--cream3);margin-top:6px;letter-spacing:1px;text-transform:uppercase}
+.queue-box{background:linear-gradient(135deg,rgba(232,160,48,.12),rgba(46,204,142,.08));border:1px solid var(--aborder);border-radius:24px;padding:28px 24px;margin:0 auto 24px;max-width:420px}
+.queue-label{font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;color:var(--amber);letter-spacing:2px;margin-bottom:10px}
+.queue-num{font-family:'Unbounded',sans-serif;font-size:clamp(64px,14vw,96px);font-weight:900;color:var(--amber);line-height:.95;letter-spacing:-2px;text-shadow:0 4px 24px rgba(232,160,48,.3)}
+.queue-sub{font-size:14px;color:var(--cream2);margin-top:8px}
+.queue-sub strong{color:var(--cream)}
+.queue-bar{height:8px;background:rgba(245,230,200,.08);border-radius:100px;margin-top:16px;overflow:hidden}
+.queue-bar-fill{height:100%;background:linear-gradient(90deg,var(--amber),var(--green));border-radius:100px;width:11%;transition:width 1s ease}
+.launch-cd-caption{font-size:11px;color:var(--cream3);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;font-weight:700}
 .launch-cd-sep{font-family:'Unbounded',sans-serif;font-size:32px;font-weight:900;color:var(--cream4);margin-bottom:22px}
 .launch-email-wrap{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:460px;margin:0 auto 16px}
 .launch-email-input{flex:1;min-width:220px;background:var(--clay);border:1px solid rgba(245,230,200,.15);border-radius:100px;padding:14px 22px;font-size:14px;color:var(--cream);font-family:'Nunito',sans-serif;outline:none;transition:border-color .2s}
@@ -1025,7 +1033,14 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
   <div class="launch-inner">
     <div class="launch-chip">🚀 Офіційний запуск</div>
     <h2 class="launch-title">Базар відкривається<br><span>1 серпня 2026</span></h2>
-    <p class="launch-sub">Перші <strong>100 продавців</strong> отримують тариф «Майстер» безкоштовно на 3 місяці та пріоритетне розміщення в стрічці. <strong id="launchSpots" style="color:var(--amber)">Залишилось 53 місця</strong>.</p>
+    <p class="launch-sub">Перші <strong>1000 продавців</strong> отримують потрійний бонус: за кожну гривню на бонусний рахунок зараховуємо <strong>+3 грн</strong>. Бонусами оплачуєте до 30% будь-якої послуги чи реклами (70% гроші / 30% бонуси).</p>
+    <div class="queue-box">
+      <div class="queue-label">🔥 ВЖЕ В ЧЕРЗІ</div>
+      <div class="queue-num" id="queueNum">108</div>
+      <div class="queue-sub">продавців із <strong>1000</strong> першої хвилі</div>
+      <div class="queue-bar"><div class="queue-bar-fill" id="queueBar"></div></div>
+    </div>
+    <div class="launch-cd-caption">⏳ До кінця акції · 1 серпня 2026</div>
     <div class="launch-cd">
       <div class="launch-cd-block"><span class="launch-cd-num" id="l-days">--</span><div class="launch-cd-unit">днів</div></div>
       <div class="launch-cd-sep">:</div>
@@ -1146,6 +1161,26 @@ function handleInvestForm(e) {
   const t2 = setInterval(tick, 1000);
 })();
 
+// ── Зростаючий лічильник черги (детермінований по днях) ──
+(function initQueue(){
+  var startDate = new Date(2026, 5, 26); // 26.06.2026 (місяць 0-індекс)
+  var base = 108;
+  var today = new Date();
+  var days = Math.max(0, Math.floor((today - startDate) / 86400000));
+  var total = base;
+  for (var i = 1; i <= days; i++) {
+    // детермінований псевдо-приріст 10..30 на день i
+    var seed = (i * 9301 + 49297) % 233280;
+    var rnd = seed / 233280;
+    total += 10 + Math.floor(rnd * 21); // 10..30
+  }
+  if (total > 980) total = 980; // не перевищуємо 1000 до кінця акції
+  var qn = document.getElementById('queueNum');
+  if (qn) qn.textContent = total;
+  var bar = document.getElementById('queueBar');
+  if (bar) bar.style.width = Math.min(100, (total / 1000) * 100) + '%';
+})();
+
 function submitLaunch() {
   const el = document.getElementById('launchEmail');
   const contact = el.value.trim();
@@ -1161,11 +1196,13 @@ function submitLaunch() {
     + '🕐 ' + new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'})
     + '\n🌐 bazar.in.ua → запуск';
   btn.disabled=true; btn.textContent='⏳...';
-  // лічильник місць −1
-  const spots = document.getElementById('launchSpots');
-  if (spots) {
-    const cur = parseInt((spots.textContent.match(/[0-9]+/) || ['0'])[0]);
-    spots.textContent = 'Залишилось ' + Math.max(0, cur - 1) + ' місця';
+  // лічильник черги +1
+  const qn = document.getElementById('queueNum');
+  if (qn) {
+    const cur = parseInt((qn.textContent.match(/[0-9]+/) || ['0'])[0]) || 0;
+    qn.textContent = cur + 1;
+    const bar = document.getElementById('queueBar');
+    if (bar) bar.style.width = Math.min(100, ((cur + 1) / 1000) * 100) + '%';
   }
   fetch('https://api.telegram.org/bot8898378336:AAHAPpy5HFTxp5J58TfSP4HoVJkZVJiPHuM/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1003989090256',text:text,parse_mode:'HTML'})})
     .then(()=>{
