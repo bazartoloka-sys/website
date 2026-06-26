@@ -127,6 +127,19 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
   .wrap{padding:0 4% 60px}
   .form-wrap{padding:24px 18px}
 }
+
+/* THANK YOU MODAL */
+.ty-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(10,6,3,.78);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;animation:tyFade .25s ease}
+.ty-modal.show{display:flex}
+@keyframes tyFade{from{opacity:0}to{opacity:1}}
+.ty-box{background:var(--clay2,#261508);border:1px solid var(--aborder,rgba(232,160,48,.3));border-radius:24px;padding:36px 30px;max-width:380px;width:100%;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,.5);animation:tyPop .35s cubic-bezier(.2,.9,.3,1.3)}
+@keyframes tyPop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+.ty-icon{font-size:56px;line-height:1;margin-bottom:14px}
+.ty-title{font-family:'Unbounded',sans-serif;font-size:21px;font-weight:900;color:var(--cream,#F5E6C8);margin-bottom:10px;line-height:1.2}
+.ty-text{font-family:'Nunito',sans-serif;font-size:14px;color:var(--cream2,#B89060);line-height:1.6;margin-bottom:24px}
+.ty-btn{background:var(--green,#2ECC8E);color:#05200F;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:900;letter-spacing:.5px;padding:13px 32px;border:none;border-radius:100px;cursor:pointer;transition:opacity .2s}
+.ty-btn:hover{opacity:.88}
+
 </style>
 </head>
 <body>
@@ -353,7 +366,30 @@ function submitForm(e){
   var text='💼 <b>ЗАЯВКА ІНВЕСТОР/ПАРТНЕР</b>\n━━━━━━━━━━━━━━━━\n'+'👤 <b>Імʼя:</b> '+name+'\n'+'📧 <b>Email:</b> '+email+'\n'+'🎯 <b>Роль:</b> '+role+'\n'+'━━━━━━━━━━━━━━━━\n'+'📝 '+about+'\n'+'━━━━━━━━━━━━━━━━\n'+'🕐 '+new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'});
   _tgBtn(btn, fetch('https://api.telegram.org/bot8699311467:AAFxYGz3v1zW56B9Zpokq8NHl1UW_i1iz5M/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1004471347053',text:text,parse_mode:'HTML'})}), '✅ Заявку надіслано!');
 }
-function _tgBtn(btn,fp,okText){btn._orig=btn.textContent;btn.disabled=true;btn.textContent='⏳ Надсилаємо...';fp.then(function(r){return r.json();}).then(function(d){btn.textContent=d.ok?(okText||'✅ Надіслано!'):'⚠️ Помилка. Спробуйте ще раз.';if(d.ok){btn.style.background='var(--green)';btn.style.color='#05200F';var fs=document.getElementById('formSuccess');if(fs)fs.style.display='block';var ff=document.getElementById('investForm');if(ff)ff.style.display='none';}else{setTimeout(function(){btn.textContent=btn._orig;btn.disabled=false;},3000);}}).catch(function(){btn.textContent='⚠️ Немає звʼязку.';setTimeout(function(){btn.textContent=btn._orig;btn.disabled=false;},3000);});}
+function _tgBtn(btn,fp,okText){btn._orig=btn.textContent;btn.disabled=true;btn.textContent='⏳ Надсилаємо...';fp.then(function(r){return r.json();}).then(function(d){btn.textContent=d.ok?(okText||'✅ Надіслано!'):'⚠️ Помилка. Спробуйте ще раз.';if(d.ok){btn.style.background='var(--green)';btn.style.color='#05200F';showTyModal(); showTyModal();var fs=document.getElementById('formSuccess');if(fs)fs.style.display='block';var ff=document.getElementById('investForm');if(ff)ff.style.display='none';}else{setTimeout(function(){btn.textContent=btn._orig;btn.disabled=false;},3000);}}).catch(function(){btn.textContent='⚠️ Немає звʼязку.';setTimeout(function(){btn.textContent=btn._orig;btn.disabled=false;},3000);});}
+
+/* THANK YOU MODAL */
+function showTyModal(title, text){
+  var m=document.getElementById('tyModal'); if(!m)return;
+  if(title){var t=document.getElementById('tyTitle'); if(t)t.textContent=title;}
+  if(text){var x=document.getElementById('tyText'); if(x)x.textContent=text;}
+  m.classList.add('show');
+}
+function closeTyModal(){var m=document.getElementById('tyModal'); if(m)m.classList.remove('show');}
+document.addEventListener('click',function(e){if(e.target&&e.target.id==='tyModal')closeTyModal();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeTyModal();});
+
 </script>
+
+<!-- THANK YOU MODAL -->
+<div id="tyModal" class="ty-modal" role="dialog" aria-modal="true" aria-labelledby="tyTitle">
+  <div class="ty-box">
+    <div class="ty-icon">✅</div>
+    <div class="ty-title" id="tyTitle">Дякуємо за звернення!</div>
+    <div class="ty-text" id="tyText">Ми отримали вашу заявку і звʼяжемось найближчим часом.</div>
+    <button class="ty-btn" onclick="closeTyModal()">Чудово!</button>
+  </div>
+</div>
+
 </body>
 </html>
