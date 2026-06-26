@@ -314,7 +314,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
           </div>
         </div>
         <button type="submit" class="form-submit">НАДІСЛАТИ ЗАЯВКУ →</button>
-        <p class="form-note">Відповідаємо протягом 24 годин · <a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></p>
+        <p class="form-note">Відповідаємо протягом 24 годин · <a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></p>
       </form>
       <div class="form-success" id="formSuccess">✅ Дякуємо! Розглянемо вашу заявку протягом 24 годин і відповімо особисто.</div>
     </div>
@@ -330,7 +330,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
       <a href="/upgrade">Тарифи</a><a href="/support">Підтримка</a>
       <a href="/privacy">Конфіденційність</a><a href="/terms">Умови</a><a href="/offer">Оферта</a>
     </div>
-    <div class="fcontact"><a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></div>
+    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
     <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
   </div>
 </footer>
@@ -345,12 +345,15 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
 
 function submitForm(e){
   e.preventDefault();
-  var fields=e.target.querySelectorAll('input,textarea,select');
-  var data=[];fields.forEach(function(f){if(f.value)data.push(f.placeholder||f.name||'поле'+':'+' '+f.value);});
-  window.location.href='mailto:bazartoloka@gmail.com?subject='+encodeURIComponent('Заявка інвестора/партнера Базар Толока')+'&body='+encodeURIComponent(data.join('\n'));
-  document.getElementById('investForm').style.display='none';
-  document.getElementById('formSuccess').style.display='block';
+  var f=e.target.querySelectorAll('input,textarea,select');
+  var name=(f[0]&&f[0].value||'').trim(),email=(f[1]&&f[1].value||'').trim();
+  var role=(f[2]&&f[2].value||'').trim(),about=(f[3]&&f[3].value||'').trim();
+  if(!name||!email||!about){alert('Заповніть обовʼязкові поля');return;}
+  var btn=e.target.querySelector('button[type=submit]');
+  var text='💼 <b>ЗАЯВКА ІНВЕСТОР/ПАРТНЕР</b>\n━━━━━━━━━━━━━━━━\n'+'👤 <b>Імʼя:</b> '+name+'\n'+'📧 <b>Email:</b> '+email+'\n'+'🎯 <b>Роль:</b> '+role+'\n'+'━━━━━━━━━━━━━━━━\n'+'📝 '+about+'\n'+'━━━━━━━━━━━━━━━━\n'+'🕐 '+new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'});
+  _tgBtn(btn, fetch('https://api.telegram.org/bot8699311467:AAFxYGz3v1zW56B9Zpokq8NHl1UW_i1iz5M/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1004471347053',text:text,parse_mode:'HTML'})}), '✅ Заявку надіслано!');
 }
+function _tgBtn(btn,fp,okText){btn._orig=btn.textContent;btn.disabled=true;btn.textContent='⏳ Надсилаємо...';fp.then(function(r){return r.json();}).then(function(d){btn.textContent=d.ok?(okText||'✅ Надіслано!'):'⚠️ Помилка. Спробуйте ще раз.';if(d.ok){btn.style.background='var(--green)';btn.style.color='#05200F';var fs=document.getElementById('formSuccess');if(fs)fs.style.display='block';var ff=document.getElementById('investForm');if(ff)ff.style.display='none';}else{setTimeout(function(){btn.textContent=btn._orig;btn.disabled=false;},3000);}}).catch(function(){btn.textContent='⚠️ Немає звʼязку.';setTimeout(function(){btn.textContent=btn._orig;btn.disabled=false;},3000);});}
 </script>
 </body>
 </html>

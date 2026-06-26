@@ -420,7 +420,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
       <a href="/upgrade">Тарифи</a><a href="/support">Підтримка</a>
       <a href="/privacy">Конфіденційність</a><a href="/terms">Умови</a><a href="/offer">Оферта</a>
     </div>
-    <div class="fcontact"><a href="mailto:bazartoloka@gmail.com">bazartoloka@gmail.com</a></div>
+    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
     <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
   </div>
 </footer>
@@ -449,12 +449,14 @@ function toggleFaq(btn){
 function submitForm(e,track){
   e.preventDefault();
   var fields=e.target.querySelectorAll('input,textarea,select');
-  var data=[];fields.forEach(function(f){if(f.value)data.push(f.value);});
-  var subj=track==='buyer'?'Заявка Трек 1 — Блогер для покупців':'Заявка Трек 2 — Акредитований експерт';
-  window.location.href='mailto:partners@bazar.in.ua?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(data.join('\n'));
-  e.target.style.display='none';
-  document.getElementById('formSuccess').style.display='block';
+  var vals=[];fields.forEach(function(f){if(f.value)vals.push(f.value.trim());});
+  if(vals.length<2){alert('Заповніть обовʼязкові поля');return;}
+  var btn=e.target.querySelector('button[type=submit]');
+  var head=track==='buyer'?'🎥 <b>ТРЕК 1 — БЛОГЕР ДЛЯ ПОКУПЦІВ</b>':'🎓 <b>ТРЕК 2 — АКРЕДИТОВАНИЙ ЕКСПЕРТ</b>';
+  var text=head+'\n━━━━━━━━━━━━━━━━\n'+vals.join('\n')+'\n━━━━━━━━━━━━━━━━\n🕐 '+new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'});
+  _tgBtn(btn, fetch('https://api.telegram.org/bot8418921685:AAFclYUzyMOT6m175aamuuQu5zxPCjL2usI/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-5357452804',text:text,parse_mode:'HTML'})}), '✅ Заявку надіслано!');
 }
+function _tgBtn(btn,fp,okText){btn._orig=btn.textContent;btn.disabled=true;btn.textContent='⏳ Надсилаємо...';fp.then(function(r){return r.json();}).then(function(d){btn.textContent=d.ok?(okText||'✅ Надіслано!'):'⚠️ Помилка. Спробуйте ще раз.';if(d.ok){btn.style.background='var(--green)';btn.style.color='#05200F';var fs=document.getElementById('formSuccess');if(fs)fs.style.display='block';}else{setTimeout(function(){btn.textContent=btn._orig;btn.disabled=false;},3000);}}).catch(function(){btn.textContent='⚠️ Немає звʼязку.';setTimeout(function(){btn.textContent=btn._orig;btn.disabled=false;},3000);});}
 </script>
 </body>
 </html>

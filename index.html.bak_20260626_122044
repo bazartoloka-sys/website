@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Базар Толока — Маркетплейс автентичних товарів України</title>
+<meta name="description" content="Відео-маркетплейс автентичних українських товарів. ШІ-верифікація, Escrow-захист, 4 способи оплати. Завантажити для Android.">
+<meta property="og:title" content="Базар Толока">
+<meta property="og:description" content="Купуй у справжніх господарів. Продавай — і тебе знайдуть.">
+<meta property="og:url" content="https://bazar.in.ua">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+/* ============ LIGHT THEME ============ */
+:root[data-theme="light"]{
+  --clay:#F5E6C8;
+  --clay2:#EFD9B0;
+  --clay3:#E6C898;
+  --green:#1FA670;
+  --amber:#B8700C;
+  --cream:#2A1810;
+  --cream2:#5A3318;
+  --cream3:#735030;
+  --cream4:#8B6440;
+  --border:rgba(26,15,8,.12);
+  --gborder:rgba(31,166,112,.32);
+  --aborder:rgba(184,112,12,.32);
+}
+:root[data-theme="light"] body{background:linear-gradient(180deg,#F5E6C8 0%,#EBD5A8 100%);background-attachment:fixed}
+:root[data-theme="light"] .nav{background:rgba(245,230,200,.94)!important;border-bottom-color:var(--aborder)}
+:root[data-theme="light"] .panas-c{border:3px solid #1A0F08;box-shadow:0 10px 28px rgba(26,15,8,.28),0 2px 6px rgba(26,15,8,.15),inset 0 -3px 10px rgba(26,15,8,.12);background:#EFD9B0}
+:root[data-theme="light"] .vc,
+:root[data-theme="light"] .pc,
+:root[data-theme="light"] .tcard,
+:root[data-theme="light"] .feat-card,
+:root[data-theme="light"] .stat-box,
+:root[data-theme="light"] .rcard,
+:root[data-theme="light"] .istat,
+:root[data-theme="light"] .ai-b,
+:root[data-theme="light"] .video-block,
+:root[data-theme="light"] .invest-sec,
+:root[data-theme="light"] .seller-sec,
+:root[data-theme="light"] .ai-sec,
+:root[data-theme="light"] .card,
+:root[data-theme="light"] .job-card,
+:root[data-theme="light"] .compare-card,
+:root[data-theme="light"] .article-card,
+:root[data-theme="light"] .blog-card,
+:root[data-theme="light"] .tariff-card,
+:root[data-theme="light"] .upgrade-card{box-shadow:0 4px 14px rgba(26,15,8,.08),0 1px 3px rgba(26,15,8,.05)}
+:root[data-theme="light"] .float-chip{background:rgba(245,230,200,.96);color:var(--cream);border-color:rgba(26,15,8,.12);box-shadow:0 4px 10px rgba(26,15,8,.10)}
+:root[data-theme="light"] .phone{box-shadow:0 30px 60px rgba(26,15,8,.25),0 0 0 1px rgba(26,15,8,.10)}
+:root[data-theme="light"] .ncta{box-shadow:0 4px 12px rgba(31,166,112,.30)}
+:root[data-theme="light"] .btn-play,
+:root[data-theme="light"] .cta-primary{box-shadow:0 5px 16px rgba(31,166,112,.32)}
+:root[data-theme="light"] .notify-btn,
+:root[data-theme="light"] .btn-invest{box-shadow:0 4px 12px rgba(184,112,12,.32)}
+:root[data-theme="light"] .notify-input,
+:root[data-theme="light"] .field input,
+:root[data-theme="light"] .field textarea,
+:root[data-theme="light"] .field select,
+:root[data-theme="light"] input[type=text],
+:root[data-theme="light"] input[type=email],
+:root[data-theme="light"] textarea,
+:root[data-theme="light"] select{background:#FAF0D8;border-color:rgba(26,15,8,.15);color:var(--cream)}
+:root[data-theme="light"] .notify-input::placeholder,
+:root[data-theme="light"] .field input::placeholder,
+:root[data-theme="light"] .field textarea::placeholder,
+:root[data-theme="light"] input::placeholder,
+:root[data-theme="light"] textarea::placeholder{color:var(--cream3)}
+:root[data-theme="light"] .pill{background:#EFD9B0;border-color:rgba(26,15,8,.10);color:var(--cream2)}
+:root[data-theme="light"] .div{background:rgba(26,15,8,.10)}
+:root[data-theme="light"] footer{border-top-color:rgba(26,15,8,.10)}
+:root[data-theme="light"] .sbadge{background:rgba(31,166,112,.12);border-color:var(--gborder)}
+:root[data-theme="light"] .notify-chip,
+:root[data-theme="light"] .invest-chip{background:rgba(184,112,12,.12);border-color:rgba(184,112,12,.25)}
+:root[data-theme="light"] .feat-glow,
+:root[data-theme="light"] .vc::before{opacity:.10}
+:root[data-theme="light"] .phone-screen{color:#F5E6C8}
+:root[data-theme="light"] .ai-search{background:rgba(46,204,142,.10);border-color:rgba(46,204,142,.25)}
+:root[data-theme="light"] .ai-text{color:#B89060}
+:root[data-theme="light"] .rating-card{background:rgba(245,230,200,.06);border-color:rgba(245,230,200,.10)}
+:root[data-theme="light"] .rating-name{color:#F5E6C8}
+:root[data-theme="light"] .shield-chip{background:rgba(46,204,142,.10);border-color:rgba(46,204,142,.18);color:#2ECC8E}
+:root[data-theme="light"] .feat-card{background:var(--clay2);border-color:rgba(26,15,8,.08)}
+:root[data-theme="light"] .feat-tag{background:rgba(26,15,8,.05);border-color:rgba(26,15,8,.10);color:var(--cream3)}
+:root[data-theme="light"] .feat-number{color:var(--cream3)}
+
+/* Theme toggle button (inline in nav) */
+.theme-toggle{background:transparent;border:1px solid var(--aborder);color:var(--cream2);width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;margin-right:10px;transition:background .2s,border-color .2s,transform .15s;flex-shrink:0;padding:0;font-family:inherit}
+.theme-toggle:hover{background:rgba(232,160,48,.10);border-color:var(--amber);transform:scale(1.08)}
+:root[data-theme="light"] .theme-toggle:hover{background:rgba(184,112,12,.10);border-color:var(--amber)}
+.nav-right{display:flex;align-items:center;gap:0}
+
+/* Theme toggle button (floating, for pages without nav) */
+.theme-toggle-fab{position:fixed;bottom:20px;right:20px;background:var(--clay2);border:1px solid var(--aborder);color:var(--cream);width:48px;height:48px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;z-index:1000;box-shadow:0 6px 20px rgba(0,0,0,.30);transition:transform .15s,box-shadow .15s;padding:0;font-family:inherit}
+.theme-toggle-fab:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(0,0,0,.40)}
+:root[data-theme="light"] .theme-toggle-fab{background:#EFD9B0;color:var(--cream);box-shadow:0 6px 20px rgba(26,15,8,.18)}
+/* ====================================== */
+
+:root{--clay:#1A0F08;--clay2:#261508;--clay3:#321C0A;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.22);--aborder:rgba(232,160,48,.22)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background-color .4s ease,color .4s ease}
+a{text-decoration:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.nlogo b{color:var(--amber)}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover{color:var(--green)}
+.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
+
+/* HERO */
+.hero{padding:48px 5% 52px;text-align:center;position:relative;overflow:hidden}
+.hglow{position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 30%,rgba(46,204,142,.07) 0%,transparent 70%);pointer-events:none}
+.panas{position:relative;width:260px;height:260px;margin:0 auto 28px}
+.panas-c{width:260px;height:260px;border-radius:54% 46% 52% 48%/46% 54% 48% 52%;background:var(--clay2);border:2px solid var(--aborder);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.panas-img{width:100%;height:100%;object-fit:cover}
+.panas-emoji{font-size:110px;line-height:1;margin-top:16px}
+.bd{position:absolute;border-radius:50%}
+.bd1{width:16px;height:16px;background:var(--green);top:20px;left:24px;opacity:.8;animation:bob 3s ease-in-out infinite}
+.bd2{width:12px;height:12px;background:var(--amber);top:36px;right:20px;opacity:.9;animation:bob 3.5s ease-in-out infinite .5s}
+.bd3{width:9px;height:9px;background:#E24B4A;bottom:32px;left:20px;opacity:.7;animation:bob 2.8s ease-in-out infinite 1s}
+.bd4{width:20px;height:20px;background:var(--amber);bottom:18px;right:16px;opacity:.5;animation:bob 4s ease-in-out infinite .3s}
+.bd5{width:7px;height:7px;background:var(--green);bottom:56px;right:10px;opacity:.6;animation:bob 3.2s ease-in-out infinite .8s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+.sbadge{display:inline-flex;align-items:center;gap:7px;background:rgba(46,204,142,.1);border:1px solid var(--gborder);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--green);margin-bottom:20px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.7)}}
+h1{font-family:'Unbounded',sans-serif;font-size:clamp(38px,8vw,80px);font-weight:900;line-height:.92;letter-spacing:-2px;margin-bottom:8px}
+h1 b{color:var(--amber);display:block}
+.hsub{font-size:clamp(15px,2.5vw,18px);color:var(--cream2);line-height:1.55;margin-bottom:36px;font-style:italic;max-width:480px;margin-left:auto;margin-right:auto}
+.hero-btns{display:flex;flex-direction:column;align-items:center;gap:12px}
+.btn-play{display:flex;align-items:center;gap:12px;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;padding:15px 32px;border-radius:100px;width:280px;justify-content:center;transition:transform .15s,box-shadow .15s}
+.btn-play:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(46,204,142,.25)}
+.hlegal{font-size:11px;color:var(--cream4)}
+.hlegal a{color:var(--cream2)}
+
+
+
+/* VALUE CARDS */
+.value-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%;max-width:700px;margin:0 auto 32px}
+.vc{background:var(--clay2);border-radius:20px;padding:24px 20px;border:1px solid var(--border);position:relative;overflow:hidden;transition:transform .2s}
+.vc:hover{transform:translateY(-4px)}
+.vc::before{content:'';position:absolute;width:100px;height:100px;border-radius:50%;filter:blur(40px);opacity:.15;top:-20px;right:-20px}
+.vc-green{border-color:rgba(46,204,142,.2)}.vc-green::before{background:var(--green)}
+.vc-red{border-color:rgba(226,75,74,.2)}.vc-red::before{background:#E74C3C}
+.vc-blue{border-color:rgba(52,152,219,.2)}.vc-blue::before{background:#3498DB}
+.vc-icon{font-size:32px;margin-bottom:12px;display:block}
+.vc-title{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--cream);margin-bottom:8px;line-height:1.3}
+.vc-desc{font-size:12px;color:var(--cream2);line-height:1.65}
+@media(max-width:600px){.value-cards{grid-template-columns:1fr}}
+
+
+/* NOTIFY FORM */
+.notify-wrap{text-align:center;width:100%;max-width:480px;margin:0 auto}
+.notify-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(232,160,48,.12);border:1px solid rgba(232,160,48,.25);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--amber);margin-bottom:12px}
+.notify-title{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;margin-bottom:6px}
+.notify-sub{font-size:13px;color:var(--cream2);margin-bottom:20px;line-height:1.6}
+.notify-form{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.notify-input{flex:1;min-width:220px;background:var(--clay2);border:1px solid rgba(245,230,200,.15);border-radius:100px;padding:13px 20px;font-size:14px;color:var(--cream);font-family:'Nunito',sans-serif;outline:none;transition:border-color .2s}
+.notify-input:focus{border-color:var(--amber)}
+.notify-input::placeholder{color:var(--cream4)}
+.notify-btn{background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;letter-spacing:.5px;padding:13px 24px;border-radius:100px;border:none;cursor:pointer;transition:opacity .2s;white-space:nowrap}
+.notify-btn:hover{opacity:.88}
+.notify-success{background:rgba(46,204,142,.1);border:1px solid rgba(46,204,142,.25);border-radius:14px;padding:16px 20px;font-size:14px;font-weight:700;color:var(--green)}
+
+/* PILLS */
+.pills{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;padding:8px 5% 48px}
+.pill{display:flex;align-items:center;gap:5px;background:var(--clay2);border:1px solid var(--border);border-radius:100px;padding:6px 14px;font-size:12px;color:var(--cream2);font-weight:700}
+
+.div{height:1px;background:var(--border);margin:0 5% 48px}
+
+/* SECTION HEADER */
+.sh{text-align:center;margin-bottom:32px}
+.sl{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--amber);text-transform:uppercase;margin-bottom:10px}
+.st{font-family:'Unbounded',sans-serif;font-size:clamp(20px,3.5vw,30px);font-weight:900;line-height:1.15;margin-bottom:8px}
+.ss{font-size:14px;color:var(--cream2);line-height:1.6;max-width:520px;margin:0 auto}
+
+/* VIDEO BLOCK */
+.video-block{margin:0 5% 48px;background:var(--clay2);border-radius:24px;border:1px solid var(--gborder);overflow:hidden}
+.vb-top{padding:24px 24px 18px;border-bottom:1px solid rgba(46,204,142,.1)}
+.vb-chip{display:inline-flex;align-items:center;gap:7px;background:var(--green);color:#05200F;font-size:10px;font-weight:700;letter-spacing:1px;padding:5px 14px;border-radius:100px;margin-bottom:12px}
+.vb-title{font-family:'Unbounded',sans-serif;font-size:clamp(18px,3vw,24px);font-weight:900;line-height:1.2;margin-bottom:8px}
+.vb-title em{color:var(--green);font-style:normal}
+.vb-desc{font-size:13px;color:var(--cream2);line-height:1.65;max-width:520px}
+.vb-phones{display:flex;gap:10px;padding:18px 20px;overflow-x:auto;scrollbar-width:none}
+.vb-phones::-webkit-scrollbar{display:none}
+.vphone{flex-shrink:0;width:130px;background:var(--clay);border-radius:18px;border:1px solid var(--aborder);overflow:hidden;transition:border-color .2s}
+.vphone:hover{border-color:var(--amber)}
+.vp-screen{aspect-ratio:9/18;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;position:relative}
+.vp-play{width:38px;height:38px;background:rgba(46,204,142,.15);border:1.5px solid rgba(46,204,142,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--green)}
+.vp-tag{font-size:8px;font-weight:700;color:var(--cream3);letter-spacing:.5px;text-align:center;padding:0 8px;text-transform:uppercase}
+.vp-bar{background:var(--clay2);padding:7px 9px;display:flex;align-items:center}
+.vp-bar span{font-size:9px;color:var(--cream2);font-weight:700}
+.vp-price{font-size:10px;color:var(--green);font-weight:900;margin-left:auto}
+
+/* PAYMENTS */
+.pay-sec{padding:0 5% 48px}
+.pay-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.pc{background:var(--clay2);border:1px solid var(--border);border-radius:16px;padding:18px 16px;transition:border-color .2s}
+.pc:hover{border-color:var(--amber)}
+.pc.hl{border-color:rgba(46,204,142,.18)}
+.pc-icon{font-size:28px;margin-bottom:10px;display:block}
+.pc-name{font-size:14px;font-weight:700;color:var(--cream);margin-bottom:4px}
+.pc-tag{display:inline-block;font-size:10px;font-weight:700;padding:3px 9px;border-radius:100px;margin-bottom:8px}
+.tg{background:rgba(46,204,142,.15);color:var(--green)}
+.ta{background:rgba(232,160,48,.15);color:var(--amber)}
+.tb{background:rgba(74,158,232,.15);color:#4A9EE8}
+.tgr{background:rgba(245,230,200,.08);color:var(--cream2)}
+.pc-desc{font-size:12px;color:var(--cream3);line-height:1.6}
+
+/* AI */
+.ai-sec{margin:0 5% 48px;background:var(--clay2);border-radius:20px;border:1px solid var(--aborder);padding:28px 24px}
+.ai-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.ai-ico{width:48px;height:48px;border-radius:14px;background:rgba(232,160,48,.1);border:1px solid var(--aborder);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.ai-ttl{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;line-height:1.2}
+.ai-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.ai-b{display:flex;align-items:center;gap:8px;background:var(--clay);border:1px solid var(--aborder);border-radius:12px;padding:12px 14px;flex:1;min-width:150px}
+.ai-b-ico{font-size:22px}
+.ai-b-t1{font-size:13px;font-weight:700;color:var(--amber)}
+.ai-b-t2{font-size:11px;color:var(--cream3);margin-top:2px}
+.ai-note{font-size:12px;color:var(--cream3);line-height:1.7;font-style:italic;border-top:1px solid var(--border);padding-top:14px}
+
+/* TRUST */
+.trust-sec{padding:0 5% 48px}
+.tg-wrap{display:flex;flex-direction:column;gap:10px}
+.trow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tcard{background:var(--clay2);border-radius:16px;border:1px solid var(--border);padding:18px 16px}
+.tcard.wide{grid-column:1/-1}
+.tcard.green{border-color:rgba(46,204,142,.18)}
+.tcard.amber{border-color:rgba(232,160,48,.15)}
+.tcard-ico{font-size:28px;margin-bottom:8px;display:block}
+.tcard-name{font-size:13px;font-weight:700;color:var(--cream);margin-bottom:4px;line-height:1.3}
+.tcard-desc{font-size:12px;color:var(--cream3);line-height:1.55}
+.tlist{list-style:none;margin-top:8px}
+.tlist li{font-size:12px;color:var(--cream3);line-height:1.7;padding-left:14px;position:relative}
+.tlist li::before{content:'·';position:absolute;left:0;color:var(--green);font-size:16px;line-height:1.4}
+
+/* ROLES */
+.roles-sec{padding:0 5% 48px}
+.roles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.rcard{background:var(--clay2);border:1px solid var(--border);border-radius:16px;padding:18px 14px;text-align:center;transition:border-color .25s,transform .2s}
+.rcard:hover{border-color:var(--amber);transform:translateY(-3px)}
+.rcard-ico{font-size:32px;margin-bottom:10px;display:block}
+.rcard-name{font-size:13px;font-weight:700;color:var(--amber);margin-bottom:5px}
+.rcard-desc{font-size:12px;color:var(--cream3);line-height:1.5}
+
+/* INVEST */
+.invest-sec{margin:0 5% 48px;border-radius:24px;border:1px solid var(--aborder);background:var(--clay2);overflow:hidden}
+.invest-glow{height:4px;background:linear-gradient(90deg,var(--amber),rgba(232,160,48,.2),var(--amber))}
+.invest-inner{padding:32px 24px}
+.invest-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(232,160,48,.12);border:1px solid var(--aborder);border-radius:100px;padding:5px 16px;font-size:10px;font-weight:700;color:var(--amber);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+.invest-title{font-family:'Unbounded',sans-serif;font-size:clamp(22px,4vw,32px);font-weight:900;line-height:1.1;margin-bottom:12px}
+.invest-title em{color:var(--amber);font-style:normal}
+.invest-desc{font-size:14px;color:var(--cream2);line-height:1.7;margin-bottom:24px;max-width:560px}
+.istats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:28px}
+.istat{background:var(--clay);border:1px solid var(--aborder);border-radius:14px;padding:16px;text-align:center}
+.istat-n{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;color:var(--amber);display:block;line-height:1}
+.istat-l{font-size:10px;color:var(--cream3);margin-top:5px;letter-spacing:.5px;text-transform:uppercase}
+
+.invest-form{background:var(--clay);border:1px solid var(--aborder);border-radius:16px;padding:20px}
+.iform-title{font-size:14px;font-weight:700;color:var(--cream);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.field{margin-bottom:12px}
+.field label{font-size:10px;color:var(--cream3);font-weight:700;letter-spacing:.5px;text-transform:uppercase;display:block;margin-bottom:5px}
+.field input,.field textarea,.field select{width:100%;background:var(--clay2);border:1px solid rgba(245,230,200,.12);border-radius:10px;padding:10px 14px;font-size:14px;color:var(--cream);font-family:'Nunito',sans-serif;outline:none;transition:border-color .2s}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--amber)}
+.field input::placeholder,.field textarea::placeholder{color:var(--cream4)}
+.field textarea{resize:vertical;min-height:80px;line-height:1.55}
+.field select{color:var(--cream2);cursor:pointer}
+.field select option{background:var(--clay2)}
+.btn-invest{width:100%;background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;padding:14px;border-radius:100px;border:none;cursor:pointer;margin-top:4px;transition:opacity .2s}
+.btn-invest:hover{opacity:.88}
+.iform-note{font-size:11px;color:var(--cream4);text-align:center;margin-top:10px}
+
+/* SELLER CTA */
+.seller-sec{margin:0 5% 48px;background:var(--clay2);border:1px solid var(--gborder);border-radius:20px;padding:28px 24px;text-align:center}
+.seller-sec h2{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;margin-bottom:8px}
+.seller-sec p{font-size:14px;color:var(--cream2);margin-bottom:20px;line-height:1.65}
+.btn-seller{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--gborder);color:var(--green);font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;padding:12px 26px;border-radius:100px;transition:background .2s}
+.btn-seller:hover{background:rgba(46,204,142,.08)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:40px 5%}
+.foot-inner{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:16px;font-weight:900;letter-spacing:3px}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.flinks a{font-size:12px;color:var(--cream3);transition:color .2s}
+.flinks a:hover{color:var(--green)}
+.fcontact{font-size:12px;color:var(--cream3)}
+.fcontact a{color:var(--cream2)}
+.fcopy{font-size:11px;color:var(--cream4)}
+
+@media(max-width:600px){
+  .nlinks{display:none}
+  .trow{grid-template-columns:1fr}
+  .tcard.wide{grid-column:auto}
+  .istats{grid-template-columns:1fr 1fr}
+}
+
+/* PANAS BANNER */
+.panas-banner{display:flex;align-items:center;gap:20px;margin:0 5% 48px;background:var(--clay2);border:1px solid var(--aborder);border-radius:24px;padding:24px 28px;text-decoration:none;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+.panas-banner:hover{transform:translateY(-3px);border-color:var(--amber)}
+.panas-banner-glow{position:absolute;right:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:var(--amber);filter:blur(60px);opacity:.07;pointer-events:none}
+.panas-banner-img{flex-shrink:0;width:90px;height:90px;border-radius:50%;overflow:hidden;border:2px solid var(--aborder);background:var(--clay)}
+.panas-banner-img img{width:100%;height:100%;object-fit:cover;object-position:top}
+.panas-banner-body{flex:1}
+.panas-banner-label{font-size:10px;font-weight:700;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.panas-banner-title{font-family:'Unbounded',sans-serif;font-size:clamp(18px,3vw,24px);font-weight:900;color:var(--cream);margin-bottom:6px}
+.panas-banner-sub{font-size:13px;color:var(--cream2);line-height:1.6;max-width:420px;margin-bottom:12px}
+.panas-banner-cta{display:inline-flex;align-items:center;background:rgba(232,160,48,.12);border:1px solid var(--aborder);color:var(--amber);font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:.5px;padding:8px 18px;border-radius:100px;transition:background .2s}
+.panas-banner:hover .panas-banner-cta{background:rgba(232,160,48,.2)}
+@media(max-width:600px){.panas-banner{flex-direction:column;text-align:center;padding:20px}.panas-banner-sub{display:none}}
+
+/* ── PHONE MOCKUP ── */
+.phone-section{padding:60px 5% 0;text-align:center}
+.phone-wrap{margin:0 auto;position:relative;width:260px}
+.phone{width:260px;height:520px;background:linear-gradient(160deg,#1A1200,#0D0B07);border-radius:40px;border:2px solid rgba(245,200,66,.25);position:relative;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.7),0 0 60px rgba(245,200,66,.08),inset 0 1px 0 rgba(255,255,255,.05);margin:0 auto}
+.phone::before{content:'';position:absolute;top:12px;left:50%;transform:translateX(-50%);width:80px;height:6px;background:rgba(245,200,66,.3);border-radius:10px;z-index:10}
+.phone-screen{padding:32px 14px 14px;height:100%;display:flex;flex-direction:column;gap:8px}
+.screen-header{display:flex;align-items:center;justify-content:space-between;padding:0 4px}
+.screen-logo{font-family:'Unbounded',sans-serif;font-size:16px;font-weight:900;color:var(--amber);letter-spacing:-.5px}
+.screen-icons{display:flex;gap:6px}
+.sdot{width:8px;height:8px;border-radius:50%;background:var(--amber);opacity:.6}
+.ai-search{background:rgba(46,204,142,.08);border:1px solid rgba(46,204,142,.2);border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:8px}
+.ai-icon{color:var(--green);font-size:14px}
+.ai-text{font-size:10px;color:var(--cream2);flex:1}
+.ai-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 1.5s infinite}
+.video-card{background:linear-gradient(135deg,#1A2A1A,#0A1A0A);border-radius:16px;height:200px;position:relative;overflow:hidden;border:1px solid rgba(46,204,142,.2);flex-shrink:0}
+.video-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.8))}
+.video-bg{position:absolute;inset:0;background:radial-gradient(circle at 30% 40%,rgba(46,204,142,.15) 0%,transparent 50%),radial-gradient(circle at 70% 60%,rgba(232,160,48,.1) 0%,transparent 50%)}
+.play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:44px;height:44px;background:rgba(232,160,48,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;animation:playPulse 2s infinite}
+@keyframes playPulse{0%,100%{box-shadow:0 0 0 0 rgba(232,160,48,.4)}50%{box-shadow:0 0 0 12px rgba(232,160,48,0)}}
+.video-labels{position:absolute;right:8px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;align-items:center}
+.video-action{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:9px;color:var(--cream)}
+.video-action-icon{width:28px;height:28px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
+.video-info{position:absolute;bottom:8px;left:8px;right:48px}
+.video-title{font-size:11px;font-weight:700;color:#fff;line-height:1.3}
+.video-price{font-family:'Unbounded',sans-serif;font-size:13px;color:var(--amber);font-weight:700;margin-top:2px}
+.tiktok-badge{position:absolute;top:8px;left:8px;background:var(--amber);color:#000;font-size:8px;font-weight:800;padding:3px 8px;border-radius:6px;letter-spacing:.5px}
+.rating-card{background:rgba(245,230,200,.04);border:1px solid rgba(245,230,200,.08);border-radius:12px;padding:8px 10px;display:flex;align-items:center;gap:8px}
+.avatar{font-size:24px;flex-shrink:0}
+.rating-info{flex:1}
+.rating-name{font-size:10px;font-weight:700;color:var(--cream)}
+.stars{font-size:10px;color:var(--amber)}
+.rating-badge{background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:900;padding:4px 8px;border-radius:8px}
+.shield-row{display:flex;gap:6px}
+.shield-chip{background:rgba(46,204,142,.08);border:1px solid rgba(46,204,142,.15);border-radius:8px;padding:5px 8px;font-size:9px;color:var(--green);font-weight:700;display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
+.float-chip{position:absolute;background:rgba(26,15,8,.95);border:1px solid rgba(245,230,200,.12);border-radius:100px;padding:5px 12px;font-size:10px;font-weight:700;color:var(--cream2);white-space:nowrap;z-index:10}
+.float-chip.left{left:-110px}
+.float-chip.right{right:-110px}
+
+/* ── 10 FEATURES ── */
+.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+@media(max-width:700px){.features-grid{grid-template-columns:1fr}}
+.feat-card{background:var(--clay2);border:1px solid var(--border);border-radius:20px;padding:24px 20px;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+.feat-card:hover{transform:translateY(-3px)}
+.feat-card.green{border-color:rgba(46,204,142,.2)}
+.feat-card.red{border-color:rgba(226,75,74,.2)}
+.feat-card.blue{border-color:rgba(52,152,219,.2)}
+.feat-card.large{grid-column:1/-1}
+.feat-glow{position:absolute;width:120px;height:120px;border-radius:50%;filter:blur(40px);opacity:.15;top:-30px;right:-30px;background:var(--amber);pointer-events:none}
+.feat-card.green .feat-glow{background:var(--green)}
+.feat-card.red .feat-glow{background:#E74C3C}
+.feat-card.blue .feat-glow{background:#3498DB}
+.feat-number{font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--cream3);letter-spacing:2px;margin-bottom:10px}
+.feat-icon{font-size:32px;display:block;margin-bottom:10px}
+.feat-title{font-family:'Unbounded',sans-serif;font-size:15px;font-weight:700;color:var(--cream);margin-bottom:8px;line-height:1.3}
+.feat-desc{font-size:13px;color:var(--cream2);line-height:1.65}
+.feat-tag{display:inline-block;margin-top:12px;background:rgba(245,230,200,.06);border:1px solid rgba(245,230,200,.1);border-radius:100px;padding:3px 12px;font-size:10px;font-weight:700;color:var(--cream3);letter-spacing:.5px}
+.feat-card.green .feat-tag{background:rgba(46,204,142,.08);border-color:rgba(46,204,142,.2);color:var(--green)}
+.feat-card.red .feat-tag{background:rgba(226,75,74,.08);border-color:rgba(226,75,74,.2);color:#E74C3C}
+.feat-card.blue .feat-tag{background:rgba(52,152,219,.08);border-color:rgba(52,152,219,.2);color:#3498DB}
+.ai-lines{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.ai-line{height:4px;background:linear-gradient(90deg,rgba(0,212,255,.3),transparent);border-radius:4px;animation:aiScan 2s infinite}
+.ai-line:nth-child(2){animation-delay:.3s;width:80%}
+.ai-line:nth-child(3){animation-delay:.6s;width:60%}
+.ai-line:nth-child(4){animation-delay:.9s;width:40%}
+@keyframes aiScan{0%{opacity:.3}50%{opacity:1}100%{opacity:.3}}
+.feat-visual{float:right;margin-left:16px}
+
+/* ── STATS ROW ── */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:32px}
+.stat-box{background:var(--clay2);border:1px solid var(--border);border-radius:16px;padding:20px 14px;text-align:center}
+.stat-num{font-family:'Unbounded',sans-serif;font-size:28px;font-weight:900;color:var(--amber)}
+.stat-label{font-size:11px;color:var(--cream3);margin-top:6px;letter-spacing:.3px}
+@media(max-width:600px){.float-chip{display:none}.stats-row{grid-template-columns:1fr 1fr}.feat-card.large{grid-column:auto}}
+
+/* COUNTDOWN */
+.countdown-wrap{width:100%;max-width:540px;margin:0 auto 32px;text-align:center}
+.cd-label{font-size:11px;color:var(--cream3);font-weight:700;letter-spacing:1px;margin-bottom:16px;text-transform:uppercase}
+.cd-blocks{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:24px}
+.cd-block{background:var(--clay2);border:1px solid var(--aborder);border-radius:16px;padding:14px 16px;min-width:70px;text-align:center}
+.cd-num{font-family:'Unbounded',sans-serif;font-size:30px;font-weight:900;color:var(--amber);line-height:1;display:block}
+.cd-unit{font-size:9px;color:var(--cream3);margin-top:5px;letter-spacing:1px;text-transform:uppercase}
+.cd-sep{font-family:'Unbounded',sans-serif;font-size:26px;font-weight:900;color:var(--cream4);margin-bottom:20px}
+.btn-upgrade-hero{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid var(--aborder);color:var(--amber);font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:13px 28px;border-radius:100px;transition:all .2s;margin-top:4px}
+.btn-upgrade-hero:hover{background:rgba(232,160,48,.08);border-color:var(--amber)}
+@media(max-width:440px){.cd-block{padding:10px 10px;min-width:54px}.cd-num{font-size:22px}.cd-sep{font-size:20px}}
+
+/* PANAS SEC */
+.panas-sec{margin:0 5% 48px}
+.panas-sec-inner{display:flex;align-items:center;gap:32px;background:var(--clay2);border:1px solid var(--aborder);border-radius:28px;padding:36px 40px;position:relative;overflow:hidden}
+.panas-sec-glow{position:absolute;left:-60px;bottom:-60px;width:280px;height:280px;border-radius:50%;background:var(--amber);filter:blur(80px);opacity:.05;pointer-events:none}
+.panas-sec-img{flex-shrink:0;width:140px;height:140px;border-radius:50%;overflow:hidden;border:3px solid var(--aborder);background:var(--clay);box-shadow:0 0 40px rgba(232,160,48,.15)}
+.panas-sec-img img{width:100%;height:100%;object-fit:cover;object-position:top}
+.panas-sec-body{flex:1}
+.panas-sec-label{font-size:10px;font-weight:700;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.panas-sec-title{font-family:'Unbounded',sans-serif;font-size:clamp(22px,3.5vw,32px);font-weight:900;color:var(--cream);margin-bottom:12px;line-height:1.15}
+.panas-sec-sub{font-size:14px;color:var(--cream2);line-height:1.7;margin-bottom:18px;max-width:460px}
+.panas-sec-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.panas-tag{background:var(--clay);border:1px solid var(--aborder);border-radius:100px;padding:5px 14px;font-size:12px;color:var(--cream2);font-weight:700}
+.panas-sec-cta{display:inline-flex;align-items:center;background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;letter-spacing:.5px;padding:13px 28px;border-radius:100px;transition:opacity .2s}
+.panas-sec-cta:hover{opacity:.88}
+@media(max-width:640px){.panas-sec-inner{flex-direction:column;text-align:center;padding:28px 20px}.panas-sec-tags{justify-content:center}.panas-sec-img{width:110px;height:110px}}
+
+/* LAUNCH SECTION */
+.launch-sec{margin:0 5% 60px;border-radius:28px;background:linear-gradient(135deg,var(--clay2) 0%,rgba(50,28,10,.8) 100%);border:1px solid var(--aborder);overflow:hidden;position:relative}
+.launch-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(232,160,48,.05) 0%,transparent 70%);pointer-events:none}
+.launch-glow-top{height:3px;background:linear-gradient(90deg,transparent,var(--amber),transparent)}
+.launch-inner{padding:48px 40px;text-align:center;position:relative}
+.launch-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(232,160,48,.12);border:1px solid var(--aborder);border-radius:100px;padding:6px 18px;font-size:11px;font-weight:700;color:var(--amber);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+.launch-title{font-family:'Unbounded',sans-serif;font-size:clamp(24px,4vw,40px);font-weight:900;line-height:1.1;margin-bottom:12px}
+.launch-title span{color:var(--amber)}
+.launch-sub{font-size:15px;color:var(--cream2);line-height:1.65;max-width:500px;margin:0 auto 32px}
+.launch-cd{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:36px}
+.launch-cd-block{background:var(--clay);border:1px solid var(--aborder);border-radius:18px;padding:18px 20px;min-width:82px;text-align:center}
+.launch-cd-num{font-family:'Unbounded',sans-serif;font-size:36px;font-weight:900;color:var(--amber);line-height:1;display:block}
+.launch-cd-unit{font-size:10px;color:var(--cream3);margin-top:6px;letter-spacing:1px;text-transform:uppercase}
+.queue-box{background:linear-gradient(135deg,rgba(232,160,48,.12),rgba(46,204,142,.08));border:1px solid var(--aborder);border-radius:24px;padding:28px 24px;margin:0 auto 24px;max-width:420px}
+.queue-label{font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;color:var(--amber);letter-spacing:2px;margin-bottom:10px}
+.queue-num{font-family:'Unbounded',sans-serif;font-size:clamp(64px,14vw,96px);font-weight:900;color:var(--amber);line-height:.95;letter-spacing:-2px;text-shadow:0 4px 24px rgba(232,160,48,.3)}
+.queue-sub{font-size:14px;color:var(--cream2);margin-top:8px}
+.queue-sub strong{color:var(--cream)}
+.queue-bar{height:8px;background:rgba(245,230,200,.08);border-radius:100px;margin-top:16px;overflow:hidden}
+.queue-bar-fill{height:100%;background:linear-gradient(90deg,var(--amber),var(--green));border-radius:100px;width:11%;transition:width 1s ease}
+.launch-cd-caption{font-size:11px;color:var(--cream3);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;font-weight:700}
+.launch-cd-sep{font-family:'Unbounded',sans-serif;font-size:32px;font-weight:900;color:var(--cream4);margin-bottom:22px}
+.launch-email-wrap{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:460px;margin:0 auto 16px}
+.launch-email-input{flex:1;min-width:220px;background:var(--clay);border:1px solid rgba(245,230,200,.15);border-radius:100px;padding:14px 22px;font-size:14px;color:var(--cream);font-family:'Nunito',sans-serif;outline:none;transition:border-color .2s}
+.launch-email-input:focus{border-color:var(--amber)}
+.launch-email-input::placeholder{color:var(--cream4)}
+.launch-btn{background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;letter-spacing:.5px;padding:14px 26px;border-radius:100px;border:none;cursor:pointer;transition:opacity .2s;white-space:nowrap}
+.launch-btn:hover{opacity:.88}
+.launch-ok{display:none;background:rgba(46,204,142,.1);border:1px solid rgba(46,204,142,.25);border-radius:14px;padding:14px 20px;font-size:14px;font-weight:700;color:var(--green);max-width:400px;margin:0 auto}
+.launch-legal{font-size:11px;color:var(--cream4);margin-top:12px}
+.launch-legal a{color:var(--cream3)}
+@media(max-width:500px){.launch-inner{padding:32px 20px}.launch-cd-block{padding:12px 14px;min-width:62px}.launch-cd-num{font-size:26px}.launch-cd-sep{font-size:24px}}
+
+/* IMPORT BLOCK */
+.import-sec{margin:0 5% 48px}
+.import-inner{background:linear-gradient(135deg,#0D1A12 0%,#1A0F08 50%,#0D0D1A 100%);border:1px solid rgba(245,230,200,.1);border-radius:28px;padding:40px;position:relative;overflow:hidden}
+.import-inner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 20% 50%,rgba(46,204,142,.06) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 80% 50%,rgba(232,160,48,.05) 0%,transparent 60%);pointer-events:none}
+.import-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative}
+.import-left{}
+.import-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(46,204,142,.1);border:1px solid rgba(46,204,142,.25);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--green);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+.import-title{font-family:'Unbounded',sans-serif;font-size:clamp(20px,3vw,30px);font-weight:900;line-height:1.15;margin-bottom:12px}
+.import-title span{color:var(--green)}
+.import-sub{font-size:14px;color:var(--cream2);line-height:1.7;margin-bottom:24px;max-width:420px}
+.import-steps{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.import-step{display:flex;align-items:center;gap:14px}
+.import-step-num{width:32px;height:32px;border-radius:50%;background:rgba(46,204,142,.12);border:1px solid rgba(46,204,142,.3);display:flex;align-items:center;justify-content:center;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:900;color:var(--green);flex-shrink:0}
+.import-step-text{font-size:13px;color:var(--cream2);line-height:1.5}
+.import-step-text strong{color:var(--cream)}
+.import-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:900;padding:4px 16px;border-radius:100px}
+
+.import-right{display:flex;flex-direction:column;gap:12px}
+.import-platforms{display:flex;gap:10px;margin-bottom:4px}
+.import-platform{flex:1;background:rgba(245,230,200,.04);border:1px solid rgba(245,230,200,.08);border-radius:16px;padding:16px;text-align:center;transition:border-color .2s}
+.import-platform:hover{border-color:rgba(245,230,200,.2)}
+.import-platform-ico{font-size:36px;margin-bottom:8px;display:block}
+.import-platform-name{font-size:12px;font-weight:700;color:var(--cream2)}
+.import-arrow{text-align:center;font-size:28px;color:var(--green);animation:arrowPulse 1.5s ease-in-out infinite}
+@keyframes arrowPulse{0%,100%{transform:translateY(0);opacity:.7}50%{transform:translateY(4px);opacity:1}}
+.import-result{background:rgba(46,204,142,.08);border:1px solid rgba(46,204,142,.2);border-radius:16px;padding:16px 20px;display:flex;align-items:center;gap:14px}
+.import-result-ico{font-size:32px}
+.import-result-text{flex:1}
+.import-result-title{font-size:13px;font-weight:700;color:var(--green);margin-bottom:3px}
+.import-result-sub{font-size:12px;color:var(--cream3)}
+.import-time{display:flex;align-items:center;gap:8px;background:rgba(232,160,48,.1);border:1px solid rgba(232,160,48,.2);border-radius:12px;padding:10px 16px}
+.import-time-num{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;color:var(--amber)}
+.import-time-text{font-size:12px;color:var(--cream2);line-height:1.4}
+.import-seller-btn{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;padding:13px 26px;border-radius:100px;border:none;cursor:pointer;transition:opacity .2s,transform .15s}
+.import-seller-btn:hover{opacity:.9;transform:translateY(-2px)}
+@media(max-width:700px){.import-grid{grid-template-columns:1fr;gap:28px}.import-inner{padding:24px 20px}.import-seller-btn{width:100%;justify-content:center}}
+
+/* ROLES INTERACTIVE */
+.roles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.rcard{background:var(--clay2);border:1px solid var(--border);border-radius:16px;padding:18px 14px;text-align:center;transition:border-color .25s,transform .2s;cursor:pointer;position:relative;overflow:hidden}
+.rcard:hover{border-color:var(--amber);transform:translateY(-3px)}
+.rcard.active{border-color:var(--amber);transform:translateY(0)}
+.rcard-ico{font-size:32px;margin-bottom:10px;display:block}
+.rcard-name{font-size:13px;font-weight:700;color:var(--amber);margin-bottom:5px}
+.rcard-desc{font-size:12px;color:var(--cream3);line-height:1.5}
+.rcard-hint{font-size:10px;color:var(--cream4);margin-top:8px;letter-spacing:.3px}
+
+/* ROLE DETAIL PANEL */
+.role-detail{display:none;background:var(--clay2);border:1px solid var(--aborder);border-radius:20px;padding:28px;margin-top:16px;position:relative;overflow:hidden;animation:fadeSlide .25s ease}
+.role-detail.visible{display:block}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.role-detail-glow{position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;filter:blur(60px);opacity:.08;pointer-events:none}
+.role-detail-top{display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.role-detail-icon{font-size:44px}
+.role-detail-info{flex:1}
+.role-detail-name{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;color:var(--cream);margin-bottom:4px}
+.role-detail-niche{font-size:13px;color:var(--cream2)}
+.role-detail-price-block{text-align:right}
+.role-detail-price{font-family:'Unbounded',sans-serif;font-size:26px;font-weight:900;color:var(--amber);line-height:1}
+.role-detail-price-note{font-size:11px;color:var(--cream3);margin-top:3px}
+.role-detail-promo{display:inline-block;background:rgba(46,204,142,.12);border:1px solid rgba(46,204,142,.25);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700;color:var(--green);margin-bottom:16px}
+.role-features-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.role-feature{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--cream2)}
+.role-feature::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+.role-feature.dim{color:var(--cream4)}
+.role-feature.dim::before{content:'—';color:var(--cream4)}
+.role-detail-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--border);padding-top:16px}
+.role-commission{background:rgba(46,204,142,.1);border:1px solid rgba(46,204,142,.2);border-radius:100px;padding:6px 16px;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--green)}
+.role-detail-cta{background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:12px 24px;border-radius:100px;border:none;cursor:pointer;transition:opacity .2s}
+.role-detail-cta:hover{opacity:.88}
+.role-detail-close{position:absolute;top:14px;right:14px;background:rgba(245,230,200,.07);border:none;color:var(--cream3);font-size:16px;width:28px;height:28px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.role-detail-close:hover{background:rgba(245,230,200,.14)}
+@media(max-width:500px){.role-features-grid{grid-template-columns:1fr}.role-detail-price-block{text-align:left}.role-detail-top{flex-direction:column;align-items:flex-start}}
+
+
+/* Карусель скріншотів */
+.carousel-hero{padding:40px 5% 20px;max-width:900px;margin:0 auto}
+.car-wrap-hero{position:relative}
+.car-track-outer{overflow:hidden;border-radius:24px}
+.car-track{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1)}
+.car-slide{min-width:100%;display:flex;align-items:center;justify-content:center;gap:40px;padding:8px}
+.car-phone{flex-shrink:0;width:200px;border-radius:32px;overflow:hidden;border:2px solid rgba(232,160,48,.25);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 40px rgba(232,160,48,.06)}
+.car-phone img{width:100%;display:block}
+.car-caption{max-width:280px;text-align:left}
+.car-cap-icon{font-size:36px;margin-bottom:12px}
+.car-cap-title{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;color:var(--cream);margin-bottom:10px;line-height:1.2}
+.car-cap-desc{font-size:15px;color:var(--cream2);line-height:1.7}
+.car-btn{position:absolute;top:45%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:var(--clay2);border:1px solid var(--aborder);color:var(--amber);font-size:18px;cursor:pointer;transition:all .2s;z-index:10;display:flex;align-items:center;justify-content:center}
+.car-btn:hover{background:rgba(232,160,48,.12);border-color:var(--amber)}
+.car-prev{left:-22px}
+.car-next{right:-22px}
+.car-dots{display:flex;justify-content:center;gap:8px;margin-top:24px}
+.car-dot{width:8px;height:8px;border-radius:50%;background:var(--clay3);border:1px solid var(--border);cursor:pointer;transition:all .25s;padding:0}
+.car-dot.active{background:var(--amber);border-color:var(--amber);width:24px;border-radius:4px}
+@media(max-width:600px){
+  .car-slide{flex-direction:column;gap:20px}
+  .car-phone{width:150px}
+  .car-caption{text-align:center;max-width:100%}
+  .car-btn{display:none}
+}
+
+/* УТП чіпи */
+.utp-chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:16px 0 24px}
+.utp-chip{display:inline-flex;align-items:center;gap:6px;background:rgba(245,230,200,.06);border:1px solid rgba(245,230,200,.12);border-radius:100px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--cream2);letter-spacing:.3px}
+.utp-chip span{font-size:14px}
+:root[data-theme="light"] .utp-chip{background:rgba(26,15,8,.05);border-color:rgba(26,15,8,.12)}
+/* Кнопка блогерам */
+.btn-partners-hero{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--aborder);color:var(--amber);font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:12px 22px;border-radius:100px;transition:all .2s;letter-spacing:.5px}
+.btn-partners-hero:hover{background:rgba(232,160,48,.08);border-color:var(--amber)}
+
+/* Навігаційні плашки */
+.nav-cards-sec{margin:0 5% 48px}
+.nav-cards-label{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--green);text-transform:uppercase;text-align:center;margin-bottom:20px}
+.nav-cards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.nav-card{display:flex;align-items:center;gap:16px;background:var(--clay2);border:1px solid var(--border);border-radius:18px;padding:20px 22px;transition:all .2s;cursor:pointer}
+.nav-card:hover{border-color:rgba(245,230,200,.18);transform:translateY(-2px)}
+.nav-card-amber{border-color:var(--aborder)}
+.nav-card-amber:hover{background:rgba(232,160,48,.05);border-color:var(--amber)}
+.nav-card-green{border-color:var(--gborder)}
+.nav-card-green:hover{background:rgba(46,204,142,.05);border-color:var(--green)}
+.nav-card-wide{grid-column:1/-1}
+.nc-icon{font-size:28px;flex-shrink:0;width:44px;text-align:center}
+.nc-content{flex:1}
+.nc-title{font-family:'Unbounded',sans-serif;font-size:14px;font-weight:700;color:var(--cream);margin-bottom:5px;line-height:1.3}
+.nav-card-amber .nc-title{color:var(--amber)}
+.nav-card-green .nc-title{color:var(--green)}
+.nc-desc{font-size:12px;color:var(--cream3);line-height:1.6}
+.nc-arrow{font-size:18px;color:var(--cream4);flex-shrink:0;transition:transform .2s}
+.nav-card:hover .nc-arrow{transform:translateX(4px);color:var(--amber)}
+:root[data-theme="light"] .nav-card{background:#EFD9B0}
+@media(max-width:600px){
+  .nav-cards-grid{grid-template-columns:1fr}
+  .nav-card-wide{grid-column:auto}
+}
+
+/* Invest teaser */
+.invest-teaser{margin:0 5% 48px;border-radius:24px;border:1px solid var(--aborder);background:var(--clay2);overflow:hidden}
+.invest-teaser::before{content:'';display:block;height:4px;background:linear-gradient(90deg,var(--amber),rgba(232,160,48,.2),var(--amber))}
+.invest-teaser-inner{padding:32px 28px;display:flex;flex-direction:column;gap:24px}
+.it-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(232,160,48,.12);border:1px solid var(--aborder);border-radius:100px;padding:5px 16px;font-size:10px;font-weight:700;color:var(--amber);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;width:fit-content}
+.it-title{font-family:'Unbounded',sans-serif;font-size:clamp(22px,4vw,32px);font-weight:900;line-height:1.1;margin-bottom:10px}
+.it-title em{color:var(--amber);font-style:normal}
+.it-desc{font-size:14px;color:var(--cream2);line-height:1.7;max-width:560px}
+.it-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.it-stat{text-align:center;padding:14px 8px;background:var(--clay3);border-radius:14px;border:1px solid var(--border)}
+.it-stat span{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;color:var(--amber);display:block;margin-bottom:6px}
+.it-stat div{font-size:11px;color:var(--cream3);font-weight:700;line-height:1.3}
+.it-btn{display:inline-block;background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;padding:14px 28px;border-radius:100px;transition:opacity .2s;text-align:center;width:fit-content}
+.it-btn:hover{opacity:.88}
+:root[data-theme="light"] .invest-teaser{background:#EFD9B0}
+:root[data-theme="light"] .it-stat{background:#E8CFA0}
+@media(max-width:600px){.it-stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nlinks">
+    <a href="/upgrade">Тарифи</a>
+    <a href="/panas">Навчання</a>
+    <a href="/blog">Блог</a>
+    <a href="/partners">Партнерам</a>
+    <a href="/about">Про нас</a>
+    <a href="/support">Підтримка</a>
+  </div>
+  <div class="nav-right"><button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button><a href="#launch" class="ncta" id="navCta">⏳ 1 СЕРПНЯ →</a></div>
+  </nav>
+
+<section class="hero" id="top">
+  <div class="hglow"></div>
+  <div class="panas">
+    <div class="panas-c">
+      <img id="panasImg" src="splash_spring.png" alt="Панас" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">
+    </div>
+    <div class="bd bd1"></div><div class="bd bd2"></div>
+    <div class="bd bd3"></div><div class="bd bd4"></div><div class="bd bd5"></div>
+  </div>
+  <div class="sbadge" id="heroBadge"><div class="dot"></div>Офіційний запуск · 1 серпня 2026</div>
+  <h1>БАЗАР<b>ТОЛОКА</b></h1>
+  <p class="hsub">Де справжнє українське зустрічає свого покупця</p>
+  <div class="utp-chips">
+    <div class="utp-chip"><span>🇺🇦</span> 100% українські дані</div>
+    <div class="utp-chip"><span>🤖</span> ШІ-захист 360°</div>
+    <div class="utp-chip"><span>🪙</span> 0% комісії для виробника</div>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <div class="countdown-wrap">
+    <div class="cd-label" id="cdLabel">⏳ До офіційного запуску залишилось</div>
+    <div class="cd-blocks">
+      <div class="cd-block"><div class="cd-num" id="cd-days">--</div><div class="cd-unit">днів</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><div class="cd-num" id="cd-hours">--</div><div class="cd-unit">годин</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><div class="cd-num" id="cd-mins">--</div><div class="cd-unit">хвилин</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><div class="cd-num" id="cd-secs">--</div><div class="cd-unit">секунд</div></div>
+    </div>
+    <div class="hero-btns">
+      <a href="#launch" class="btn-play" id="mainCta">
+        <span>⏳</span> ВІДКРИЄТЬСЯ 1 СЕРПНЯ 2026
+      </a>
+      <a href="/upgrade" class="btn-upgrade-hero">🌾 ТАРИФИ ДЛЯ ПРОДАВЦІВ →</a>
+      <a href="/partners" class="btn-partners-hero">🎬 БЛОГЕРАМ →</a>
+    </div>
+    <p class="hlegal" style="margin-top:12px">Погоджуєтесь з <a href="/terms">Угодою</a> та <a href="/privacy">Конфіденційністю</a></p>
+  </div>
+
+  <!-- КАРУСЕЛЬ СКРІНШОТІВ -->
+  <div class="carousel-hero">
+    <div class="car-wrap-hero">
+      <button class="car-btn car-prev" onclick="carMove(-1)" aria-label="Назад">&#8592;</button>
+      <button class="car-btn car-next" onclick="carMove(1)" aria-label="Вперед">&#8594;</button>
+      <div class="car-track-outer">
+        <div class="car-track" id="carTrack">
+          <div class="car-slide">
+            <div class="car-phone"><img src="screen_splash.png" alt="Вхід" loading="lazy"></div>
+            <div class="car-caption">
+              <div class="car-cap-icon">🌸</div>
+              <div class="car-cap-title">Вхід в додаток</div>
+              <div class="car-cap-desc">Авторизація через Google за 1 дотик. Без SMS, без паролів.</div>
+            </div>
+          </div>
+          <div class="car-slide">
+            <div class="car-phone"><img src="screen_feed.png" alt="Стрічка" loading="lazy"></div>
+            <div class="car-caption">
+              <div class="car-cap-icon">🎬</div>
+              <div class="car-cap-title">TikTok-стрічка</div>
+              <div class="car-cap-desc">Гортай вертикально — купуй одним кліком. Алгоритм підбирає саме те що цікавить.</div>
+            </div>
+          </div>
+          <div class="car-slide">
+            <div class="car-phone"><img src="screen_cabinet.png" alt="Кабінет продавця" loading="lazy"></div>
+            <div class="car-caption">
+              <div class="car-cap-icon">🏪</div>
+              <div class="car-cap-title">Кабінет продавця</div>
+              <div class="car-cap-desc">Статистика, оголошення і замовлення — все в одному місці.</div>
+            </div>
+          </div>
+          <div class="car-slide">
+            <div class="car-phone"><img src="buy.png" alt="Кабінет покупця" loading="lazy"></div>
+            <div class="car-caption">
+              <div class="car-cap-icon">🛍️</div>
+              <div class="car-cap-title">Кабінет покупця</div>
+              <div class="car-cap-desc">Замовлення, статус доставки і захист платежу в реальному часі.</div>
+            </div>
+          </div>
+          <div class="car-slide">
+            <div class="car-phone"><img src="screen_payment.png" alt="Оплата" loading="lazy"></div>
+            <div class="car-caption">
+              <div class="car-cap-icon">💳</div>
+              <div class="car-cap-title">4 способи оплати</div>
+              <div class="car-cap-desc">Картка, NovaPay ескроу, НП Кредит або переказ на ФОП.</div>
+            </div>
+          </div>
+          <div class="car-slide">
+            <div class="car-phone"><img src="accounts.png" alt="Рахунки" loading="lazy"></div>
+            <div class="car-caption">
+              <div class="car-cap-icon">🏦</div>
+              <div class="car-cap-title">Рахунки виплат</div>
+              <div class="car-cap-desc">Продавець підключає банківський рахунок і отримує виплати автоматично.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="car-dots" id="carDots">
+        <button class="car-dot active" onclick="carGoTo(0)"></button>
+        <button class="car-dot" onclick="carGoTo(1)"></button>
+        <button class="car-dot" onclick="carGoTo(2)"></button>
+        <button class="car-dot" onclick="carGoTo(3)"></button>
+        <button class="car-dot" onclick="carGoTo(4)"></button>
+        <button class="car-dot" onclick="carGoTo(5)"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pills">
+  <div class="pill">🎬 Відео-оголошення</div>
+  <div class="pill">🤖 ШІ-верифікація</div>
+  <div class="pill">🛡️ Escrow-захист</div>
+  <div class="pill">🕵️ Анонімність</div>
+  <div class="pill">🔒 Антифрод</div>
+  <div class="pill">4 способи оплати</div>
+</div>
+
+
+<!-- ІМПОРТ З TIKTOK/INSTAGRAM -->
+<div class="import-sec">
+  <div class="import-inner">
+    <div class="import-grid">
+      <div class="import-left">
+        <div class="import-chip">⚡ Нова фішка · v1.0</div>
+        <h2 class="import-title">Вже продаєш<br>у <span>TikTok або Instagram?</span></h2>
+        <p class="import-sub">Не починай з нуля. Перекинь свої товари у Базар за 5 хвилин — відео, фото, описи, ціни. Все автоматично.</p>
+        <div class="import-steps">
+          <div class="import-step">
+            <div class="import-step-num">1</div>
+            <div class="import-step-text"><strong>Вставляєш посилання</strong> на свій TikTok або Instagram магазин</div>
+          </div>
+          <div class="import-step">
+            <div class="import-step-num">2</div>
+            <div class="import-step-text"><strong>ШІ сканує і парсить</strong> всі твої товари, відео та описи</div>
+          </div>
+          <div class="import-step">
+            <div class="import-step-num">3</div>
+            <div class="import-step-text"><strong>Підтверджуєш і публікуєш</strong> — каталог готовий у Базарі</div>
+          </div>
+        </div>
+        <div class="import-badge">🐱 БУДЕ 100% У ПЕРШІЙ ВЕРСІЇ!</div>
+        <button class="import-seller-btn" onclick="openSellerModal()">🌾 ХОЧУ СТАТИ ПРОДАВЦЕМ →</button>
+      </div>
+      <div class="import-right">
+        <div class="import-platforms">
+          <div class="import-platform">
+            <span class="import-platform-ico">🎵</span>
+            <div class="import-platform-name">TikTok Shop</div>
+          </div>
+          <div class="import-platform">
+            <span class="import-platform-ico">📸</span>
+            <div class="import-platform-name">Instagram</div>
+          </div>
+        </div>
+        <div class="import-arrow">↓</div>
+        <div class="import-result">
+          <div class="import-result-ico">🛒</div>
+          <div class="import-result-text">
+            <div class="import-result-title">Базар Толока</div>
+            <div class="import-result-sub">Всі товари, відео та ціни вже на місці</div>
+          </div>
+        </div>
+        <div class="import-time">
+          <div class="import-time-num">5 хв</div>
+          <div class="import-time-text">— і всі твої товари<br>вже у Базарі</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ПАНАС ВІДПОВІДАЄ — СЕКЦІЯ -->
+<div class="panas-sec">
+  <div class="panas-sec-inner">
+    <div class="panas-sec-img">
+      <img src="panas.png" alt="Панас">
+    </div>
+    <div class="panas-sec-body">
+      <div class="panas-sec-label">🎓 Навчання</div>
+      <h2 class="panas-sec-title">Панас відповідає</h2>
+      <p class="panas-sec-sub">Як знайти товар? Що таке Escrow? Як стати продавцем за 30 секунд?<br>Панас пояснює просто і чесно — без зайвих слів.</p>
+      <div class="panas-sec-tags">
+        <span class="panas-tag">🛍️ Покупцям</span>
+        <span class="panas-tag">🏪 Продавцям</span>
+        <span class="panas-tag">🛡️ Безпека</span>
+        <span class="panas-tag">💳 Оплата</span>
+      </div>
+      <a href="/panas" class="panas-sec-cta">ЧИТАТИ ВІДПОВІДІ →</a>
+    </div>
+    <div class="panas-sec-glow"></div>
+  </div>
+</div>
+
+<!-- PHONE MOCKUP -->
+
+<div class="div" style="margin-top:60px"></div>
+
+<!-- 10 ФІШОК -->
+<div class="features" id="video" style="padding:60px 5% 0">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="sh" style="text-align:center;margin-bottom:32px">
+      <div class="sl">Наші фішки</div>
+      <h2 class="st">10 причин обрати<br>Базар Толока</h2>
+      <p class="ss" style="margin:0 auto">Ми побудували маркетплейс де кожна деталь працює на довіру між людьми</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card"><div class="feat-glow"></div><div class="feat-number">01</div><span class="feat-icon">⭐</span><div class="feat-title">Двосторонній рейтинг</div><div class="feat-desc">Оцінюють обидва — і покупець продавця, і продавець покупця. Чесна репутація кожного учасника.</div><span class="feat-tag">Довіра</span></div>
+      <div class="feat-card"><div class="feat-glow"></div><div class="feat-number">02</div><span class="feat-icon">🎬</span><div class="feat-title">Відео-оголошення</div><div class="feat-desc">Знімай товар на відео прямо в застосунку. Реальний продукт — жива увага. Ніяких постановочних фото.</div><span class="feat-tag">Контент</span></div>
+      <div class="feat-card green"><div class="feat-glow"></div><div class="feat-number">03</div><span class="feat-icon">📲</span><div class="feat-title">Формат TikTok</div><div class="feat-desc">Вертикальна стрічка відео-оголошень. Гортай — купуй. Алгоритм підбирає саме те що тебе цікавить.</div><span class="feat-tag">Вірусність</span></div>
+      <div class="feat-card red"><div class="feat-glow"></div><div class="feat-number">04</div><span class="feat-icon">🚫</span><div class="feat-title">Захист від шахрайства</div><div class="feat-desc">ШІ аналізує поведінку, виявляє підозрілі схеми. Верифікація через Google. Ескроу-платежі. Боти заблоковані.</div><span class="feat-tag">Безпека</span></div>
+      <div class="feat-card blue"><div class="feat-glow"></div><div class="feat-number">05</div><span class="feat-icon">🔒</span><div class="feat-title">Приватність даних</div><div class="feat-desc">Продавці не бачать адресу, телефон чи особисті дані покупців. Анонімний контакт через захищений чат.</div><span class="feat-tag">Конфіденційно</span></div>
+      <div class="feat-card"><div class="feat-glow"></div><div class="feat-number">06</div><span class="feat-icon">📦</span><div class="feat-title">Розумна картка товару</div><div class="feat-desc">Відео, рейтинг продавця, захист угоди, схожі пропозиції від ШІ, аналіз ціни по ринку — все на одному екрані.</div><span class="feat-tag">UX</span></div>
+      <div class="feat-card green"><div class="feat-glow"></div><div class="feat-number">07</div><span class="feat-icon">🎓</span><div class="feat-title">Сторінка навчання</div><div class="feat-desc">Курси для продавців: як робити відео, як встановлювати ціни, як отримувати 5 зірок. Прямо в застосунку.</div><span class="feat-tag">Зростання</span></div>
+      <div class="feat-card"><div class="feat-glow"></div><div class="feat-number">08</div><span class="feat-icon">🤝</span><div class="feat-title">Захист всіх сторін</div><div class="feat-desc">Ескроу-рахунок тримає гроші до підтвердження. Покупець отримав — продавець отримав оплату.</div><span class="feat-tag">Гарантія</span></div>
+      <div class="feat-card blue"><div class="feat-glow"></div><div class="feat-number">09</div><span class="feat-icon">📢</span><div class="feat-title">Просте керування рекламою</div><div class="feat-desc">3 кнопки — і твоє оголошення в топі. Авто-бюджет, авто-аудиторія, авто-час показу. ШІ оптимізує сам.</div><span class="feat-tag">Маркетинг</span></div>
+      <div class="feat-card green"><div class="feat-glow"></div><div class="feat-number">10</div><span class="feat-icon">📱</span><div class="feat-title">Дані на вашому пристрої</div><div class="feat-desc">Особисті дані, чати та кеш зберігаються локально на телефоні. Ніякого злиття в хмару без вашого відома.</div><span class="feat-tag">Приватність</span></div>
+      <div class="feat-card blue large"><div class="feat-glow" style="background:#00D4FF;width:200px;height:200px;top:-60px;right:-60px"></div><div class="feat-visual"><div style="font-size:24px;margin-bottom:6px">✦</div><div class="ai-lines"><div class="ai-line"></div><div class="ai-line"></div><div class="ai-line"></div><div class="ai-line"></div></div></div><div><div class="feat-number">11</div><div class="feat-title" style="font-size:18px">Ультра-сучасний ШІ пошук</div><div class="feat-desc">Семантичний пошук розуміє природну мову. "Хочу солодкі яблука з Карпат" — і ось вони. ШІ аналізує попит і підбирає рекламу автоматично.</div><span class="feat-tag" style="margin-top:16px">ШІ Клауд</span></div></div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-num">11</div><div class="stat-label">Унікальних фішок</div></div>
+      <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Посередників</div></div>
+      <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Українські дані</div></div>
+      <div class="stat-box"><div class="stat-num">∞</div><div class="stat-label">Довіра громади</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="div" style="margin-top:60px"></div>
+
+<div class="trust-sec">
+  <div class="sh">
+    <div class="sl">Довіра і захист</div>
+    <h2 class="st">Безпека без компромісів</h2>
+    <p class="ss">Три рівні захисту — для покупця, продавця і всієї платформи.</p>
+  </div>
+  <div class="tg-wrap">
+    <div class="trow">
+      <div class="tcard green"><span class="tcard-ico">🕵️</span><div class="tcard-name">Анонімність</div><div class="tcard-desc">Номер телефону прихований. Покупець і продавець бачать тільки Bazar-ID.</div></div>
+      <div class="tcard green"><span class="tcard-ico">🔐</span><div class="tcard-name">Фото-верифікація</div><div class="tcard-desc">Будь-яка зміна реквізитів — підтвердження через 6 живих фото.</div></div>
+    </div>
+    <div class="tcard wide amber"><span class="tcard-ico">🛡️</span><div class="tcard-name">Антифрод — захист покупця</div>
+      <ul class="tlist">
+        <li>Escrow утримує гроші до підтвердження отримання посилки НП</li>
+        <li>ШІ виявляє підозрілі оголошення і дублікати в реальному часі</li>
+        <li>Двостороння система рейтингів — репутація видна всім</li>
+        <li>Заява на повернення і арбітраж протягом 14 днів</li>
+      </ul>
+    </div>
+    <div class="trow">
+      <div class="tcard"><span class="tcard-ico">🌾</span><div class="tcard-name">Свобода продавця</div><div class="tcard-desc">Сам обирає спосіб оплати, ціну, умови доставки і повернення.</div></div>
+      <div class="tcard"><span class="tcard-ico">🧾</span><div class="tcard-name">Офіційні чеки</div><div class="tcard-desc">ПРРО Вчасно.Каса — фіскальні чеки автоматично для ФОП.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="div"></div>
+
+<!-- РОЛІ -->
+<div class="roles-sec">
+  <div class="sh">
+    <div class="sl">Для продавців</div>
+    <h2 class="st">Хто торгує на Базарі</h2>
+    <p class="ss">Від домашнього господаря до великого магазину — кожен знайде свій рівень.</p>
+  </div>
+  <div class="roles-grid">
+    <div class="rcard" onclick="showRole('hospodar')">
+      <span class="rcard-ico">🌾</span>
+      <div class="rcard-name">Господар</div>
+      <div class="rcard-desc">Власна с/г продукція. 1 фото + 1 відео на місяць.</div>
+      <div class="rcard-hint">Натисни — деталі →</div>
+    </div>
+    <div class="rcard" onclick="showRole('majster')">
+      <span class="rcard-ico">🎨</span>
+      <div class="rcard-name">Майстер</div>
+      <div class="rcard-desc">Хендмейд та авторські вироби. Розширені ліміти.</div>
+      <div class="rcard-hint">Натисни — деталі →</div>
+    </div>
+    <div class="rcard" onclick="showRole('kramar')">
+      <span class="rcard-ico">🏪</span>
+      <div class="rcard-name">Крамар</div>
+      <div class="rcard-desc">ФОП, малий бізнес. Верифікація через Дія.</div>
+      <div class="rcard-hint">Натисни — деталі →</div>
+    </div>
+    <div class="rcard" onclick="showRole('kupets')">
+      <span class="rcard-ico">🏢</span>
+      <div class="rcard-name">Купець</div>
+      <div class="rcard-desc">Великий бізнес. API інтеграція. ШІ-продавець.</div>
+      <div class="rcard-hint">Натисни — деталі →</div>
+    </div>
+  </div>
+
+  <!-- DETAIL PANEL -->
+  <div class="role-detail" id="roleDetail">
+    <button class="role-detail-close" onclick="closeRole()">✕</button>
+    <div class="role-detail-glow" id="roleGlow"></div>
+    <div class="role-detail-top">
+      <div class="role-detail-icon" id="roleIcon"></div>
+      <div class="role-detail-info">
+        <div class="role-detail-name" id="roleName"></div>
+        <div class="role-detail-niche" id="roleNiche"></div>
+      </div>
+      <div class="role-detail-price-block">
+        <div class="role-detail-price" id="rolePrice"></div>
+        <div class="role-detail-price-note" id="rolePriceNote"></div>
+      </div>
+    </div>
+    <div class="role-detail-promo" id="rolePromo"></div>
+    <div class="role-features-grid" id="roleFeatures"></div>
+    <div class="role-detail-footer">
+      <div class="role-commission">КОМІСІЯ 0% НАЗАВЖДИ</div>
+      <button class="role-detail-cta" id="roleBtn" onclick="goToTariff()">ДЕТАЛЬНІШЕ →</button>
+    </div>
+  </div>
+</div>
+
+<div class="div"></div>
+
+<!-- ІНВЕСТИЦІЇ -->
+<div class="invest-teaser" id="invest">
+  <div class="invest-teaser-inner">
+    <div>
+      <div class="it-chip">💰 Інвесторам та партнерам</div>
+      <h2 class="it-title">Увійди в проект<br><em>поки ринок вільний</em></h2>
+      <p class="it-desc">Будуємо національну інфраструктуру довіри для мільйонів угод між українцями. Відкриті до інвесторів, стратегічних партнерів і медіа.</p>
+    </div>
+    <div class="it-stats">
+      <div class="it-stat"><span>🇺🇦</span><div>Ukraine-first</div></div>
+      <div class="it-stat"><span>4</span><div>Платіжних системи</div></div>
+      <div class="it-stat"><span>0₴</span><div>Вхід для продавця</div></div>
+      <div class="it-stat"><span>🤖</span><div>ШІ-модерація</div></div>
+    </div>
+    <a href="/invest" class="it-btn">ДЕТАЛЬНІШЕ ТА ЗАЛИШИТИ ЗАЯВКУ →</a>
+  </div>
+</div>
+</div>
+
+<!-- ПРОДАВЦЯМ CTA -->
+<!-- НАВ ПЛАШКИ -->
+<div class="nav-cards-sec">
+  <div class="nav-cards-label">Досліджуй Базар Толока</div>
+  <div class="nav-cards-grid">
+
+    <a href="/partners" class="nav-card nav-card-amber">
+      <div class="nc-icon">🤝</div>
+      <div class="nc-content">
+        <div class="nc-title">Партнерам та блогерам</div>
+        <div class="nc-desc">Увійди в проект, стань акредитованим партнером або навчальним експертом платформи</div>
+      </div>
+      <div class="nc-arrow">→</div>
+    </a>
+
+    <a href="/panas" class="nav-card nav-card-green">
+      <div class="nc-icon">🎓</div>
+      <div class="nc-content">
+        <div class="nc-title">Навчання продавців</div>
+        <div class="nc-desc">Панас відповідає — покрокові пояснення як продавати, отримувати 5 зірок і уникати помилок</div>
+      </div>
+      <div class="nc-arrow">→</div>
+    </a>
+
+    <a href="/blog" class="nav-card">
+      <div class="nc-icon">📝</div>
+      <div class="nc-content">
+        <div class="nc-title">Блог</div>
+        <div class="nc-desc">Аналітика ринку, поради для продавців, новини платформи та порівняння з конкурентами</div>
+      </div>
+      <div class="nc-arrow">→</div>
+    </a>
+
+    <a href="/about" class="nav-card">
+      <div class="nc-icon">🇺🇦</div>
+      <div class="nc-content">
+        <div class="nc-title">Про нас</div>
+        <div class="nc-desc">Місія, цінності, команда і юридичний статус — хто стоїть за Базар Толока</div>
+      </div>
+      <div class="nc-arrow">→</div>
+    </a>
+
+    <a href="/upgrade" class="nav-card nav-card-wide">
+      <div class="nc-icon">💎</div>
+      <div class="nc-content">
+        <div class="nc-title">Тарифи та підписка</div>
+        <div class="nc-desc">Господар, Майстер, Крамар, Купець — порівняй плани і обери свій. Перший місяць безкоштовно.</div>
+      </div>
+      <div class="nc-arrow">→</div>
+    </a>
+
+    <a href="/invest" class="nav-card nav-card-wide" style="border-color:var(--aborder)">
+      <div class="nc-icon">💰</div>
+      <div class="nc-content">
+        <div class="nc-title" style="color:var(--amber)">Інвесторам та партнерам</div>
+        <div class="nc-desc">Входь у проект поки ринок вільний — інвестори, стратегічні партнери і медіа. Відповідаємо протягом 24 годин.</div>
+      </div>
+      <div class="nc-arrow">→</div>
+    </a>
+
+  </div>
+</div>
+
+<!-- LAUNCH SECTION -->
+<div class="launch-sec" id="launch">
+  <div class="launch-glow-top"></div>
+  <div class="launch-inner">
+    <div class="launch-chip">🚀 Офіційний запуск</div>
+    <h2 class="launch-title">Базар відкривається<br><span>1 серпня 2026</span></h2>
+    <p class="launch-sub">Перші <strong>1000 продавців</strong> отримують потрійний бонус: за кожну гривню на бонусний рахунок зараховуємо <strong>+3 грн</strong>. Бонусами оплачуєте до 30% будь-якої послуги чи реклами (70% гроші / 30% бонуси).</p>
+    <div class="queue-box">
+      <div class="queue-label">🔥 ВЖЕ В ЧЕРЗІ</div>
+      <div class="queue-num" id="queueNum">108</div>
+      <div class="queue-sub">продавців із <strong>1000</strong> першої хвилі</div>
+      <div class="queue-bar"><div class="queue-bar-fill" id="queueBar"></div></div>
+    </div>
+    <div class="launch-cd-caption">⏳ До кінця акції · 1 серпня 2026</div>
+    <div class="launch-cd">
+      <div class="launch-cd-block"><span class="launch-cd-num" id="l-days">--</span><div class="launch-cd-unit">днів</div></div>
+      <div class="launch-cd-sep">:</div>
+      <div class="launch-cd-block"><span class="launch-cd-num" id="l-hours">--</span><div class="launch-cd-unit">годин</div></div>
+      <div class="launch-cd-sep">:</div>
+      <div class="launch-cd-block"><span class="launch-cd-num" id="l-mins">--</span><div class="launch-cd-unit">хвилин</div></div>
+      <div class="launch-cd-sep">:</div>
+      <div class="launch-cd-block"><span class="launch-cd-num" id="l-secs">--</span><div class="launch-cd-unit">секунд</div></div>
+    </div>
+    <div class="launch-email-wrap" id="launchForm">
+      <input type="text" id="launchEmail" class="launch-email-input" placeholder="Telegram (@нік) або email">
+      <button class="launch-btn" onclick="submitLaunch()">ЗАЙНЯТИ МІСЦЕ →</button>
+    </div>
+    <div class="launch-ok" id="launchOk">✅ Місце за вами! Зв'яжемось до 1 серпня 🎉</div>
+    <p class="launch-legal">Погоджуєтесь з <a href="/terms">Угодою</a> та <a href="/privacy">Конфіденційністю</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="/blog">Блог</a>
+      <a href="/about">Про нас</a>
+      <a href="/partners">Партнерам</a>
+      <a href="/upgrade">Тарифи</a>
+      <a href="/support">Підтримка</a>
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови</a>
+      <a href="/offer">Оферта</a>
+      <a href="/jobs">Вакансії</a>
+    </div>
+    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
+</footer>
+
+<script>
+function handleInvestForm(e) {
+  e.preventDefault();
+  const btn = e.target;
+  const form = btn.closest('.invest-form');
+  const name    = form.querySelector('input[type=text]').value.trim();
+  const contact = (form.querySelector('input[type=email]')||{}).value||'';
+  const role    = (form.querySelector('select')||{}).value||'';
+  const about   = (form.querySelector('textarea')||{}).value||'';
+  if (!name || !contact) { btn.textContent='⚠️ Заповніть ім\'я та контакт'; setTimeout(()=>btn.textContent='НАДІСЛАТИ ЗАЯВКУ →',2000); return; }
+  const text = '💰 <b>ІНВЕСТОР/ПАРТНЕР</b>\n━━━━━━━━━━━━━━━━\n'
+    + '👤 <b>Ім\'я:</b> ' + name + '\n'
+    + '📞 <b>Контакт:</b> ' + contact.trim() + '\n'
+    + (role?'📋 <b>Роль:</b> '+role+'\n':'')
+    + '━━━━━━━━━━━━━━━━\n'
+    + (about.trim()?'💬 '+about.trim()+'\n':'')
+    + '━━━━━━━━━━━━━━━━\n'
+    + '🕐 ' + new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'});
+  _tgBtn(btn, fetch('https://api.telegram.org/bot8699311467:AAFxYGz3v1zW56B9Zpokq8NHl1UW_i1iz5M/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1004471347053',text:text,parse_mode:'HTML'})}), '✅ Заявку надіслано!');
+}
+</script>
+
+<script>
+// ── COUNTDOWN до 1.08.2026 ──
+(function() {
+  const LAUNCH = new Date('2026-08-01T00:00:00+03:00').getTime();
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick() {
+    const diff = LAUNCH - Date.now();
+    if (diff <= 0) {
+      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id=>{
+        const el=document.getElementById(id); if(el) el.textContent='00';
+      });
+      const lbl=document.getElementById('cdLabel');
+      if(lbl) lbl.textContent='🎉 БАЗАР ТОЛОКА ЗАПУЩЕНО!';
+      const badge=document.getElementById('heroBadge');
+      if(badge) badge.innerHTML='<div class="dot"></div>Вже в Google Play ✅';
+      const cta=document.getElementById('mainCta');
+      if(cta){ cta.style.boxShadow='0 0 60px rgba(46,204,142,.45)'; }
+      clearInterval(timer); return;
+    }
+    const d=Math.floor(diff/86400000);
+    const h=Math.floor((diff%86400000)/3600000);
+    const m=Math.floor((diff%3600000)/60000);
+    const s=Math.floor((diff%60000)/1000);
+    document.getElementById('cd-days').textContent=pad(d);
+    document.getElementById('cd-hours').textContent=pad(h);
+    document.getElementById('cd-mins').textContent=pad(m);
+    document.getElementById('cd-secs').textContent=pad(s);
+  }
+  tick();
+  const timer=setInterval(tick,1000);
+})();
+
+// ── Launch section countdown ──
+(function() {
+  const LAUNCH = new Date('2026-08-01T00:00:00+03:00').getTime();
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick() {
+    const diff = LAUNCH - Date.now();
+    if (diff <= 0) {
+      ['l-days','l-hours','l-mins','l-secs'].forEach(id=>{
+        const el=document.getElementById(id); if(el) el.textContent='00';
+      });
+      // Оновлюємо nav кнопку на Play
+      const nav=document.getElementById('navCta');
+      if(nav){ nav.textContent='GOOGLE PLAY →'; nav.href='https://play.google.com/store/apps/details?id=ua.bazartoloka.app'; }
+      clearInterval(t2); return;
+    }
+    const d=Math.floor(diff/86400000);
+    const h=Math.floor((diff%86400000)/3600000);
+    const m=Math.floor((diff%3600000)/60000);
+    const s=Math.floor((diff%60000)/1000);
+    const el = (id) => document.getElementById(id);
+    if(el('l-days')) el('l-days').textContent=pad(d);
+    if(el('l-hours')) el('l-hours').textContent=pad(h);
+    if(el('l-mins')) el('l-mins').textContent=pad(m);
+    if(el('l-secs')) el('l-secs').textContent=pad(s);
+  }
+  tick();
+  const t2 = setInterval(tick, 1000);
+})();
+
+// ── Зростаючий лічильник черги (детермінований по днях) ──
+(function initQueue(){
+  var startDate = new Date(2026, 5, 26); // 26.06.2026 (місяць 0-індекс)
+  var base = 108;
+  var today = new Date();
+  var days = Math.max(0, Math.floor((today - startDate) / 86400000));
+  var total = base;
+  for (var i = 1; i <= days; i++) {
+    // детермінований псевдо-приріст 10..30 на день i
+    var seed = (i * 9301 + 49297) % 233280;
+    var rnd = seed / 233280;
+    total += 10 + Math.floor(rnd * 21); // 10..30
+  }
+  if (total > 980) total = 980; // не перевищуємо 1000 до кінця акції
+  var qn = document.getElementById('queueNum');
+  if (qn) qn.textContent = total;
+  var bar = document.getElementById('queueBar');
+  if (bar) bar.style.width = Math.min(100, (total / 1000) * 100) + '%';
+})();
+
+function submitLaunch() {
+  const el = document.getElementById('launchEmail');
+  const contact = el.value.trim();
+  if (contact.length < 3) {
+    el.style.borderColor='#E24B4A';
+    setTimeout(()=>el.style.borderColor='',2000);
+    return;
+  }
+  const btn = document.querySelector('.launch-btn');
+  if (!btn) return;
+  const text = '🌾 <b>НОВИЙ ПРОДАВЕЦЬ У ЧЕРЗІ</b>\n━━━━━━━━━━━━━━━━\n'
+    + '📨 <b>Контакт:</b> ' + contact + '\n'
+    + '🕐 ' + new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'})
+    + '\n🌐 bazar.in.ua → запуск';
+  btn.disabled=true; btn.textContent='⏳...';
+  // лічильник черги +1
+  const qn = document.getElementById('queueNum');
+  if (qn) {
+    const cur = parseInt((qn.textContent.match(/[0-9]+/) || ['0'])[0]) || 0;
+    qn.textContent = cur + 1;
+    const bar = document.getElementById('queueBar');
+    if (bar) bar.style.width = Math.min(100, ((cur + 1) / 1000) * 100) + '%';
+  }
+  fetch('https://api.telegram.org/bot8898378336:AAHAPpy5HFTxp5J58TfSP4HoVJkZVJiPHuM/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1003989090256',text:text,parse_mode:'HTML'})})
+    .then(()=>{
+      document.getElementById('launchForm').style.display='none';
+      document.getElementById('launchOk').style.display='block';
+    })
+    .catch(()=>{
+      document.getElementById('launchForm').style.display='none';
+      document.getElementById('launchOk').style.display='block';
+    });
+}
+
+// ── Seasonal Panas ──
+(function() {
+  const m = new Date().getMonth();
+  const seasons = {spring:[2,3,4],summer:[5,6,7],autumn:[8,9,10],winter:[11,0,1]};
+  const files = {spring:'splash_spring.png',summer:'summer.png',autumn:'splash_autumn.png',winter:'splash_winter.png'};
+  let season = 'summer';
+  for (const [s, months] of Object.entries(seasons)) {
+    if (months.includes(m)) { season = s; break; }
+  }
+  const img = document.getElementById('panasImg');
+  if (img) img.src = files[season];
+})();
+</script>
+
+
+<script>
+const ROLES = {
+  hospodar: {
+    icon:'🌾', name:'Господар', niche:'Сільськогосподарська продукція',
+    price:'0₴', priceNote:'1 місяць безкоштовно, далі 150 ₴/міс',
+    promo:'🎁 Перший місяць — безкоштовно',
+    glow:'#2ECC8E',
+    features:[
+      {t:'10 оголошень',dim:false},{t:'Фото та відео',dim:false},
+      {t:'Оплата NovaPay',dim:false},{t:'Трекінг Нова Пошта',dim:false},
+      {t:'Пріоритет у пошуку',dim:true},{t:'ШІ-чернетка',dim:true}
+    ],
+    plan:'hospodar'
+  },
+  majster: {
+    icon:'🎨', name:'Майстер', niche:'Хендмейд, майстерня, ремесло',
+    price:'249₴', priceNote:'на місяць',
+    promo:'🔥 +3 міс у подарунок до 01.08',
+    glow:'#2ECC8E',
+    features:[
+      {t:'100 оголошень',dim:false},{t:'Фото та відео',dim:false},
+      {t:'Пріоритет у пошуку',dim:false},{t:'Статистика продажів',dim:false},
+      {t:'ШІ-чернетка оголошення',dim:false},{t:'Власний магазин',dim:true}
+    ],
+    plan:'majster'
+  },
+  kramar: {
+    icon:'🏪', name:'Крамар', niche:'ФОП, малий бізнес',
+    price:'499₴', priceNote:'на місяць · 5 988 ₴/рік',
+    promo:'🔥 +3 міс у подарунок до 01.08',
+    glow:'#E8A030',
+    features:[
+      {t:'1 000 оголошень',dim:false},{t:'Власний магазин',dim:false},
+      {t:'ФОП верифікація через Дія',dim:false},{t:'Пріоритет у пошуку ×2',dim:false},
+      {t:'Веб-кабінет',dim:false},{t:'ШІ-чернетка оголошення',dim:false}
+    ],
+    plan:'kramar'
+  },
+  kupets: {
+    icon:'🏢', name:'Купець', niche:'ТОВ, середній та великий бізнес',
+    price:'від 2000₴', priceNote:'на місяць',
+    promo:'🔥 +3 міс у подарунок до 01.08',
+    glow:'#E8A030',
+    features:[
+      {t:'10 000 оголошень',dim:false},{t:'Брендований магазин',dim:false},
+      {t:'ШІ-продавець 24/7',dim:false},{t:'Пріоритет у пошуку ×5',dim:false},
+      {t:'API доступ',dim:false},{t:'До 10 робочих місць',dim:false}
+    ],
+    plan:'kupets'
+  }
+};
+
+let activeRole = null;
+
+function showRole(key) {
+  const r = ROLES[key];
+  if (!r) return;
+
+  // Підсвічуємо активну картку
+  document.querySelectorAll('.rcard').forEach(c => c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+
+  // Якщо та сама — закриваємо
+  if (activeRole === key) { closeRole(); return; }
+  activeRole = key;
+
+  // Заповнюємо дані
+  document.getElementById('roleIcon').textContent = r.icon;
+  document.getElementById('roleName').textContent = r.name;
+  document.getElementById('roleNiche').textContent = r.niche;
+  document.getElementById('rolePrice').textContent = r.price;
+  document.getElementById('rolePriceNote').textContent = r.priceNote;
+  document.getElementById('rolePromo').textContent = r.promo;
+  document.getElementById('roleGlow').style.background = r.glow;
+  document.getElementById('roleBtn').dataset.plan = r.plan;
+
+  const feat = document.getElementById('roleFeatures');
+  feat.innerHTML = r.features.map(f =>
+    `<div class="role-feature${f.dim?' dim':''}">${f.t}</div>`
+  ).join('');
+
+  const panel = document.getElementById('roleDetail');
+  panel.classList.add('visible');
+  setTimeout(() => panel.scrollIntoView({behavior:'smooth', block:'nearest'}), 50);
+}
+
+function closeRole() {
+  document.getElementById('roleDetail').classList.remove('visible');
+  document.querySelectorAll('.rcard').forEach(c => c.classList.remove('active'));
+  activeRole = null;
+}
+
+function goToTariff() {
+  const plan = document.getElementById('roleBtn').dataset.plan;
+  window.location.href = '/upgrade?plan=' + (plan||'');
+}
+</script>
+
+<script>
+/* ============ THEME SWITCHER ============ */
+(function(){
+  const KEY = 'bazar-theme';
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  function apply(theme){
+    if(theme === 'light'){
+      root.setAttribute('data-theme', 'light');
+      btn.textContent = '☀️';
+      btn.title = 'Темна тема';
+    } else {
+      root.removeAttribute('data-theme');
+      btn.textContent = '🌙';
+      btn.title = 'Світла тема';
+    }
+  }
+  const saved = localStorage.getItem(KEY) || 'dark';
+  apply(saved);
+  btn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    const next = current === 'light' ? 'dark' : 'light';
+    localStorage.setItem(KEY, next);
+    apply(next);
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var cur=0, total=6;
+  var track=document.getElementById('carTrack');
+  var dots=document.querySelectorAll('.car-dot');
+  function upd(){
+    track.style.transform='translateX(-'+(cur*100)+'%)';
+    dots.forEach(function(d,i){d.classList.toggle('active',i===cur);});
+  }
+  window.carMove=function(d){cur=(cur+d+total)%total;upd();};
+  window.carGoTo=function(i){cur=i;upd();};
+  track.addEventListener('touchstart',function(e){track._sx=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-track._sx;
+    if(Math.abs(dx)>50)carMove(dx<0?1:-1);
+  },{passive:true});
+  setInterval(function(){carMove(1);},8000);
+})();
+</script>
+<script>
+(function(){
+  var cur=0,total=6;
+  var track=document.getElementById('carTrack');
+  var dots=document.querySelectorAll('.car-dot');
+  function upd(){
+    track.style.transform='translateX(-'+(cur*100)+'%)';
+    dots.forEach(function(d,i){d.classList.toggle('active',i===cur);});
+  }
+  window.carMove=function(d){cur=(cur+d+total)%total;upd();};
+  window.carGoTo=function(i){cur=i;upd();};
+  track.addEventListener('touchstart',function(e){track._sx=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-track._sx;
+    if(Math.abs(dx)>50)carMove(dx<0?1:-1);
+  },{passive:true});
+  setInterval(function(){carMove(1);},8000);
+})();
+</script>
+
+<script>
+/* ── TG form helper ── */
+function _tgBtn(btn, fetchPromise, okText) {
+  btn._orig = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = '⏳ Надсилаємо...';
+  fetchPromise
+    .then(r => r.json())
+    .then(d => {
+      btn.textContent = d.ok ? (okText||'✅ Надіслано!') : '⚠️ Помилка. Спробуйте ще раз.';
+      if (d.ok) { btn.style.background='var(--green)'; btn.style.color='#05200F'; }
+      else { setTimeout(()=>{ btn.textContent=btn._orig; btn.disabled=false; },3000); }
+    })
+    .catch(()=>{ btn.textContent='⚠️ Немає зв'язку.'; setTimeout(()=>{ btn.textContent=btn._orig; btn.disabled=false; },3000); });
+}
+</script>
+
+
+<!-- ── Модалка заявки продавця ── -->
+<div id="sellerModal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px">
+  <div style="background:var(--clay2);border:1px solid var(--aborder);border-radius:20px;padding:28px 24px;max-width:480px;width:100%;position:relative">
+    <button onclick="closeSellerModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;color:var(--cream3);font-size:20px;cursor:pointer;line-height:1">✕</button>
+    <div style="font-family:'Unbounded',sans-serif;font-size:16px;font-weight:900;margin-bottom:6px">🌾 Заявка продавця</div>
+    <div style="font-size:13px;color:var(--cream2);margin-bottom:20px">Залиш контакти — допоможемо стартувати на Базарі</div>
+    <div class="field"><label>Ваше ім'я / назва бізнесу</label><input type="text" id="seName" placeholder="Іван Петренко / ФОП Петренко"></div>
+    <div class="field"><label>Як з вами зв'язатись</label><input type="text" id="seContact" placeholder="тел / email / Telegram — що зручно"></div>
+    <div class="field"><label>Що продаєте</label><textarea id="seMsg" style="min-height:80px" placeholder="Коротко про товар: овочі, мед, хендмейд, одяг... Чи вже торгуєте у TikTok/Instagram?"></textarea></div>
+    <button class="import-seller-btn" id="seSendBtn" style="width:100%;justify-content:center;margin-top:4px" onclick="sendSellerForm()">НАДІСЛАТИ ЗАЯВКУ →</button>
+    <p style="font-size:11px;color:var(--cream4);text-align:center;margin-top:10px">Відповідаємо протягом 24 годин</p>
+  </div>
+</div>
+<script>
+function openSellerModal(){
+  ['seName','seContact','seMsg'].forEach(function(id){document.getElementById(id).value='';});
+  var b=document.getElementById('seSendBtn');
+  b.textContent='НАДІСЛАТИ ЗАЯВКУ →'; b.style.background=''; b.style.color=''; b.disabled=false;
+  document.getElementById('sellerModal').style.display='flex';
+}
+function closeSellerModal(){document.getElementById('sellerModal').style.display='none';}
+function sendSellerForm(){
+  var name=document.getElementById('seName').value.trim();
+  var contact=document.getElementById('seContact').value.trim();
+  var msg=document.getElementById('seMsg').value.trim();
+  if(!name||!contact){alert('Заповніть ім\'я та контакт');return;}
+  var text='🏪 <b>ЗАЯВКА ПРОДАВЦЯ</b>\n━━━━━━━━━━━━━━━━\n'
+    +'👤 <b>Ім\'я/бізнес:</b> '+name+'\n'
+    +'📞 <b>Контакт:</b> '+contact+'\n'
+    +'━━━━━━━━━━━━━━━━\n'
+    +(msg?'💬 '+msg+'\n':'')
+    +'━━━━━━━━━━━━━━━━\n'
+    +'🕐 '+new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'});
+  var btn=document.getElementById('seSendBtn');
+  _tgBtn(btn,fetch('https://api.telegram.org/bot8898378336:AAHAPpy5HFTxp5J58TfSP4HoVJkZVJiPHuM/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1003989090256',text:text,parse_mode:'HTML'})}),'✅ Заявку надіслано!');
+}
+document.getElementById('sellerModal').addEventListener('click',function(e){if(e.target===this)closeSellerModal();});
+</script>
+
+</body>
+</html>

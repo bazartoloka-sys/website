@@ -1,186 +1,24 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-<meta charset="UTF-8">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Блог — Базар Толока</title>
-<meta name="description" content="Новини, навчання та корисні статті від команди Базар Толока. Як продавати, як купувати, оновлення платформи.">
-<meta property="og:title" content="Блог — Базар Толока">
-<meta property="og:description" content="Новини та статті від команди Базар Толока">
-<meta property="og:url" content="https://bazar.in.ua/blog">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-F5X711EZGE');
-</script>
-<style>
-:root{--clay:#1A0F08;--clay2:#261508;--clay3:#321C0A;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.22);--aborder:rgba(232,160,48,.22)}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{text-decoration:none}
+#!/usr/bin/env python3
+"""
+Патч для blog.html — вставляє 27 нових карток статей.
+Запуск:
+  python3 patch_blog.py --check   # dry-run, тільки перевірка
+  python3 patch_blog.py           # бойовий режим
 
-/* NAV */
-.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
-.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
-.nlogo b{color:var(--amber)}
-.nlinks{display:flex;gap:22px}
-.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
-.nlinks a:hover{color:var(--green)}
-.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
-.ncta:hover{opacity:.88}
+Файл: /home/boot/website/blog.html
+"""
 
-/* HERO */
-.blog-hero{padding:60px 5% 48px;text-align:center;position:relative;overflow:hidden}
-.blog-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(232,160,48,.06) 0%,transparent 70%);pointer-events:none}
-.blog-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(232,160,48,.12);border:1px solid rgba(232,160,48,.25);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--amber);margin-bottom:18px}
-.blog-title{font-family:'Unbounded',sans-serif;font-size:clamp(32px,6vw,56px);font-weight:900;line-height:1;letter-spacing:-1px;margin-bottom:14px}
-.blog-title span{color:var(--amber)}
-.blog-sub{font-size:16px;color:var(--cream2);max-width:500px;margin:0 auto;line-height:1.65;font-style:italic}
+import sys
+import os
+import shutil
 
-/* FILTERS */
-.filters{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:0 5% 40px}
-.filter-btn{background:var(--clay2);border:1px solid var(--border);border-radius:100px;padding:7px 18px;font-size:12px;font-weight:700;color:var(--cream2);cursor:pointer;transition:all .2s;font-family:'Nunito',sans-serif}
-.filter-btn:hover,.filter-btn.active{background:rgba(232,160,48,.12);border-color:var(--aborder);color:var(--amber)}
+BLOG_PATH = "/home/boot/website/blog.html"
+DRY_RUN = "--check" in sys.argv
 
-/* GRID */
-.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;padding:0 5% 80px;max-width:1200px;margin:0 auto}
-
-/* ARTICLE CARD */
-.acard{background:var(--clay2);border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:transform .2s,border-color .2s;cursor:pointer}
-.acard:hover{transform:translateY(-4px);border-color:var(--aborder)}
-.acard-img{width:100%;height:200px;object-fit:cover;display:block;background:var(--clay3)}
-.acard-img-placeholder{width:100%;height:200px;background:linear-gradient(135deg,var(--clay3) 0%,var(--clay2) 100%);display:flex;align-items:center;justify-content:center;font-size:56px}
-.acard-body{padding:22px}
-.acard-meta{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.acard-tag{background:rgba(232,160,48,.12);border:1px solid rgba(232,160,48,.2);border-radius:100px;padding:3px 12px;font-size:10px;font-weight:700;color:var(--amber);letter-spacing:.5px;text-transform:uppercase}
-.acard-tag.green{background:rgba(46,204,142,.1);border-color:rgba(46,204,142,.2);color:var(--green)}
-.acard-tag.blue{background:rgba(52,152,219,.1);border-color:rgba(52,152,219,.2);color:#5DADE2}
-.acard-date{font-size:11px;color:var(--cream3)}
-.acard-title{font-family:'Unbounded',sans-serif;font-size:16px;font-weight:700;line-height:1.35;margin-bottom:10px;color:var(--cream)}
-.acard-desc{font-size:13px;color:var(--cream2);line-height:1.65;margin-bottom:18px}
-.acard-footer{display:flex;align-items:center;justify-content:space-between}
-.acard-read{font-size:12px;font-weight:700;color:var(--amber)}
-.acard-time{font-size:11px;color:var(--cream3)}
-
-/* EMPTY STATE */
-.empty-state{text-align:center;padding:80px 20px;color:var(--cream3);grid-column:1/-1}
-.empty-state .e-ico{font-size:56px;margin-bottom:16px}
-.empty-state p{font-size:15px;line-height:1.65}
-
-/* FOOTER */
-footer{border-top:1px solid var(--border);padding:32px 5%}
-.foot-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
-.flogo{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;letter-spacing:3px}
-.flogo b{color:var(--amber)}
-.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
-.flinks a{font-size:12px;color:var(--cream3);transition:color .2s}
-.flinks a:hover{color:var(--cream)}
-.fcontact a{font-size:13px;color:var(--cream2)}
-.fcopy{font-size:11px;color:var(--cream4)}
-
-@media(max-width:600px){
-  .nlinks{display:none}
-  .blog-grid{grid-template-columns:1fr;padding:0 4% 60px}
-}
-</style>
-</head>
-<body>
-
-<nav class="nav">
-  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
-  <div class="nlinks">
-    <a href="/">Головна</a>
-    <a href="/jobs">Вакансії</a>
-    <a href="/upgrade">Тарифи</a>
-    <a href="/support">Підтримка</a>
-  </div>
-  <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
-</nav>
-
-<div class="blog-hero">
-  <div class="blog-chip">📰 Блог Базару</div>
-  <h1 class="blog-title">Новини та<br><span>корисне</span></h1>
-  <p class="blog-sub">Як користуватись Базаром, оновлення платформи, поради продавцям і покупцям</p>
-</div>
-
-<div class="filters">
-  <button class="filter-btn active" onclick="filterArticles('all', this)">Всі статті</button>
-  <button class="filter-btn" onclick="filterArticles('news', this)">🔔 Новини</button>
-  <button class="filter-btn" onclick="filterArticles('guide', this)">📖 Навчання</button>
-  <button class="filter-btn" onclick="filterArticles('seller', this)">🌾 Продавцям</button>
-  <button class="filter-btn" onclick="filterArticles('buyer', this)">🛒 Покупцям</button>
-  <button class="filter-btn" onclick="filterArticles('promo', this)">🎁 Акції</button>
-</div>
-
-<div class="blog-grid" id="blogGrid">
-
-  <!-- ===== СТАТТІ ===== -->
-  <!-- Щоб додати нову — скопіюй блок acard нижче і заміни дані -->
-
-  <!-- Стаття 003 — найновіша вгорі -->
-  <a href="/article-003.html" class="acard" data-tag="seller">
-    <div class="acard-img-placeholder">📉</div>
-    <div class="acard-body">
-      <div class="acard-meta">
-        <span class="acard-tag">Аналітика</span>
-        <span class="acard-tag green">Продавцям</span>
-        <span class="acard-date">20 червня 2026</span>
-      </div>
-      <div class="acard-title">TikTok → Telegram: чому ви втрачаєте до 80% клієнтів на цьому переході</div>
-      <div class="acard-desc">5 критичних точок зламу конверсії при переході з TikTok у месенджери — і як Базар Толока закриває кожну з них.</div>
-      <div class="acard-footer">
-        <span class="acard-read">Читати →</span>
-        <span class="acard-time">7 хв читання</span>
-      </div>
-    </div>
-  </a>
-
-  <!-- Стаття 002 -->
-  <a href="/article-002.html" class="acard" data-tag="seller">
-    <div class="acard-img-placeholder">💰</div>
-    <div class="acard-body">
-      <div class="acard-meta">
-        <span class="acard-tag">Аналітика</span>
-        <span class="acard-tag green">Продавцям</span>
-        <span class="acard-date">20 червня 2026</span>
-      </div>
-      <div class="acard-title">Ера відсотків минає: чому фіксована підписка вигідніша для продавця</div>
-      <div class="acard-desc">Маркетплейси забирають 10–20% з кожного чека. 4 залізобетонні причини чому модель фіксованої підписки — єдиний вигідний шлях у 2026 році.</div>
-      <div class="acard-footer">
-        <span class="acard-read">Читати →</span>
-        <span class="acard-time">6 хв читання</span>
-      </div>
-    </div>
-  </a>
-
-  <!-- Стаття 001 — виправлений шлях -->
-  <a href="/blog/article-001.html" class="acard" data-tag="news">
-    <div class="acard-img-placeholder">⚖️</div>
-    <div class="acard-body">
-      <div class="acard-meta">
-        <span class="acard-tag">Новини</span>
-        <span class="acard-tag green">Продавцям</span>
-        <span class="acard-date">11 червня 2026</span>
-      </div>
-      <div class="acard-title">Закон № 15111-д: що змінюється для продавців маркетплейсів з 2027 року</div>
-      <div class="acard-desc">Верховна Рада ухвалила закон про оподаткування доходів через цифрові платформи. Пояснюємо простою мовою: кого стосується, які пороги, і як Базар Толока вже підготувався.</div>
-      <div class="acard-footer">
-        <span class="acard-read">Читати →</span>
-        <span class="acard-time">7 хв читання</span>
-      </div>
-    </div>
-  </a>
-
+# =========================================================
+# 27 НОВИХ КАРТОК (004–030)
+# =========================================================
+NEW_CARDS = """
   <a href="/blog/article-004.html" class="acard" data-tag="seller">
     <div class="acard-img-placeholder">🚀</div>
     <div class="acard-body">
@@ -450,46 +288,56 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
       <div class="acard-footer"><span class="acard-read">Читати →</span><span class="acard-time">8 хв читання</span></div>
     </div>
   </a>
+"""
 
-  <!-- Порожній стан — прихований поки є хоч одна стаття -->
-  <!--
-  <div class="empty-state">
-    <div class="e-ico">📭</div>
-    <p>Статей ще немає.<br>Скоро тут з'являться корисні матеріали!</p>
-  </div>
-  -->
+# =========================================================
+# ВСТАВКА В blog.html
+# =========================================================
+ANCHOR = '</a>\n\n  <!-- Порожній стан'
 
-</div>
+def patch(path, dry_run):
+    if not os.path.exists(path):
+        print(f"ПОМИЛКА: файл не знайдено: {path}")
+        sys.exit(1)
 
-<footer>
-  <div class="foot-inner">
-    <div class="flogo">БАЗАР<b>.</b></div>
-    <div class="flinks">
-      <a href="/privacy">Конфіденційність</a>
-      <a href="/terms">Умови використання</a>
-      <a href="/offer">Публічна оферта</a>
-      <a href="/jobs">Вакансії</a>
-    <a href="/upgrade">Тарифи</a>
-      <a href="/support">Підтримка</a>
-    </div>
-    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
-    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
-  </div>
-</footer>
+    with open(path, "r", encoding="utf-8") as f:
+        content = f.read()
 
-<script>
-function filterArticles(tag, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.acard').forEach(card => {
-    if (tag === 'all' || card.dataset.tag === tag) {
-      card.style.display = '';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-</script>
+    if ANCHOR not in content:
+        print(f"ПОМИЛКА: якірний рядок не знайдено в файлі.")
+        print(f"Шукаємо: {repr(ANCHOR[:60])}")
+        sys.exit(1)
 
-</body>
-</html>
+    if "article-004.html" in content:
+        print("ℹ️  Картки вже вставлені (article-004 знайдено). Нічого не змінюємо.")
+        sys.exit(0)
+
+    new_content = content.replace(ANCHOR, f'</a>\n{NEW_CARDS}\n  <!-- Порожній стан', 1)
+
+    if dry_run:
+        lines_before = content.count('\n')
+        lines_after = new_content.count('\n')
+        print(f"✅ DRY-RUN: файл знайдено, якір знайдено.")
+        print(f"   Рядків до патча:   {lines_before}")
+        print(f"   Рядків після патча: {lines_after}")
+        print(f"   Додається ~{lines_after - lines_before} рядків (27 карток)")
+        print(f"\nЗапустіть без --check щоб застосувати.")
+    else:
+        backup = path + ".bak"
+        shutil.copy2(path, backup)
+        print(f"📦 Бекап збережено: {backup}")
+
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(new_content)
+
+        lines = new_content.count('\n')
+        print(f"✅ Патч застосовано! Файл: {path}")
+        print(f"   Рядків у файлі після патча: {lines}")
+        print(f"\nНаступні кроки:")
+        print(f"  cd /home/boot/website")
+        print(f"  git add blog.html")
+        print(f'  git commit -m "blog: додано 27 статей (article-004 — article-030)"')
+        print(f"  git push")
+
+if __name__ == "__main__":
+    patch(BLOG_PATH, DRY_RUN)
