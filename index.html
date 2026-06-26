@@ -1025,7 +1025,7 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
   <div class="launch-inner">
     <div class="launch-chip">🚀 Офіційний запуск</div>
     <h2 class="launch-title">Базар відкривається<br><span>1 серпня 2026</span></h2>
-    <p class="launch-sub">Перші продавці отримають спеціальну ціну і пріоритетне розміщення. Залиш email — повідомимо в день запуску.</p>
+    <p class="launch-sub">Перші <strong>100 продавців</strong> отримують тариф «Майстер» безкоштовно на 3 місяці та пріоритетне розміщення в стрічці. <strong id="launchSpots" style="color:var(--amber)">Залишилось 53 місця</strong>.</p>
     <div class="launch-cd">
       <div class="launch-cd-block"><span class="launch-cd-num" id="l-days">--</span><div class="launch-cd-unit">днів</div></div>
       <div class="launch-cd-sep">:</div>
@@ -1036,10 +1036,10 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
       <div class="launch-cd-block"><span class="launch-cd-num" id="l-secs">--</span><div class="launch-cd-unit">секунд</div></div>
     </div>
     <div class="launch-email-wrap" id="launchForm">
-      <input type="email" id="launchEmail" class="launch-email-input" placeholder="твій@email.com">
-      <button class="launch-btn" onclick="submitLaunch()">ЗАПИСАТИСЬ →</button>
+      <input type="text" id="launchEmail" class="launch-email-input" placeholder="Telegram (@нік) або email">
+      <button class="launch-btn" onclick="submitLaunch()">ЗАЙНЯТИ МІСЦЕ →</button>
     </div>
-    <div class="launch-ok" id="launchOk">✅ Записано! Повідомимо 1 серпня 🎉</div>
+    <div class="launch-ok" id="launchOk">✅ Місце за вами! Зв'яжемось до 1 серпня 🎉</div>
     <p class="launch-legal">Погоджуєтесь з <a href="/terms">Угодою</a> та <a href="/privacy">Конфіденційністю</a></p>
   </div>
 </div>
@@ -1147,20 +1147,27 @@ function handleInvestForm(e) {
 })();
 
 function submitLaunch() {
-  const emailEl = document.getElementById('launchEmail');
-  const email = emailEl.value.trim();
-  if (!email || !email.includes('@')) {
-    emailEl.style.borderColor='#E24B4A';
-    setTimeout(()=>emailEl.style.borderColor='',2000);
+  const el = document.getElementById('launchEmail');
+  const contact = el.value.trim();
+  if (contact.length < 3) {
+    el.style.borderColor='#E24B4A';
+    setTimeout(()=>el.style.borderColor='',2000);
     return;
   }
   const btn = document.querySelector('.launch-btn');
   if (!btn) return;
-  const text = '🚀 <b>ПІДПИСКА НА ЗАПУСК</b>\n━━━━━━━━━━━━━━━━\n'
-    + '📧 <b>Email:</b> ' + email + '\n'
-    + '🕐 ' + new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'});
+  const text = '🌾 <b>НОВИЙ ПРОДАВЕЦЬ У ЧЕРЗІ</b>\n━━━━━━━━━━━━━━━━\n'
+    + '📨 <b>Контакт:</b> ' + contact + '\n'
+    + '🕐 ' + new Date().toLocaleString('uk-UA',{timeZone:'Europe/Kyiv'})
+    + '\n🌐 bazar.in.ua → запуск';
   btn.disabled=true; btn.textContent='⏳...';
-  fetch('https://api.telegram.org/bot8699311467:AAFxYGz3v1zW56B9Zpokq8NHl1UW_i1iz5M/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1004471347053',text:text,parse_mode:'HTML'})})
+  // лічильник місць −1
+  const spots = document.getElementById('launchSpots');
+  if (spots) {
+    const cur = parseInt((spots.textContent.match(/[0-9]+/) || ['0'])[0]);
+    spots.textContent = 'Залишилось ' + Math.max(0, cur - 1) + ' місця';
+  }
+  fetch('https://api.telegram.org/bot8898378336:AAHAPpy5HFTxp5J58TfSP4HoVJkZVJiPHuM/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'-1003989090256',text:text,parse_mode:'HTML'})})
     .then(()=>{
       document.getElementById('launchForm').style.display='none';
       document.getElementById('launchOk').style.display='block';
