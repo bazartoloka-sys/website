@@ -388,7 +388,7 @@ function _tgBtn(btn, fetchPromise, okText) {
       if (d.ok) { btn.style.background='var(--green)'; btn.style.color='#05200F'; showTyModal(); }
       else { setTimeout(()=>{ btn.textContent=btn._orig; btn.disabled=false; },3000); }
     })
-    .catch(()=>{ btn.textContent='⚠️ Немає зв'язку.'; setTimeout(()=>{ btn.textContent=btn._orig; btn.disabled=false; },3000); });
+    .catch(()=>{ btn.textContent='⚠️ Немає звʼязку.'; setTimeout(()=>{ btn.textContent=btn._orig; btn.disabled=false; },3000); });
 }
 
 /* THANK YOU MODAL */
