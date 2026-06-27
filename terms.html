@@ -124,12 +124,19 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
 .fl a{font-size:12px;color:var(--cream3);text-decoration:none}
 .fl a:hover{color:var(--green)}
 .fc{font-size:11px;color:var(--cream4)}
+
+/* КНОПКА КАБІНЕТ */
+.ncab{display:inline-flex;align-items:center;gap:6px;background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:.5px;padding:9px 16px;border-radius:100px;text-decoration:none;transition:opacity .2s;white-space:nowrap;margin-right:10px}
+.ncab:hover{opacity:.88}
+@media(max-width:600px){.ncab{font-size:9px;padding:8px 12px}}
+
 </style>
 </head>
 <body>
 <nav class="nav">
   <a href="/" class="nlogo">БАЗАР<b>.</b></a>
-  <div class="nav-right"><button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button><a href="/" class="nav-back">← Головна</a></div>
+  <div class="nav-right"><a href="https://cabinet.bazar.in.ua" class="ncab">🏪 Кабінет продавця</a>
+  <button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button><a href="/" class="nav-back">← Головна</a></div>
   </nav>
 <div class="doc">
   <div class="doc-label">Юридичний документ</div>

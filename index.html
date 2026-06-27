@@ -623,6 +623,12 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 .ty-btn{background:var(--green,#2ECC8E);color:#05200F;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:900;letter-spacing:.5px;padding:13px 32px;border:none;border-radius:100px;cursor:pointer;transition:opacity .2s}
 .ty-btn:hover{opacity:.88}
 
+
+/* КНОПКА КАБІНЕТ */
+.ncab{display:inline-flex;align-items:center;gap:6px;background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:.5px;padding:9px 16px;border-radius:100px;text-decoration:none;transition:opacity .2s;white-space:nowrap;margin-right:10px}
+.ncab:hover{opacity:.88}
+@media(max-width:600px){.ncab{font-size:9px;padding:8px 12px}}
+
 </style>
 </head>
 <body>
@@ -638,7 +644,8 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
     <a href="/sales">Акції</a>
     <a href="/support">Підтримка</a>
   </div>
-  <div class="nav-right"><button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button><a href="#launch" class="ncta" id="navCta">⏳ 1 СЕРПНЯ →</a></div>
+  <div class="nav-right"><a href="https://cabinet.bazar.in.ua" class="ncab">🏪 Кабінет продавця</a>
+  <button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button><a href="#launch" class="ncta" id="navCta">⏳ 1 СЕРПНЯ →</a></div>
   </nav>
 
 <section class="hero" id="top">
@@ -1046,9 +1053,9 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 <div class="launch-sec" id="launch">
   <div class="launch-glow-top"></div>
   <div class="launch-inner">
-    <div class="launch-chip">🚀 Офіційний запуск</div>
-    <h2 class="launch-title">Базар відкривається<br><span>1 серпня 2026</span></h2>
-    <p class="launch-sub">Перші <strong>1000 продавців</strong> отримують потрійний бонус: за кожну гривню на бонусний рахунок зараховуємо <strong>+3 грн</strong>. Бонусами оплачуєте до 30% будь-якої послуги чи реклами (70% гроші / 30% бонуси).</p>
+    <div class="launch-chip">✅ Кабінет продавця відкрито</div>
+    <h2 class="launch-title">Кабінет продавця<br><span>вже відкрито</span></h2>
+    <p class="launch-sub">Реєструйтесь і додавайте товари вже зараз. Перші <strong>1000 продавців</strong> отримують потрійний бонус: за кожну гривню на бонусний рахунок зараховуємо <strong>+3 грн</strong>. Бонусами оплачуєте до 30% будь-якої послуги чи реклами (70% гроші / 30% бонуси).</p>
     <div class="queue-box">
       <div class="queue-label">🔥 ВЖЕ В ЧЕРЗІ</div>
       <div class="queue-num" id="queueNum">108</div>
@@ -1066,8 +1073,7 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
       <div class="launch-cd-block"><span class="launch-cd-num" id="l-secs">--</span><div class="launch-cd-unit">секунд</div></div>
     </div>
     <div class="launch-email-wrap" id="launchForm">
-      <input type="text" id="launchEmail" class="launch-email-input" placeholder="Telegram (@нік) або email">
-      <button class="launch-btn" onclick="submitLaunch()">ЗАЙНЯТИ МІСЦЕ →</button>
+      <a href="https://cabinet.bazar.in.ua" class="launch-btn" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">🏪 ВІДКРИТИ КАБІНЕТ ПРОДАВЦЯ →</a>
     </div>
     <div class="launch-ok" id="launchOk">✅ Місце за вами! Зв'яжемось до 1 серпня 🎉</div>
     <p class="launch-legal">Погоджуєтесь з <a href="/terms">Угодою</a> та <a href="/privacy">Конфіденційністю</a></p>
