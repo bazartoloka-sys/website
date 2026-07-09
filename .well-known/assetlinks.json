@@ -1,10 +1,12 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "ua.bazartoloka.app",
-    "sha256_cert_fingerprints": [
-      "REPLACE_WITH_YOUR_SHA256_FINGERPRINT"
-    ]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ua.toloka.bazar",
+      "sha256_cert_fingerprints": [
+        "C8:43:5B:23:91:35:86:ED:AA:DC:DE:07:50:F8:E7:BF:81:23:95:E0:61:FA:B2:A2:12:80:B8:44:55:47:CD:74"
+      ]
+    }
   }
-}]
+]
