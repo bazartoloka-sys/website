@@ -159,6 +159,27 @@ h1 b{color:var(--amber);display:block}
 :root[data-theme="light"] .hbtn-green{box-shadow:0 5px 16px rgba(31,166,112,.32)}
 :root[data-theme="light"] .hbtn-amber{box-shadow:0 4px 12px rgba(184,112,12,.32)}
 @media(max-width:520px){.hbtn{font-size:11px;padding:16px 18px;letter-spacing:.3px}.hero-btns-sec{flex-direction:column;align-items:center}.hero-btns-sec>a{width:min(420px,100%);justify-content:center}}
+/* ── ВЕЛИКІ БАНЕР-КНОПКИ (CSS-only, без зображень) ── */
+.hero-banners{display:flex;flex-direction:column;gap:14px;width:100%;max-width:640px;margin:0 auto}
+.hbanner{display:flex;align-items:center;gap:18px;width:100%;padding:20px 26px;border-radius:22px;transition:transform .18s,box-shadow .18s;position:relative;overflow:hidden;text-align:left}
+.hbanner:hover{transform:translateY(-3px)}
+.hbanner::after{content:'';position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.10);filter:blur(30px);top:-50px;right:-30px;pointer-events:none}
+.hbanner-ico{width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;background:rgba(0,0,0,.13);position:relative;z-index:1}
+.hbanner-text{flex:1;min-width:0;position:relative;z-index:1}
+.hbanner-title{display:block;font-family:'Unbounded',sans-serif;font-size:15px;font-weight:700;letter-spacing:.2px;margin-bottom:4px}
+.hbanner-sub{display:block;font-size:12px;font-weight:600;opacity:.72;line-height:1.3}
+.hbanner-arr{font-size:20px;opacity:.55;flex-shrink:0;position:relative;z-index:1}
+.hbanner-green{background:linear-gradient(135deg,var(--green),#1FA876);color:#05200F;box-shadow:0 8px 26px rgba(46,204,142,.22)}
+.hbanner-green:hover{box-shadow:0 12px 34px rgba(46,204,142,.32)}
+.hbanner-amber{background:linear-gradient(135deg,var(--amber),#C9821F);color:#1A0800;box-shadow:0 8px 26px rgba(232,160,48,.22)}
+.hbanner-amber:hover{box-shadow:0 12px 34px rgba(232,160,48,.32)}
+.hbanner-ghost{background:var(--clay2);border:1.5px solid var(--aborder);color:var(--cream);box-shadow:none}
+.hbanner-ghost:hover{border-color:var(--amber);box-shadow:0 8px 24px rgba(0,0,0,.22)}
+.hbanner-ghost .hbanner-ico{background:rgba(232,160,48,.14);color:var(--amber)}
+.hbanner-badge{display:inline-block;margin-left:8px;font-size:9px;font-weight:700;letter-spacing:.6px;background:rgba(232,160,48,.18);border:1px solid var(--aborder);color:var(--amber);border-radius:100px;padding:3px 9px;vertical-align:middle}
+:root[data-theme="light"] .hbanner-green{box-shadow:0 6px 18px rgba(31,166,112,.30)}
+:root[data-theme="light"] .hbanner-amber{box-shadow:0 6px 18px rgba(184,112,12,.30)}
+@media(max-width:520px){.hbanner{padding:16px 18px;gap:13px;border-radius:18px}.hbanner-ico{width:44px;height:44px;font-size:21px;border-radius:13px}.hbanner-title{font-size:13.5px}.hbanner-sub{font-size:11px}}
 .hlegal{font-size:11px;color:var(--cream4)}
 .hlegal a{color:var(--cream2)}
 
@@ -695,16 +716,31 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
       <div class="cd-sep">:</div>
       <div class="cd-block"><div class="cd-num" id="cd-secs">--</div><div class="cd-unit">секунд</div></div>
     </div>
-    <div class="hero-btns">
-      <a href="https://cabinet.bazar.in.ua" class="hbtn hbtn-green" id="mainCta">
-        <span class="hbtn-ico">🏪</span> КАБІНЕТ ПРОДАВЦЯ <span class="hbtn-arr">→</span>
+    <div class="hero-banners">
+      <a href="https://cabinet.bazar.in.ua" class="hbanner hbanner-green" id="mainCta">
+        <span class="hbanner-ico">🏪</span>
+        <span class="hbanner-text">
+          <span class="hbanner-title">Кабінет продавця</span>
+          <span class="hbanner-sub">Оголошення, замовлення, гаманець</span>
+        </span>
+        <span class="hbanner-arr">→</span>
       </a>
-      <a href="https://torg.bazar.in.ua" class="hbtn hbtn-amber">
-        <span class="hbtn-ico">🛒</span> ЗА ПОКУПКАМИ <span class="hbtn-arr">→</span>
+      <a href="https://torg.bazar.in.ua" class="hbanner hbanner-amber">
+        <span class="hbanner-ico">🛒</span>
+        <span class="hbanner-text">
+          <span class="hbanner-title">За покупками</span>
+          <span class="hbanner-sub">Живі товари від українських продавців</span>
+        </span>
+        <span class="hbanner-arr">→</span>
       </a>
-      <!-- APP-LINK: коли буде Google Play — замінити href на посилання маркету і прибрати hbtn-badge -->
-      <a href="#launch" class="hbtn hbtn-ghost" id="btnApp">
-        <span class="hbtn-ico">📱</span> ЗАВАНТАЖИТИ ДОДАТОК <span class="hbtn-badge">СКОРО</span>
+      <!-- APP-LINK: коли буде Google Play — замінити href на посилання маркету, прибрати hbanner-badge -->
+      <a href="#launch" class="hbanner hbanner-ghost" id="btnApp">
+        <span class="hbanner-ico">📱</span>
+        <span class="hbanner-text">
+          <span class="hbanner-title">Завантажити додаток<span class="hbanner-badge">СКОРО</span></span>
+          <span class="hbanner-sub">Google Play — вже незабаром</span>
+        </span>
+        <span class="hbanner-arr">→</span>
       </a>
       <div class="hero-btns-sec">
         <a href="/upgrade" class="btn-upgrade-hero">🌾 ТАРИФИ ДЛЯ ПРОДАВЦІВ →</a>
