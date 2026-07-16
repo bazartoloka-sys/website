@@ -706,16 +706,6 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 
   <!-- COUNTDOWN -->
   <div class="countdown-wrap">
-    <div class="cd-label" id="cdLabel">⏳ До офіційного запуску залишилось</div>
-    <div class="cd-blocks">
-      <div class="cd-block"><div class="cd-num" id="cd-days">--</div><div class="cd-unit">днів</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-block"><div class="cd-num" id="cd-hours">--</div><div class="cd-unit">годин</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-block"><div class="cd-num" id="cd-mins">--</div><div class="cd-unit">хвилин</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-block"><div class="cd-num" id="cd-secs">--</div><div class="cd-unit">секунд</div></div>
-    </div>
     <div class="hero-banners">
       <a href="https://cabinet.bazar.in.ua" class="hbanner hbanner-green" id="mainCta">
         <span class="hbanner-ico">🏪</span>
@@ -1188,30 +1178,17 @@ function handleInvestForm(e) {
 <script>
 // ── COUNTDOWN до 1.08.2026 ──
 (function() {
+  // Верхній лічильник прибрано; лишаємо тільки перемикання бейджа/кнопки після запуску.
   const LAUNCH = new Date('2026-08-01T00:00:00+03:00').getTime();
-  function pad(n){ return String(n).padStart(2,'0'); }
   function tick() {
     const diff = LAUNCH - Date.now();
     if (diff <= 0) {
-      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id=>{
-        const el=document.getElementById(id); if(el) el.textContent='00';
-      });
-      const lbl=document.getElementById('cdLabel');
-      if(lbl) lbl.textContent='🎉 БАЗАР ТОЛОКА ЗАПУЩЕНО!';
       const badge=document.getElementById('heroBadge');
       if(badge) badge.innerHTML='<div class="dot"></div>Вже в Google Play ✅';
       const cta=document.getElementById('mainCta');
       if(cta){ cta.style.boxShadow='0 0 60px rgba(46,204,142,.45)'; }
       clearInterval(timer); return;
     }
-    const d=Math.floor(diff/86400000);
-    const h=Math.floor((diff%86400000)/3600000);
-    const m=Math.floor((diff%3600000)/60000);
-    const s=Math.floor((diff%60000)/1000);
-    document.getElementById('cd-days').textContent=pad(d);
-    document.getElementById('cd-hours').textContent=pad(h);
-    document.getElementById('cd-mins').textContent=pad(m);
-    document.getElementById('cd-secs').textContent=pad(s);
   }
   tick();
   const timer=setInterval(tick,1000);
