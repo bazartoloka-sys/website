@@ -143,6 +143,22 @@ h1 b{color:var(--amber);display:block}
 .hero-btns{display:flex;flex-direction:column;align-items:center;gap:12px}
 .btn-play{display:flex;align-items:center;gap:12px;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;padding:15px 32px;border-radius:100px;width:280px;justify-content:center;transition:transform .15s,box-shadow .15s}
 .btn-play:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(46,204,142,.25)}
+/* ── ДОВГІ HERO-КНОПКИ ── */
+.hbtn{display:flex;align-items:center;justify-content:center;gap:10px;width:min(420px,100%);padding:17px 24px;border-radius:100px;font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;letter-spacing:.6px;transition:transform .15s,box-shadow .15s,background .2s,border-color .2s;position:relative}
+.hbtn:hover{transform:translateY(-2px)}
+.hbtn-ico{font-size:16px;line-height:1}
+.hbtn-arr{opacity:.7}
+.hbtn-green{background:var(--green);color:#05200F;box-shadow:0 6px 22px rgba(46,204,142,.18)}
+.hbtn-green:hover{box-shadow:0 0 40px rgba(46,204,142,.30)}
+.hbtn-amber{background:var(--amber);color:#1A0800;box-shadow:0 6px 22px rgba(232,160,48,.18)}
+.hbtn-amber:hover{box-shadow:0 0 40px rgba(232,160,48,.30)}
+.hbtn-ghost{background:transparent;border:1.5px solid var(--aborder);color:var(--amber)}
+.hbtn-ghost:hover{background:rgba(232,160,48,.08);border-color:var(--amber)}
+.hbtn-badge{font-size:9px;font-weight:700;letter-spacing:.8px;background:rgba(232,160,48,.18);border:1px solid var(--aborder);color:var(--amber);border-radius:100px;padding:3px 9px;line-height:1}
+.hero-btns-sec{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+:root[data-theme="light"] .hbtn-green{box-shadow:0 5px 16px rgba(31,166,112,.32)}
+:root[data-theme="light"] .hbtn-amber{box-shadow:0 4px 12px rgba(184,112,12,.32)}
+@media(max-width:520px){.hbtn{font-size:11px;padding:16px 18px;letter-spacing:.3px}.hero-btns-sec{flex-direction:column;align-items:center}.hero-btns-sec>a{width:min(420px,100%);justify-content:center}}
 .hlegal{font-size:11px;color:var(--cream4)}
 .hlegal a{color:var(--cream2)}
 
@@ -636,6 +652,7 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 <nav class="nav">
   <a href="/" class="nlogo">БАЗАР<b>.</b></a>
   <div class="nlinks">
+    <a href="https://torg.bazar.in.ua">За покупками</a>
     <a href="/upgrade">Тарифи</a>
     <a href="/panas">Навчання</a>
     <a href="/blog">Блог</a>
@@ -679,11 +696,20 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
       <div class="cd-block"><div class="cd-num" id="cd-secs">--</div><div class="cd-unit">секунд</div></div>
     </div>
     <div class="hero-btns">
-      <a href="#launch" class="btn-play" id="mainCta">
-        <span>⏳</span> ВІДКРИЄТЬСЯ 1 СЕРПНЯ 2026
+      <a href="https://cabinet.bazar.in.ua" class="hbtn hbtn-green" id="mainCta">
+        <span class="hbtn-ico">🏪</span> КАБІНЕТ ПРОДАВЦЯ <span class="hbtn-arr">→</span>
       </a>
-      <a href="/upgrade" class="btn-upgrade-hero">🌾 ТАРИФИ ДЛЯ ПРОДАВЦІВ →</a>
-      <a href="/partners" class="btn-partners-hero">🎬 БЛОГЕРАМ →</a>
+      <a href="https://torg.bazar.in.ua" class="hbtn hbtn-amber">
+        <span class="hbtn-ico">🛒</span> ЗА ПОКУПКАМИ <span class="hbtn-arr">→</span>
+      </a>
+      <!-- APP-LINK: коли буде Google Play — замінити href на посилання маркету і прибрати hbtn-badge -->
+      <a href="#launch" class="hbtn hbtn-ghost" id="btnApp">
+        <span class="hbtn-ico">📱</span> ЗАВАНТАЖИТИ ДОДАТОК <span class="hbtn-badge">СКОРО</span>
+      </a>
+      <div class="hero-btns-sec">
+        <a href="/upgrade" class="btn-upgrade-hero">🌾 ТАРИФИ ДЛЯ ПРОДАВЦІВ →</a>
+        <a href="/partners" class="btn-partners-hero">🎬 БЛОГЕРАМ →</a>
+      </div>
     </div>
     <p class="hlegal" style="margin-top:12px">Погоджуєтесь з <a href="/terms">Угодою</a> та <a href="/privacy">Конфіденційністю</a></p>
   </div>
@@ -1084,6 +1110,7 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
   <div class="foot-inner">
     <div class="flogo">БАЗАР<b>.</b></div>
     <div class="flinks">
+      <a href="https://torg.bazar.in.ua">За покупками</a>
       <a href="/blog">Блог</a>
       <a href="/about">Про нас</a>
       <a href="/partners">Партнерам</a>
