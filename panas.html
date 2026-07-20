@@ -173,6 +173,10 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
 .ncab:hover{opacity:.88}
 @media(max-width:600px){.ncab{font-size:9px;padding:8px 12px}}
 
+
+/* ── БАНЕР-ШАПКА (під навбаром) ── */
+.site-banner{width:100%;overflow:hidden;line-height:0}
+.site-banner img{width:100%;height:auto;display:block}
 </style>
 </head>
 <body>
@@ -183,6 +187,14 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
   <div class="nav-right"><a href="https://cabinet.bazar.in.ua" class="ncab">🏪 Кабінет продавця</a>
   <button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button><a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">GOOGLE PLAY →</a></div>
   </nav>
+
+<div class="site-banner">
+  <picture>
+    <source media="(max-width:640px)" srcset="img/banners/site-banner-mobile.webp">
+    <img src="img/banners/site-banner.webp" alt="Базар Толока — разом ми зможемо більше" loading="lazy">
+  </picture>
+</div>
+
 
 <!-- CAROUSEL -->
 <div class="carousel-wrap" id="carousel">
