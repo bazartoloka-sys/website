@@ -85,6 +85,10 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
 .fcontact a{font-size:13px;color:var(--cream2)}
 .fcopy{font-size:11px;color:var(--cream4)}
 @media(max-width:600px){.nlinks{display:none}.tech-grid{grid-template-columns:1fr}.art-header{padding:28px 5% 32px}}
+
+/* ── БАНЕР-ШАПКА (під навбаром) ── */
+.site-banner{width:100%;overflow:hidden;line-height:0}
+.site-banner img{width:100%;height:auto;display:block}
 </style>
 </head>
 <body>
@@ -99,6 +103,14 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
   </div>
   <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">ЗАВАНТАЖИТИ</a>
 </nav>
+
+<div class="site-banner">
+  <picture>
+    <source media="(max-width:640px)" srcset="../img/banners/site-banner-mobile.webp">
+    <img src="../img/banners/site-banner.webp" alt="Базар Толока — разом ми зможемо більше" loading="lazy">
+  </picture>
+</div>
+
 
 <div class="breadcrumb">
   <a href="/">Головна</a><span>/</span>
