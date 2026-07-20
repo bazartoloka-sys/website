@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Видалення акаунта — Базар Толока</title>
+<meta name="description" content="Як видалити акаунт у застосунку Базар Толока: покрокова інструкція, які дані видаляються та які зберігаються.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Nunito:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+<style>
+
+/* ============ LIGHT THEME ============ */
+:root[data-theme="light"]{
+  --clay:#F5E6C8;
+  --clay2:#EFD9B0;
+  --clay3:#E6C898;
+  --green:#1FA670;
+  --amber:#B8700C;
+  --cream:#2A1810;
+  --cream2:#5A3318;
+  --cream3:#735030;
+  --cream4:#8B6440;
+  --border:rgba(26,15,8,.12);
+  --gborder:rgba(31,166,112,.32);
+  --aborder:rgba(184,112,12,.32);
+}
+:root[data-theme="light"] body{background:linear-gradient(180deg,#F5E6C8 0%,#EBD5A8 100%);background-attachment:fixed}
+:root[data-theme="light"] .nav{background:rgba(245,230,200,.94)!important;border-bottom-color:var(--aborder)}
+:root[data-theme="light"] .card{box-shadow:0 4px 14px rgba(26,15,8,.08),0 1px 3px rgba(26,15,8,.05)}
+:root[data-theme="light"] footer{border-top-color:rgba(26,15,8,.10)}
+
+/* Theme toggle button (inline in nav) */
+.theme-toggle{background:transparent;border:1px solid var(--aborder);color:var(--cream2);width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;margin-right:10px;transition:background .2s,border-color .2s,transform .15s;flex-shrink:0;padding:0;font-family:inherit}
+.theme-toggle:hover{background:rgba(232,160,48,.10);border-color:var(--amber);transform:scale(1.08)}
+:root[data-theme="light"] .theme-toggle:hover{background:rgba(184,112,12,.10);border-color:var(--amber)}
+.nav-right{display:flex;align-items:center;gap:0}
+/* ====================================== */
+
+:root{--clay:#1A0F08;--clay2:#261508;--green:#2ECC8E;--amber:#E8A030;--cream:#F5E6C8;--cream2:#B89060;--cream3:#7A6040;--cream4:#4A3828;--border:rgba(245,230,200,.07);--gborder:rgba(46,204,142,.22);--aborder:rgba(232,160,48,.22);--red:#E85A4F}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;background:var(--clay);color:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;transition:background-color .4s ease,color .4s ease}
+a{color:var(--green)}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream);text-decoration:none}
+.nlogo b{color:var(--amber)}
+.nav-back{font-size:13px;color:var(--cream2);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--green)}
+.lang-sw{display:flex;gap:8px;margin-bottom:32px}
+.lang-btn{padding:6px 16px;border-radius:100px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid rgba(245,230,200,.15);background:transparent;color:var(--cream2);transition:all .2s;font-family:'Nunito',sans-serif}
+.lang-btn.active{background:var(--green);color:#05200F;border-color:var(--green)}
+.doc{max-width:780px;margin:0 auto;padding:56px 5% 80px}
+.doc-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:10px}
+h1{font-family:'Unbounded',sans-serif;font-size:clamp(22px,4vw,34px);font-weight:900;margin-bottom:8px;line-height:1.15}
+.doc-date{font-size:12px;color:var(--cream3);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.sec{margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--border)}
+.sec:last-child{border-bottom:none}
+h2{font-family:'Unbounded',sans-serif;font-size:16px;font-weight:700;color:var(--amber);margin-bottom:14px;line-height:1.3}
+h3{font-size:15px;font-weight:700;color:var(--cream);margin:18px 0 8px}
+p{font-size:14px;color:var(--cream2);margin-bottom:10px;line-height:1.7}
+ul{margin:8px 0 14px 20px}
+li{font-size:14px;color:var(--cream2);margin-bottom:5px;line-height:1.65}
+.hl{background:rgba(46,204,142,.08);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:14px 18px;margin:14px 0}
+.hl p{margin:0;font-size:13px}
+.warn{background:rgba(232,90,79,.08);border-left:3px solid var(--red);border-radius:0 8px 8px 0;padding:14px 18px;margin:14px 0}
+.warn p{margin:0;font-size:13px;color:var(--cream)}
+.steps{list-style:none;margin:14px 0;counter-reset:step}
+.steps li{counter-increment:step;position:relative;padding-left:38px;margin-bottom:14px;font-size:14px;color:var(--cream)}
+.steps li::before{content:counter(step);position:absolute;left:0;top:-1px;width:26px;height:26px;border-radius:50%;background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-weight:900;font-size:12px;display:flex;align-items:center;justify-content:center}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+.card.del{border-color:rgba(232,90,79,.25)}
+.card.keep{border-color:var(--gborder)}
+.card h4{font-family:'Unbounded',sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.card.del h4{color:var(--red)}
+.card.keep h4{color:var(--green)}
+.card ul{margin:0 0 0 18px}
+footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
+.fl{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
+.fl a{font-size:12px;color:var(--cream3);text-decoration:none}
+.fl a:hover{color:var(--green)}
+.fc{font-size:11px;color:var(--cream4)}
+[data-lang]{display:none}[data-lang].show{display:block}
+
+/* ── БАНЕР-ШАПКА (під навбаром) ── */
+.site-banner{width:100%;overflow:hidden;line-height:0}
+.site-banner img{width:100%;height:auto;display:block}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nav-right"><button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button><a href="/" class="nav-back">← Головна</a></div>
+  </nav>
+
+<div class="site-banner">
+  <picture>
+    <source media="(max-width:640px)" srcset="img/banners/site-banner-mobile.webp">
+    <img src="img/banners/site-banner.webp" alt="Базар Толока — разом ми зможемо більше" loading="lazy">
+  </picture>
+</div>
+
+<div class="doc">
+  <div class="lang-sw">
+    <button class="lang-btn active" onclick="setLang('uk',this)">🇺🇦 Українська</button>
+    <button class="lang-btn" onclick="setLang('en',this)">🇬🇧 English</button>
+  </div>
+
+  <div data-lang="uk" class="show">
+    <div class="doc-label">Керування акаунтом</div>
+    <h1>Видалення акаунта Базар Толока</h1>
+    <p class="doc-date">Застосунок: <strong>Базар Толока</strong> (пакет ua.toloka.bazar) · Розробник: ФОП Торкотюк Оксана Петрівна</p>
+
+    <div class="hl"><p>Ви можете видалити свій акаунт у застосунку Базар Толока в будь-який момент, безпосередньо в самому застосунку — без звернень у підтримку та без очікування.</p></div>
+
+    <div class="sec">
+      <h2>Як видалити акаунт</h2>
+      <ol class="steps">
+        <li>Відкрийте застосунок Базар Толока</li>
+        <li>Перейдіть у <strong>Профіль → Налаштування</strong></li>
+        <li>Оберіть <strong>«Видалити акаунт»</strong></li>
+        <li>Підтвердіть видалення</li>
+      </ol>
+      <p>Видалення відбувається одразу після підтвердження — окремого періоду очікування чи листа на пошту не потрібно.</p>
+    </div>
+
+    <div class="sec">
+      <h2>Що відбувається після видалення</h2>
+      <div class="grid2">
+        <div class="card del">
+          <h4>Видаляється одразу</h4>
+          <ul>
+            <li>Ваші оголошення</li>
+            <li>Історія транзакцій гаманця</li>
+            <li>Платіжні реквізити продавця</li>
+            <li>ФОП-верифікація та статус продавця</li>
+            <li>Баланс гаманця та бонуси</li>
+          </ul>
+        </div>
+        <div class="card keep">
+          <h4>Зберігається</h4>
+          <ul>
+            <li>Технічний ідентифікатор акаунта — без персональних даних, лише для запобігання повторній реєстрації того самого користувача під виглядом нового</li>
+            <li>Знеособлена архівна копія облікових та фінансових записів — відповідно до вимог податкового та бухгалтерського законодавства України, потім видаляється</li>
+          </ul>
+        </div>
+      </div>
+      <div class="warn"><p>Якщо на момент видалення на гаманці лишились кошти, повернені протягом 24 годин після оплати верифікації — сума автоматично повертається на картку, з якої була здійснена оплата.</p></div>
+    </div>
+
+    <div class="sec">
+      <h2>Питання</h2>
+      <p>Якщо у вас виникли проблеми з видаленням акаунта, напишіть на <a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div data-lang="en">
+    <div class="doc-label">Account management</div>
+    <h1>Delete your Bazar Toloka account</h1>
+    <p class="doc-date">App: <strong>Bazar Toloka</strong> (package ua.toloka.bazar) · Developer: ФОП Торкотюк Оксана Петрівна</p>
+
+    <div class="hl"><p>You can delete your Bazar Toloka account at any time, directly in the app — no support ticket and no waiting period required.</p></div>
+
+    <div class="sec">
+      <h2>How to delete your account</h2>
+      <ol class="steps">
+        <li>Open the Bazar Toloka app</li>
+        <li>Go to <strong>Profile → Settings</strong></li>
+        <li>Select <strong>"Delete account"</strong></li>
+        <li>Confirm the deletion</li>
+      </ol>
+      <p>Deletion happens immediately after confirmation — no separate waiting period or confirmation email is required.</p>
+    </div>
+
+    <div class="sec">
+      <h2>What happens after deletion</h2>
+      <div class="grid2">
+        <div class="card del">
+          <h4>Deleted immediately</h4>
+          <ul>
+            <li>Your listings</li>
+            <li>Wallet transaction history</li>
+            <li>Seller payout details</li>
+            <li>Business (FOP) verification and seller status</li>
+            <li>Wallet balance and bonuses</li>
+          </ul>
+        </div>
+        <div class="card keep">
+          <h4>Retained</h4>
+          <ul>
+            <li>A technical account identifier, with no personal data attached — kept only to prevent the same person from re-registering under a new identity</li>
+            <li>An anonymized archival copy of account and financial records — retained per Ukrainian tax and accounting law requirements, then deleted</li>
+          </ul>
+        </div>
+      </div>
+      <div class="warn"><p>If wallet funds remain at the time of deletion and are refundable within 24 hours of a verification payment, that amount is automatically returned to the card used for payment.</p></div>
+    </div>
+
+    <div class="sec">
+      <h2>Questions</h2>
+      <p>If you have any issues deleting your account, contact <a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="fl"><a href="/">Головна</a>
+    <a href="/blog">Блог</a><a href="/privacy">Конфіденційність</a><a href="/terms">Умови</a><a href="/offer">Оферта</a><a href="/jobs">Вакансії</a>
+    <a href="/support">Підтримка</a></div>
+  <div class="fc">© 2026 Базар Толока 🇺🇦</div>
+</footer>
+<script>
+function setLang(lang,btn){
+  document.querySelectorAll('[data-lang]').forEach(el=>el.classList.remove('show'));
+  document.querySelector('[data-lang="'+lang+'"]').classList.add('show');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+
+<script>
+/* ============ THEME SWITCHER ============ */
+(function(){
+  const KEY = 'bazar-theme';
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  function apply(theme){
+    if(theme === 'light'){
+      root.setAttribute('data-theme', 'light');
+      btn.textContent = '☀️';
+      btn.title = 'Темна тема';
+    } else {
+      root.removeAttribute('data-theme');
+      btn.textContent = '🌙';
+      btn.title = 'Світла тема';
+    }
+  }
+  const saved = localStorage.getItem(KEY) || 'dark';
+  apply(saved);
+  btn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    const next = current === 'light' ? 'dark' : 'light';
+    localStorage.setItem(KEY, next);
+    apply(next);
+  });
+})();
+</script>
+
+</body></html>
