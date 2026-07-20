@@ -150,6 +150,10 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
   .vs-block{grid-template-columns:1fr}
   .art-cta{padding:28px 20px}
 }
+
+/* ── БАНЕР-ШАПКА (під навбаром) ── */
+.site-banner{width:100%;overflow:hidden;line-height:0}
+.site-banner img{width:100%;height:auto;display:block}
 </style>
 </head>
 <body>
@@ -164,6 +168,14 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
   </div>
   <a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">GOOGLE PLAY →</a>
 </nav>
+
+<div class="site-banner">
+  <picture>
+    <source media="(max-width:640px)" srcset="../img/banners/site-banner-mobile.webp">
+    <img src="../img/banners/site-banner.webp" alt="Базар Толока — разом ми зможемо більше" loading="lazy">
+  </picture>
+</div>
+
 
 <div class="breadcrumb">
   <a href="/">Головна</a>
