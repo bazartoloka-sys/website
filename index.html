@@ -669,6 +669,7 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 /* ── БАНЕР-ШАПКА (під навбаром) ── */
 .site-banner{width:100%;overflow:hidden;line-height:0}
 .site-banner img{width:100%;height:auto;display:block}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 </style>
 </head>
@@ -699,21 +700,7 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
 
 <section class="hero" id="top">
   <div class="hglow"></div>
-  <div class="panas">
-    <div class="panas-c">
-      <img id="panasImg" src="splash_spring.png" alt="Панас" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">
-    </div>
-    <div class="bd bd1"></div><div class="bd bd2"></div>
-    <div class="bd bd3"></div><div class="bd bd4"></div><div class="bd bd5"></div>
-  </div>
-  <div class="sbadge" id="heroBadge"><div class="dot"></div>Офіційний запуск · 1 серпня 2026</div>
-  <h1>БАЗАР<b>ТОЛОКА</b></h1>
-  <p class="hsub">Де справжнє українське зустрічає свого покупця</p>
-  <div class="utp-chips">
-    <div class="utp-chip"><span>🇺🇦</span> 100% українські дані</div>
-    <div class="utp-chip"><span>🤖</span> ШІ-захист 360°</div>
-    <div class="utp-chip"><span>🪙</span> 0% комісії для виробника</div>
-  </div>
+  <h1 class="sr-only">Базар Толока</h1>
 
   <!-- COUNTDOWN -->
   <div class="countdown-wrap">
