@@ -173,12 +173,16 @@ h1 b{color:var(--amber);display:block}
 .hbanner-green:hover{box-shadow:0 12px 34px rgba(46,204,142,.32)}
 .hbanner-amber{background:linear-gradient(135deg,var(--amber),#C9821F);color:#1A0800;box-shadow:0 8px 26px rgba(232,160,48,.22)}
 .hbanner-amber:hover{box-shadow:0 12px 34px rgba(232,160,48,.32)}
+.hbanner-red{background:linear-gradient(135deg,#E74C3C,#C0392B);color:#fff;box-shadow:0 8px 26px rgba(231,76,60,.28)}
+.hbanner-red:hover{box-shadow:0 12px 34px rgba(231,76,60,.38)}
+.hbanner-red .hbanner-badge{background:rgba(255,255,255,.20);border-color:rgba(255,255,255,.35);color:#fff}
 .hbanner-ghost{background:var(--clay2);border:1.5px solid var(--aborder);color:var(--cream);box-shadow:none}
 .hbanner-ghost:hover{border-color:var(--amber);box-shadow:0 8px 24px rgba(0,0,0,.22)}
 .hbanner-ghost .hbanner-ico{background:rgba(232,160,48,.14);color:var(--amber)}
 .hbanner-badge{display:inline-block;margin-left:8px;font-size:9px;font-weight:700;letter-spacing:.6px;background:rgba(232,160,48,.18);border:1px solid var(--aborder);color:var(--amber);border-radius:100px;padding:3px 9px;vertical-align:middle}
 :root[data-theme="light"] .hbanner-green{box-shadow:0 6px 18px rgba(31,166,112,.30)}
 :root[data-theme="light"] .hbanner-amber{box-shadow:0 6px 18px rgba(184,112,12,.30)}
+:root[data-theme="light"] .hbanner-red{box-shadow:0 6px 18px rgba(192,57,43,.34)}
 @media(max-width:520px){.hbanner{padding:16px 18px;gap:13px;border-radius:18px}.hbanner-ico{width:44px;height:44px;font-size:21px;border-radius:13px}.hbanner-title{font-size:13.5px}.hbanner-sub{font-size:11px}}
 .hlegal{font-size:11px;color:var(--cream4)}
 .hlegal a{color:var(--cream2)}
@@ -716,6 +720,14 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
         <span class="hbanner-text">
           <span class="hbanner-title">За покупками</span>
           <span class="hbanner-sub">Живі товари від українських продавців</span>
+        </span>
+        <span class="hbanner-arr">→</span>
+      </a>
+      <a href="/efiry" class="hbanner hbanner-red">
+        <span class="hbanner-ico">🎥</span>
+        <span class="hbanner-text">
+          <span class="hbanner-title">Базар Трансляції<span class="hbanner-badge">LIVE</span></span>
+          <span class="hbanner-sub">Дивіться товар наживо — питайте й купуйте в чаті</span>
         </span>
         <span class="hbanner-arr">→</span>
       </a>
