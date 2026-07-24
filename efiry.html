@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ефіри Базар Толока — продавайте наживо | Базар LIFE</title>
+<meta name="description" content="Ефіри Базар Толока (#Базар_LIFE) — продавайте товар наживо, як у TikTok, тільки свій. Покажіть товар у прямому ефірі, назвіть код — покупець купує не виходячи з трансляції.">
+<meta property="og:title" content="Базар LIFE — ефіри Базар Толока">
+<meta property="og:description" content="Продавайте наживо, покупці дивляться, питають і купують прямо в ефірі.">
+<meta property="og:url" content="https://bazar.in.ua/efiry">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bazar.in.ua/efiry">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5X711EZGE');</script>
+
+<style>
+
+/* ============ LIGHT THEME (як на інших сторінках сайту) ============ */
+:root[data-theme="light"]{
+  --clay:#F5E6C8; --clay2:#EFD9B0; --clay3:#E6C898;
+  --green:#1FA670; --amber:#B8700C;
+  --cream:#2A1810; --cream2:#5A3318; --cream3:#735030; --cream4:#8B6440;
+  --border:rgba(26,15,8,.12); --gborder:rgba(31,166,112,.32); --aborder:rgba(184,112,12,.32);
+  --hairline:rgba(26,15,8,.14);
+}
+:root[data-theme="light"] body{background:linear-gradient(180deg,#F5E6C8 0%,#EBD5A8 100%);background-attachment:fixed}
+:root[data-theme="light"] .nav{background:rgba(245,230,200,.94)!important;border-bottom-color:var(--aborder)}
+:root[data-theme="light"] .step,
+:root[data-theme="light"] .feature,
+:root[data-theme="light"] .tbl-wrap,
+:root[data-theme="light"] .tip,
+:root[data-theme="light"] .buyers,
+:root[data-theme="light"] .life-visual{box-shadow:0 4px 14px rgba(26,15,8,.08),0 1px 3px rgba(26,15,8,.05)}
+:root[data-theme="light"] .life-visual{background:#EFD9B0}
+:root[data-theme="light"] footer{border-top-color:rgba(26,15,8,.10)}
+:root[data-theme="light"] .eyebrow::before{color:#D64545}
+
+.theme-toggle{background:transparent;border:1px solid var(--aborder);color:var(--cream2);width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:background .2s,border-color .2s,transform .15s;flex-shrink:0;padding:0;font-family:inherit}
+.theme-toggle:hover{background:rgba(232,160,48,.10);border-color:var(--amber);transform:scale(1.08)}
+:root[data-theme="light"] .theme-toggle:hover{background:rgba(184,112,12,.10);border-color:var(--amber)}
+.nav-right{display:flex;align-items:center;gap:14px}
+/* ====================================================================== */
+
+:root{
+  --clay:#1A0F08; --clay2:#261508; --clay3:#321C0A;
+  --hairline:rgba(245,230,200,.08);
+  --green:#2ECC8E; --green-dim:#1F8F63;
+  --amber:#E8A030; --cream:#F5E6C8; --cream2:#B89060; --cream3:#7A6040;
+  --red:#E74C3C;
+  --border:rgba(245,230,200,.07); --gborder:rgba(46,204,142,.22); --aborder:rgba(232,160,48,.22);
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--clay); color:var(--cream);
+  font-family:'Nunito', sans-serif; line-height:1.55;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  transition:background-color .4s ease, color .4s ease;
+}
+h1,h2,h3,.eyebrow,.num{ font-family:'Unbounded', sans-serif; }
+a{ color:inherit; text-decoration:none; }
+img,svg{display:block; max-width:100%;}
+
+.wrap{ max-width:1200px; margin:0 auto; padding:0 5%; }
+
+/* ── NAV ───────────────────────────────────────────────── */
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.nlogo b{color:var(--amber)}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover,.nlinks a.active{color:var(--green)}
+.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
+@media(max-width:860px){.nlinks{display:none}}
+
+/* ── BANNER ────────────────────────────────────────────── */
+.site-banner{width:100%;overflow:hidden;line-height:0}
+.site-banner img{width:100%;height:auto;display:block}
+
+/* ── HERO ──────────────────────────────────────────────── */
+.hero{ padding:64px 0 76px; position:relative; overflow:hidden; }
+.hero::before{
+  content:''; position:absolute; top:-140px; right:-160px; width:520px; height:520px;
+  background:radial-gradient(circle, rgba(232,160,48,.14), transparent 70%);
+  pointer-events:none;
+}
+.hero-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; position:relative; }
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--amber); margin-bottom:22px;
+}
+.eyebrow::before{ content:'●'; color:var(--red); font-size:9px; animation:blink 1.6s infinite; }
+@keyframes blink{ 50%{opacity:.25;} }
+
+h1{
+  font-size:clamp(30px,4.2vw,44px); line-height:1.08; font-weight:900; color:var(--cream);
+  margin-bottom:20px; letter-spacing:-.01em;
+}
+h1 em{ font-style:normal; color:var(--green); }
+.hero p.lead{ font-size:17px; color:var(--cream2); max-width:480px; margin-bottom:32px; }
+.hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 24px; border-radius:100px; font-weight:700; font-size:14.5px;
+  text-decoration:none; border:1px solid transparent; transition:transform .15s ease, opacity .15s ease;
+}
+.btn:hover{ transform:translateY(-1px); }
+.btn-primary{ background:var(--green); color:#05200F; }
+.btn-primary:hover{ background:#37D89A; }
+.btn-ghost{ border-color:var(--aborder); color:var(--cream); }
+.btn-ghost:hover{ border-color:var(--amber); color:var(--amber); }
+
+/* ── ХІРО-ВІЗУАЛ "Базар LIFE" (замість телефон-мокапу) ───── */
+.life-visual{
+  position:relative; width:100%; max-width:300px; margin:0 auto;
+  border-radius:32px; overflow:hidden; background:var(--clay2);
+  box-shadow:0 30px 70px -20px rgba(0,0,0,.6), 0 0 0 1px var(--hairline);
+}
+.life-visual img{ width:100%; height:auto; display:block; }
+.lv-dot{ position:absolute; border-radius:50%; pointer-events:none; }
+.lv-dot1{width:16px;height:16px;background:var(--green);top:6%;left:8%;opacity:.85;animation:bob 3s ease-in-out infinite}
+.lv-dot2{width:11px;height:11px;background:var(--amber);top:14%;right:9%;opacity:.9;animation:bob 3.6s ease-in-out infinite .4s}
+.lv-dot3{width:9px;height:9px;background:var(--red);bottom:16%;left:7%;opacity:.7;animation:bob 2.9s ease-in-out infinite .9s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* ── Секції ────────────────────────────────────────────── */
+section{ padding:64px 0; border-top:1px solid var(--hairline); }
+.section-head{ max-width:600px; margin-bottom:44px; }
+.section-head .eyebrow{ margin-bottom:12px; }
+h2{ font-size:clamp(24px,3.4vw,30px); font-weight:800; color:var(--cream); letter-spacing:-.01em; }
+.section-head p{ color:var(--cream2); margin-top:12px; font-size:15.5px; }
+
+/* Кроки продавця */
+.steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.step{
+  background:var(--clay2); border:1px solid var(--hairline); border-radius:16px;
+  padding:26px 22px; position:relative; overflow:hidden;
+}
+.step .num{
+  font-size:34px; font-weight:900; line-height:1; margin-bottom:16px;
+  -webkit-text-stroke:1px var(--amber); color:transparent;
+}
+.step h3{ font-size:16px; font-weight:700; color:var(--cream); margin-bottom:8px; font-family:'Nunito'; }
+.step p{ font-size:13.5px; color:var(--cream2); }
+
+/* Дві картки-фічі */
+.features{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.feature{ background:var(--clay2); border:1px solid var(--hairline); border-radius:18px; padding:30px; }
+.feature .tag{
+  display:inline-block; font-size:11px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+  padding:5px 10px; border-radius:20px; margin-bottom:16px;
+}
+.feature.f-code .tag{ background:rgba(46,204,142,.14); color:var(--green); }
+.feature.f-pin .tag{ background:rgba(232,160,48,.14); color:var(--amber); }
+.feature h3{ font-size:19px; color:var(--cream); margin-bottom:10px; font-family:'Nunito'; font-weight:800; }
+.feature p{ color:var(--cream2); font-size:14.5px; margin-bottom:16px; }
+.code-demo{
+  background:var(--clay); border:1px solid var(--hairline); border-radius:10px; padding:14px 16px;
+  font-size:13.5px; color:var(--cream);
+}
+.code-demo .chip{
+  display:inline-block; background:var(--green-dim); color:#fff; font-weight:700;
+  border-radius:6px; padding:2px 8px; font-size:12.5px; margin:0 2px;
+}
+.mini-list{ list-style:none; }
+.mini-list li{ display:flex; gap:10px; font-size:13.5px; color:var(--cream2); margin-bottom:8px; align-items:flex-start; }
+.mini-list li::before{ content:'→'; color:var(--amber); font-weight:700; flex:none; }
+
+/* Тарифи */
+table{ width:100%; border-collapse:collapse; }
+th{
+  text-align:left; font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:.06em;
+  color:var(--cream3); padding:0 16px 12px; border-bottom:1px solid var(--hairline);
+}
+td{ padding:16px; font-size:14.5px; border-bottom:1px solid var(--hairline); color:var(--cream); }
+tr:last-child td{ border-bottom:none; }
+td.price{ color:var(--amber); font-weight:800; }
+.tbl-wrap{ background:var(--clay2); border:1px solid var(--hairline); border-radius:16px; overflow:hidden; padding:8px 0; }
+.tbl-note{ font-size:12.5px; color:var(--cream3); margin-top:14px; }
+
+/* Для покупців */
+.buyers{
+  background:linear-gradient(135deg, var(--clay3), var(--clay2));
+  border:1px solid var(--hairline); border-radius:20px; padding:44px;
+  display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;
+}
+.buyers h2{ font-size:26px; margin-bottom:14px; }
+.buyers p{ color:var(--cream2); font-size:14.5px; margin-bottom:18px; }
+.buyers .mini-list li{ color:var(--cream); }
+.buyers .btn{ margin-top:8px; }
+
+/* Поради */
+.tips{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.tip{ padding:22px; border-radius:14px; background:var(--clay2); border:1px solid var(--hairline); }
+.tip .ico{ font-size:22px; margin-bottom:12px; }
+.tip h3{ font-size:14.5px; color:var(--cream); margin-bottom:6px; font-family:'Nunito'; font-weight:700; }
+.tip p{ font-size:13px; color:var(--cream2); }
+
+/* ── FOOTER ────────────────────────────────────────────── */
+footer{border-top:1px solid var(--hairline);padding:40px 5% 32px}
+.foot-inner{max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px}
+.flinks a{font-size:12.5px;color:var(--cream2);transition:color .2s}
+.flinks a:hover{color:var(--green)}
+.fcontact a{font-size:12.5px;color:var(--cream3)}
+.fcopy{font-size:11.5px;color:var(--cream3)}
+
+@media (max-width: 860px){
+  .hero-grid{ grid-template-columns:1fr; }
+  .life-visual{ margin-top:24px; max-width:240px; }
+  .steps{ grid-template-columns:1fr 1fr; }
+  .features, .buyers{ grid-template-columns:1fr; }
+  .tips{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nlinks">
+    <a href="/upgrade">Тарифи</a>
+    <a href="/panas">Навчання</a>
+    <a href="/efiry" class="active">Ефіри</a>
+    <a href="/blog">Блог</a>
+    <a href="/partners">Партнерам</a>
+    <a href="/about">Про нас</a>
+    <a href="/sales">Акції</a>
+    <a href="/support">Підтримка</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button>
+    <a href="https://cabinet.bazar.in.ua" class="ncta">КАБІНЕТ →</a>
+  </div>
+</nav>
+
+<div class="site-banner">
+  <picture>
+    <source media="(max-width:640px)" srcset="img/banners/site-banner-mobile.webp">
+    <img src="img/banners/site-banner.webp" alt="Базар Толока — разом ми зможемо більше" loading="eager">
+  </picture>
+</div>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">#Базар_LIVE · в ефірі просто зараз</div>
+      <h1>Продавайте <em>наживо</em>,<br>як у TikTok — тільки свій</h1>
+      <p class="lead">Увімкнули камеру, показали товар, назвали код — покупець побачив, написав у чат і купив, не виходячи з ефіру. Без монтажу, без зайвих кроків.</p>
+      <div class="hero-ctas">
+        <a href="#steps" class="btn btn-primary">Як почати ефір →</a>
+        <a href="#buyers" class="btn btn-ghost">Я покупець</a>
+      </div>
+    </div>
+
+    <div class="life-visual">
+      <span class="lv-dot lv-dot1"></span>
+      <span class="lv-dot lv-dot2"></span>
+      <span class="lv-dot lv-dot3"></span>
+      <img src="img/live/bazar-life-hero.webp" alt="Базар LIFE — ефіри Базар Толока, #Базар_LIVE" loading="eager">
+    </div>
+  </div>
+</section>
+
+<section id="steps">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Продавцям</div>
+      <h2>Як провести ефір за 4 кроки</h2>
+      <p>Все відбувається в застосунку, у кабінеті продавця — окреме обладнання не потрібне, вистачить телефону.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Забронюйте ефір</h3>
+        <p>«Мої ефіри» → оберіть тривалість і ліміт глядачів → оплата з гаманця. Ефір з'явиться в розкладі.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Натисніть «Почати ефір»</h3>
+        <p>Камера вмикається одразу на весь екран. Глядачі бачать вас у ту ж мить — попереднього завантаження немає.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Показуйте й називайте код</h3>
+        <p>Візьміть товар у кадр, назвіть його 5-значний код уголос — покупці зможуть одразу перейти до нього.</p>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <h3>Відповідайте в чаті</h3>
+        <p>Питання глядачів видно прямо поверх ефіру. Закріпіть товар, що показуєте — картка постане перед усіма.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Дві фішки, які пришвидшують продаж</div>
+      <h2>Артикули та закріплення товару</h2>
+    </div>
+    <div class="features">
+      <div class="feature f-code">
+        <span class="tag">Артикул у чаті</span>
+        <h3>Код замість довгого пошуку</h3>
+        <p>Кожен товар має свій 5-значний код. Назвіть його голосом в ефірі — щойно хтось напише цей код у чат, він перетвориться на кнопку.</p>
+        <div class="code-demo">Марія: «а цей светр?» <span class="chip">📦 48211</span></div>
+      </div>
+      <div class="feature f-pin">
+        <span class="tag">Закріпити товар</span>
+        <h3>Один товар на очах у всіх</h3>
+        <p>Відкрийте «Мої лоти» під час ефіру й натисніть «Закріпити» на товарі, який показуєте. У всіх глядачів одразу з'явиться картка з фото, ціною й кодом.</p>
+        <ul class="mini-list">
+          <li>Оновлюється миттєво — жодного оновлення сторінки</li>
+          <li>Новий товар автоматично заміняє попередній</li>
+          <li>«Зняти» — прибрати картку в будь-яку мить</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tariffs">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Тарифи</div>
+      <h2>Оберіть тривалість і охоплення</h2>
+      <p>Оплата одноразова, за конкретний ефір. Списується з гаманця продавця в момент бронювання.</p>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Тривалість</th><th>До 50 глядачів</th><th>До 100 глядачів</th><th>До 200 глядачів</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2 години</td><td class="price">499 ₴</td><td class="price">799 ₴</td><td class="price">1 499 ₴</td></tr>
+          <tr><td>4 години</td><td class="price">999 ₴</td><td class="price">1 599 ₴</td><td class="price">2 999 ₴</td></tr>
+          <tr><td>6 годин</td><td class="price">1 499 ₴</td><td class="price">2 399 ₴</td><td class="price">4 499 ₴</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note">* Ціни попередні — уточнюються перед стартом продажів 1 серпня 2026.</p>
+  </div>
+</section>
+
+<section id="buyers">
+  <div class="wrap">
+    <div class="buyers">
+      <div>
+        <div class="eyebrow">Покупцям</div>
+        <h2>Дивіться, питайте, купуйте — без переходів</h2>
+        <p>Ефіри — окрема вкладка застосунку. Кожен показує реальний товар наживо: ставте питання продавцю прямо в чаті, він відповість, поки ви дивитесь.</p>
+        <a href="https://torg.bazar.in.ua" class="btn btn-primary">Дивитись ефіри →</a>
+      </div>
+      <ul class="mini-list">
+        <li>«Ефіри» в стрічці → оберіть трансляцію, що вже йде або скоро почнеться</li>
+        <li>Побачили код товару в чаті — тапніть на нього, відкриється картка з описом</li>
+        <li>🛍 справа відкриває всі товари продавця одним списком</li>
+        <li>«Купити» доступне прямо з картки товару — без виходу з ефіру</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Поради від Базару</div>
+      <h2>Щоб ефір продавав краще</h2>
+    </div>
+    <div class="tips">
+      <div class="tip">
+        <div class="ico">💡</div>
+        <h3>Більше світла</h3>
+        <p>Товар при денному або яскравому світлі виглядає переконливіше — покупець бачить справжній колір і стан речі.</p>
+      </div>
+      <div class="tip">
+        <div class="ico">🗣️</div>
+        <h3>Кажіть код двічі</h3>
+        <p>Називайте артикул товару на початку й ще раз через хвилину — глядачі часто приєднуються посеред ефіру.</p>
+      </div>
+      <div class="tip">
+        <div class="ico">📌</div>
+        <h3>Закріплюйте вчасно</h3>
+        <p>Змінили товар у кадрі — одразу оновіть закріплення. Так картка в глядачів завжди відповідає тому, що на екрані.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="https://torg.bazar.in.ua">За покупками</a>
+      <a href="/panas">Навчання</a>
+      <a href="/efiry">Ефіри</a>
+      <a href="/blog">Блог</a>
+      <a href="/about">Про нас</a>
+      <a href="/partners">Партнерам</a>
+      <a href="/upgrade">Тарифи</a>
+      <a href="/sales">Акції</a>
+      <a href="/support">Підтримка</a>
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови</a>
+      <a href="/offer">Оферта</a>
+      <a href="/jobs">Вакансії</a>
+    </div>
+    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
+</footer>
+
+<script>
+/* ============ THEME SWITCHER ============ */
+(function(){
+  const KEY = 'bazar-theme';
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  function apply(theme){
+    if(theme === 'light'){
+      root.setAttribute('data-theme', 'light');
+      btn.textContent = '☀️';
+      btn.title = 'Темна тема';
+    } else {
+      root.removeAttribute('data-theme');
+      btn.textContent = '🌙';
+      btn.title = 'Світла тема';
+    }
+  }
+  const saved = localStorage.getItem(KEY) || 'dark';
+  apply(saved);
+  btn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    const next = current === 'light' ? 'dark' : 'light';
+    localStorage.setItem(KEY, next);
+    apply(next);
+  });
+})();
+</script>
+
+</body>
+</html>
