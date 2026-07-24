@@ -184,6 +184,24 @@ h1 b{color:var(--amber);display:block}
 :root[data-theme="light"] .hbanner-amber{box-shadow:0 6px 18px rgba(184,112,12,.30)}
 :root[data-theme="light"] .hbanner-red{box-shadow:0 6px 18px rgba(192,57,43,.34)}
 @media(max-width:520px){.hbanner{padding:16px 18px;gap:13px;border-radius:18px}.hbanner-ico{width:44px;height:44px;font-size:21px;border-radius:13px}.hbanner-title{font-size:13.5px}.hbanner-sub{font-size:11px}}
+
+/* ── PHOTO BANNERS (full-image mega-buttons) ── */
+.hbanner-photo{display:flex;align-items:flex-end;padding:0;min-height:150px;background-size:cover;background-position:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.hbanner-photo:hover{box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.hbanner-photo::after{content:none}
+.hbanner-photo-fade{position:absolute;inset:0;z-index:0}
+.hbanner-photo-body{position:relative;z-index:1;width:100%;padding:18px 22px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+.hbanner-photo .hbanner-title{color:#fff;font-size:16px;margin-bottom:4px}
+.hbanner-photo .hbanner-sub{color:rgba(255,255,255,.82);opacity:1}
+.hbanner-photo .hbanner-arr{color:#fff;opacity:.85}
+.hbanner-photo.hbanner-green .hbanner-photo-fade{background:linear-gradient(90deg, rgba(4,26,17,.90) 0%, rgba(4,26,17,.55) 40%, rgba(4,26,17,.10) 75%, transparent 100%)}
+.hbanner-photo.hbanner-amber .hbanner-photo-fade{background:linear-gradient(90deg, rgba(28,17,3,.90) 0%, rgba(28,17,3,.55) 40%, rgba(28,17,3,.10) 75%, transparent 100%)}
+.hbanner-photo.hbanner-red .hbanner-photo-fade{background:linear-gradient(90deg, rgba(35,9,7,.90) 0%, rgba(35,9,7,.55) 40%, rgba(35,9,7,.10) 75%, transparent 100%)}
+.hbanner-photo.hbanner-ghost{border:none}
+.hbanner-photo.hbanner-ghost .hbanner-photo-fade{background:linear-gradient(90deg, rgba(16,9,4,.92) 0%, rgba(16,9,4,.60) 40%, rgba(16,9,4,.15) 75%, transparent 100%)}
+.hbanner-photo.hbanner-ghost .hbanner-badge{background:rgba(232,160,48,.85);border-color:transparent;color:#1A0800}
+.hbanner-photo .hbanner-badge{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.4);color:#fff}
+@media(max-width:520px){.hbanner-photo{min-height:118px}.hbanner-photo-body{padding:14px 16px}.hbanner-photo .hbanner-title{font-size:14px}.hbanner-photo .hbanner-sub{font-size:11px}}
 .hlegal{font-size:11px;color:var(--cream4)}
 .hlegal a{color:var(--cream2)}
 
@@ -708,38 +726,46 @@ footer{border-top:1px solid var(--border);padding:40px 5%}
   <!-- COUNTDOWN -->
   <div class="countdown-wrap">
     <div class="hero-banners">
-      <a href="https://cabinet.bazar.in.ua" class="hbanner hbanner-green" id="mainCta">
-        <span class="hbanner-ico">🏪</span>
-        <span class="hbanner-text">
-          <span class="hbanner-title">Кабінет продавця</span>
-          <span class="hbanner-sub">Оголошення, замовлення, гаманець</span>
+      <a href="https://cabinet.bazar.in.ua" class="hbanner hbanner-photo hbanner-green" id="mainCta" style="background-image:url('img/mega/mega-cabinet.webp')">
+        <span class="hbanner-photo-fade"></span>
+        <span class="hbanner-photo-body">
+          <span class="hbanner-text">
+            <span class="hbanner-title">Кабінет продавця</span>
+            <span class="hbanner-sub">Оголошення, замовлення, гаманець</span>
+          </span>
+          <span class="hbanner-arr">→</span>
         </span>
-        <span class="hbanner-arr">→</span>
       </a>
-      <a href="https://torg.bazar.in.ua" class="hbanner hbanner-amber">
-        <span class="hbanner-ico">🛒</span>
-        <span class="hbanner-text">
-          <span class="hbanner-title">За покупками</span>
-          <span class="hbanner-sub">Живі товари від українських продавців</span>
+      <a href="https://torg.bazar.in.ua" class="hbanner hbanner-photo hbanner-amber" style="background-image:url('img/mega/mega-shopping.webp')">
+        <span class="hbanner-photo-fade"></span>
+        <span class="hbanner-photo-body">
+          <span class="hbanner-text">
+            <span class="hbanner-title">За покупками</span>
+            <span class="hbanner-sub">Живі товари від українських продавців</span>
+          </span>
+          <span class="hbanner-arr">→</span>
         </span>
-        <span class="hbanner-arr">→</span>
       </a>
-      <a href="/efiry" class="hbanner hbanner-red">
-        <span class="hbanner-ico">🎥</span>
-        <span class="hbanner-text">
-          <span class="hbanner-title">Базар Трансляції<span class="hbanner-badge">LIVE</span></span>
-          <span class="hbanner-sub">Дивіться товар наживо — питайте й купуйте в чаті</span>
+      <a href="/efiry" class="hbanner hbanner-photo hbanner-red" style="background-image:url('img/mega/mega-live.webp')">
+        <span class="hbanner-photo-fade"></span>
+        <span class="hbanner-photo-body">
+          <span class="hbanner-text">
+            <span class="hbanner-title">Базар Трансляції<span class="hbanner-badge">LIVE</span></span>
+            <span class="hbanner-sub">Дивіться товар наживо — питайте й купуйте в чаті</span>
+          </span>
+          <span class="hbanner-arr">→</span>
         </span>
-        <span class="hbanner-arr">→</span>
       </a>
       <!-- APP-LINK: коли буде Google Play — замінити href на посилання маркету, прибрати hbanner-badge -->
-      <a href="#launch" class="hbanner hbanner-ghost" id="btnApp">
-        <span class="hbanner-ico">📱</span>
-        <span class="hbanner-text">
-          <span class="hbanner-title">Завантажити додаток<span class="hbanner-badge">СКОРО</span></span>
-          <span class="hbanner-sub">Google Play — вже незабаром</span>
+      <a href="#launch" class="hbanner hbanner-photo hbanner-ghost" id="btnApp" style="background-image:url('img/mega/mega-app.webp')">
+        <span class="hbanner-photo-fade"></span>
+        <span class="hbanner-photo-body">
+          <span class="hbanner-text">
+            <span class="hbanner-title">Завантажити додаток<span class="hbanner-badge">СКОРО</span></span>
+            <span class="hbanner-sub">Google Play — вже незабаром</span>
+          </span>
+          <span class="hbanner-arr">→</span>
         </span>
-        <span class="hbanner-arr">→</span>
       </a>
       <div class="hero-btns-sec">
         <a href="/upgrade" class="btn-upgrade-hero">🌾 ТАРИФИ ДЛЯ ПРОДАВЦІВ →</a>
