@@ -186,8 +186,8 @@ h1 b{color:var(--amber);display:block}
 @media(max-width:520px){.hbanner{padding:16px 18px;gap:13px;border-radius:18px}.hbanner-ico{width:44px;height:44px;font-size:21px;border-radius:13px}.hbanner-title{font-size:13.5px}.hbanner-sub{font-size:11px}}
 
 /* ── PHOTO BANNERS (full-image mega-buttons) ── */
-.hbanner-photo{display:flex;align-items:flex-end;padding:0;min-height:150px;background-size:cover;background-position:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-.hbanner-photo:hover{box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.hbanner-photo{display:flex;align-items:flex-end;padding:0;aspect-ratio:4.3/1;background-size:cover;background-position:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.hbanner-photo:hover{transform:translateY(-4px)}
 .hbanner-photo::after{content:none}
 .hbanner-photo-fade{position:absolute;inset:0;z-index:0}
 .hbanner-photo-body{position:relative;z-index:1;width:100%;padding:18px 22px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
@@ -200,8 +200,12 @@ h1 b{color:var(--amber);display:block}
 .hbanner-photo.hbanner-ghost{border:none}
 .hbanner-photo.hbanner-ghost .hbanner-photo-fade{background:linear-gradient(90deg, rgba(16,9,4,.92) 0%, rgba(16,9,4,.60) 40%, rgba(16,9,4,.15) 75%, transparent 100%)}
 .hbanner-photo.hbanner-ghost .hbanner-badge{background:rgba(232,160,48,.85);border-color:transparent;color:#1A0800}
+.hbanner-photo.hbanner-green:hover{box-shadow:0 0 0 2px rgba(46,204,142,.65),0 16px 40px rgba(46,204,142,.30)}
+.hbanner-photo.hbanner-amber:hover{box-shadow:0 0 0 2px rgba(232,160,48,.65),0 16px 40px rgba(232,160,48,.30)}
+.hbanner-photo.hbanner-red:hover{box-shadow:0 0 0 2px rgba(231,76,60,.65),0 16px 40px rgba(231,76,60,.30)}
+.hbanner-photo.hbanner-ghost:hover{box-shadow:0 0 0 2px rgba(232,160,48,.45),0 16px 40px rgba(0,0,0,.40)}
 .hbanner-photo .hbanner-badge{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.4);color:#fff}
-@media(max-width:520px){.hbanner-photo{min-height:118px}.hbanner-photo-body{padding:14px 16px}.hbanner-photo .hbanner-title{font-size:14px}.hbanner-photo .hbanner-sub{font-size:11px}}
+@media(max-width:520px){.hbanner-photo{aspect-ratio:3.2/1}.hbanner-photo-body{padding:14px 16px}.hbanner-photo .hbanner-title{font-size:14px}.hbanner-photo .hbanner-sub{font-size:11px}}
 .hlegal{font-size:11px;color:var(--cream4)}
 .hlegal a{color:var(--cream2)}
 
