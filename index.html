@@ -190,10 +190,11 @@ h1 b{color:var(--amber);display:block}
 .hbanner-photo:hover{transform:translateY(-4px)}
 .hbanner-photo::after{content:none}
 .hbanner-photo-fade{position:absolute;inset:0;z-index:0}
-.hbanner-photo-body{position:relative;z-index:1;width:100%;padding:18px 22px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
-.hbanner-photo .hbanner-title{color:#fff;font-size:16px;margin-bottom:4px}
-.hbanner-photo .hbanner-sub{color:rgba(255,255,255,.82);opacity:1}
-.hbanner-photo .hbanner-arr{color:#fff;opacity:.85}
+.hbanner-photo-body{position:relative;z-index:1;width:100%;padding:clamp(18px,3vw,34px) clamp(22px,3.2vw,36px);display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+.hbanner-photo .hbanner-title{color:#fff;font-size:clamp(16px,2.3vw,26px);margin-bottom:clamp(4px,0.6vw,8px)}
+.hbanner-photo .hbanner-sub{color:rgba(255,255,255,.82);opacity:1;font-size:clamp(12px,1.15vw,16px)}
+.hbanner-photo .hbanner-arr{color:#fff;opacity:.85;font-size:clamp(20px,2.4vw,30px)}
+.hbanner-photo .hbanner-badge{font-size:clamp(9px,0.9vw,12px);padding:clamp(3px,0.4vw,5px) clamp(9px,1vw,13px)}
 .hbanner-photo.hbanner-green .hbanner-photo-fade{background:linear-gradient(90deg, rgba(4,26,17,.90) 0%, rgba(4,26,17,.55) 40%, rgba(4,26,17,.10) 75%, transparent 100%)}
 .hbanner-photo.hbanner-amber .hbanner-photo-fade{background:linear-gradient(90deg, rgba(28,17,3,.90) 0%, rgba(28,17,3,.55) 40%, rgba(28,17,3,.10) 75%, transparent 100%)}
 .hbanner-photo.hbanner-red .hbanner-photo-fade{background:linear-gradient(90deg, rgba(35,9,7,.90) 0%, rgba(35,9,7,.55) 40%, rgba(35,9,7,.10) 75%, transparent 100%)}
@@ -205,7 +206,7 @@ h1 b{color:var(--amber);display:block}
 .hbanner-photo.hbanner-red:hover{box-shadow:0 0 0 2px rgba(231,76,60,.65),0 16px 40px rgba(231,76,60,.30)}
 .hbanner-photo.hbanner-ghost:hover{box-shadow:0 0 0 2px rgba(232,160,48,.45),0 16px 40px rgba(0,0,0,.40)}
 .hbanner-photo .hbanner-badge{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.4);color:#fff}
-@media(max-width:520px){.hbanner-photo{aspect-ratio:3.2/1}.hbanner-photo-body{padding:14px 16px}.hbanner-photo .hbanner-title{font-size:14px}.hbanner-photo .hbanner-sub{font-size:11px}}
+@media(max-width:520px){.hbanner-photo{aspect-ratio:3.2/1}.hbanner-photo-body{padding:14px 16px}}
 .hlegal{font-size:11px;color:var(--cream4)}
 .hlegal a{color:var(--cream2)}
 
