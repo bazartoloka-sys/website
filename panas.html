@@ -224,6 +224,11 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
   <div class="carousel-slide" data-group="buyers"><img src="images/panas/panas_escrow_zakhyst.png" alt="Панас покупцям: Escrow-захист"></div>
   <div class="carousel-slide" data-group="buyers"><img src="images/panas/panas_nds_pokupets.png" alt="Панас покупцям: НДС"></div>
 
+  <!-- РЕКЛАМА -->
+  <div class="carousel-slide" data-group="promo"><img src="images/panas/panas_reklama_3_kliky.png" alt="Панас: реклама в 3 кліки"></div>
+  <div class="carousel-slide" data-group="promo"><img src="images/panas/panas_nul_vidsotkiv_komisii.png" alt="Панас: 0% комісії"></div>
+  <div class="carousel-slide" data-group="promo"><img src="images/panas/panas_biznes_model_platforma.png" alt="Панас: бізнес-модель"></div>
+
   <button class="carousel-btn prev" onclick="slideBy(-1)">‹</button>
   <button class="carousel-btn next" onclick="slideBy(1)">›</button>
   <div class="slide-counter" id="counter">1 / 9</div>
@@ -240,6 +245,9 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
       </button>
       <button class="tab" id="tab-buyers" onclick="switchTab('buyers',this)">
         <span class="tab-icon">🛍️</span>Я купую
+      </button>
+      <button class="tab" id="tab-promo" onclick="switchTab('promo',this)">
+        <span class="tab-icon">📢</span>Реклама
       </button>
     </div>
   </div>
@@ -506,6 +514,98 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
       </div></div>
     </div>
 
+  </div>
+</div>
+
+<!-- PROMO Q&A -->
+<div class="qa-section" id="promo-section">
+  <div class="qa-header">
+    <h2>Рекламні <span>інструменти</span></h2>
+    <p>Усе, що вже працює на платформі для просування товарів — без зовнішніх рекламних бюджетів</p>
+  </div>
+  <div class="qa-grid">
+
+    <div class="qa-card" onclick="toggleCard(this)">
+      <div class="qa-question">
+        <div class="qa-q-icon">🔗</div>
+        <div class="qa-q-text">Як поширити оголошення в Telegram, Viber чи соцмережах?</div>
+        <div class="qa-arrow">▾</div>
+      </div>
+      <div class="qa-answer"><div class="qa-answer-inner">
+        <p>Кнопка «Поділитися» на сторінці кожного оголошення — одним дотиком відправ у Telegram, Viber, Instagram, Facebook або скопіюй посилання. Кожне посилання автоматично містить UTM-мітки: платформа бачить, звідки прийшов покупець і який канал працює найкраще. Той, хто отримує посилання, бачить картку з фото й ціною — а не голий текст, що суттєво підвищує кількість переходів.</p>
+      </div></div>
+    </div>
+
+    <div class="qa-card" onclick="toggleCard(this)">
+      <div class="qa-question">
+        <div class="qa-q-icon">📱</div>
+        <div class="qa-q-text">Чи можна опублікувати відео оголошення одразу в TikTok та Instagram?</div>
+        <div class="qa-arrow">▾</div>
+      </div>
+      <div class="qa-answer"><div class="qa-answer-inner">
+        <p>Так, не виходячи з кабінету. На мобільному — кнопки «Опублікувати в TikTok» і «Опублікувати в Instagram» на екрані редагування оголошення передають відео у відповідний застосунок. На вебі кнопка завантажує відео і відкриває tiktok.com/upload у новій вкладці. Перед цим додай свої акаунти TikTok/Instagram у розділі «Соцмережі» кабінету — це захист від завантаження чужого контенту з водяним знаком.</p>
+      </div></div>
+    </div>
+
+    <div class="qa-card" onclick="toggleCard(this)">
+      <div class="qa-question">
+        <div class="qa-q-icon">🚀</div>
+        <div class="qa-q-text">Як просунути оголошення в топ стрічки — і скільки це коштує?</div>
+        <div class="qa-arrow">▾</div>
+      </div>
+      <div class="qa-answer"><div class="qa-answer-inner">
+        <p>Відкрий оголошення у кабінеті → кнопка «Просунути». Топ Реклама (360₴/30 днів) — оголошення в топі по всій Україні: у пошуку, категоріях, на головній. GEO буст (180₴/30 днів) — те саме, але тільки серед оголошень у твоєму місті, дешевше для локального товару. Оплата з гаманця, до 30% можна покрити бонусним балансом. Обидва бусти можна увімкнути одночасно на один товар.</p>
+      </div></div>
+    </div>
+
+    <div class="qa-card" onclick="toggleCard(this)">
+      <div class="qa-question">
+        <div class="qa-q-icon">🎁</div>
+        <div class="qa-q-text">Чи є бонус за запрошення інших продавців на платформу?</div>
+        <div class="qa-arrow">▾</div>
+      </div>
+      <div class="qa-answer"><div class="qa-answer-inner">
+        <p>500₴ на гаманець за кожного запрошеного продавця, без обмежень по кількості. У розділі «Реферали» кабінету — твоє персональне посилання. Друг реєструється, проходить верифікаційний платіж 150₴ — тобі автоматично нараховується 500₴ бонусу. Статистику (скільки запрошено, верифіковано, зароблено) видно там само.</p>
+      </div></div>
+    </div>
+
+    <div class="qa-card" onclick="toggleCard(this)">
+      <div class="qa-question">
+        <div class="qa-q-icon">📢</div>
+        <div class="qa-q-text">Чи публікується моє оголошення десь ще автоматично, без моєї участі?</div>
+        <div class="qa-arrow">▾</div>
+      </div>
+      <div class="qa-answer"><div class="qa-answer-inner">
+        <p>Так, одразу двома способами. Кожне оголошення, що пройшло модерацію, автоматично публікується у Telegram-каналі Базар Толока — з фото, ціною, містом і прямим посиланням. Плюс кожне оголошення має публічну сторінку, яку індексує Google — включно з категоріями («Хендмейд», «Продукти», «Сільгосптехніка») і Google Merchant Center (Google Shopping), безкоштовно й без додаткових дій з твого боку.</p>
+      </div></div>
+    </div>
+
+    <div class="qa-card" onclick="toggleCard(this)">
+      <div class="qa-question">
+        <div class="qa-q-icon">🔍</div>
+        <div class="qa-q-text">Чи побачать мій товар ті, хто шукає його прямо в Google, а не в додатку?</div>
+        <div class="qa-arrow">▾</div>
+      </div>
+      <div class="qa-answer"><div class="qa-answer-inner">
+        <p>Так. Кожне оголошення — окрема публічна сторінка з фото, відео, описом і рейтингом продавця, яку Google індексує автоматично. Покупець шукає «мед натуральний купити» — і бачить твоє оголошення з ціною та зіркою рейтингу прямо в результатах пошуку (rich snippets). Товари з відео також потрапляють у вкладку «Відео» в Google — джерело трафіку, яке більшість маркетплейсів ігнорує.</p>
+      </div></div>
+    </div>
+
+    <div class="qa-card" onclick="toggleCard(this)">
+      <div class="qa-question">
+        <div class="qa-q-icon">💰</div>
+        <div class="qa-q-text">Що таке бонусний баланс і як його отримати?</div>
+        <div class="qa-arrow">▾</div>
+      </div>
+      <div class="qa-answer"><div class="qa-answer-inner">
+        <p>При кожному поповненні гаманця через веб-кабінет зверху нараховуються бонуси — зараз множник потроєний на перший платіж. Бонусами можна покрити до 30% вартості підписки, реклами чи будь-якої іншої покупки на платформі. Той самий бонусний баланс поповнюється й за реферальну програму.</p>
+      </div></div>
+    </div>
+
+  </div>
+
+  <div class="cta-sec" style="padding:44px 5% 0">
+    <a href="https://cabinet.bazar.in.ua" class="cta-btn">ВІДКРИТИ КАБІНЕТ ПРОДАВЦЯ →</a>
   </div>
 </div>
 
