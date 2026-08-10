@@ -178,6 +178,20 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
 .site-banner{width:100%;overflow:hidden;line-height:0}
 .site-banner img{width:100%;height:auto;display:block}
 .page-banner{max-width:1200px;margin:40px auto 0;padding:0 5%;box-sizing:border-box}
+
+/* PAGE HERO BANNER — заголовок поверх фото Панаса */
+.page-hero-banner{max-width:1200px;margin:0 auto;padding:0 5%;box-sizing:border-box}
+.page-hero-banner .phb-frame{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35);aspect-ratio:1400/324}
+.page-hero-banner .phb-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.page-hero-banner .phb-fade{position:absolute;inset:0;background:linear-gradient(90deg, rgba(10,6,3,.90) 0%, rgba(10,6,3,.60) 38%, rgba(10,6,3,.10) 68%, transparent 88%)}
+.page-hero-banner .phb-content{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 4.5%;box-sizing:border-box;text-align:left;max-width:600px}
+.page-hero-banner .phb-content h1{font-family:'Unbounded',sans-serif;font-size:clamp(22px,3.2vw,40px);font-weight:900;line-height:1.08;letter-spacing:-1px;margin-bottom:8px;color:#fff}
+.page-hero-banner .phb-content .phb-sub{font-size:clamp(12px,1.1vw,15px);color:rgba(255,255,255,.86);max-width:480px;margin:0;line-height:1.55}
+@media(max-width:640px){
+  .page-hero-banner .phb-frame{aspect-ratio:auto;min-height:300px}
+  .page-hero-banner .phb-fade{background:linear-gradient(180deg, rgba(10,6,3,.15) 0%, rgba(10,6,3,.55) 48%, rgba(10,6,3,.94) 100%)}
+  .page-hero-banner .phb-content{padding:22px 20px;justify-content:flex-end;max-width:100%}
+}
 .page-banner img{width:100%;height:auto;border-radius:24px;display:block;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 </style>
 </head>
@@ -189,13 +203,16 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
   <div class="nav-right"><button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button><a href="https://play.google.com/store/apps/details?id=ua.bazartoloka.app" class="ncta">GOOGLE PLAY →</a></div>
   </nav>
 
-<div class="site-banner">
-  <picture>
-    <source media="(max-width:640px)" srcset="img/banners/site-banner-mobile.webp">
-    <img src="img/banners/site-banner.webp" alt="Базар Толока — разом ми зможемо більше" loading="lazy">
-  </picture>
+<div class="page-hero-banner">
+  <div class="phb-frame">
+    <img class="phb-img" src="img/banners/banner-panas-faq.webp" alt="Панас відповідає — питання і відповіді для продавців та покупців Базар Толока" loading="eager">
+    <div class="phb-fade"></div>
+    <div class="phb-content">
+      <h1>Навчання продавців</h1>
+      <p class="phb-sub">Панас відповідає — покрокові пояснення без зайвих слів</p>
+    </div>
+  </div>
 </div>
-
 
 <!-- CAROUSEL -->
 <div class="carousel-wrap" id="carousel">
@@ -235,10 +252,6 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
   <button class="carousel-btn next" onclick="slideBy(1)">›</button>
   <div class="slide-counter" id="counter">1 / 9</div>
   <div class="carousel-dots" id="dots"></div>
-</div>
-
-<div class="page-banner">
-  <img src="img/banners/banner-panas-faq.webp" alt="Панас відповідає — питання і відповіді для продавців та покупців Базар Толока" loading="lazy">
 </div>
 
 <!-- TABS -->
