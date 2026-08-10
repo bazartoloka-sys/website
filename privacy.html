@@ -109,7 +109,22 @@ a{color:var(--green)}
 .lang-sw{display:flex;gap:8px;margin-bottom:32px}
 .lang-btn{padding:6px 16px;border-radius:100px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid rgba(245,230,200,.15);background:transparent;color:var(--cream2);transition:all .2s;font-family:'Nunito',sans-serif}
 .lang-btn.active{background:var(--green);color:#05200F;border-color:var(--green)}
-.doc{max-width:780px;margin:0 auto;padding:56px 5% 80px}
+.doc{max-width:1200px;margin:0 auto;padding:56px 5% 80px;box-sizing:border-box}
+
+/* PAGE HERO BANNER */
+.page-hero-banner{max-width:1200px;margin:0 auto;padding:0 5%;box-sizing:border-box}
+.page-hero-banner .phb-frame{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35);aspect-ratio:1400/324}
+.page-hero-banner .phb-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.page-hero-banner .phb-fade{position:absolute;inset:0;background:linear-gradient(90deg, rgba(10,6,3,.90) 0%, rgba(10,6,3,.60) 38%, rgba(10,6,3,.10) 68%, transparent 88%)}
+.page-hero-banner .phb-content{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 4.5%;box-sizing:border-box;text-align:left;max-width:600px}
+.page-hero-banner .phb-content .phb-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:10px}
+.page-hero-banner .phb-content h1{font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.8vw,34px);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:6px;color:#fff}
+.page-hero-banner .phb-content .phb-sub{font-size:clamp(11px,1vw,14px);color:rgba(255,255,255,.8);max-width:460px;margin:0;line-height:1.5}
+@media(max-width:640px){
+  .page-hero-banner .phb-frame{aspect-ratio:auto;min-height:300px}
+  .page-hero-banner .phb-fade{background:linear-gradient(180deg, rgba(10,6,3,.15) 0%, rgba(10,6,3,.55) 48%, rgba(10,6,3,.94) 100%)}
+  .page-hero-banner .phb-content{padding:22px 20px;justify-content:flex-end;max-width:100%}
+}
 .doc-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:10px}
 h1{font-family:'Unbounded',sans-serif;font-size:clamp(22px,4vw,34px);font-weight:900;margin-bottom:8px;line-height:1.15}
 .doc-date{font-size:12px;color:var(--cream3);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--border)}
@@ -146,11 +161,16 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
   <div class="nav-right"><button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button><a href="/" class="nav-back">← Головна</a></div>
   </nav>
 
-<div class="site-banner">
-  <picture>
-    <source media="(max-width:640px)" srcset="img/banners/site-banner-mobile.webp">
-    <img src="img/banners/site-banner.webp" alt="Базар Толока — разом ми зможемо більше" loading="lazy">
-  </picture>
+<div class="page-hero-banner">
+  <div class="phb-frame">
+    <img class="phb-img" src="img/banners/banner-privacy.webp" alt="Ворон Базар Толока обробляє дані — політика конфіденційності" loading="eager">
+    <div class="phb-fade"></div>
+    <div class="phb-content">
+      <div class="phb-label">Юридичний документ</div>
+      <h1>Політика конфіденційності</h1>
+      <p class="phb-sub">Як ми збираємо, використовуємо та захищаємо ваші дані</p>
+    </div>
+  </div>
 </div>
 
 <div class="doc">
@@ -160,8 +180,6 @@ footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center}
   </div>
 
   <div data-lang="uk" class="show">
-    <div class="doc-label">Юридичний документ</div>
-    <h1>Політика конфіденційності</h1>
     <p class="doc-date">Набирає чинності: 20 липня 2026 · Версія 1.1</p>
     <div class="hl"><p>Ми серйозно ставимося до вашої конфіденційності. Цей документ пояснює які дані збираємо, як використовуємо та захищаємо.</p></div>
     <div class="sec"><h2>1. Загальні положення</h2><p>Ця Політика регулює обробку персональних даних користувачів додатку «Базар Толока», що розробляється ФОП <strong>ФОП Торкотюк Оксана Петрівна</strong> (далі — «Оператор»). Використовуючи Додаток, ви погоджуєтесь з умовами цієї Політики.</p></div>
