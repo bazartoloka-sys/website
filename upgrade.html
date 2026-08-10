@@ -215,7 +215,7 @@ a{text-decoration:none}
 .kupets-extra{max-width:960px;margin:16px auto 0;padding:0 5%}
 .kupets-box{background:var(--clay2);border:1px solid var(--aborder);border-radius:20px;padding:24px 28px}
 .kupets-box h3{font-family:'Unbounded',sans-serif;font-size:15px;font-weight:700;color:var(--amber);margin-bottom:16px}
-.kupets-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.kupets-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .kupets-tier{background:var(--clay3);border:1px solid var(--border);border-radius:14px;padding:16px;text-align:center}
 .kt-size{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--cream);margin-bottom:6px}
 .kt-price{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;color:var(--amber);margin-bottom:4px}
@@ -258,6 +258,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;margin-top:60px}
 }
 @media(max-width:480px){
   .plans{grid-template-columns:1fr}
+  .kupets-grid{grid-template-columns:1fr}
 }
 /* IMPORT BLOCK */
 .import-sec{margin:0 5% 48px}
