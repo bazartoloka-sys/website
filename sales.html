@@ -67,7 +67,7 @@ img{max-width:100%}
 .cat-chip:hover,.cat-chip.active{background:rgba(232,160,48,.15);border-color:var(--aborder);color:var(--amber)}
 
 /* ── PROMO CARDS ───────────────────────────────────────── */
-.promos-section{padding:0 5% 64px;max-width:1000px;margin:0 auto}
+.promos-section{padding:0 5% 64px;max-width:1200px;margin:0 auto;box-sizing:border-box}
 
 .promo-featured{background:linear-gradient(135deg,var(--clay3) 0%,var(--clay4) 100%);border:2px solid var(--aborder);border-radius:28px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;margin-bottom:32px;position:relative;overflow:hidden}
 .promo-featured::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(232,160,48,.08);filter:blur(40px);pointer-events:none}
@@ -120,7 +120,7 @@ img{max-width:100%}
 .bar-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--amber) 0%,var(--amber2) 100%);transition:width .8s ease}
 
 /* ── HOW IT WORKS ──────────────────────────────────────── */
-.how-sec{padding:0 5% 64px;max-width:900px;margin:0 auto}
+.how-sec{padding:0 5% 64px;max-width:1200px;margin:0 auto;box-sizing:border-box}
 .sec-label{font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;color:var(--amber);margin-bottom:12px;text-align:center}
 .sec-title{font-family:'Unbounded',sans-serif;font-size:clamp(22px,4vw,32px);font-weight:900;text-align:center;margin-bottom:8px}
 .sec-sub{font-size:14px;color:var(--cream2);text-align:center;margin-bottom:40px;line-height:1.6}
@@ -132,7 +132,7 @@ img{max-width:100%}
 .step-desc{font-size:12px;color:var(--cream2);line-height:1.6}
 
 /* ── BONUS CALC ─────────────────────────────────────────── */
-.calc-sec{padding:0 5% 64px;max-width:640px;margin:0 auto}
+.calc-sec{padding:0 5% 64px;max-width:1200px;margin:0 auto;box-sizing:border-box}
 .calc-box{background:var(--clay2);border:1px solid var(--aborder);border-radius:24px;padding:36px}
 .calc-title{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;margin-bottom:6px;text-align:center}
 .calc-sub{font-size:13px;color:var(--cream2);text-align:center;margin-bottom:28px}
@@ -149,7 +149,7 @@ img{max-width:100%}
 .calc-note{font-size:11px;color:var(--cream3);text-align:center;margin-top:12px;line-height:1.5}
 
 /* ── FAQ ────────────────────────────────────────────────── */
-.faq-sec{padding:0 5% 80px;max-width:760px;margin:0 auto}
+.faq-sec{padding:0 5% 80px;max-width:1200px;margin:0 auto;box-sizing:border-box}
 .faq-item{border-bottom:1px solid var(--border);overflow:hidden}
 .faq-q{padding:18px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:14px;font-weight:700;color:var(--cream);gap:12px;user-select:none}
 .faq-arrow{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:rgba(245,230,200,.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--cream3);transition:all .3s}
@@ -217,8 +217,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
 
 <div class="site-banner">
   <picture>
-    <source media="(max-width:640px)" srcset="img/banners/site-banner-mobile.webp">
-    <img src="img/banners/site-banner.webp" alt="Базар Толока — разом ми зможемо більше" loading="lazy">
+    <img src="img/banners/banner-sales.webp" alt="Панас розкидує гроші — акції та бонуси Базар Толока" loading="eager">
   </picture>
 </div>
 
@@ -268,30 +267,6 @@ footer{border-top:1px solid var(--border);padding:32px 5%}
 
 <!-- ── FEATURED PROMO ── -->
 <section class="promos-section">
-
-  <!-- Головна акція: ×3 бонус -->
-  <div class="promo-featured" data-cat="seller bonus">
-    <div>
-      <span class="promo-tag">🔥 ГОТ-АКЦіЯ</span>
-      <h2 class="promo-title">Бонус <span>×3</span> для перших 1000 продавців</h2>
-      <p class="promo-desc">Кожна поповнена гривня на бонусний рахунок перетворюється на три. При оплаті послуг і реклами — 30% закривається бонусами, 70% реальними коштами.</p>
-      <div class="promo-conditions">
-        <span class="cond-chip">✅ Тільки верифіковані ФОП</span>
-        <span class="cond-chip">✅ Перші 1000 продавців</span>
-        <span class="cond-chip">✅ Старт 1 серпня 2026</span>
-        <span class="cond-chip">✅ Нараховується автоматично</span>
-      </div>
-
-      <!-- Slots bar -->
-      <div class="slots-bar">
-        <div class="slots-label"><span>Зайнято місць</span><b id="slotsCount">273 / 1000</b></div>
-        <div class="bar-track"><div class="bar-fill" id="slotsBar" style="width:27%"></div></div>
-      </div>
-      <br>
-      <a href="https://play.google.com/store/apps/details?id=ua.toloka.bazar&referrer=utm_source%3Dweb" class="promo-cta">ЗАЙНЯТИ МІСЦЕ →</a>
-    </div>
-    <div class="mult-badge">×3<small>БОНУС</small></div>
-  </div>
 
   <!-- Grid of smaller promos -->
   <div class="promos-grid">
