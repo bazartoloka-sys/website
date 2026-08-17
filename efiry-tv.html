@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Базар TV — записи ефірів | Базар Толока</title>
+<meta name="description" content="Базар TV — записи ефірів Базар Толока, доступні у будь-який час. Дивіться як кіно й купуйте прямо з відео, навіть якщо трансляція вже закінчилась.">
+<meta property="og:title" content="Базар TV — записи ефірів Базар Толока">
+<meta property="og:description" content="Дивіться записи ефірів як кіно й купуйте прямо з відео у будь-який час.">
+<meta property="og:url" content="https://bazar.in.ua/efiry-tv">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bazar.in.ua/efiry-tv">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5X711EZGE');</script>
+
+<style>
+
+/* ============ LIGHT THEME ============ */
+:root[data-theme="light"]{
+  --clay:#F5E6C8; --clay2:#EFD9B0; --clay3:#E6C898;
+  --green:#1FA670; --amber:#B8700C;
+  --cream:#2A1810; --cream2:#5A3318; --cream3:#735030; --cream4:#8B6440;
+  --border:rgba(26,15,8,.12); --gborder:rgba(31,166,112,.32); --aborder:rgba(184,112,12,.32);
+  --hairline:rgba(26,15,8,.14);
+}
+:root[data-theme="light"] body{background:linear-gradient(180deg,#F5E6C8 0%,#EBD5A8 100%);background-attachment:fixed}
+:root[data-theme="light"] .nav{background:rgba(245,230,200,.94)!important;border-bottom-color:var(--aborder)}
+:root[data-theme="light"] .step,
+:root[data-theme="light"] .feature,
+:root[data-theme="light"] .tip,
+:root[data-theme="light"] .buyers{box-shadow:0 4px 14px rgba(26,15,8,.08),0 1px 3px rgba(26,15,8,.05)}
+:root[data-theme="light"] footer{border-top-color:rgba(26,15,8,.10)}
+:root[data-theme="light"] .eyebrow::before{color:#D64545}
+
+.theme-toggle{background:transparent;border:1px solid var(--aborder);color:var(--cream2);width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:background .2s,border-color .2s,transform .15s;flex-shrink:0;padding:0;font-family:inherit}
+.theme-toggle:hover{background:rgba(232,160,48,.10);border-color:var(--amber);transform:scale(1.08)}
+:root[data-theme="light"] .theme-toggle:hover{background:rgba(184,112,12,.10);border-color:var(--amber)}
+.nav-right{display:flex;align-items:center;gap:14px}
+
+:root{
+  --clay:#1A0F08; --clay2:#261508; --clay3:#321C0A;
+  --hairline:rgba(245,230,200,.08);
+  --green:#2ECC8E; --green-dim:#1F8F63;
+  --amber:#E8A030; --cream:#F5E6C8; --cream2:#B89060; --cream3:#7A6040;
+  --red:#E74C3C;
+  --border:rgba(245,230,200,.07); --gborder:rgba(46,204,142,.22); --aborder:rgba(232,160,48,.22);
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--clay); color:var(--cream); font-family:'Nunito', sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden; transition:background-color .4s ease, color .4s ease;}
+h1,h2,h3,.eyebrow,.num{ font-family:'Unbounded', sans-serif; }
+a{ color:inherit; text-decoration:none; }
+img,svg{display:block; max-width:100%;}
+
+.wrap{ max-width:1200px; margin:0 auto; padding:0 5%; }
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.nlogo b{color:var(--amber)}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover,.nlinks a.active{color:var(--green)}
+.ncta{background:var(--green);color:#05200F;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
+@media(max-width:860px){.nlinks{display:none}}
+
+/* PAGE HERO BANNER */
+.page-hero-banner{max-width:1200px;margin:24px auto 0;padding:0 5%;box-sizing:border-box}
+.page-hero-banner .phb-frame{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35);aspect-ratio:1400/324}
+.page-hero-banner .phb-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.page-hero-banner .phb-fade{position:absolute;inset:0;background:linear-gradient(90deg, rgba(10,6,3,.90) 0%, rgba(10,6,3,.60) 38%, rgba(10,6,3,.10) 68%, transparent 88%)}
+.page-hero-banner .phb-content{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 4.5%;box-sizing:border-box;text-align:left;max-width:600px}
+.page-hero-banner .phb-content .eyebrow{margin-bottom:12px}
+.page-hero-banner .phb-content h1{font-family:'Unbounded',sans-serif;font-size:clamp(22px,3.2vw,40px);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:8px;color:#fff}
+.page-hero-banner .phb-content h1 em{font-style:normal;color:var(--green)}
+.page-hero-banner .phb-content .phb-sub{font-size:clamp(11px,1vw,14px);color:rgba(255,255,255,.86);max-width:460px;margin:0 0 18px;line-height:1.5}
+@media(max-width:640px){
+  .page-hero-banner .phb-frame{aspect-ratio:auto;min-height:320px}
+  .page-hero-banner .phb-fade{background:linear-gradient(180deg, rgba(10,6,3,.15) 0%, rgba(10,6,3,.55) 48%, rgba(10,6,3,.94) 100%)}
+  .page-hero-banner .phb-content{padding:22px 20px;justify-content:flex-end;max-width:100%}
+}
+
+.eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--amber); margin-bottom:22px;}
+.eyebrow::before{ content:'●'; color:var(--red); font-size:9px;}
+h1{font-size:clamp(30px,4.2vw,44px); line-height:1.08; font-weight:900; color:var(--cream); margin-bottom:20px; letter-spacing:-.01em;}
+h1 em{ font-style:normal; color:var(--green); }
+.btn{display:inline-flex; align-items:center; gap:8px; padding:14px 24px; border-radius:100px; font-weight:700; font-size:14.5px; text-decoration:none; border:1px solid transparent; transition:transform .15s ease, opacity .15s ease;}
+.btn:hover{ transform:translateY(-1px); }
+.btn-primary{ background:var(--green); color:#05200F; }
+.btn-primary:hover{ background:#37D89A; }
+.btn-ghost{ border-color:var(--aborder); color:var(--cream); }
+.btn-ghost:hover{ border-color:var(--amber); color:var(--amber); }
+
+section{ padding:56px 0; border-top:1px solid var(--hairline); }
+.section-head{ max-width:600px; margin-bottom:44px; }
+.section-head .eyebrow{ margin-bottom:12px; }
+h2{ font-size:clamp(24px,3.4vw,30px); font-weight:800; color:var(--cream); letter-spacing:-.01em; }
+.section-head p{ color:var(--cream2); margin-top:12px; font-size:15.5px; }
+
+.steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.step{ background:var(--clay2); border:1px solid var(--hairline); border-radius:16px; padding:26px 22px; position:relative; overflow:hidden; }
+.step .num{ font-size:34px; font-weight:900; line-height:1; margin-bottom:16px; -webkit-text-stroke:1px var(--amber); color:transparent; }
+.step h3{ font-size:16px; font-weight:700; color:var(--cream); margin-bottom:8px; font-family:'Nunito'; }
+.step p{ font-size:13.5px; color:var(--cream2); }
+
+.features{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.feature{ background:var(--clay2); border:1px solid var(--hairline); border-radius:18px; padding:30px; }
+.feature .tag{ display:inline-block; font-size:11px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; padding:5px 10px; border-radius:20px; margin-bottom:16px; background:rgba(46,204,142,.14); color:var(--green);}
+.feature h3{ font-size:19px; color:var(--cream); margin-bottom:10px; font-family:'Nunito'; font-weight:800; }
+.feature p{ color:var(--cream2); font-size:14.5px; margin-bottom:16px; }
+.mini-list{ list-style:none; }
+.mini-list li{ display:flex; gap:10px; font-size:13.5px; color:var(--cream2); margin-bottom:8px; align-items:flex-start; }
+.mini-list li::before{ content:'→'; color:var(--amber); font-weight:700; flex:none; }
+
+.buyers{background:linear-gradient(135deg, var(--clay3), var(--clay2)); border:1px solid var(--hairline); border-radius:20px; padding:44px; display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;}
+.buyers h2{ font-size:26px; margin-bottom:14px; }
+.buyers p{ color:var(--cream2); font-size:14.5px; margin-bottom:18px; }
+.buyers .mini-list li{ color:var(--cream); }
+.buyers .btn{ margin-top:8px; }
+
+footer{border-top:1px solid var(--hairline);padding:40px 5% 32px}
+.foot-inner{max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px}
+.flinks a{font-size:12.5px;color:var(--cream2);transition:color .2s}
+.flinks a:hover{color:var(--green)}
+.fcontact a{font-size:12.5px;color:var(--cream3)}
+.fcopy{font-size:11.5px;color:var(--cream3)}
+
+@media (max-width: 860px){
+  .steps{ grid-template-columns:1fr; }
+  .features, .buyers{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nlinks">
+    <a href="/upgrade">Тарифи</a>
+    <a href="/panas">Навчання</a>
+    <a href="/efiry" class="active">Ефіри</a>
+    <a href="/blog">Блог</a>
+    <a href="/partners">Партнерам</a>
+    <a href="/about">Про нас</a>
+    <a href="/sales">Акції</a>
+    <a href="/support">Підтримка</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button>
+    <a href="https://cabinet.bazar.in.ua" class="ncta">КАБІНЕТ →</a>
+  </div>
+</nav>
+
+<div class="page-hero-banner">
+  <div class="phb-frame">
+    <img class="phb-img" src="img/banners/banner-efiry-tv.webp" alt="Базар TV — ворон дивиться записи ефірів як кіно" loading="eager">
+    <div class="phb-fade"></div>
+    <div class="phb-content">
+      <div class="eyebrow">Архів ефірів</div>
+      <h1>Базар <em>TV</em></h1>
+      <p class="phb-sub">Пропустили ефір наживо? Дивіться запис у будь-який час — як кіно, і купуйте прямо з відео.</p>
+      <a href="https://torg.bazar.in.ua/tv" class="btn btn-primary">Дивитись Базар TV →</a>
+    </div>
+  </div>
+</div>
+
+<section id="steps">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Як це працює</div>
+      <h2>Кожен ефір автоматично стає записом</h2>
+      <p>Нічого додатково робити не треба — трансляція зберігається сама.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Ефір завершився</h3>
+        <p>Щойно продавець завершує прямий ефір, запис одразу з'являється в розділі Базар TV — без обробки й затримок.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Покупець дивиться коли зручно</h3>
+        <p>Запис доступний завжди — вранці, ввечері, через тиждень. Перемотуйте, дивіться повторно, як звичайне відео.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Купуйте прямо з відео</h3>
+        <p>Товари, показані в ефірі, залишаються клікабельними у записі — тапнули картку, оформили покупку, не виходячи з відео.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Навіщо це потрібно</div>
+      <h2>Ефір, що продає і після завершення</h2>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <span class="tag">Продавцям</span>
+        <h3>Один ефір — довга віддача</h3>
+        <p>Ефір, який ви провели один раз, продовжує приводити покупців тижнями. Запис індексується в стрічці Базар TV так само, як і звичайні відео.</p>
+      </div>
+      <div class="feature">
+        <span class="tag">Покупцям</span>
+        <h3>Не треба ловити прямий ефір</h3>
+        <p>Не встигли подивитись наживо — не проблема. Вся атмосфера ефіру (питання в чаті, показ товару вживу) залишається в записі.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="buyers">
+  <div class="wrap">
+    <div class="buyers">
+      <div>
+        <div class="eyebrow">Покупцям</div>
+        <h2>Дивіться архів, купуйте без поспіху</h2>
+        <p>Базар TV — окрема вкладка з усіма записаними ефірами продавців. Спокійно передивіться, порівняйте, і купуйте, коли будете готові.</p>
+        <a href="https://torg.bazar.in.ua/tv" class="btn btn-primary">Відкрити Базар TV →</a>
+      </div>
+      <ul class="mini-list">
+        <li>«Базар TV» в стрічці → каталог усіх записаних трансляцій</li>
+        <li>Кожне відео можна перемотувати й переглядати повторно</li>
+        <li>Товари, показані в ефірі, клікабельні прямо на відео</li>
+        <li>«Купити» доступне без переходу на інші сторінки</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="https://torg.bazar.in.ua">За покупками</a>
+      <a href="/panas">Навчання</a>
+      <a href="/efiry">Ефіри</a>
+      <a href="/blog">Блог</a>
+      <a href="/about">Про нас</a>
+      <a href="/partners">Партнерам</a>
+      <a href="/upgrade">Тарифи</a>
+      <a href="/sales">Акції</a>
+      <a href="/support">Підтримка</a>
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови</a>
+      <a href="/offer">Оферта</a>
+      <a href="/jobs">Вакансії</a>
+    </div>
+    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
+</footer>
+
+<script>
+/* ============ THEME SWITCHER ============ */
+(function(){
+  const KEY = 'bazar-theme';
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  function apply(theme){
+    if(theme === 'light'){
+      root.setAttribute('data-theme', 'light');
+      btn.textContent = '☀️';
+      btn.title = 'Темна тема';
+    } else {
+      root.removeAttribute('data-theme');
+      btn.textContent = '🌙';
+      btn.title = 'Світла тема';
+    }
+  }
+  const saved = localStorage.getItem(KEY) || 'dark';
+  apply(saved);
+  btn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    const next = current === 'light' ? 'dark' : 'light';
+    localStorage.setItem(KEY, next);
+    apply(next);
+  });
+})();
+</script>
+</body>
+</html>

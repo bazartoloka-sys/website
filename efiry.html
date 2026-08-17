@@ -71,6 +71,20 @@ img,svg{display:block; max-width:100%;}
 
 .wrap{ max-width:1200px; margin:0 auto; padding:0 5%; }
 
+/* FORMATS HUB */
+.formats-sec{padding:8px 0 56px}
+.formats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
+.fmt-card{position:relative;aspect-ratio:1400/324;border-radius:20px;overflow:hidden;display:block;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .2s}
+.fmt-card:hover{transform:translateY(-3px)}
+.fmt-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fmt-card .fmt-fade{position:absolute;inset:0;background:linear-gradient(90deg, rgba(10,6,3,.92) 0%, rgba(10,6,3,.62) 42%, rgba(10,6,3,.12) 72%, transparent 90%)}
+.fmt-card .fmt-body{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 22px;max-width:75%}
+.fmt-card .fmt-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(46,204,142,.12);border:1px solid rgba(46,204,142,.3);border-radius:100px;padding:3px 11px;font-size:9px;font-weight:700;color:var(--green);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;width:fit-content}
+.fmt-card .fmt-title{font-family:'Unbounded',sans-serif;font-size:clamp(15px,1.8vw,20px);font-weight:900;color:#fff;margin-bottom:4px;line-height:1.15}
+.fmt-card .fmt-sub{font-size:11px;color:rgba(255,255,255,.82);line-height:1.4}
+.fmt-card .fmt-arr{position:absolute;bottom:14px;right:16px;color:var(--green);font-size:16px}
+@media(max-width:700px){.formats-grid{grid-template-columns:1fr}.fmt-card{aspect-ratio:auto;min-height:150px}}
+
 /* ── NAV ───────────────────────────────────────────────── */
 .nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
 .nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
@@ -270,6 +284,59 @@ footer{border-top:1px solid var(--hairline);padding:40px 5% 32px}
       <span class="lv-dot lv-dot2"></span>
       <span class="lv-dot lv-dot3"></span>
       <img src="img/live/bazar-live-hero.webp" alt="Базар LIVE — ефіри Базар Толока, #Базар_LIVE" loading="eager">
+    </div>
+  </div>
+</section>
+
+<!-- FORMATS HUB -->
+<section class="formats-sec">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">4 формати</div>
+      <h2>Обери свій формат ефіру</h2>
+      <p>Від звичайної трансляції до аукціону — кожен формат під свою мету.</p>
+    </div>
+    <div class="formats-grid">
+      <a href="#steps" class="fmt-card">
+        <img src="img/banners/banner-efiry-live.webp" alt="Звичайні ефіри Базар LIVE — продавайте наживо як у TikTok">
+        <div class="fmt-fade"></div>
+        <div class="fmt-body">
+          <span class="fmt-badge">Класика</span>
+          <div class="fmt-title">Звичайні ефіри</div>
+          <div class="fmt-sub">Показуйте товар наживо, як у TikTok — покупці дивляться, питають, купують</div>
+        </div>
+        <span class="fmt-arr">→</span>
+      </a>
+      <a href="/efiry-tv" class="fmt-card">
+        <img src="img/banners/banner-efiry-tv.webp" alt="Базар TV — записи ефірів, які можна дивитись і купувати як кіно">
+        <div class="fmt-fade"></div>
+        <div class="fmt-body">
+          <span class="fmt-badge">Архів</span>
+          <div class="fmt-title">Базар TV</div>
+          <div class="fmt-sub">Записи ефірів у будь-який час — дивіться як кіно й купуйте прямо з відео</div>
+        </div>
+        <span class="fmt-arr">→</span>
+      </a>
+      <a href="/efiry-auction" class="fmt-card">
+        <img src="img/banners/banner-efiry-auction.webp" alt="Аукціони Базар — робіть ставки, останній за 15 секунд перемагає">
+        <div class="fmt-fade"></div>
+        <div class="fmt-body">
+          <span class="fmt-badge">Азарт</span>
+          <div class="fmt-title">Аукціони</div>
+          <div class="fmt-sub">Робіть ставки наживо — хто останній за 15 секунд, той і забирає лот</div>
+        </div>
+        <span class="fmt-arr">→</span>
+      </a>
+      <a href="/efiry-fast" class="fmt-card">
+        <img src="img/banners/banner-efiry-fast.webp" alt="Швидкі стріми — фіксована ціна, блискавичний показ товару за товаром">
+        <div class="fmt-fade"></div>
+        <div class="fmt-body">
+          <span class="fmt-badge">Швидкість</span>
+          <div class="fmt-title">Швидкі стріми</div>
+          <div class="fmt-sub">Фіксована ціна, без торгу — товар за товаром у темпі блискавки</div>
+        </div>
+        <span class="fmt-arr">→</span>
+      </a>
     </div>
   </div>
 </section>
