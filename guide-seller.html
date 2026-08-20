@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Продавцям — як користуватись Базар Толока</title>
+<meta name="description" content="Повний гайд для продавця Базар Толока: обробка замовлень, чат з покупцем, бонусна програма, рейтинг і відгуки.">
+<meta property="og:title" content="Продавцям — як користуватись Базар Толока">
+<meta property="og:description" content="Замовлення, чат, бонуси, рейтинг — повний гайд для продавця.">
+<meta property="og:url" content="https://bazar.in.ua/guide-seller">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bazar.in.ua/guide-seller">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X711EZGE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5X711EZGE');</script>
+
+<style>
+
+/* ============ LIGHT THEME ============ */
+:root[data-theme="light"]{
+  --clay:#F5E6C8; --clay2:#EFD9B0; --clay3:#E6C898;
+  --green:#1FA670; --amber:#B8700C;
+  --cream:#2A1810; --cream2:#5A3318; --cream3:#735030; --cream4:#8B6440;
+  --border:rgba(26,15,8,.12); --gborder:rgba(31,166,112,.32); --aborder:rgba(184,112,12,.32);
+  --hairline:rgba(26,15,8,.14);
+}
+:root[data-theme="light"] body{background:linear-gradient(180deg,#F5E6C8 0%,#EBD5A8 100%);background-attachment:fixed}
+:root[data-theme="light"] .nav{background:rgba(245,230,200,.94)!important;border-bottom-color:var(--aborder)}
+:root[data-theme="light"] .step,
+:root[data-theme="light"] .feature,
+:root[data-theme="light"] .shot-ph{box-shadow:0 4px 14px rgba(26,15,8,.08),0 1px 3px rgba(26,15,8,.05)}
+:root[data-theme="light"] footer{border-top-color:rgba(26,15,8,.10)}
+:root[data-theme="light"] .eyebrow::before{color:#D64545}
+:root[data-theme="light"] .toc a{background:var(--clay2)}
+
+.theme-toggle{background:transparent;border:1px solid var(--aborder);color:var(--cream2);width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:background .2s,border-color .2s,transform .15s;flex-shrink:0;padding:0;font-family:inherit}
+.theme-toggle:hover{background:rgba(232,160,48,.10);border-color:var(--amber);transform:scale(1.08)}
+:root[data-theme="light"] .theme-toggle:hover{background:rgba(184,112,12,.10);border-color:var(--amber)}
+.nav-right{display:flex;align-items:center;gap:14px}
+
+:root{
+  --clay:#1A0F08; --clay2:#261508; --clay3:#321C0A;
+  --hairline:rgba(245,230,200,.08);
+  --green:#2ECC8E; --green-dim:#1F8F63;
+  --amber:#E8A030; --cream:#F5E6C8; --cream2:#B89060; --cream3:#7A6040;
+  --red:#E74C3C;
+  --border:rgba(245,230,200,.07); --gborder:rgba(46,204,142,.22); --aborder:rgba(232,160,48,.22);
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--clay); color:var(--cream); font-family:'Nunito', sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden; transition:background-color .4s ease, color .4s ease;}
+h1,h2,h3,.eyebrow,.num{ font-family:'Unbounded', sans-serif; }
+a{ color:inherit; text-decoration:none; }
+img,svg{display:block; max-width:100%;}
+
+.wrap{ max-width:1200px; margin:0 auto; padding:0 5%; }
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;background:rgba(26,15,8,.97);border-bottom:1px solid var(--aborder);backdrop-filter:blur(10px)}
+.nlogo{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.nlogo b{color:var(--amber)}
+.nlinks{display:flex;gap:22px}
+.nlinks a{font-size:12px;color:var(--cream2);font-weight:700;transition:color .2s}
+.nlinks a:hover,.nlinks a.active{color:var(--amber)}
+.ncta{background:var(--amber);color:#1A0800;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;padding:9px 18px;border-radius:100px;transition:opacity .2s}
+.ncta:hover{opacity:.88}
+@media(max-width:860px){.nlinks{display:none}}
+
+/* PAGE HERO BANNER */
+.page-hero-banner{max-width:1200px;margin:24px auto 0;padding:0 5%;box-sizing:border-box}
+.page-hero-banner .phb-frame{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35);aspect-ratio:1400/324}
+.page-hero-banner .phb-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.page-hero-banner .phb-fade{position:absolute;inset:0;background:linear-gradient(90deg, rgba(10,6,3,.90) 0%, rgba(10,6,3,.60) 38%, rgba(10,6,3,.10) 68%, transparent 88%)}
+.page-hero-banner .phb-content{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 4.5%;box-sizing:border-box;text-align:left;max-width:600px}
+.page-hero-banner .phb-content .hero-chip{margin-bottom:14px}
+.page-hero-banner .phb-content h1{font-family:'Unbounded',sans-serif;font-size:clamp(22px,3.2vw,40px);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:8px;color:#fff}
+.page-hero-banner .phb-content .phb-sub{font-size:clamp(11px,1vw,14px);color:rgba(255,255,255,.86);max-width:460px;margin:0;line-height:1.5}
+@media(max-width:640px){
+  .page-hero-banner .phb-frame{aspect-ratio:auto;min-height:300px}
+  .page-hero-banner .phb-fade{background:linear-gradient(180deg, rgba(10,6,3,.15) 0%, rgba(10,6,3,.55) 48%, rgba(10,6,3,.94) 100%)}
+  .page-hero-banner .phb-content{padding:22px 20px;justify-content:flex-end;max-width:100%}
+}
+
+.hero-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(232,160,48,.1);border:1px solid rgba(232,160,48,.25);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--amber);letter-spacing:.5px}
+
+/* TOC */
+.toc{max-width:1200px;margin:32px auto 0;padding:0 5%;box-sizing:border-box}
+.toc-inner{display:flex;flex-wrap:wrap;gap:10px}
+.toc a{display:flex;align-items:center;gap:8px;background:var(--clay2);border:1px solid var(--hairline);border-radius:100px;padding:9px 18px 9px 12px;font-size:13px;font-weight:700;color:var(--cream);transition:border-color .2s,color .2s}
+.toc a:hover{border-color:var(--aborder);color:var(--amber)}
+.toc a .toc-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(232,160,48,.14);color:var(--amber);font-family:'Unbounded',sans-serif;font-size:11px;font-weight:900;flex-shrink:0}
+
+.eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--amber); margin-bottom:16px;}
+.eyebrow::before{ content:'●'; color:var(--red); font-size:9px;}
+h2{ font-size:clamp(22px,3vw,28px); font-weight:800; color:var(--cream); letter-spacing:-.01em; margin-bottom:10px;}
+.sec-intro{color:var(--cream2); font-size:15px; margin-bottom:28px; max-width:680px; line-height:1.6}
+
+section.guide-sec{padding:52px 0; border-top:1px solid var(--hairline); scroll-margin-top:80px}
+
+.steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:8px}
+.steps.cols-2{grid-template-columns:1fr 1fr}
+.step{ background:var(--clay2); border:1px solid var(--hairline); border-radius:16px; padding:22px 20px; position:relative; overflow:hidden; }
+.step .num{ font-size:30px; font-weight:900; line-height:1; margin-bottom:12px; -webkit-text-stroke:1px var(--amber); color:transparent; }
+.step h3{ font-size:15px; font-weight:700; color:var(--cream); margin-bottom:8px; font-family:'Nunito'; }
+.step p{ font-size:13.5px; color:var(--cream2); }
+.step p b{color:var(--cream)}
+
+.shot-ph{background:var(--clay); border:1px dashed var(--hairline); border-radius:10px; padding:12px 16px; margin-top:12px; font-size:12px; color:var(--cream3); display:flex; align-items:center; gap:8px}
+.shot-ph::before{content:'📷'; font-size:14px}
+
+.hl{background:rgba(232,160,48,.08); border-left:3px solid var(--amber); border-radius:0 10px 10px 0; padding:14px 18px; margin:20px 0; font-size:14px; color:var(--cream2)}
+.hl.green{background:rgba(46,204,142,.08); border-left-color:var(--green)}
+.hl b{color:var(--cream)}
+
+.tbl-wrap{background:var(--clay2); border:1px solid var(--hairline); border-radius:16px; overflow:hidden; margin:20px 0}
+table{width:100%; border-collapse:collapse}
+th{text-align:left; font-size:11px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--amber); padding:14px 20px; border-bottom:1px solid var(--hairline)}
+td{padding:13px 20px; font-size:13.5px; color:var(--cream2); border-bottom:1px solid var(--hairline)}
+tr:last-child td{border-bottom:none}
+td:first-child{color:var(--cream); font-weight:700}
+
+footer{border-top:1px solid var(--hairline);padding:40px 5% 32px}
+.foot-inner{max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.flogo{font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;letter-spacing:3px;color:var(--cream)}
+.flogo b{color:var(--amber)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px}
+.flinks a{font-size:12.5px;color:var(--cream2);transition:color .2s}
+.flinks a:hover{color:var(--amber)}
+.fcontact a{font-size:12.5px;color:var(--cream3)}
+.fcopy{font-size:11.5px;color:var(--cream3)}
+
+@media (max-width: 860px){
+  .steps, .steps.cols-2{ grid-template-columns:1fr; }
+  .tbl-wrap{overflow-x:auto}
+  th,td{padding:11px 14px; font-size:12.5px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nlogo">БАЗАР<b>.</b></a>
+  <div class="nlinks">
+    <a href="/upgrade">Тарифи</a>
+    <a href="/panas">Навчання</a>
+    <a href="/guide-seller" class="active">Продавцям</a>
+    <a href="/efiry">Ефіри</a>
+    <a href="/blog">Блог</a>
+    <a href="/about">Про нас</a>
+    <a href="/support">Підтримка</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему" title="Перемкнути тему">🌙</button>
+    <a href="https://cabinet.bazar.in.ua" class="ncta">КАБІНЕТ →</a>
+  </div>
+</nav>
+
+<div class="page-hero-banner">
+  <div class="phb-frame">
+    <img class="phb-img" src="img/banners/banner-sellers.webp" alt="Панас — гайд для продавця Базар Толока" loading="eager">
+    <div class="phb-fade"></div>
+    <div class="phb-content">
+      <div class="hero-chip">📦 Гайд для продавця</div>
+      <h1>Продавцям</h1>
+      <p class="phb-sub">Замовлення, спілкування з покупцями, бонуси і рейтинг — все для роботи на Базарі</p>
+    </div>
+  </div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <div class="toc-inner">
+    <a href="#orders"><span class="toc-num">1</span> Замовлення</a>
+    <a href="#chat"><span class="toc-num">2</span> Чат з покупцем</a>
+    <a href="#bonus"><span class="toc-num">3</span> Бонусна програма</a>
+    <a href="#rating"><span class="toc-num">4</span> Рейтинг і відгуки</a>
+  </div>
+</div>
+
+<!-- 1. ЗАМОВЛЕННЯ -->
+<section class="guide-sec" id="orders">
+  <div class="wrap">
+    <div class="eyebrow">Крок 1</div>
+    <h2>Замовлення: статуси й обробка</h2>
+    <p class="sec-intro">Від оплати покупцем до автоматичного закриття угоди — весь шлях замовлення і що робити продавцю на кожному кроці.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Статус</th><th>Що означає</th></tr></thead>
+        <tbody>
+          <tr><td>Очікує оплати</td><td>Покупець оформив, ще не оплатив</td></tr>
+          <tr><td>Оплачено</td><td>Кошти заморожені провайдером (ескроу)</td></tr>
+          <tr><td>В дорозі</td><td>Ви створили ТТН, товар відправлено</td></tr>
+          <tr><td>Чекає у відділенні</td><td>Нова Пошта: товар прибув у відділення/поштомат</td></tr>
+          <tr><td>Отримано</td><td>Покупець забрав товар</td></tr>
+          <tr><td>Спір відкрито</td><td>Покупець або ви відкрили спірну ситуацію</td></tr>
+          <tr><td>Завершено</td><td>Угода закрита, кошти виплачені</td></tr>
+          <tr><td>Скасовано / Повернення</td><td>Замовлення не відбулось</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="steps cols-2" style="margin-top:24px">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Нове замовлення</h3>
+        <p>У розділі «Замовлення» нове надходження позначене окремо. Відкрийте — перевірте товар, кількість, адресу доставки.</p>
+        <div class="shot-ph">Список замовлень з позначкою нового</div>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Відправка</h3>
+        <p>«Створити ТТН» — оберіть відділення отримувача. Після друку накладної статус зміниться на «В дорозі» автоматично.</p>
+        <div class="shot-ph">Форма створення ТТН з вибором відділення</div>
+      </div>
+    </div>
+
+    <div class="hl"><b>Угода закривається автоматично</b>, коли Нова Пошта фіксує статус «Отримано» — виплата коштів іде продавцю без ручного підтвердження. Скасувати замовлення після оплати/відправки не можна — це захист від шахрайства для обох сторін. Якщо виникла проблема — кнопка «Відкрити спір».</div>
+
+    <p class="sec-intro" style="margin-top:20px;margin-bottom:0">Замовлення з ефіру позначені окремим ярликом і одразу відкривають чат із покупцем, де можна уточнити деталі.</p>
+  </div>
+</section>
+
+<!-- 2. ЧАТ -->
+<section class="guide-sec" id="chat">
+  <div class="wrap">
+    <div class="eyebrow">Крок 2</div>
+    <h2>Чат з покупцем</h2>
+    <p class="sec-intro">Уточнюйте деталі замовлення, відповідайте на запитання — окремий чат на кожного покупця.</p>
+
+    <div class="steps cols-2">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Як почати чат</h3>
+        <p>Чат відкривається автоматично, коли покупець пише вам з картки товару або з замовлення. Усі діалоги — в розділі «Чати» кабінету продавця (веб) чи вкладці застосунку.</p>
+        <div class="shot-ph">Список чатів з останнім повідомленням</div>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>У чаті</h3>
+        <p>Якщо діалог виник із замовлення, оформленого під час ефіру — зверху буде позначка «Замовлення з ефіру» з посиланням. Підтримуються текст і фото.</p>
+        <div class="shot-ph">Вікно чату з бульбашками повідомлень</div>
+      </div>
+    </div>
+
+    <div class="hl green">Відповідайте швидко — час відповіді продавця впливає на довіру покупців і на позицію в пошуку. Увімкніть пуш-сповіщення в налаштуваннях застосунку, щоб не пропустити.</div>
+  </div>
+</section>
+
+<!-- 3. БОНУСИ -->
+<section class="guide-sec" id="bonus">
+  <div class="wrap">
+    <div class="eyebrow">Крок 3</div>
+    <h2>Бонусна програма</h2>
+    <p class="sec-intro">Поповнюєте гаманець через веб-кабінет — автоматично отримуєте бонуси, якими можна покрити частину оплати тарифу чи реклами.</p>
+
+    <div class="steps cols-2">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Як нараховуються</h3>
+        <p>Тільки за поповнення через <b>веб-кабінет</b> (Mono). Поповнення через застосунок (Google Play) бонусів не дає — там кошти частково йдуть Google. Розмір нарахування залежить від поточного множника програми.</p>
+        <div class="shot-ph">Блок «Бонуси 🎁» на екрані гаманця</div>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Як витратити</h3>
+        <p>Бонуси покривають <b>до 30%</b> вартості тарифу чи реклами — решта списується з основного гаманця. Система сама пропонує максимально можливу частку бонусами при оплаті.</p>
+        <div class="shot-ph">Вікно підтвердження купівлі з рядками «Бонусами» і «З гаманця»</div>
+      </div>
+    </div>
+
+    <div class="hl">Бонуси не виводяться і не конвертуються у гривні напряму — тільки покривають частину майбутніх платежів на Базарі.</div>
+  </div>
+</section>
+
+<!-- 4. РЕЙТИНГ -->
+<section class="guide-sec" id="rating">
+  <div class="wrap">
+    <div class="eyebrow">Крок 4</div>
+    <h2>Рейтинг і відгуки</h2>
+    <p class="sec-intro">Покупці оцінюють угоду після отримання товару — рейтинг видно у вашому профілі продавця.</p>
+
+    <div class="steps cols-2">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Як формується</h3>
+        <p>Після статусу «Отримано» покупцю пропонується оцінити угоду за шкалою від «Погано» до «Ідеально». Оцінка і короткий відгук з'являються на сторінці вашого профілю.</p>
+        <div class="shot-ph">Екран оцінки з шкалою і зірками</div>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Де подивитись</h3>
+        <p>У кабінеті продавця, на головній сторінці — загальна оцінка й кількість відгуків. На публічній сторінці профілю (яку бачать покупці) — усі відгуки за угодами.</p>
+        <div class="shot-ph">Блок рейтингу на публічній сторінці продавця</div>
+      </div>
+    </div>
+
+    <div class="hl green">Рейтинг — накопичувальний, впливає на довіру покупців і видимість оголошень у пошуку. Рейтинг двосторонній: продавець теж може оцінити покупця після завершення угоди — це окрема оцінка, вона не показується публічно на сторінці товару.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="flogo">БАЗАР<b>.</b></div>
+    <div class="flinks">
+      <a href="https://torg.bazar.in.ua">За покупками</a>
+      <a href="/panas">Навчання</a>
+      <a href="/efiry">Ефіри</a>
+      <a href="/blog">Блог</a>
+      <a href="/about">Про нас</a>
+      <a href="/partners">Партнерам</a>
+      <a href="/upgrade">Тарифи</a>
+      <a href="/sales">Акції</a>
+      <a href="/support">Підтримка</a>
+      <a href="/privacy">Конфіденційність</a>
+      <a href="/terms">Умови</a>
+      <a href="/offer">Оферта</a>
+      <a href="/jobs">Вакансії</a>
+    </div>
+    <div class="fcontact"><a href="mailto:info.bazartoloka@gmail.com">info.bazartoloka@gmail.com</a></div>
+    <div class="fcopy">© 2026 Базар Толока · Зроблено в Україні 🇺🇦</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const KEY = 'bazar-theme';
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  function apply(theme){
+    if(theme === 'light'){
+      root.setAttribute('data-theme', 'light');
+      btn.textContent = '☀️';
+      btn.title = 'Темна тема';
+    } else {
+      root.removeAttribute('data-theme');
+      btn.textContent = '🌙';
+      btn.title = 'Світла тема';
+    }
+  }
+  const saved = localStorage.getItem(KEY) || 'dark';
+  apply(saved);
+  btn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    const next = current === 'light' ? 'dark' : 'light';
+    localStorage.setItem(KEY, next);
+    apply(next);
+  });
+})();
+</script>
+</body>
+</html>
